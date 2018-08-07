@@ -1,3 +1,4 @@
+{% load i18n %}
 <!doctype html>
 <html style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
 <head style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -7,7 +8,7 @@
 <!-- Forcing initial-scale shouldn't be necessary -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 <!-- Use the latest (edge) version of IE rendering engine -->
-<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Domain_name_change</title>
+<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Welcome to ikwen" %}</title>
 <!-- The title tag shows in email notifications, like Android 4.4. -->
 
 <!-- Please use an inliner tool to convert all CSS to inline as inpage or external CSS is removed by email clients -->
@@ -63,6 +64,110 @@ img {
 a[x-apple-data-detectors] {
 	color: inherit !important;
 }
+			
+
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.animated.infinite {
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes pulse {
+	from {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+	-webkit-transform: scale3d(1.05, 1.05, 1.05);
+	transform: scale3d(1.05, 1.05, 1.05);
+	}
+
+	to {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	}
+}
+
+@-moz-keyframes pulse {
+	from {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+	-webkit-transform: scale3d(1.05, 1.05, 1.05);
+	transform: scale3d(1.05, 1.05, 1.05);
+	}
+
+	to {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	}
+}
+
+@-o-keyframes pulse {
+	from {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+	-webkit-transform: scale3d(1.05, 1.05, 1.05);
+	transform: scale3d(1.05, 1.05, 1.05);
+	}
+
+	to {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	}
+}
+
+@-ms-keyframes pulse {
+	from {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+	-webkit-transform: scale3d(1.05, 1.05, 1.05);
+	transform: scale3d(1.05, 1.05, 1.05);
+	}
+
+	to {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes pulse {
+	from {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+	-webkit-transform: scale3d(1.05, 1.05, 1.05);
+	transform: scale3d(1.05, 1.05, 1.05);
+	}
+
+	to {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	}
+}
+
+.pulse:hover {
+	-webkit-animation-name: pulse;
+	animation-name: pulse;
+}
 </style>
 
 <!-- Progressive Enhancements -->
@@ -72,13 +177,18 @@ a[x-apple-data-detectors] {
 	transition: all 100ms ease-in;
 }
 .button-td:hover, .button-a:hover {
-	background:#319dd5!important;
-	border-color: #319dd5!important;
+	background:#f38e42!important;
+	border-color: #f38e42!important;
 }
 .button-ta:hover, .button-b:hover {
-	background:#cccccc!important;
-	border-color: #cccccc!important;
+	background:#222222!important;
+	border-color: #222222!important;
 }
+
+.screen-display{
+	margin-top: 10px;
+}
+	
 
 @media screen and (max-width: 480px) {
 
@@ -116,6 +226,15 @@ a[x-apple-data-detectors] {
 table.center-on-narrow {
 	display: inline-block !important;
 }
+.screen-display{
+	margin-top: 0 !important;
+}
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape){
+.screen-display{
+	margin-top: 0 !important;
+}
 }
 </style>
 </head>
@@ -123,7 +242,12 @@ table.center-on-narrow {
 <table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#e0e0e0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;table-layout:fixed !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;" >
   <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
-        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;box-shadow:6px 5px 5px  #bfbfbf;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" > 
+        
+        <!-- Visually Hidden Preheader Text : BEGIN -->
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >Welcome to ikwen!</div>
+        <!-- Visually Hidden Preheader Text : END -->
+        
+        <div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;box-shadow:0 5px 5px 0 #bfbfbf;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;margin-top:10px;" > 
           <!--[if (gte mso 9)|(IE)]>
             <table cellspacing="0" cellpadding="0" border="0" width="680" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;" >
             <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -140,10 +264,10 @@ table.center-on-narrow {
 						</td>
 					</tr>
 				  </table>
-				  <!-- Email Header : END --> 
+				  <!-- Email Header : END -->  
           
           <!-- Email Body : BEGIN -->
-          <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;border-top-width:3px;border-top-style:solid;border-top-color:#9CC640;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+          <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;border-top-width:3px;border-top-style:solid;border-top-color:#f38e42;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
             
             <!-- 1 Column Text : BEGIN -->
             <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -153,63 +277,95 @@ table.center-on-narrow {
                         <v:textbox inset="0,0,0,0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                         <![endif]-->
                 
-                <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" > 
-                  <!--[if mso]>
-                            <table border="0" cellspacing="0" cellpadding="0" align="center" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-                            <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                            <td align="center" valign="top" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-                            <![endif]-->
                 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:600px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
                     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                      <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:16px;mso-height-rule:exactly;line-height:36px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" > 
-                        <h1 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-							Hey!
-						  </h1>
-                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Your domain name was moved to : <a href="dlpcabinet-conseils.ikwen.com" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#f38e42;" >dlpcabinet-conseils.ikwen.com</a></p>
-                        
-                      <!-- Button : Begin -->
-                    <table cellspacing="0" cellpadding="0" border="0" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
-                        <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                          <td  class="button-ta" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-radius:3px;background-color:#f38e42;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><a href="http://www.google.com"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#f38e42;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#f38e42;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" > 
-                              <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->Visit our webpage<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--> 
-                              </a>
-							</td>
-                        </tr>
-                    </table>
-						  <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-					<!-- Button : END -->
-						</td>
+                      <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:5px;padding-right:20px;padding-left:20px;font-size:16px;mso-height-rule:exactly;line-height:36px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" > 
+                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><h1 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Welcome to ikwen" %}!</h1></p>
+                          {% blocktrans %}
+                          By joining us, you’ve just entered into an exciting universe whereby every action is rewarded.
+                          The adventure is just beginning. On ikwen,  over thousands of you are connected to their
+                          favourite businesses. These businesses offer you exclusive gifts every day and enable you to
+                          benefit from tailored-promotional offers simply because you are here. To celebrate the
+                          expansion of the ikwen family together, here is the first gift (among others) that we offer
+                          you. Click on gift box to collect it!
+                          {% endblocktrans %}
+                      </td>
                     </tr>
                 </table>
-                
-                  <!--[if (gte mso 9)|(IE)]>
-                            </td>
-                            </tr>
-                            </table>
-                            <![endif]--> 
-                </div>
-                
-                <!--[if gte mso 9]>
-                        </v:textbox>
-                        </v:rect>
-                        <![endif]--></td>
+                <!-- Image Button : BEGIN -->
+
+				<table cellspacing="0" cellpadding="0" border="0" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
+					<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+						<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-radius:3px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+							<a href="http://www.ikwen.com/" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" > <img src="../../images/gift-1_1.png" width="300" alt="Gift_picture"  class="center-on-narrow animated infinite pulse" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:200px;height:auto;-ms-interpolation-mode:bicubic;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;" ></a>
+						</td>
+					</tr>
+				</table>
+			<!-- Image Button : END -->
+			</td>
+		<!-- 1 Column Text : END -->
+            
+            <!-- 1 Column Text : BEGIN -->
+            <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+				  <td bgcolor="#ffffff" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:center;background-position:center center !important;background-size:cover !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><!--[if gte mso 9]>
+							<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:680px;height:175px;background-position:center center !important;" >
+							<v:fill type="tile" src="assets/Hybrid/Image_680x230.png" color="#222222" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" />
+							<v:textbox inset="0,0,0,0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+							<![endif]-->
+
+					<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" > 
+					  <!--[if mso]>
+								<table border="0" cellspacing="0" cellpadding="0" align="center" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+								<td align="center" valign="top" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+								<![endif]-->
+					<table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:600px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
+						<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+							<td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:5px;padding-right:20px;padding-left:20px;font-size:16px;mso-height-rule:exactly;line-height:36px;color:#555555;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{% blocktrans %}
+								<span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#223682;text-align:center;" ><p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><h2 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >3 tips on not missing out on any gift</h2></p></span>
+								<ul style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+									<li style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Attach our sending address <a href= "http://ikwen.com" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >no-reply@ikwen.com</a> to your contacts.</li>
+									<li style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >If you are on Gmail, we’d appear on the promotion tab of your mailbox (the notification tab), click, hold and drag us to your main mailbox. Gmail would ask you if that should always be the case as regards us (a “pop-up” menu would appear at the top of your screen), reply “YES” and, hope you’d find us without having to search.</li>
+									<li style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Whatever the email platform: during our first send (this one), it’s possible that your email box doesn’t recognise us and classifies us under spam/junk (NB: this is unfair given that we never ever spam), If you don’ find us after some time, check us in the Spam... and take us out of there!   (For technical difficulties: <a href= "http://ikwen.com" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >support@ikwen.com</a>).</li>
+								</ul>
+							{% endblocktrans %}</td>
+						</tr>
+					</table>		
+					  <!--[if (gte mso 9)|(IE)]>
+								</td>
+								</tr>
+								</table>
+								<![endif]--> 
+					</div>
+
+					<!--[if gte mso 9]>
+							</v:textbox>
+							</v:rect>
+							<![endif]-->
+				</td>
             </tr>
             <!-- 1 Column Text : END -->
-            <!-- Email Footer : BEGIN -->
+		</tr>
+		</table>
+		<!-- email body : END -->
+						
+			 <!-- Email Footer : BEGIN -->
 							<table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#F3F3F3" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;padding-top:15px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 								  <td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
 										<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;max-width:600px;" >
+                                            {% blocktrans %}
 											<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#cccccc;font-size:12px;text-align:left;" >CONFIDENTIALITY </p>
 											<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#cccccc;font-size:12px;text-align:justify;" >
 												The information contained in this e-mail and any accompanying documents is confidential or otherwise protected from disclosure. If you are not the intended recipient, please immediately alert the sender by reply e-mail and delete this message and any attachments. Any copy, dissemination or unauthorized access of the contents of this message by anyone other than the intended recipient is strictly prohibited. E-mails may be susceptible to falsification or alteration and cause data corruption and/or loss of data. IKWEN and/or any of its subsidiaries decline any liability resulting from the consequences thereof. Therefore, this e-mail and any attachments are used at your own risk.
 											</p>
-									<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:12px;color:#555555;" >© 2018 {{ project_name }}, Inc. All Rights Reserved.</span></p>
+                                            {% endblocktrans %}
+									<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:12px;color:#555555;" >© {{ year }} ikwen, Inc. All Rights Reserved.</span></p>
 					<!--
 										  <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;font-size:12px;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;float:none;display:inline !important;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >You're opinion matters! Let us know how we're doing in this <a href="http:www.ikwen.com/survey" target="_blank" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-decoration:none;color:#4834d4;" >1-minute survey</a></strong>.</span></span></p> 
 					-->
 										  <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;font-size:12px;padding-bottom:40px;" >
-											<span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;float:none;display:inline !important;" ><a href="{{ site_url_about}}" target="_blank" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-decoration:none;color:#4834d4;padding-bottom:30px;" >About us</a>&nbsp;| If you would like to unsubscribe</span>
+											<span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;float:none;display:inline !important;" ><a href="{{ site_url_about}}" target="_blank" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-decoration:none;color:#4834d4;padding-bottom:30px;" >{% trans "About us" %}</a></span>
 										  <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;float:none;display:inline !important;" >.</span></span></p>
 								    </div>
 								  </td>
@@ -217,11 +373,11 @@ table.center-on-narrow {
 							</table>
 
 							  <!-- Email Footer : END --> 
-	</table>
+
         </div>
     </center>
 	</td>
   </tr> 
 </table>
 </body>
-</html>  
+</html>

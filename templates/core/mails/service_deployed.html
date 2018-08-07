@@ -1,3 +1,4 @@
+{% load i18n humanize %}
 <!doctype html>
 <html style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
 <head style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -7,7 +8,7 @@
 <!-- Forcing initial-scale shouldn't be necessary -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 <!-- Use the latest (edge) version of IE rendering engine -->
-<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Biling</title>
+<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ subject }} - {{ config.company_name }}</title>
 <!-- The title tag shows in email notifications, like Android 4.4. -->
 
 <!-- Please use an inliner tool to convert all CSS to inline as inpage or external CSS is removed by email clients -->
@@ -141,7 +142,7 @@ table.center-on-narrow {
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
         
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >Billing</div>
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ subject }}</div>
         <!-- Visually Hidden Preheader Text : END -->
 				
         <div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;box-shadow:6px 5px 5px  #bfbfbf;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;margin-top:10px;" > 
@@ -183,17 +184,17 @@ table.center-on-narrow {
                 <table border="0" cellpadding="0" cellspacing="0" align="left" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
                     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                       <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:16px;mso-height-rule:exactly;line-height:36px;color:#ffffff;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" > 
-                        <h1 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#ffffff;margin-top:0;" >Félicitations,vous êtes en ligne !</h1>
-                        Les détails de votre service sont les suivants:
+                        <h1 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#ffffff;margin-top:0;" >{% trans "Congrats, you are online !" %}</h1>
+                        {% trans "Your service details are as follow" %} :
                         <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                        Application : WebNode
+                        {% trans "Application" %} : {{ service_activated.app.name }}
                         <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                        Running as : SIARC
+                        {% trans "Running as" %} : {{ service_activated.project_name }}
                         <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                        On :
-                        <a href= "http://siarc.ikwen.com" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#f38e42;" >http://siarc.ikwen.com</span></a>
+                        {% trans "On" %} :
+                        <a href= "{{ service_activated.url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#f38e42;" >{{ service_activated.url }}</span></a>
                         <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                        Coût mensuel: XAF 3 900,0
+                        {% trans "Monthly cost" %} : <strong>{{ config.currency_symbol }}</strong> {{ service_activated.monthly_cost|intcomma }}
                         </td>
                     </tr>
                 </table>
@@ -228,15 +229,14 @@ table.center-on-narrow {
                 <table border="0" cellpadding="0" cellspacing="0" align="left" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
                     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                       <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:16px;mso-height-rule:exactly;line-height:36px;color:grey;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" > 
-                        <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#253781;" >Facturé à:</strong>
+                        <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#253781;" >{% trans "Invoiced to" %}:</strong>
                         <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >                       
-                        Kom Sihon
+                        {{ member.full_name }},
 						<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                        Gmail:
-                        <a href= "rsihon@gmail.com" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#f38e42;" >rsihon@gmail.com</a>
-                        <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                        Tel:675187705
-                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-bottom:0;" >La facture d'installation de votre service à été générée, et est dûe le 29 juin 2018 09:59:24, voir tout les détails ci-aprés:</p>
+                          {{ member.email }}
+                          {% if member.phone %}, <br><em>{{ member.phone }}</em>{% endif %} <br>
+                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-bottom:0;" >{% blocktrans with due_date=invoice.due_date %}
+            The invoice for your service setup has been generated, and is due on {{ due_date }}, see details below{% endblocktrans%} :</p>
                     
                         </td>
                     </tr>
@@ -273,23 +273,46 @@ table.center-on-narrow {
                         <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                             <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:center;font-size:15px;mso-height-rule:exactly;line-height:20px;color:grey;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                 <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:20px;margin-bottom:20px;margin-right:20px;margin-left:20px;" >
-                                <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#253781;" >Facture No A102/0618</strong>
+                                <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#253781;" >{% trans "Invoice" %} No {{ invoice.number }}</strong>
                                 <table border="1" cellpadding="1" cellspacing="1" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:500px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;border-width:2px;border-style:solid;border-color:grey;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
                                 <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                                     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                                         <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                                            <th style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Element</th>
-                                            <th style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Montant</th>
+                                            <th style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Item" %}</th>
+                                            <th style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Amount" %}</th>
                                     </tr>
-                                            <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Domain name</td>
-                                            <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >0</td>
-                                    <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                                            <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Website setup : Twelve months of service</td>
-                                            <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >59 000,0</td>
+{#                                    {% for entry in invoice.entries %}#}
+{#                                        <div style="border-bottom: 1px solid #ddd; padding: 5px 10px">#}
+{#                                            <span style="float: left; width: 68%">#}
+{#                                                {{ entry.item.label }}#}
+{#                                                {% if entry.short_description %}: <em>{{ entry.short_description }}</em>{% endif %}#}
+{#                                            </span>#}
+{#                                            <span style="float: right; text-align: right; width: 30%">{{ entry.item.amount|intcomma }}</span>#}
+{#                                            <div style="clear: both"></div>#}
+{#                                        </div>#}
+{#                                        <tr>#}
+{#                                            <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >#}
+{#                                                {{ entry.item.label }}#}
+{#                                                {% if entry.short_description %} : <em>{{ entry.short_description }}</em>{% endif %}#}
+{#                                            </td>#}
+{#                                            <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >#}
+{#                                                {{ entry.item.amount|intcomma }}#}
+{#                                            </td>#}
+{#                                        </tr>#}
+{#                                    {% endfor %}#}
+                                    <tr>
+                                        <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Domain name</td>
+                                        <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >0</td>
                                     </tr>
                                     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                                            <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ></td>
-                                            <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >TOTAL:</strong>XAF 59 000,0</td>
+                                        <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Website setup : Twelve months of service</td>
+                                        <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >59 000,0</td>
+                                    </tr>
+                                    <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                        <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;text-align:right" >
+                                            <strong>{% trans "TOTAL" %}</strong>
+                                        </td>
+                                        <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ config.currency_symbol }} {{ invoice.amount|intcomma }}</td>
                                     </tr>
                                 </table>
                                 </div>
@@ -297,8 +320,9 @@ table.center-on-narrow {
 								<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 								<table cellspacing="0" cellpadding="0" border="0" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
 									<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-										<td  class="button-td" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-radius:3px;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;transition:all 100ms ease-in;" ><a href="http://www.google.com"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#233682;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" > 
-												  <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->Payez maintenant<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--> 
+										<td  class="button-td" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-radius:3px;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;transition:all 100ms ease-in;" >
+                                            <a href="{{ invoice_url }}"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#233682;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" >
+												  <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% trans "Pay Now" %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
 												  </a>
 										</td>
 									</tr>
@@ -316,7 +340,9 @@ table.center-on-narrow {
                             </table>
                             <![endif]--> 
                 </div>
-                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:center;margin-bottom:0;font-size:15px;mso-height-rule:exactly;line-height:20px;color:grey;" >Nous vous remerciouns pour votre partenariat</p>
+                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:center;margin-bottom:0;font-size:15px;mso-height-rule:exactly;line-height:20px;color:grey;" >
+                    {% blocktrans with company_name=config.company_name %}Thank you for your business with {{ company_name }}.{% endblocktrans %}
+                </p>
                 <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                 <!--[if gte mso 9]>
                         </v:textbox>
