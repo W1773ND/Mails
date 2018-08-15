@@ -1,3 +1,4 @@
+{% load i18n %}
 <!doctype html>
 <html style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
 <head style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -7,7 +8,7 @@
 <!-- Forcing initial-scale shouldn't be necessary -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 <!-- Use the latest (edge) version of IE rendering engine -->
-<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >A gift from ikwen !</title>
+<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ company_name }} - {{ subject }}</title>
 <!-- The title tag shows in email notifications, like Android 4.4. -->
 
 
@@ -134,7 +135,7 @@ table.center-on-narrow {
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
         
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" > ikwen sent you a gift!</div>
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ company_name }} - {{ subject }}</div>
         <!-- Visually Hidden Preheader Text : END -->
         
         <div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;box-shadow:0 5px 5px 0 #bfbfbf;margin-top:10px;" > 
@@ -161,7 +162,10 @@ table.center-on-narrow {
             
             <!-- Hero Image, Flush : BEGIN -->
             <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-              <td class="full-width-image" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:5px;padding-bottom:0;padding-right:15px;padding-left:15px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><a href="http://www.ikwen.com/signIn" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><img src="../../images/Gift-free.png" width="680" alt="alt_text" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;max-width:680px;height:auto;-ms-interpolation-mode:bicubic;" ></a>
+              <td class="full-width-image" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:5px;padding-bottom:0;padding-right:15px;padding-left:15px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                  <a href="http://www.ikwen.com/console" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                      <img src="https://lh3.googleusercontent.com/Gh-SmXjDd0ua-XsViRIXKBFYqLxLJ5V5MuwKyHbaZfU3GqOkKS9xrbf8aiZXuinfGSlNjhE26XB_IizwET5IAswbkXlEFZ0a5zYEkB6NxFMT0sk3bSzCVC6Rc-a4KCyNGS1JKMYTZF8MwzQ4KGcxej_BgBPmpQ5-lnGnk69U_8MP8WnuLKIHNrGkk0nsB7CVxAucjnXxxhUB68HQ6n_9nMOInKkj8a3SBix8kwV2nX69G3NElvSovjlqMOGlijQQWVZ-agVRo3Pp6mFnLWK7bLNJURB9A2asuy81W03UHkCORm914BvpdV2y3-KQqu3nuTCO9kP8vhna7oPqndAKzNq8-UL5DFQhQ3CpNu0fV0sTtUVyP7jq_nsgtYvZXOw5fZMyZpLrw080SSYjGKdMpgn7Mx9z5hNc37F0gLP7ELMdrb8jV7oMu6Xit-Qevx3mNvHmR9eG4Z-5L471akYRRKmSpzt7LVvifBfkIsESAl6ZOvDG9JiBgm1RiFknzi1JaLHZPCI5a6bWIXUXSCZc4TygLVO6IdbTbmHkz9j_JgycHzoBLKflTfvLDLUWWDYNbEBkqn5j2UQSQ3KUaeVHO4PTKTPM7L1_33CGgXM=w680-h500-no" width="680" alt="alt_text" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;max-width:680px;height:auto;-ms-interpolation-mode:bicubic;" >
+                  </a>
 				</td>
             </tr>
             <!-- Hero Image, Flush : END --> 
@@ -183,7 +187,8 @@ table.center-on-narrow {
                                     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                                     <td align="left" valign="top" width="220" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                     <![endif]-->
-                      
+                      {% for service, reward_list in grouped_rewards.items %}
+                          {% with logo=service.config.logo %}
                       <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:33.33%;min-width:220px;vertical-align:top;width:100%;" >
                         <table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -191,108 +196,45 @@ table.center-on-narrow {
 									<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:14px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 											<td colspan="2" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<img src="../../images/tchopetyamologo.png" width="200" alt="community_icon"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:90%;height:auto;-ms-interpolation-mode:bicubic;" >
+												<img src="{{ IKWEN_MEDIA_URL }}{{ logo.name }}" width="200"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:90%;height:auto;-ms-interpolation-mode:bicubic;" >
 											</td>
 											<td colspan="3" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><p  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:90%;max-width:95%;height:auto;" >{{ project_name }}</p></strong>
+												<strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                    <p  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:90%;max-width:95%;height:auto;" >{{ service.project_name }}</p>
+                                                </strong>
 											</td>
 										</tr>
+                                        {% with reward=reward_list.0 %}
 										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 											<td colspan="5" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<img src="../../images/tchopetyamologo.png" width="200" alt="community_icon"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:90%;height:auto;-ms-interpolation-mode:bicubic;" >
+												<img src="{{ IKWEN_MEDIA_URL }}{{ reward.coupon.image.name }}" width="200" class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:90%;height:auto;-ms-interpolation-mode:bicubic;" >
 											</td>
 										</tr>
 										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 											<td colspan="5" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
 												<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" >
-													<span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#8F8F8F;" >X</span><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:20px;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ coupon_count }}</strong></span>
+													<span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#8F8F8F;" >X</span><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:20px;" >
+                                                        <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ reward.count }}</strong>
+                                                    </span>
 												</p>
 											</td>
 										</tr>
+                                        {% endwith %}
 									</table>
 								</td>
 							</tr>
                         </table>
                       </div>
-                      
-                      <!--[if mso]>
-                                    </td>
-                                    <td align="left" valign="top" width="220" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-                                    <![endif]-->
-                      
-                      <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:33.33%;min-width:220px;vertical-align:top;width:100%;" >
-                        <table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-								<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-									<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:14px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td colspan="2" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<img src="../../images/tchopetyamologo.png" width="200" alt="community_icon"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:90%;height:auto;-ms-interpolation-mode:bicubic;" >
-											</td>
-											<td colspan="3" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><p  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:90%;max-width:95%;height:auto;" >{{ project_name }}</p></strong>
-											</td>
-										</tr>
-										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td colspan="5" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<img src="../../images/tchopetyamologo.png" width="200" alt="community_icon"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:90%;height:auto;-ms-interpolation-mode:bicubic;" >
-											</td>
-										</tr>
-										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td colspan="5" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" >
-													<span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#8F8F8F;" >X</span><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:20px;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ coupon_count }}</strong></span>
-												</p>
-											</td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-                        </table>
-                      </div>
-                      
-                      <!--[if mso]>
-                                    </td>
-                                    <td align="left" valign="top" width="220" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-                                    <![endif]-->
-                      
-                      <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:33.33%;min-width:220px;vertical-align:top;width:100%;" >
-                        <table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-								<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-									<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:14px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td colspan="2" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<img src="../../images/tchopetyamologo.png" width="200" alt="community_icon"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:90%;height:auto;-ms-interpolation-mode:bicubic;" >
-											</td>
-											<td colspan="3" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><p  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:90%;max-width:95%;height:auto;" >{{ project_name }}</p></strong>
-											</td>
-										</tr>
-										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td colspan="5" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<img src="../../images/tchopetyamologo.png" width="200" alt="community_icon"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:90%;height:auto;-ms-interpolation-mode:bicubic;" >
-											</td>
-										</tr>
-										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td colspan="5" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" >
-													<span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#8F8F8F;" >X</span><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:20px;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ coupon_count }}</strong></span>
-												</p>
-											</td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-                        </table>
-                      </div>
+                          {% endwith %}
+                      {% endfor %}
                       
                       <!--[if mso]>
                                     </td>
 
                                    </tr>
                                     </table>
-                                    <![endif]--></td>
+                                    <![endif]-->
+                    </td>
                   </tr>
                 </table>
                 
@@ -302,107 +244,9 @@ table.center-on-narrow {
                         </table>
                         <![endif]--></td>
             </tr>
-            <!-- Three Even Columns : END --> 
-			  
-			<!-- Two Even Columns : BEGIN -->
-            <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-              <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><!--[if mso]>
-                        <table border="0" cellspacing="0" cellpadding="0" align="center" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-                        <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                        <td align="center" valign="top" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-                        <![endif]-->
-                
-                <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:660px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-                  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                    <td align="center" valign="top" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:0;padding-top:10px;padding-bottom:10px;padding-right:0;padding-left:0;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><!--[if mso]>
-                                    <table border="0" cellspacing="0" cellpadding="0" align="center" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-                                    <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                                    <td align="left" valign="top" width="330" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-                                    <![endif]-->
-                      
-                      <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:33.33%;min-width:220px;vertical-align:top;width:100%;" >
-                        <table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-								<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-									<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:14px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td colspan="2" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<img src="../../images/tchopetyamologo.png" width="200" alt="community_icon"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:90%;height:auto;-ms-interpolation-mode:bicubic;" >
-											</td>
-											<td colspan="3" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><p  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:90%;max-width:95%;height:auto;" >{{ project_name }}</p></strong>
-											</td>
-										</tr>
-										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td colspan="5" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<img src="../../images/tchopetyamologo.png" width="200" alt="community_icon"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:90%;height:auto;-ms-interpolation-mode:bicubic;" >
-											</td>
-										</tr>
-										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td colspan="5" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" >
-													<span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#8F8F8F;" >X</span><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:20px;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ coupon_count }}</strong></span>
-												</p>
-											</td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-                        </table>
-                      </div>
-                      
-                      <!--[if mso]>
-                                    </td>
-                                    <td align="left" valign="top" width="330" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-                                    <![endif]-->
-                      
-                      <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:33.33%;min-width:220px;vertical-align:top;width:100%;" >
-                        <table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-								<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-									<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:14px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td colspan="2" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<img src="../../images/tchopetyamologo.png" width="200" alt="community_icon"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:90%;height:auto;-ms-interpolation-mode:bicubic;" >
-											</td>
-											<td colspan="3" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><p  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:90%;max-width:95%;height:auto;" >{{ project_name }}</p></strong>
-											</td>
-										</tr>
-										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td colspan="5" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<img src="../../images/tchopetyamologo.png" width="200" alt="community_icon"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:90%;height:auto;-ms-interpolation-mode:bicubic;" >
-											</td>
-										</tr>
-										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td colspan="5" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" >
-													<span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#8F8F8F;" >X</span><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:20px;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ coupon_count }}</strong></span>
-												</p>
-											</td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-                        </table>
-                      </div>
-                      
-                      <!--[if mso]>
-                                    </td>
-                                    </tr>
-                                    </table>
-                                    <![endif]--></td>
-                  </tr>
-                </table>
-                
-                <!--[if mso]>
-                        </td>
-                        </tr>
-                        </table>
-                        <![endif]--></td>
-            </tr>
-            <!-- Two Even Columns : END --> 
-            
+            <!-- Three Even Columns : END -->
+
+            {% if sample_app %}
             <!-- Thumbnail Left, Text Right : BEGIN -->
             <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
               <td dir="ltr" bgcolor="#F3F3F3" align="center" height="100%" valign="top" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:10px;padding-bottom:10px;padding-right:0;padding-left:0;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><!--[if mso]>
@@ -469,31 +313,15 @@ table.center-on-narrow {
                         </table>
                         <![endif]--></td>
             </tr>
-            <!-- Thumbnail Left, Text Right : END --> 
-            
+            <!-- Thumbnail Left, Text Right : END -->
+            {% endif %}
             
             
           </table>
           <!-- Email Body : END --> 
           
           <!-- Email Footer : BEGIN -->
-							<table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#F3F3F3" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;padding-top:15px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-								  <td align="center" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-										<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:20px;padding-top:10px;max-width:600px;border-top-width:2px;border-top-style:solid;border-top-color:rgba(0, 0, 0, 0.14);" >
-											<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#cccccc;font-size:12px;text-align:left;" >CONFIDENTIALITY </p>
-											<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#cccccc;font-size:12px;text-align:justify;" >
-												The information contained in this e-mail and any accompanying documents is confidential or otherwise protected from disclosure. If you are not the intended recipient, please immediately alert the sender by reply e-mail and delete this message and any attachments. Any copy, dissemination or unauthorized access of the contents of this message by anyone other than the intended recipient is strictly prohibited. E-mails may be susceptible to falsification or alteration and cause data corruption and/or loss of data. IKWEN and/or any of its subsidiaries decline any liability resulting from the consequences thereof. Therefore, this e-mail and any attachments are used at your own risk.
-											</p>
-										  <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:12px;color:#555555;" >© 2018 ikwen, Inc. All Rights Reserved.</span></p>
-								  <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;font-size:12px;padding-bottom:40px;" >
-											<span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;float:none;display:inline !important;" ><a href="http://www.tchopetyamo.com" target="_blank" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-decoration:none;color:#4834d4;padding-bottom:30px;" >About us</a>&nbsp;| Making the Web a business.</span>
-										  </span></p>
-									  </div>
-									</td>
-								</tr>
-							</table>
-
+            {% include 'core/mails/snippets/confidentiality.html' %}
 		  <!-- Email Footer : END --> 
           
           <!--[if (gte mso 9)|(IE)]>

@@ -1,3 +1,4 @@
+{% load i18n humanize %}
 <!doctype html>
 <html style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
 	<head style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -7,7 +8,7 @@
 		<!-- Forcing initial-scale shouldn't be necessary -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 		<!-- Use the latest (edge) version of IE rendering engine -->
-		<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Welcome to our Community</title>
+		<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ company_name }} - {{ subject }}</title>
 		<!-- The title tag shows in email notifications, like Android 4.4. -->
 
 
@@ -247,8 +248,7 @@
 					<center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
 
 				<!-- Visually Hidden Preheader Text : BEGIN -->
-						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >Take your welcome gift! 
-						</div>
+						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ company_name }} - {{ subject }}</div>
 				<!-- Visually Hidden Preheader Text : END -->
 
 						<div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;box-shadow:0 5px 5px 0 #bfbfbf;margin-top:10px;" > 
@@ -259,15 +259,15 @@
 					<![endif]-->
 							
 				  <!-- Email Header : BEGIN -->
-				  <!--<table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#F3F3F3" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+				  <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#F3F3F3" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 					<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 					  <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
 						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-top:15px;padding-bottom:5px;padding-right:0;padding-left:0;text-align:left;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#EEEEEE;" >
 						  <a href="http://www.ikwen.com" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><img src="https://lh3.googleusercontent.com/UKnQJTLFRojYq16ysHKkALYatEMamNqlqN6kUBTaMXkCBwn_B70FjnvBH3OwsFiHFo2g-rdA_ux_yLRyYNCazERPKyZI2J-gAPfyOQK5ZrcvqXU18kRBo4q6gznucb5y7xr94Y1kaHM9qokKvtbmFzUWy4XRybiSjJ1JJyidrBFIr4usYhkLqmcXVVHIq3V-9b9S4xC1afnc96IR6JYMue-_Nnm0Z5z9iSqASqVDGTcl-TKmqRyE23Dp6nH3dKl2sJVudIIRqjSA91CIu_nPCHrIb2JvFXbGX9xD7D5YZUWU_uzSBNR-RtR5zhq7S0NnZuWljR86D30kz0nHYijU-ZH6v23mVVCwYhpRj2byy8hJ52lyt9h9RWHH5iWqCCImuwesyP_9cnsoEsfy_rjoPjtgmp3fKYdoGP4YgGitZuaY_3YRcQ6Nnmv6nAYbVGQesc5ylJRD6Jf3jffU-w3XcgHUcDYaDVwCanAKh4wyNHrjfhNBxK4LAQx_ic3toHvcsX0fkbWObLvYfDdtFeCXcdaJrgZRB1sxYnUiora34hprdUQAE-cRgNBsj1U-MpiJMlgN-H36OMfO0-qrpSVHNPGKlKpjdTirQ5PXVXY=w200-h49-no" width="100" height="auto" alt="ikwen website" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic;" ></a>
-						</div>				
+						</div>
 						</td>
 					</tr>
-				  </table>-->
+				  </table>
 				  <!-- Email Header : END -->
 
 				  <!-- Email Body : BEGIN -->
@@ -292,7 +292,9 @@
 												<![endif]-->
 										<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 											<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-												<td class="mobil-font-size" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:30px;mso-height-rule:exactly;line-height:35px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" > Bienvenue dans la communauté <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#f28632;" >{{project_name}}</span></td>
+												<td class="mobil-font-size" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:30px;mso-height-rule:exactly;line-height:35px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                                    Welcome to <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#f28632;" >{{project_name}}</span> community
+                                                </td>
 											</tr>
 										</table>
 									  <!--[if (gte mso 9)|(IE)]>
@@ -330,7 +332,11 @@
 									  <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:1%;min-width:100px;vertical-align:top;width:100%;" >
 														<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 														  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-															<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:10px;padding-right:10px;padding-left:10px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><a href="http://www.tchopetyamo.com" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><img src="../../images/tchopetyamologo.png" width="200" alt=""  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:100px;height:auto;-ms-interpolation-mode:bicubic;" ></a></td>
+															<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:10px;padding-right:10px;padding-left:10px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                                                <a href="{{ joined_service.url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                                <img src="{{ IKWEN_MEDIA_URL }}{{ joined_logo.name }}" width="200" alt=""  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:100px;height:auto;-ms-interpolation-mode:bicubic;" >
+                                                                </a>
+                                                            </td>
 														  </tr>
 														</table>
 													  </div>
@@ -343,10 +349,14 @@
 									  <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:66.66%;min-width:320px;vertical-align:top;" >
 										<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 										  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:18px;mso-height-rule:exactly;line-height:25px;color:#555555;padding-top:10px;padding-bottom:0;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#111111;" >Plein de bonnes choses vous attendent !</strong> <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+											<td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:18px;mso-height-rule:exactly;line-height:25px;color:#555555;padding-top:10px;padding-bottom:0;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                                <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#111111;" >{% trans "Great things are waiting for you !" %}</strong> <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 											  <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											  Profitez chaque jour de coupons à collectionner offerts gratuitement.<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-												Collectionnez-les pour bénéficier d'offres promotionelles, de tarifs préférentiels, de cadeaux exceptionnels et plus encore. Cliquez sur votre cadeau de bienvenue pour le récupérer... <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                {% blocktrans %}
+                                                Enjoy free collectible coupons every day. Collect them for promotional
+                                                offers, preferential rates, special gifts and more. <br>
+                                                Click on your welcome gift to retrieve it ...
+                                                {% endblocktrans %}
 											  <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 
 											  <!-- Image Button : BEGIN -->
@@ -354,7 +364,9 @@
 																<table cellspacing="0" cellpadding="0" border="0" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;table-layout:fixed !important;" >
 																	<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 																		<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-radius:3px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-																			<a href="http://www.ikwen.com/" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" > <img src="../../images/gift-1_1.png" width="300" alt="Gift_picture"  class="center-on-narrow animated infinite pulse" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:200px;height:auto;-ms-interpolation-mode:bicubic;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;" ></a>
+																			<a href="http://www.ikwen.com/" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                                              <img src="https://lh3.googleusercontent.com/e1VKEACDyoXSVYyZ36gaIgQG0o9XbSBHNW8ozPnJ6Hn0r1jSoLIzgrU8ZI9Ftmy7tDmP53xib6HWi70rsGasDQ4x6mpYtAvcSZSyBbdE3XtGG1tJtqDq_pc1zGYAWOMc25X_1ijGy365lmJZTOfIP955GzX-aq3vlVnKrn8BGeoEkk7Oh5zNH1RAxe-al6CgMU764hZhgvapZXPwKYYtRU2prTGE31h6E0E3xQ-AD6lsZXOGZLJ2clE7IQupsRzkEtkxDB3Z4B2LBuA32zO-wM_sJ5du5wMRe_I_gWT--peyaW2bOR84YMkZPVegPANrwbQShpAp3fROYjs4iXEGAiAv1v0vdy5e34DBLFepdYSrjoR1xh2QtcNLc2AjxjocVDp5Ufnfup4iRx4C81yjFHAd5QNQ9nPASDlp81-nZh38-W0acreQTPW_9073qDistDHo-lmcU5bkJFPfpEbNOjpPLOEqwclkYHvaZKpKlepg9HrRaNJzckXZhtqWB5vNKKb-IOiGJZG5LGU3R2xn46nYhvziUIAOQL88pEVoefxHfi2472H_B_qQurKCws8crqs188jtAsCP2TUZL7q1JoAXkQnZ4yeNHes-txY=s250-k-no" width="300" alt="Gift_picture"  class="center-on-narrow animated infinite pulse" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:200px;height:auto;-ms-interpolation-mode:bicubic;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;" >
+                                                                            </a>
 																		</td>
 																	</tr>
 																</table>
@@ -400,22 +412,23 @@
 										    <td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:14px;mso-height-rule:exactly;line-height:25px;color:#555555;padding-top:15px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#111111;" >Comment collectionner des coupons ?</strong>
 										      <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 												<div class="screen-adjust" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;height:150px;" >
-													<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:10px;margin-bottom:0;" >Les coupons se collectent de 3 façons :
+													<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:10px;margin-bottom:0;" >{% trans "There are 3 ways to earn coupons" %} :
 													<ul style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:5px;margin-bottom:5px;margin-right:0;margin-left:0;" >
-													  <li style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Acheter en ligne</li>
-													  <li style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Appartenir à une (des) communauté(s)</li>
-													  <li style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Rester actif sur vos différentes plateformes</li>
+													  <li style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Join our community (you just did it)" %}</li>
+													  <li style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Buy from us (online or onsite)" %}</li>
+													  <li style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Visit our website very often" %}</li>
 													</ul>
-													Toutes vos actions sont récompensées.
+													{% trans "All of your actions are rewarded" %}.
 													</p>
 												</div>
 										      
 										      <!-- Button : Begin -->
 										      <table cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;float:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 										        <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-										          <td  class="button-td" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-radius:3px;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;transition:all 100ms ease-in;" ><a href="http://www.google.com"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#233682;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" >
+										          <td  class="button-td" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-radius:3px;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;transition:all 100ms ease-in;" >
+                                                      <a href="{% trans "http://blog.ikwen.com/how-to-collect-coupons" %}" class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#233682;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" >
 										            <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
-										            En savoir plus
+										            {% trans "Read more" %}
 										            <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
 										            </a></td>
 									            </tr>
@@ -434,19 +447,25 @@
 									  <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;max-width:50%;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;min-width:200px;vertical-align:top;width:100%;" >
 										<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 										  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-										    <td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:14px;mso-height-rule:exactly;line-height:25px;color:#555555;padding-top:15px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#111111;" >Comment récupérer mes gains ?</strong>
+										    <td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:14px;mso-height-rule:exactly;line-height:25px;color:#555555;padding-top:15px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                              <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#111111;" >{% trans "How to recover my earnings?" %}</strong>
 										      <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 												<div class="screen-adjust" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;height:150px;" >
 													<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:10px;margin-bottom:0;height:180px;" >
-														Une fois que vous avez réunis 100 coupons du même item, vous pouvez les échanger contre le(s) item(s) équivalent(s) directement en magasin et sans frais supplémentaires ! Il existe 3 types de coupons, récupérer les tous.
+                                                      {% blocktrans %}
+													  Once you have collected 100 coupons from the same item, you can
+                                                      redeem them for the equivalent item (s) directly in the store and at
+                                                      no additional charge! There are 3 types of coupons, get them all.
+                                                      {% endblocktrans %}
 													</p>												
 												</div>
 											<!-- Button : Begin -->
 										      <table cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;float:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 										        <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-										          <td  class="button-td" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-radius:3px;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;transition:all 100ms ease-in;" ><a href="http://www.google.com"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#233682;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" >
+										          <td  class="button-td" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-radius:3px;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;transition:all 100ms ease-in;" >
+                                                      <a href="{% trans "http://blog.ikwen.com/how-to-recover-my-earned-coupons" %}"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#233682;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" >
 										            <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
-										            En savoir plus
+										            {% trans "Read more" %}
 										            <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
 										            </a></td>
 									            </tr>

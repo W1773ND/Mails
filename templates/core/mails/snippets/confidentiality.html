@@ -1,18 +1,32 @@
 {% load i18n %}
-<table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#F3F3F3" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;padding-top:15px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+<table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#F3F3F3" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;padding-top:15px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-      <td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-            <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;max-width:600px;" >
-                {% blocktrans %}
-                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#cccccc;font-size:12px;text-align:left;" >CONFIDENTIALITY </p>
+      <td align="center" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+            <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:20px;padding-top:10px;max-width:600px;border-top-width:2px;border-top-style:solid;border-top-color:rgba(0, 0, 0, 0.14);" >
+                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#cccccc;font-size:12px;text-align:left;" >{% trans "CONFIDENTIALITY" %}</p>
                 <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#cccccc;font-size:12px;text-align:justify;" >
-                    The information contained in this e-mail and any accompanying documents is confidential or otherwise protected from disclosure. If you are not the intended recipient, please immediately alert the sender by reply e-mail and delete this message and any attachments. Any copy, dissemination or unauthorized access of the contents of this message by anyone other than the intended recipient is strictly prohibited. E-mails may be susceptible to falsification or alteration and cause data corruption and/or loss of data. IKWEN and/or any of its subsidiaries decline any liability resulting from the consequences thereof. Therefore, this e-mail and any attachments are used at your own risk.
-                </p>
+                {% blocktrans %}
+                    The information contained in this e-mail and any accompanying documents is confidential or otherwise
+                    protected from disclosure. If you are not the intended recipient, please immediately alert the
+                    sender by reply e-mail and delete this message and any attachments. Any copy, dissemination or
+                    unauthorized access of the contents of this message by anyone other than the intended recipient
+                    is strictly prohibited. E-mails may be susceptible to falsification or alteration and cause data
+                    corruption and/or loss of data. {{ company_name }} and/or any of its subsidiaries decline any liability resulting
+                    from the consequences thereof. Therefore, this e-mail and any attachments are used at your own risk.
                 {% endblocktrans %}
-        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:12px;color:#555555;" >© {{ year }} ikwen, Inc. All Rights Reserved.</span></p>
-				<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;font-size:12px;padding-bottom:40px;" >
-                <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;float:none;display:inline !important;" ><a href="{{ site_url_about}}" target="_blank" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-decoration:none;color:#4834d4;padding-bottom:30px;" >{% trans "About us" %}</a></span>
-              <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;float:none;display:inline !important;" >.</span></span></p>
+                </p>
+                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                    <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:12px;color:#555555;" >{% blocktrans %}© {{ year }} {{ company_name }}. All Rights Reserved.{% endblocktrans %}</span>
+                </p>
+                {% if service.project_name != 'ikwen' %}
+                <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                    <a href="http://www.ikwen.com/about" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding-bottom:30px; text-decoration: none; font-size: 10px" >
+                        Powered by
+                        <img alt="ikwen_website" src="https://lh3.googleusercontent.com/v9CCPOyEGFuD-T0E1OfBUGb_CyMPacAQFLG4xufA1pobFajCbO_tHBK09tilfMxP5qPd2V4BvYT2sb4Vd2_8d-vqDjb43qVyvsO9KdYALH0C7RsSf0oOMW62w23VsvYVknbI5jun1FBqg66Fv9yr7dO6m5TG6zRwU9y3EMp8q_ZDlmk2nYDcL-2GnxozBNKigLRxikOrYT8OBqEoBWd76bSmlS_oE5nwyrKs3G2_xpYOBL_2ETsJfvoMGbfvGQwY0fmkeRVsoXkr6FJJd_3_mN4s6sHxdJAfIDroP7w8Xv1hqXWeG5eACThXw_69LNmzmvkt-uYMrjvNefW3NSVu64mIQGRIhLOOgqhVPAh9bVDx9ayBuNmN_NOjEnPpfok5zu6erofbS1l1l0SMRP39XyxiwcwSukq1PwK7OlKejNHC7_Irqv0d5saVgDu0B08V7D2I_t6qjSvJcoOpdMe-NzfncVqtwfUDikuho97OwA6ENhurpNlmlWM2zinmCiH-IRVFyyw8ZoOsFI6vMBPNGa4rZ1NBOn04gaI13hTDwTpkHwL8TMCIy-WeK8zTrsKdB2_LxKRTgDf9x62BSJm6H-AQ0p0IaUp8Qp9J0aY=w60-h15-no" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-ms-interpolation-mode:bicubic;" >
+                    </a>
+                </div>
+                {% endif %}
+                <p>&nbsp;</p>
         </div>
       </td>
     </tr>
