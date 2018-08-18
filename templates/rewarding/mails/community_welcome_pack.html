@@ -227,7 +227,8 @@
 		}
 			
 		.screen-adjust{
-			text-align: justify!important;			
+			text-align: justify!important;
+			height: 120px !important;
 		}
 		.screen-display{
 			margin-top: 0 !important;
@@ -237,6 +238,10 @@
 		@media screen and (max-width: 767px) and (orientation: landscape){
 		.screen-display{
 			margin-top: 0 !important;
+		}
+		
+		.screen-adjust{
+			height: 140px !important;
 		}
 		}
 		</style>
@@ -292,7 +297,7 @@
 												<![endif]-->
 										<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 											<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-												<td class="mobil-font-size" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:30px;mso-height-rule:exactly;line-height:35px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+												<td class="mobil-font-size" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:25px;mso-height-rule:exactly;line-height:20px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                                     {% blocktrans with joined_project_name=joined_service.project_name %}
                                                     Welcome to <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#f28632;" >{{ joined_project_name}} </span> community
                                                     {% endblocktrans %}
@@ -351,12 +356,12 @@
 									  <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:66.66%;min-width:320px;vertical-align:top;" >
 										<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 										  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:18px;mso-height-rule:exactly;line-height:25px;color:#555555;padding-top:10px;padding-bottom:0;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+											<td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:16px;mso-height-rule:exactly;line-height:18px;color:#555555;padding-top:10px;padding-bottom:0;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                                 <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#111111;" >{% trans "Great things are waiting for you !" %}</strong> <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 											  <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                                                 {% blocktrans %}
                                                 Enjoy free collectible coupons every day. Collect them for promotional
-                                                offers, preferential rates, special gifts and more. <br>
+                                                offers, preferential rates, special gifts and more. <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                                                 Click on your welcome gift to retrieve it ...
                                                 {% endblocktrans %}
 											  <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -411,9 +416,9 @@
 									  <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;max-width:50%;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;min-width:200px;vertical-align:top;width:100%;" >
 										<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 										  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-										    <td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:14px;mso-height-rule:exactly;line-height:25px;color:#555555;padding-top:15px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#111111;" >Comment collectionner des coupons ?</strong>
+										    <td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:14px;mso-height-rule:exactly;line-height:18px;color:#555555;padding-top:15px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#111111;" >Comment collectionner des coupons ?</strong>
 										      <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-												<div class="screen-adjust" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;height:150px;" >
+												<div class="screen-adjust" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;height:160px;" >
 													<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:10px;margin-bottom:0;" >{% trans "There are 3 ways to earn coupons" %} :
 													<ul style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:5px;margin-bottom:5px;margin-right:0;margin-left:0;" >
 													  <li style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Join our community (you just did it)" %}</li>
@@ -449,10 +454,10 @@
 									  <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;max-width:50%;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;min-width:200px;vertical-align:top;width:100%;" >
 										<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 										  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-										    <td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:14px;mso-height-rule:exactly;line-height:25px;color:#555555;padding-top:15px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+										    <td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:14px;mso-height-rule:exactly;line-height:18px;color:#555555;padding-top:15px;padding-bottom:10px;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                               <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#111111;" >{% trans "How to recover my earnings?" %}</strong>
 										      <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-												<div class="screen-adjust" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;height:150px;" >
+												<div class="screen-adjust" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;height:160px;" >
 													<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:10px;margin-bottom:0;height:180px;" >
                                                       {% blocktrans %}
 													  Once you have collected 100 coupons from the same item, you can
