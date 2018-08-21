@@ -8,7 +8,7 @@
 <!-- Forcing initial-scale shouldn't be necessary -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 <!-- Use the latest (edge) version of IE rendering engine -->
-<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ company_name }} - {{ subject }}</title>
+<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ subject }} - {{ company_name }}</title>
 <!-- The title tag shows in email notifications, like Android 4.4. -->
 
 <!-- CSS Reset -->
@@ -92,7 +92,7 @@ table.center-on-narrow {
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
         
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ company_name }} - {{ subject }}</div>
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ subject }} - {{ company_name }}</div>
         <!-- Visually Hidden Preheader Text : END -->
         <div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;box-shadow:6px 5px 5px  #bfbfbf;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;margin-top:10px;" > 
           <!--[if (gte mso 9)|(IE)]>
@@ -232,7 +232,7 @@ table.center-on-narrow {
 				<!-- Button : END -->
 				<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                 <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#8f8f8f;text-align:center;margin-bottom:20px;" >
-					{% blocktrans %}Thank you for your business with {{ company_name }}.{% endblocktrans %}
+					{% blocktrans %}Thank you for your business with {{ company_name }}{% endblocktrans %}
 			  	</p>
                 <!--[if mso]>
                         </td>

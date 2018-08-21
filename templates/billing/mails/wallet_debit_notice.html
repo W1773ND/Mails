@@ -1,3 +1,4 @@
+{% load i18n humanize %}
 <!doctype html>
 <html style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
 <head style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -7,7 +8,7 @@
 <!-- Forcing initial-scale shouldn't be necessary -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 <!-- Use the latest (edge) version of IE rendering engine -->
-<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Payment notice</title>
+<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ subject }} - {{ company_name }}</title>
 <!-- The title tag shows in email notifications, like Android 4.4. -->
 	
 <!-- CSS Reset -->
@@ -34,7 +35,7 @@
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
         
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" > This mail is intended for account debit notice. </div>
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" > {{ subject }} - {{ company_name }}</div>
         <!-- Visually Hidden Preheader Text : END -->
         
         <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;box-shadow:6px 5px 5px  #bfbfbf;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" > 
@@ -49,8 +50,14 @@
 					<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 					  <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
 						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-top:15px;padding-bottom:5px;padding-right:0;padding-left:0;text-align:left;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#EEEEEE;" >
-						  <a href="http://www.ikwen.com" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><img src="https://lh3.googleusercontent.com/UKnQJTLFRojYq16ysHKkALYatEMamNqlqN6kUBTaMXkCBwn_B70FjnvBH3OwsFiHFo2g-rdA_ux_yLRyYNCazERPKyZI2J-gAPfyOQK5ZrcvqXU18kRBo4q6gznucb5y7xr94Y1kaHM9qokKvtbmFzUWy4XRybiSjJ1JJyidrBFIr4usYhkLqmcXVVHIq3V-9b9S4xC1afnc96IR6JYMue-_Nnm0Z5z9iSqASqVDGTcl-TKmqRyE23Dp6nH3dKl2sJVudIIRqjSA91CIu_nPCHrIb2JvFXbGX9xD7D5YZUWU_uzSBNR-RtR5zhq7S0NnZuWljR86D30kz0nHYijU-ZH6v23mVVCwYhpRj2byy8hJ52lyt9h9RWHH5iWqCCImuwesyP_9cnsoEsfy_rjoPjtgmp3fKYdoGP4YgGitZuaY_3YRcQ6Nnmv6nAYbVGQesc5ylJRD6Jf3jffU-w3XcgHUcDYaDVwCanAKh4wyNHrjfhNBxK4LAQx_ic3toHvcsX0fkbWObLvYfDdtFeCXcdaJrgZRB1sxYnUiora34hprdUQAE-cRgNBsj1U-MpiJMlgN-H36OMfO0-qrpSVHNPGKlKpjdTirQ5PXVXY=w200-h49-no" width="100" height="auto" alt="ikwen website" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic;" ></a>
-						</div>				
+                          {% if project_name == 'ikwen' %}
+						    <a href="http://www.ikwen.com" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><img src="https://lh3.googleusercontent.com/UKnQJTLFRojYq16ysHKkALYatEMamNqlqN6kUBTaMXkCBwn_B70FjnvBH3OwsFiHFo2g-rdA_ux_yLRyYNCazERPKyZI2J-gAPfyOQK5ZrcvqXU18kRBo4q6gznucb5y7xr94Y1kaHM9qokKvtbmFzUWy4XRybiSjJ1JJyidrBFIr4usYhkLqmcXVVHIq3V-9b9S4xC1afnc96IR6JYMue-_Nnm0Z5z9iSqASqVDGTcl-TKmqRyE23Dp6nH3dKl2sJVudIIRqjSA91CIu_nPCHrIb2JvFXbGX9xD7D5YZUWU_uzSBNR-RtR5zhq7S0NnZuWljR86D30kz0nHYijU-ZH6v23mVVCwYhpRj2byy8hJ52lyt9h9RWHH5iWqCCImuwesyP_9cnsoEsfy_rjoPjtgmp3fKYdoGP4YgGitZuaY_3YRcQ6Nnmv6nAYbVGQesc5ylJRD6Jf3jffU-w3XcgHUcDYaDVwCanAKh4wyNHrjfhNBxK4LAQx_ic3toHvcsX0fkbWObLvYfDdtFeCXcdaJrgZRB1sxYnUiora34hprdUQAE-cRgNBsj1U-MpiJMlgN-H36OMfO0-qrpSVHNPGKlKpjdTirQ5PXVXY=w200-h49-no" width="100" height="auto" alt="ikwen website" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic;" ></a>
+						  {% else %}
+						    <a href="{{ service.url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                <img src="{{ IKWEN_MEDIA_URL }}{{ logo.name }}" width="100" height="auto" alt="ikwen website" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic;" >
+                            </a>
+						  {% endif %}
+                        </div>
 						</td>
 					</tr>
 				  </table>
@@ -76,8 +83,10 @@
                 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:600px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
                     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                       <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:20px;mso-height-rule:exactly;line-height:25px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" > 
-                        <h3 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#ffffff;margin-bottom:0px;" >Thanks for dealing with IKWEN</h3>
-                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >We successfully receive your payment for your usage charges, so you're all set!</p>
+                        <h3 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#ffffff;margin-bottom:0px;" >{% blocktrans %}Thanks for your business with ikwen{% endblocktrans %}</h3>
+                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% blocktrans %}
+                            We successfully charged your wallet for your service fees, so you're all set !
+                        {% endblocktrans %}</p>
                       </td>
                     </tr>
                 </table>
@@ -130,40 +139,37 @@
                         <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                             <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;font-size:16px;mso-height-rule:exactly;line-height:18px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                 <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;" >
-                                <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#253781;font-size:16px;" >Payment details for {{ client_name }}:</strong><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#253781;font-size:16px;" >
+                                    {% blocktrans %}Summary for {{ member_name }}{% endblocktrans %}:
+                                </strong><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                                 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:600px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;line-height:20px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >  
-                                <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                                   	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Payment type</td>
-                                    <td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ payment.method }}</td>
-                                </tr>
-                                <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >                                
-                                	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Product description</td>
-                                  	<td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Basic website</td>
-                                </tr>
-								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >                                
-                                	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Date/Time</td>
-                                  	<td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >15/08/18,&nbsp;  15:12AM</td>
-                                </tr>
-								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                                
-                                	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Amount</strong></td>
-                                  	<td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >25,000 XAF</strong></td>
-                                </tr>
-								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-									<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-										<!-- Button : Begin -->
-										      <table cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;float:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:10px !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-										        <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-										          <td  class="button-td" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-radius:3px;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;transition:all 100ms ease-in;" ><a href="http://www.google.com"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#233682;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" >
-										            <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
-										            View notice
-										            <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
-										            </a></td>
-									            </tr>
-									          </table>
-										      <!-- Button : END -->
-									</td>
-								</tr>
+                                    {% for entry in invoice.entries %}
+                                    <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                        <td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ entry.item.label }}</td>
+                                        <td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ config.currency_symbol }} {{ entry.total|intcomma }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                    <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                        <td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Amount paid" %}</strong></td>
+                                        <td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                            <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ config.currency_symbol }} {{ invoice.amount|intcomma }}</strong>
+                                        </td>
+                                    </tr>
+                                    <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                        <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                            <!-- Button : Begin -->
+                                                  <table cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;float:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:10px !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+                                                    <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                      <td  class="button-td" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-radius:3px;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;transition:all 100ms ease-in;" ><a href="{{ invoice_url }}"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#233682;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" >
+                                                        <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                                        {% trans "View invoice" %}
+                                                        <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                                        </a></td>
+                                                    </tr>
+                                                  </table>
+                                                  <!-- Button : END -->
+                                        </td>
+                                    </tr>
                                 </table>
                                 </div>								
 							</td>
@@ -197,25 +203,8 @@
             <!-- 1 Column Text : END -->
 						
             <!-- Email Footer : BEGIN -->
-							<table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#F3F3F3" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;padding-top:15px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;border-spacing:0 !important;" >
-								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-								  <td align="center" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-										<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;max-width:600px;" >
-											<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#cccccc;font-size:12px;text-align:left;" >CONFIDENTIALITY </p>
-											<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#cccccc;font-size:12px;text-align:justify;" >
-												The information contained in this e-mail and any accompanying documents is confidential or otherwise protected from disclosure. If you are not the intended recipient, please immediately alert the sender by reply e-mail and delete this message and any attachments. Any copy, dissemination or unauthorized access of the contents of this message by anyone other than the intended recipient is strictly prohibited. E-mails may be susceptible to falsification or alteration and cause data corruption and/or loss of data. IKWEN and/or any of its subsidiaries decline any liability resulting from the consequences thereof. Therefore, this e-mail and any attachments are used at your own risk.
-											</p>
-									<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:12px;color:#555555;" >© 2018 ikwen, Inc. All Rights Reserved.</span></p>
-					
-										  <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-												<a href="http://www.ikwen.com/about" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding-bottom:30px;" ><img alt="ikwen_website" src="https://lh3.googleusercontent.com/6LDYStbhJuUa0HUac5C7m47YVWKyW49a4FeFLZ31LmgsDYwK0WaOvUJThC8fW-gOQpWizAuWjOgku9cOZGSLrZg2SD0Rx0qonjYRygWcyBtmmg4nYJRooCVVKdohgTpRDxec6iwQiem4r_jnGVhHzOmuL_qnj09Xv-eC6ZHqNskFkcqfOrxZTTXHJXimm-k-faGUHERPkwTdOZ_YH5M9va4ljjTEO2F3_9UUnmfGbknudBabEtLiGkcfYvk0QxJuuVIIa9r2mlJl2G-ldvzY98jEG686n0BUcXciRk0kUlO5hEQ_gJmmnjJDScmLPEDpIFRtoKgZFUWiwlha0j_r5fEMjVJz0NTDGtnb12cmPN75glX9G6APyM7GZWfBBACbX8h4Z29cIGduVSBpzyA5mNCNr7y47z4TgHJdfib7AGL_FbyVgCEUSz2N8Qg5a8RdHv7wsErecWUhjLlY0uk3bVLFmhC2TWxKugMA5wrs6wB9dqQVjfUNjrefmRJ8wqwg_byMNtaK9nHVFIQ0PW2PTR62mIZ_COH7O4IFsPkK0ucF91SK3KpSoy-Nktg8ZN4P9mBpZs_i82i8QNga2RBT_FS5g44XtenDcYL3Gms=w60-h15-no" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-ms-interpolation-mode:bicubic;" ></a>
-										  	</div>
-								    </div>
-								  </td>
-								</tr>
-							</table>
-
-							  <!-- Email Footer : END --> 
+              {% include 'core/mails/snippets/confidentiality.html' %}
+            <!-- Email Footer : END -->
 	</table>
         </div>
     </center>

@@ -1,3 +1,4 @@
+{% load i18n humanize %}
 <!doctype html>
 <html style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
 <head style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -7,7 +8,7 @@
 <!-- Forcing initial-scale shouldn't be necessary -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 <!-- Use the latest (edge) version of IE rendering engine -->
-<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Cash-out request</title>
+<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ subject }} - {{ company_name }}</title>
 <!-- The title tag shows in email notifications, like Android 4.4. -->
 	
 
@@ -18,7 +19,7 @@
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
         
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" > This mail is intended for cash-out request on your ikwen account. </div>
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ subject }} - {{ company_name }}</div>
         <!-- Visually Hidden Preheader Text : END -->
         
         <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;box-shadow:6px 5px 5px  #bfbfbf;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" > 
@@ -59,10 +60,9 @@
                             <![endif]-->
                 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:600px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
                     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                      <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:20px;mso-height-rule:exactly;line-height:25px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" > 
-                        <h3 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#ffffff;margin-bottom:0px;" >Thanks for dealing with IKWEN</h3>
-                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Dear {{ client_name }},<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-							This is a confirmation that we just reveived a request to cash-out your money on {{ application_name}}. Money will be paid within the next 24h. See details below.
+                      <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:20px;mso-height-rule:exactly;line-height:25px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Dear" %} {{ client_name }},<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+							This is a confirmation that we just reveived a request to cash-out your money on {{ project_name }}. Money will be paid within the next 24h. See details below.
 					  	</p>
                       </td>
                     </tr>
@@ -116,21 +116,22 @@
                         <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                             <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;font-size:16px;mso-height-rule:exactly;line-height:18px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                 <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;" >
-                                <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#253781;font-size:16px;" >Pay to {{ client_name }}:</strong><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#253781;font-size:16px;" >{% trans "Pay to" %} {{ client_name }}:</strong><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                                 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:600px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;line-height:20px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >  
                                 <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                                   	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Amount</td>
-                                    <td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ cash-out.request }}</td>
+                                   	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{% trans "Amount" %}</td>
+                                    <td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ cash_out_request.amount|intcomma }}</td>
                                 </tr>
                                 <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >                                
-                                	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Method</td>
-                                  	<td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ payment.method }}</td>
+                                	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{% trans "Method" %}</td>
+                                  	<td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ cash_out_request.method }}</td>
                                 </tr>
+                                {% if cash_out_request.account_number %}
 								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >                                
-                                	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Account number</td>
-                                  	<td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ client.phone }}</td>
+                                	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{% trans "Account number" %}</td>
+                                  	<td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ cash_out_request.account_number }}</td>
                                 </tr>
-								
+                                {% endif %}
                                 </table>
                                 </div>								
 							</td>
@@ -164,25 +165,8 @@
             <!-- 1 Column Text : END -->
 						
             <!-- Email Footer : BEGIN -->
-							<table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#F3F3F3" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;padding-top:15px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;border-spacing:0 !important;" >
-								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-								  <td align="center" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-										<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;max-width:600px;" >
-											<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#cccccc;font-size:12px;text-align:left;" >CONFIDENTIALITY </p>
-											<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#cccccc;font-size:12px;text-align:justify;" >
-												The information contained in this e-mail and any accompanying documents is confidential or otherwise protected from disclosure. If you are not the intended recipient, please immediately alert the sender by reply e-mail and delete this message and any attachments. Any copy, dissemination or unauthorized access of the contents of this message by anyone other than the intended recipient is strictly prohibited. E-mails may be susceptible to falsification or alteration and cause data corruption and/or loss of data. IKWEN and/or any of its subsidiaries decline any liability resulting from the consequences thereof. Therefore, this e-mail and any attachments are used at your own risk.
-											</p>
-									<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:12px;color:#555555;" >© 2018 ikwen, Inc. All Rights Reserved.</span></p>
-					
-										  <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-												<a href="http://www.ikwen.com/about" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding-bottom:30px;" ><img alt="ikwen_website" src="https://lh3.googleusercontent.com/6LDYStbhJuUa0HUac5C7m47YVWKyW49a4FeFLZ31LmgsDYwK0WaOvUJThC8fW-gOQpWizAuWjOgku9cOZGSLrZg2SD0Rx0qonjYRygWcyBtmmg4nYJRooCVVKdohgTpRDxec6iwQiem4r_jnGVhHzOmuL_qnj09Xv-eC6ZHqNskFkcqfOrxZTTXHJXimm-k-faGUHERPkwTdOZ_YH5M9va4ljjTEO2F3_9UUnmfGbknudBabEtLiGkcfYvk0QxJuuVIIa9r2mlJl2G-ldvzY98jEG686n0BUcXciRk0kUlO5hEQ_gJmmnjJDScmLPEDpIFRtoKgZFUWiwlha0j_r5fEMjVJz0NTDGtnb12cmPN75glX9G6APyM7GZWfBBACbX8h4Z29cIGduVSBpzyA5mNCNr7y47z4TgHJdfib7AGL_FbyVgCEUSz2N8Qg5a8RdHv7wsErecWUhjLlY0uk3bVLFmhC2TWxKugMA5wrs6wB9dqQVjfUNjrefmRJ8wqwg_byMNtaK9nHVFIQ0PW2PTR62mIZ_COH7O4IFsPkK0ucF91SK3KpSoy-Nktg8ZN4P9mBpZs_i82i8QNga2RBT_FS5g44XtenDcYL3Gms=w60-h15-no" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-ms-interpolation-mode:bicubic;" ></a>
-										  	</div>
-								    </div>
-								  </td>
-								</tr>
-							</table>
-
-							  <!-- Email Footer : END --> 
+              {% include 'core/mails/snippets/confidentiality.html' %}
+			<!-- Email Footer : END -->
 	</table>
         </div>
     </center>
