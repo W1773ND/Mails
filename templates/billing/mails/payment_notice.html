@@ -7,10 +7,26 @@
 <!-- Forcing initial-scale shouldn't be necessary -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 <!-- Use the latest (edge) version of IE rendering engine -->
-<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Cash-out request</title>
+<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Payment notice</title>
 <!-- The title tag shows in email notifications, like Android 4.4. -->
 	
+<!-- CSS Reset -->
 
+<!-- Progressive Enhancements -->
+<style type="text/css">
+/* What it does: Hover styles for buttons */
+.button-td, .button-a {
+	transition: all 100ms ease-in;
+}
+.button-td:hover, .button-a:hover {
+	background:#319dd5!important;
+	border-color: #319dd5!important;
+}
+.button-ta:hover, .button-b:hover {
+	background:#319dd5!important;
+	border-color: #319dd5!important;
+}
+</style>
 </head>
 <body width="100%" bgcolor="#e0e0e0"  yahoo="yahoo" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
 <table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#e0e0e0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;table-layout:fixed !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;" >
@@ -18,7 +34,7 @@
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
         
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" > This mail is intended for cash-out request on your ikwen account. </div>
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" > This mail is intended for account debit notice. </div>
         <!-- Visually Hidden Preheader Text : END -->
         
         <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;box-shadow:6px 5px 5px  #bfbfbf;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" > 
@@ -38,7 +54,7 @@
 						</td>
 					</tr>
 				  </table>
-				  <!-- Email Header : END -->
+				  <!-- Email Header : END --> 
           
           <!-- Email Body : BEGIN -->
           <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;border-top-width:3px;border-top-style:solid;border-top-color:#9CC640;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
@@ -61,9 +77,7 @@
                     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                       <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:20px;mso-height-rule:exactly;line-height:25px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" > 
                         <h3 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#ffffff;margin-bottom:0px;" >Thanks for dealing with IKWEN</h3>
-                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Dear {{ client_name }},<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-							This is a confirmation that we just reveived a request to cash-out your money on {{ application_name}}. Money will be paid within the next 24h. See details below.
-					  	</p>
+                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >We successfully receive your payment for your usage charges, so you're all set!</p>
                       </td>
                     </tr>
                 </table>
@@ -116,21 +130,40 @@
                         <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                             <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;font-size:16px;mso-height-rule:exactly;line-height:18px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                 <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;" >
-                                <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#253781;font-size:16px;" >Pay to {{ client_name }}:</strong><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#253781;font-size:16px;" >Payment details for {{ client_name }}:</strong><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                                 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:600px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;line-height:20px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >  
                                 <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                                   	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Amount</td>
-                                    <td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ cash-out.request }}</td>
+                                   	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Payment type</td>
+                                    <td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ payment.method }}</td>
                                 </tr>
                                 <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >                                
-                                	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Method</td>
-                                  	<td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ payment.method }}</td>
+                                	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Product description</td>
+                                  	<td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Basic website</td>
                                 </tr>
 								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >                                
-                                	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Account number</td>
-                                  	<td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ client.phone }}</td>
+                                	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >Date/Time</td>
+                                  	<td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >15/08/18,&nbsp;  15:12AM</td>
                                 </tr>
-								
+								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                
+                                	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >Amount</strong></td>
+                                  	<td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >25,000 XAF</strong></td>
+                                </tr>
+								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+									<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+										<!-- Button : Begin -->
+										      <table cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;float:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:10px !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+										        <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+										          <td  class="button-td" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-radius:3px;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;transition:all 100ms ease-in;" ><a href="http://www.google.com"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#233682;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" >
+										            <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+										            View notice
+										            <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+										            </a></td>
+									            </tr>
+									          </table>
+										      <!-- Button : END -->
+									</td>
+								</tr>
                                 </table>
                                 </div>								
 							</td>
