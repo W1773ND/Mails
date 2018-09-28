@@ -65,7 +65,7 @@
 											<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 												<td class="mobil-font-size" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:25px;mso-height-rule:exactly;line-height:20px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                                     {% blocktrans %}
-                                                    Welcome to <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#f28632;" >{{ project_name }}</span> community.
+                                                    Welcome to <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#f28632;" >{{ joined_project_name }}</span> community.
                                                     {% endblocktrans %}
                                                 </td>
 											</tr>
@@ -106,8 +106,8 @@
 														<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 														  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 															<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:10px;padding-right:10px;padding-left:10px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-                                                                <a href="{{ service.url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                                                                    <img src="{{ IKWEN_MEDIA_URL }}{{ logo.name }}" width="200" alt=""  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:100px;height:auto;-ms-interpolation-mode:bicubic;" >
+                                                                <a href="{{ joined_service.url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                                    <img src="{{ IKWEN_MEDIA_URL }}{{ joined_logo.name }}" width="200" alt=""  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:100px;height:auto;-ms-interpolation-mode:bicubic;" >
                                                                 </a>
                                                             </td>
 														  </tr>
@@ -124,7 +124,7 @@
 										  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 											<td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:16px;mso-height-rule:exactly;line-height:18px;color:#555555;padding-top:10px;padding-bottom:0;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><di style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ></di>
                                                 <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;" >
-                                                    {% blocktrans %}You just joined {{ project_name }} community.{% endblocktrans %}
+                                                    {% blocktrans %}You just joined {{ joined_project_name }} community.{% endblocktrans %}
                                                 </strong> <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 											  <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                                               {% if config.description %}
