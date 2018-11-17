@@ -1,0 +1,461 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-23 08:18+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: templates/accesscontrol/mails/community_welcome.html:11
+#: templates/accesscontrol/mails/community_welcome.html:22
+msgid "Welcome to our Community"
+msgstr ""
+
+#: templates/accesscontrol/mails/community_welcome.html:67
+#, python-format
+msgid ""
+"\n"
+"                                                    Welcome to <span style="
+"\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;color:#f28632;\" "
+">%(project_name)s</span> community.\n"
+"                                                    "
+msgstr ""
+
+#: templates/accesscontrol/mails/community_welcome.html:127
+#, python-format
+msgid "You just joined %(project_name)s community."
+msgstr ""
+
+#: templates/accesscontrol/mails/community_welcome.html:133
+msgid "Thank you"
+msgstr ""
+
+#: templates/accesscontrol/mails/welcome_to_ikwen.html:11
+#: templates/accesscontrol/mails/welcome_to_ikwen.html:199
+#: templates/accesscontrol/mails/welcome_to_ikwen.html:235
+msgid "Welcome to ikwen"
+msgstr ""
+
+#: templates/accesscontrol/mails/welcome_to_ikwen.html:236
+msgid ""
+"\n"
+"                          By joining us, you’ve just entered into an "
+"exciting universe whereby every action is rewarded.\n"
+"                          The adventure is just beginning. On ikwen,  over "
+"thousands of you are connected to their\n"
+"                          favourite businesses. These businesses offer you "
+"exclusive gifts every day and enable you to\n"
+"                          benefit from tailored-promotional offers simply "
+"because you are here. To celebrate the\n"
+"                          expansion of the ikwen family together, here is "
+"the first gift (among others) that we offer\n"
+"                          you. Click on gift box to collect it!\n"
+"                          "
+msgstr ""
+
+#: templates/accesscontrol/mails/welcome_to_ikwen.html:278
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\t\t\t\t\t<span style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%;color:#223682;text-align:center;\" ><p style=\"-ms-text-size-"
+"adjust:100%%;-webkit-text-size-adjust:100%%;\" ><h2 style=\"-ms-text-size-"
+"adjust:100%%;-webkit-text-size-adjust:100%%;\" >3 tips on not missing out on "
+"any gift</h2></p></span>\n"
+"\t\t\t\t\t\t\t\t<ul style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%;\" >\n"
+"\t\t\t\t\t\t\t\t\t<li style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%;\" >Attach our sending address <a href= \"http://ikwen.com\" "
+"style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >no-"
+"reply@ikwen.com</a> to your contacts.</li>\n"
+"\t\t\t\t\t\t\t\t\t<li style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%;\" >If you are on Gmail, we’d appear on the promotion tab of "
+"your mailbox (the notification tab), click, hold and drag us to your main "
+"mailbox. Gmail would ask you if that should always be the case as regards us "
+"(a “pop-up” menu would appear at the top of your screen), reply “YES” and, "
+"hope you’d find us without having to search.</li>\n"
+"\t\t\t\t\t\t\t\t\t<li style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%;\" >Whatever the email platform: during our first send (this "
+"one), it’s possible that your email box doesn’t recognise us and classifies "
+"us under spam/junk (NB: this is unfair given that we never ever spam), If "
+"you don’ find us after some time, check us in the Spam... and take us out of "
+"there!   (For technical difficulties: <a href= \"http://ikwen.com\" style=\"-"
+"ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >support@ikwen."
+"com</a>).</li>\n"
+"\t\t\t\t\t\t\t\t</ul>\n"
+"\t\t\t\t\t\t\t"
+msgstr ""
+
+#: templates/billing/mails/notice.html:141
+#, python-format
+msgid "Dear %(member_name)s,"
+msgstr ""
+
+#: templates/billing/mails/notice.html:195
+#: templates/core/mails/service_deployed.html:286
+msgid "Invoice"
+msgstr ""
+
+#: templates/billing/mails/notice.html:196
+#: templates/cashout/mails/cashout_request.html:122
+#: templates/core/mails/service_deployed.html:292
+msgid "Amount"
+msgstr ""
+
+#: templates/billing/mails/notice.html:198
+msgid "Due Date"
+msgstr ""
+
+#: templates/billing/mails/notice.html:201
+msgid "Service details"
+msgstr ""
+
+#: templates/billing/mails/notice.html:235
+#, python-format
+msgid "Thank you for your business with %(company_name)s"
+msgstr ""
+
+#: templates/billing/mails/wallet_debit_notice.html:86
+msgid "Thanks for your business with ikwen"
+msgstr ""
+
+#: templates/billing/mails/wallet_debit_notice.html:87
+msgid ""
+"\n"
+"                            We successfully charged your wallet for your "
+"service fees, so you're all set !\n"
+"                        "
+msgstr ""
+
+#: templates/billing/mails/wallet_debit_notice.html:143
+#, python-format
+msgid "Summary for %(member_name)s"
+msgstr ""
+
+#: templates/billing/mails/wallet_debit_notice.html:153
+msgid "Amount paid"
+msgstr ""
+
+#: templates/billing/mails/wallet_debit_notice.html:165
+msgid "View invoice"
+msgstr ""
+
+#: templates/cashout/mails/cashout_request.html:64
+msgid "Dear"
+msgstr ""
+
+#: templates/cashout/mails/cashout_request.html:119
+msgid "Pay to"
+msgstr ""
+
+#: templates/cashout/mails/cashout_request.html:126
+msgid "Method"
+msgstr ""
+
+#: templates/cashout/mails/cashout_request.html:131
+msgid "Account number"
+msgstr ""
+
+#: templates/core/mails/service_deployed.html:196
+msgid "Congrats, you are online !"
+msgstr ""
+
+#: templates/core/mails/service_deployed.html:197
+msgid "Your service details are as follow"
+msgstr ""
+
+#: templates/core/mails/service_deployed.html:199
+msgid "Application"
+msgstr ""
+
+#: templates/core/mails/service_deployed.html:201
+msgid "Running as"
+msgstr ""
+
+#: templates/core/mails/service_deployed.html:203
+msgid "On"
+msgstr ""
+
+#: templates/core/mails/service_deployed.html:206
+msgid "Monthly cost"
+msgstr ""
+
+#: templates/core/mails/service_deployed.html:241
+msgid "Invoiced to"
+msgstr ""
+
+#: templates/core/mails/service_deployed.html:247
+#, python-format
+msgid ""
+"\n"
+"            The invoice for your service setup has been generated, and is "
+"due on %(due_date)s, see details below"
+msgstr ""
+
+#: templates/core/mails/service_deployed.html:291
+msgid "Item"
+msgstr ""
+
+#: templates/core/mails/service_deployed.html:319
+msgid "Pay Now"
+msgstr ""
+
+#: templates/core/mails/service_deployed.html:337
+#, python-format
+msgid "Thank you for your business with %(company_name)s."
+msgstr ""
+
+#: templates/core/mails/snippets/confidentiality.html:6
+msgid "CONFIDENTIALITY"
+msgstr ""
+
+#: templates/core/mails/snippets/confidentiality.html:8
+#, python-format
+msgid ""
+"\n"
+"                    The information contained in this e-mail and any "
+"accompanying documents is confidential or otherwise\n"
+"                    protected from disclosure. If you are not the intended "
+"recipient, please immediately alert the\n"
+"                    sender by reply e-mail and delete this message and any "
+"attachments. Any copy, dissemination or\n"
+"                    unauthorized access of the contents of this message by "
+"anyone other than the intended recipient\n"
+"                    is strictly prohibited. E-mails may be susceptible to "
+"falsification or alteration and cause data\n"
+"                    corruption and/or loss of data. %(company_name)s and/or "
+"any of its subsidiaries decline any liability resulting\n"
+"                    from the consequences thereof. Therefore, this e-mail "
+"and any attachments are used at your own risk.\n"
+"                "
+msgstr ""
+
+#: templates/core/mails/snippets/confidentiality.html:19
+#, python-format
+msgid "© %(year)s %(company_name)s. All Rights Reserved."
+msgstr ""
+
+#: templates/rewarding/mails/community_welcome_pack.html:254
+#, python-format
+msgid ""
+"\n"
+"                                                    Welcome to <span style="
+"\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;color:#f28632;\" "
+">%(joined_project_name)s </span> community\n"
+"                                                    "
+msgstr ""
+
+#: templates/rewarding/mails/community_welcome_pack.html:313
+msgid "Great things are waiting for you !"
+msgstr ""
+
+#: templates/rewarding/mails/community_welcome_pack.html:315
+#, python-format
+msgid ""
+"\n"
+"                                                Enjoy free collectible "
+"coupons every day. Collect them for promotional\n"
+"                                                offers, preferential rates, "
+"special gifts and more. <br style=\"-ms-text-size-adjust:100%%;-webkit-text-"
+"size-adjust:100%%;\" >\n"
+"                                                Click on your welcome gift "
+"to retrieve it ...\n"
+"                                                "
+msgstr ""
+
+#: templates/rewarding/mails/community_welcome_pack.html:375
+msgid "There are 3 ways to earn coupons"
+msgstr ""
+
+#: templates/rewarding/mails/community_welcome_pack.html:377
+msgid "Join our community (you just did it)"
+msgstr ""
+
+#: templates/rewarding/mails/community_welcome_pack.html:378
+msgid "Buy from us (online or onsite)"
+msgstr ""
+
+#: templates/rewarding/mails/community_welcome_pack.html:379
+msgid "Visit our website very often"
+msgstr ""
+
+#: templates/rewarding/mails/community_welcome_pack.html:381
+msgid "All of your actions are rewarded"
+msgstr ""
+
+#: templates/rewarding/mails/community_welcome_pack.html:389
+msgid "http://blog.ikwen.com/how-to-collect-coupons"
+msgstr ""
+
+#: templates/rewarding/mails/community_welcome_pack.html:391
+#: templates/rewarding/mails/community_welcome_pack.html:428
+msgid "Read more"
+msgstr ""
+
+#: templates/rewarding/mails/community_welcome_pack.html:411
+msgid "How to recover my earnings?"
+msgstr ""
+
+#: templates/rewarding/mails/community_welcome_pack.html:415
+msgid ""
+"\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t  Once you have collected 100 coupons from the "
+"same item, you can\n"
+"                                                      redeem them for the "
+"equivalent item (s) directly in the store and at\n"
+"                                                      no additional charge! "
+"There are 3 types of coupons, get them all.\n"
+"                                                      "
+msgstr ""
+
+#: templates/rewarding/mails/community_welcome_pack.html:426
+msgid "http://blog.ikwen.com/how-to-recover-my-earned-coupons"
+msgstr ""
+
+#: templates/shopping/mails/order_notice.html:194
+#, python-format
+msgid "Dear %(buyer_name)s"
+msgstr ""
+
+#: templates/shopping/mails/order_notice.html:197
+#, python-format
+msgid ""
+"\n"
+"                    Your order on %(merchant)s with number <strong>%(rcc)s</"
+"strong> was confirmed.\n"
+"                "
+msgstr ""
+
+#: templates/shopping/mails/order_notice.html:201
+#, python-format
+msgid ""
+"\n"
+"                    Your order on %(merchant)s with number <strong>%(rcc)s</"
+"strong> was rejected.\n"
+"                "
+msgstr ""
+
+#: templates/shopping/mails/order_notice.html:205
+msgid "Message"
+msgstr ""
+
+#: templates/shopping/mails/order_notice.html:211
+#, python-format
+msgid ""
+"\n"
+"                    Your order was issued with success under number <strong>"
+"%(rcc)s</strong> and\n"
+"                    submit for approval to %(bank_name)s.<br>\n"
+"                    You can follow order status anytime by clicking the link "
+"down here:<br><br>\n"
+"                     <a href=\"%(service_url)s%(order_cart_url)s\">"
+"%(service_url)s%(order_cart_url)s</a>\n"
+"                "
+msgstr ""
+
+#: templates/shopping/mails/order_notice.html:219
+#: templates/shopping/mails/order_notice_with_reward.html:400
+#, python-format
+msgid ""
+"\n"
+"                        Your order was issued with success under number "
+"<strong>%(rcc)s</strong>.\n"
+"                        You can follow order status anytime by clicking the "
+"link down here:<br><br>\n"
+"                         <a href=\"%(service_url)s%(order_cart_url)s\">"
+"%(service_url)s%(order_cart_url)s</a>\n"
+"                    "
+msgstr ""
+
+#: templates/shopping/mails/order_notice.html:225
+#: templates/shopping/mails/order_notice_with_reward.html:406
+#, python-format
+msgid ""
+"\n"
+"                        Your order was issued with success under number "
+"<strong>%(rcc)s</strong>.\n"
+"                        You can pick up your package in our store in about "
+"%(max_delay)s.<br>\n"
+"                        Follow order status anytime by clicking the link "
+"down here:<br><br>\n"
+"                         <a href=\"%(service_url)s%(order_cart_url)s\">"
+"%(service_url)s%(order_cart_url)s</a>\n"
+"                    "
+msgstr ""
+
+#: templates/shopping/mails/order_notice.html:234
+#: templates/shopping/mails/order_notice_with_reward.html:415
+msgid "Your order was shipped. You will receive it in about"
+msgstr ""
+
+#: templates/shopping/mails/order_notice.html:236
+#: templates/shopping/mails/order_notice_with_reward.html:417
+msgid ""
+"Your order was packaged and is ready for you to come and collect using the "
+"RCC:"
+msgstr ""
+
+#: templates/shopping/mails/order_notice.html:274
+#: templates/shopping/mails/order_notice_with_reward.html:447
+msgid "See details below"
+msgstr ""
+
+#: templates/shopping/mails/order_notice.html:333
+#: templates/shopping/mails/order_notice_with_reward.html:507
+msgid "Price"
+msgstr ""
+
+#: templates/shopping/mails/order_notice.html:334
+#: templates/shopping/mails/order_notice_with_reward.html:508
+msgid "Quantity"
+msgstr ""
+
+#: templates/shopping/mails/order_notice.html:335
+#: templates/shopping/mails/order_notice_with_reward.html:509
+msgid "Subtotal"
+msgstr ""
+
+#: templates/shopping/mails/order_notice.html:372
+#: templates/shopping/mails/order_notice_with_reward.html:545
+msgid "Thank you for shopping with us."
+msgstr ""
+
+#: templates/shopping/mails/order_notice_with_reward.html:291
+#, python-format
+msgid ""
+"\n"
+"                                                    You just won <span style="
+"\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >"
+"%(coupon_count)s coupons for your payment</span>\n"
+"                                                    "
+msgstr ""
+
+#: templates/shopping/mails/order_notice_with_reward.html:346
+#, python-format
+msgid ""
+"\n"
+"                                              Hey %(buyer_name)s, <br style="
+"\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+"\t\t\t\t\t\t\t\t\t\t\t  You just won %(coupon_count)s coupons following your "
+"payment on <a href=\"%(service.url)s\" style=\"-ms-text-size-adjust:100%%;-"
+"webkit-text-size-adjust:100%%;text-decoration:none;\" >%(service.url)s</"
+"a> !\n"
+"                                              Collect 100 of any of them to "
+"exchange them with us for the equivalent.<br style=\"-ms-text-size-"
+"adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+"                                              Click bellow to collect your "
+"coupons.\n"
+"                                              "
+msgstr ""
