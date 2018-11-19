@@ -8,7 +8,7 @@
 		<!-- Forcing initial-scale shouldn't be necessary -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 		<!-- Use the latest (edge) version of IE rendering engine -->
-		<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ subject }} - {{ company_name }}</title>
+		<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ subject }} - {{ project_name }}</title>
 		<!-- The title tag shows in email notifications, like Android 4.4. -->
 
 
@@ -131,7 +131,7 @@
 					<center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
 
 				<!-- Visually Hidden Preheader Text : BEGIN -->
-						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ subject }} - {{ company_name }}
+						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ subject }} - {{ project_name }}
 						</div>
 				<!-- Visually Hidden Preheader Text : END -->
 
@@ -143,10 +143,10 @@
 					<![endif]-->
 
 				  <!-- Email Header : BEGIN -->
-				  <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#F3F3F3" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+				  <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#fff" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 					<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 					  <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-top:15px;padding-bottom:5px;padding-right:0;padding-left:0;text-align:left;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#EEEEEE;" >
+						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-top:15px;padding-bottom:5px;padding-right:0;padding-left:0;text-align:left;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#fff;" >
 						  <a href="{{ service.url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><img src="{{ IKWEN_MEDIA_URL }}{{ logo.name }}" width="100" height="auto" alt="ikwen website" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic;" ></a>
 						</div>
 						</td>
@@ -204,7 +204,7 @@
 										<v:textbox inset="0,0,0,0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 										<![endif]-->
 
-									<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:5px;padding-right:0;padding-left:0;text-align:center;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#EEEEEE;" >
+									<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:5px;padding-right:0;padding-left:0;text-align:center;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#fff;" >
 									  <!--[if mso]>
 												<table border="0" cellspacing="0" cellpadding="0" align="center" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 												<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -277,7 +277,7 @@
                               <table cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;float:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
                                 <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                                   <td  class="button-td" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-radius:3px;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;transition:all 100ms ease-in;" >
-                                      <a href="{{ service.url }}/{{ product.category.slug }}/{{ product.slug }}"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#233682;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;width:150px;max-width:100%;transition:all 100ms ease-in;" >
+                                      <a href="{{ service.url }}/{{ product.category.slug }}/{{ product.slug }}"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#233682;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;width:190px;max-width:100%;transition:all 100ms ease-in;" >
                                     <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% trans "Order now" %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
                                     </a></td>
                                 </tr>
