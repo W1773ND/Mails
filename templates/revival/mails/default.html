@@ -147,7 +147,7 @@
 					<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 					  <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
 						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-top:15px;padding-bottom:5px;padding-right:0;padding-left:0;text-align:left;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#fff;" >
-						  <a href="{{ service.url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><img src="{{ IKWEN_MEDIA_URL }}{{ logo.name }}" width="100" height="auto" alt="ikwen website" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic;" ></a>
+						  <a href="{{ service.url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><img src="{{ IKWEN_MEDIA_URL }}{{ logo.name }}" width="100" height="auto" alt="{{ service.project_name }} website" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic;" ></a>
 						</div>
 						</td>
 					</tr>
@@ -212,8 +212,10 @@
 												<![endif]-->
 										<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 											<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-												<td class="mobil-font-size" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:center;padding-top:20px;padding-bottom:2px;padding-right:0;padding-left:0;font-size:20px;mso-height-rule:exactly;line-height:20px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-													<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-bottom:5px;" ><p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;font-size:16px;" >{{ message|safe }}</p></div>
+												<td class="mobil-font-size" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:center;padding-top:20px;padding-bottom:2px;padding-right:0;padding-left:0;font-size:16px;mso-height-rule:exactly;line-height:30px;color:#555;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+													<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding:5px 15px;" >
+                                                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ message|safe }}</p>
+                                                    </div>
 												</td>
 											</tr>
 										</table>
@@ -268,7 +270,7 @@
                           <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                             <td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:18px;mso-height-rule:exactly;line-height:15px;color:#ffffff;padding-top:10px;padding-bottom:0;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                 <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#222222;" >
-                                    {{ product.name }} - <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;" >{{ currency.symbol }} {{ product.retail_price }}</span>
+                                    {{ product.name }} - <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#888;" >{{ currency.symbol }} {{ product.retail_price }}</span>
                                 </strong>
                             	<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-bottom:10px;" ><p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;line-height:18px;font-size:15px;color:#555555;" >
                              {{ product.description|safe|truncatewords:25 }}</p></div>

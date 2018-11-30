@@ -1,3 +1,4 @@
+{% load i18n %}
 <!doctype html>
 <html style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
 <head style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -7,7 +8,7 @@
 <!-- Forcing initial-scale shouldn't be necessary -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 <!-- Use the latest (edge) version of IE rendering engine -->
-<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ></title>
+<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ subject }} - ikwen</title>
 <!-- The title tag shows in email notifications, like Android 4.4. -->
 
 
@@ -126,7 +127,7 @@ table.center-on-narrow {
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
         
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;" > (Optional) This text will appear in the inbox preview, but not the email body. </div>
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;" >{{ subject }} - ikwen</div>
         <!-- Visually Hidden Preheader Text : END -->
         
         <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;margin-top:10px;" > 
@@ -162,7 +163,10 @@ table.center-on-narrow {
 												<![endif]-->
 										<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 											<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >												
-												<td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;padding-top:30px;padding-bottom:30px;padding-right:20px;padding-left:20px;font-size:25px;mso-height-rule:exactly;line-height:35px;color:#ffffff;border-top-width:5px;border-top-style:solid;border-top-color:#9CC640;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:30px;" >{client_add}</span> nouveaux clients enregistrés !</td>
+												<td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;padding-top:30px;padding-bottom:30px;padding-right:20px;padding-left:20px;font-size:25px;mso-height-rule:exactly;line-height:35px;color:#ffffff;border-top-width:5px;border-top-style:solid;border-top-color:#9CC640;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                                    <strong>{{ total }}</strong>
+                                                    {% trans "newly registered members" %}
+                                                </td>
 											</tr>
 										</table>
 									  <!--[if (gte mso 9)|(IE)]>
@@ -188,25 +192,24 @@ table.center-on-narrow {
 									<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 							  			<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 											<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;text-align:left;mso-height-rule:exactly;color:#555555;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:18px;line-height:25px;" >
-													Bonjour {{ client_name }}, <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >												
-													Votre réseau compte à présent <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:30px;" >{{ client_lenght }}</span> membres, soit une progression de {{ customer_upgrade }} depuis le {{ reportDate_last }}. Félicitations ! <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" > <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-													Tirez le meilleur parti des
-													<a href="http://support.ikwen.com" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#f28632;text-decoration:none;" >
-														outils à votre disposition
-													</a>.
-													
-												</p>											  
+												<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:18px;line-height:25px;" >{% blocktrans with iao_name=member.first_name  %}
+													Hi {{ iao_name }}, <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+													Your community now has <strong>{{ total_member_count }}</strong> members,
+                                                {% endblocktrans %}
+                                                {% if last_mail %}
+                                                {% blocktrans with last_report_date=last_mail.created_on|date %}
+                                                    meaning a {{ change_rate }} increase since {{ last_report_date }}.<br/>
+                                                    Congratulations ! <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" > <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+												{% endblocktrans %}</p>
+                                                {% endif %}
 								  			</td>
 							  			</tr>
 									</table>
 								</td>
 							</tr>
 							
-					<!-- 1 Column Text : END --> 
-            
-            
-            
+					<!-- 1 Column Text : END -->
+            {% comment %}
             <!-- Thumbnail Left, Text Right : BEGIN -->
             <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
               <td dir="ltr" bgcolor="#F3F3F3" align="center" height="100%" valign="top" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:10px;padding-bottom:10px;padding-right:0;padding-left:0;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><!--[if mso]>
@@ -344,34 +347,13 @@ table.center-on-narrow {
                         <![endif]--></td>
             </tr>
             <!-- Thumbnail Right, Text Left : END -->
-            
+            {% endcomment %}
           </table>
-          <!-- Email Body : END --> 
-          
-          <!-- Email Footer : BEGIN -->
-							<table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#F3F3F3" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;padding-top:30px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-<!--
-								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-									<td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-										<img src="images/New logo ikwen 344x155.png" width="344" height="150" alt="" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-ms-interpolation-mode:bicubic;" />
-									</td>
-								</tr>
--->
-								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-								  <td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-										<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" > 
-										  <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ></p> 
-										  <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:12px;color:#555555;" >© 2018 ikwen, Inc. All Rights Reserved.</span></p>
-					<!--
-										  <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;font-size:12px;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;float:none;display:inline !important;" ><strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >You're opinion matters! Let us know how we're doing in this <a href="http:www.ikwen.com/survey" target="_blank" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-decoration:none;color:#4834d4;" >1-minute survey</a></strong>.</span></span></p> 
-					-->
-					<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;font-size:12px;padding-bottom:40px;" > <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;float:none;display:inline !important;" ><a href="http://www.ikwen.com/about" target="_blank" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-decoration:none;color:#4834d4;padding-bottom:30px;" >About us</a> | Making the Web a business</span></span></p>
-									</div>
-									</td>
-								</tr>
-							</table>
+          <!-- Email Body : END -->
 
-							  <!-- Email Footer : END --> 
+            <!-- Email Footer : BEGIN -->
+                {% include 'core/mails/snippets/confidentiality.html' %}
+          <!-- Email Footer : END -->
 
 							  <!--[if (gte mso 9)|(IE)]>
 								</td>

@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-18 16:58+0100\n"
-"PO-Revision-Date: 2018-11-18 17:06+0100\n"
+"POT-Creation-Date: 2018-11-26 18:57+0100\n"
+"PO-Revision-Date: 2018-11-26 19:08+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"Last-Translator: \n"
-"Language-Team: \n"
 "X-Generator: Poedit 1.8.7.1\n"
 
 #: templates/accesscontrol/mails/community_welcome.html:11
@@ -45,33 +45,35 @@ msgstr "Vous venez de rejoindre la communauté %(joined_project_name)s."
 
 #: templates/accesscontrol/mails/community_welcome.html:133
 msgid "Thank you"
-msgstr "Merci pour l'intérêt que vous nous portez."
+msgstr "Merci !"
 
 #: templates/accesscontrol/mails/confirm_email.html:11
 #: templates/accesscontrol/mails/confirm_email.html:139
 msgid "Please confirm your email"
 msgstr "Veuillez confirmer votre email SVP"
 
-#: templates/accesscontrol/mails/confirm_email.html:200
+#: templates/accesscontrol/mails/confirm_email.html:190
 #, python-format
 msgid "Hey %(member_name)s,"
-msgstr ""
+msgstr "Hey %(member_name)s,"
 
-#: templates/accesscontrol/mails/confirm_email.html:203
+#: templates/accesscontrol/mails/confirm_email.html:193
 msgid ""
 "Please click down here to confirm your email and make sure you don't miss "
 "anything."
 msgstr ""
+"Veuillez cliquer ci-dessous pour confirmer votre adresse e-mail et ainsi "
+"vous assurer que vous ne ratez rien."
 
-#: templates/accesscontrol/mails/confirm_email.html:211
+#: templates/accesscontrol/mails/confirm_email.html:201
 msgid "Confirm email now"
-msgstr ""
+msgstr "Confirmez votre email"
 
 #: templates/accesscontrol/mails/welcome_to_ikwen.html:11
 #: templates/accesscontrol/mails/welcome_to_ikwen.html:199
 #: templates/accesscontrol/mails/welcome_to_ikwen.html:235
 msgid "Welcome to ikwen"
-msgstr ""
+msgstr "Bienvenue sur ikwen"
 
 #: templates/accesscontrol/mails/welcome_to_ikwen.html:236
 msgid ""
@@ -83,14 +85,23 @@ msgid ""
 "                          favourite businesses. These businesses offer you "
 "exclusive gifts every day and enable you to\n"
 "                          benefit from tailored-promotional offers simply "
-"because you are here. To celebrate the\n"
-"                          expansion of the ikwen family together, here is "
-"the first gift (among others) that we offer\n"
-"                          you. Click on gift box to collect it!\n"
+"because you are here.\n"
 "                          "
 msgstr ""
+"\n"
+"                         En nous rejoignant, vous venez d'entrer dans un "
+"univers passionnant dans lequel chaque action est récompensée.\n"
+"                        L'aventure ne fait que commencer. Sur ikwen, plus de "
+"milliers d'entre vous sont connectés à leur\n"
+"                        entreprises préférées. Ces entreprises vous offrent "
+"chaque jour des cadeaux exclusifs et vous permettent de\n"
+"                        Bénéficiez d'offres promotionnelles sur mesure, tout "
+"simplement parce que vous êtes ici. Pour fêter \n"
+"                        ensemble l'expansion de la famille ikwen, voici le "
+"premier cadeau que nous  vous offrons (entre autres).\n"
+"                         Cliquez sur la boîte cadeau pour la récupérer!"
 
-#: templates/accesscontrol/mails/welcome_to_ikwen.html:289
+#: templates/accesscontrol/mails/welcome_to_ikwen.html:276
 #, python-format
 msgid ""
 "\n"
@@ -122,39 +133,70 @@ msgid ""
 "\t\t\t\t\t\t\t\t</ul>\n"
 "\t\t\t\t\t\t\t"
 msgstr ""
+"\n"
+"\t\t\t\t\t\t\t\t<span style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%;color:#223682;text-align:center;\" ><p style=\"-ms-text-size-"
+"adjust:100%%;-webkit-text-size-adjust:100%%;\" ><h2 style=\"-ms-text-size-"
+"adjust:100%%;-webkit-text-size-adjust:100%%;\" >3 conseils pour ne manquer "
+"aucun cadeau</h2></p></span>\n"
+"\t\t\t\t\t\t\t\t<ul style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%;\" >\n"
+"\t\t\t\t\t\t\t\t\t<li style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%;\" >Joindre notre adresse d'envoi<a href= \"http://ikwen.com\" "
+"style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;text-"
+"decoration: none;\" >no-reply@ikwen.com</a> to your contacts.</li>\n"
+"\t\t\t\t\t\t\t\t\t<li style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%;\" >Si vous êtes sur Gmail, nous serions dans l’onglet "
+"Promotion de votre boîte aux lettres (onglet Notification), cliquez, "
+"maintenez la touche enfoncée et faites-la glisser vers votre boîte aux "
+"lettres principale. Gmail vous demande si cela devrait toujours être le cas "
+"pour nous (un menu \"contextuel\" apparaîtra en haut de votre écran), "
+"répondez \"OUI\" et espérons que vous nous trouverez sans avoir à chercher.</"
+"li>\n"
+"\t\t\t\t\t\t\t\t\t<li style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%;\" >Quelle que soit la plate-forme de messagerie: lors de notre "
+"premier envoi (celui-ci), il est possible que votre boîte aux lettres "
+"électronique ne nous reconnaisse pas et nous classe dans la catégorie spam/"
+"courrier indésirable (NB: ceci est injuste étant donné que nous n'utilisons "
+"jamais de spam). Retrouvez-nous après un certain temps, vérifiez-nous dans "
+"le spam ... et sortez-nous de là! (Pour des difficultés techniques: <a href= "
+"\"http://ikwen.com\" style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%; text-decoration: none;\" >support@ikwen.com</a>).</li>\n"
+"\t\t\t\t\t\t\t\t</ul>\n"
+"\t\t\t\t\t\t\t"
 
 #: templates/billing/mails/notice.html:137
 #, python-format
 msgid "Dear %(member_name)s,"
-msgstr ""
+msgstr "Cher(e) %(member_name)s,"
 
 #: templates/billing/mails/notice.html:191
 #: templates/core/mails/service_deployed.html:286
 msgid "Invoice"
-msgstr ""
+msgstr "Facture"
 
 #: templates/billing/mails/notice.html:192
-#: templates/cashout/mails/request_notice.html:118
+#: templates/cashout/mails/request_notice.html:120
 #: templates/core/mails/service_deployed.html:292
 msgid "Amount"
-msgstr ""
+msgstr "Montant"
 
 #: templates/billing/mails/notice.html:194
 msgid "Due Date"
-msgstr ""
+msgstr "Date limite"
 
 #: templates/billing/mails/notice.html:197
 msgid "Service details"
-msgstr ""
+msgstr "Détails"
 
 #: templates/billing/mails/notice.html:231
 #, python-format
 msgid "Thank you for your business with %(company_name)s"
-msgstr ""
+msgstr "Merci d'être client chez %(company_name)s"
 
 #: templates/billing/mails/wallet_debit_notice.html:82
 msgid "Thanks for your business with ikwen"
-msgstr ""
+msgstr "Merci d'être client chez ikwen"
 
 #: templates/billing/mails/wallet_debit_notice.html:83
 msgid ""
@@ -163,39 +205,49 @@ msgid ""
 "service fees, so you're all set !\n"
 "                        "
 msgstr ""
+"\n"
+"                            Nous avons débité votre solde en ligne pour vos "
+"frais de service, donc tout est OK ! "
 
 #: templates/billing/mails/wallet_debit_notice.html:139
 #, python-format
 msgid "Summary for %(member_name)s"
-msgstr ""
+msgstr "Récapitulatif pour %(member_name)s"
 
 #: templates/billing/mails/wallet_debit_notice.html:149
 msgid "Amount paid"
-msgstr ""
+msgstr "Montant payé "
 
 #: templates/billing/mails/wallet_debit_notice.html:161
 msgid "View invoice"
-msgstr ""
+msgstr "Voir facture"
 
 #: templates/cashout/mails/request_notice.html:64
-msgid "Dear"
+#, python-format
+msgid ""
+"\n"
+"                            Dear %(client_name)s,<br>\n"
+"\t\t\t\t\t\t\tThis is a confirmation that we just received a request to cash-"
+"out your money on %(project_name)s.\n"
+"                            Money will be paid within the next 24h. See "
+"details below."
 msgstr ""
 
-#: templates/cashout/mails/request_notice.html:115
+#: templates/cashout/mails/request_notice.html:117
 msgid "Pay to"
-msgstr ""
+msgstr "Payer pour"
 
-#: templates/cashout/mails/request_notice.html:122
+#: templates/cashout/mails/request_notice.html:124
 msgid "Method"
-msgstr ""
+msgstr "Mode de paiement"
 
-#: templates/cashout/mails/request_notice.html:127
+#: templates/cashout/mails/request_notice.html:129
 msgid "Account number"
-msgstr ""
+msgstr "Numéro de compte"
 
 #: templates/core/mails/domain_updated.html:11
 msgid "Domain name changed"
-msgstr ""
+msgstr "Nom de domaine changé"
 
 #: templates/core/mails/domain_updated.html:178
 #, python-format
@@ -206,38 +258,43 @@ msgid ""
 "adjust:100%%;color:#f38e42; text-decoration: none\" >%(service_url)s</a>\n"
 "                        "
 msgstr ""
+"\n"
+"\t\t\tVotre nom de domaine a changé pour : &nbsp;<a href=\"%(service_url)s\" "
+"style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;color:"
+"#f38e42; text-decoration: none\" >%(service_url)s</a>\n"
+"\t\t\t"
 
 #: templates/core/mails/domain_updated.html:186
 msgid "Visit your website"
-msgstr ""
+msgstr "Visitez votre site web"
 
 #: templates/core/mails/service_deployed.html:196
 msgid "Congrats, you are online !"
-msgstr ""
+msgstr "Félicitations, vous êtes en ligne!"
 
 #: templates/core/mails/service_deployed.html:197
 msgid "Your service details are as follow"
-msgstr ""
+msgstr "Vos détails de votre service sont les suivants"
 
 #: templates/core/mails/service_deployed.html:199
 msgid "Application"
-msgstr ""
+msgstr "Application"
 
 #: templates/core/mails/service_deployed.html:201
 msgid "Running as"
-msgstr ""
+msgstr "Sous le nom "
 
 #: templates/core/mails/service_deployed.html:203
 msgid "On"
-msgstr ""
+msgstr "Sur"
 
 #: templates/core/mails/service_deployed.html:206
 msgid "Monthly cost"
-msgstr ""
+msgstr "Coût mensuel"
 
 #: templates/core/mails/service_deployed.html:241
 msgid "Invoiced to"
-msgstr ""
+msgstr "Facturé à "
 
 #: templates/core/mails/service_deployed.html:247
 #, python-format
@@ -246,23 +303,26 @@ msgid ""
 "            The invoice for your service setup has been generated, and is "
 "due on %(due_date)s, see details below"
 msgstr ""
+"\n"
+"            La facture pour votre mise en service a été générée et expire le "
+"%(due_date)s, voir détails ci-dessous"
 
 #: templates/core/mails/service_deployed.html:291
 msgid "Item"
-msgstr ""
+msgstr "Item"
 
 #: templates/core/mails/service_deployed.html:319
 msgid "Pay Now"
-msgstr ""
+msgstr "Payez maintenant"
 
 #: templates/core/mails/service_deployed.html:337
 #, python-format
 msgid "Thank you for your business with %(company_name)s."
-msgstr ""
+msgstr "Merci d'être client chez %(company_name)s."
 
 #: templates/core/mails/snippets/confidentiality.html:6
 msgid "CONFIDENTIALITY"
-msgstr ""
+msgstr "CONFIDENTIALITÉ"
 
 #: templates/core/mails/snippets/confidentiality.html:8
 #, python-format
@@ -284,10 +344,40 @@ msgid ""
 "and any attachments are used at your own risk.\n"
 "                "
 msgstr ""
+"\n"
+"\t\t\t\t  Les informations contenues dans ce courrier électronique et dans "
+"les documents d’accompagnement sont confidentielles sinon\n"
+"                   protégé de la divulgation. Si vous n'êtes pas le "
+"destinataire prévu, veuillez immédiatement avertir l'emetteur\n"
+"                   par courrier électronique de réponse et supprimez ce "
+"message ainsi que toutes les pièces jointes. Toute copie, diffusion ou\n"
+"                   accès non autorisé au contenu de ce message par une "
+"personne autre que le destinataire prévu\n"
+"                   est strictement interdit. Les courriels peuvent être "
+"falsifiés ou altérés et provoquer la corruption des données\n"
+"                   et/ou perte de données. %(company_name)s et/ou l’une de "
+"ses filiales déclinent toute responsabilité résultante \n"
+"                   des conséquences de celle-ci. Par conséquent, cet e-mail "
+"et toutes les pièces jointes sont utilisés à vos risques et périls."
 
 #: templates/core/mails/snippets/confidentiality.html:19
 #, python-format
 msgid "© %(year)s %(company_name)s. All Rights Reserved."
+msgstr "© %(year)s %(company_name)s.Tous droits réservés."
+
+#: templates/echo/mails/empty_messaging_credit.html:210
+#, python-format
+msgid ""
+"\n"
+"                                  You run out of %(account)s credit. It's "
+"terrible because your customers won't hear from\n"
+"                                  you again. But don't worry, you can fix it "
+"now by refilling your messaging credit.\n"
+"                              "
+msgstr ""
+
+#: templates/echo/mails/empty_messaging_credit.html:222
+msgid "Refill now"
 msgstr ""
 
 #: templates/kako/mails/product_on_sale.html:288
@@ -303,12 +393,20 @@ msgid ""
 "                                                         </span>\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t "
 msgstr ""
+"\n"
+"\t\t\t\t\t\t\t <strong style=\"color:#333\">Salut %(member_name)s,</"
+"strong><br>\n"
+"\t\t\t\t\t\t\t<span style=\"font-size:18px ; color: #666;\">\n"
+"\t\t\t\t\t\t\tNous avons cette merveilleuse opportunité pour vous. Vous ne "
+"devriez pas le manquer !\n"
+"\t\t\t\t\t\t\t</span>\n"
+"\t\t\t\t\t\t\t"
 
 #: templates/kako/mails/product_on_sale.html:331
 #: templates/kako/mails/products_added.html:251
-#: templates/revival/mails/default.html:281
+#: templates/revival/mails/default.html:283
 msgid "Order now"
-msgstr ""
+msgstr "Acheter maintenant"
 
 #: templates/kako/mails/products_added.html:179
 #, python-format
@@ -320,9 +418,52 @@ msgid ""
 "products we think are perfect for you. Be the first to get them.\n"
 "                                                        "
 msgstr ""
+"\n"
+"\t\t\t\t\t\t\tSalut %(member_name)s,<br/>\n"
+"\t\t\t\t\t\t\tNous avons ces nouveaux produits que nous pensons être "
+"parfaits pour vous. Soyez les premiers à les obtenir.\n"
+"\t\t\t\t\t\t\t"
 
 #: templates/kako/mails/products_added.html:184
 msgid "Make sure you display images to so that you don't miss anything."
+msgstr "Assurez-vous d'afficher les images afin de ne rien manquer."
+
+#: templates/monitoring/mails/customer_progression.html:168
+msgid "newly registered members"
+msgstr ""
+
+#: templates/monitoring/mails/customer_progression.html:195
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "                                                    You just won <span "
+#| "style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >"
+#| "%(coupon_count)s coupons for your payment</span>\n"
+#| "                                                    "
+msgid ""
+"\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tHi %(iao_name)s, <br style=\"-ms-text-size-"
+"adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tYour community now has <strong>"
+"%(total_member_count)s</strong> members,\n"
+"                                                "
+msgstr ""
+"\n"
+"                                                   Vous venez de gagner "
+"<span style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >"
+"%(coupon_count)s coupons pour votre paiement</span>\n"
+"                                                    "
+
+#: templates/monitoring/mails/customer_progression.html:200
+#, python-format
+msgid ""
+"\n"
+"                                                    meaning a "
+"%(change_rate)s increase since %(last_report_date)s.<br/>\n"
+"                                                    Congratulations ! <br "
+"style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" > <br "
+"style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t"
 msgstr ""
 
 #: templates/revival/mails/suggest_referral.html:218
@@ -351,10 +492,27 @@ msgid ""
 "%(referred_project_name)s for the equivalent.\n"
 "                                                        "
 msgstr ""
+"\n"
+"\t\t\t\t\t\t\t\tSalut %(member_name)s,<br style=\"-ms-text-size-"
+"adjust:100%%;-webkit-text-size-adjust:100%%;\" />\n"
+"\t\t\t\t\t\t\t\tInvitez vos amis à joindre  %(referred_project_name)s sur "
+"ikwen et gagner par la suite des coupons gratuits.\n"
+"\t\t\t\t\t\t\t\tC'est simple ! Connectez vous sur  <a href=\"http://wwww."
+"ikwen.com\" style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%;\" >ikwen.com</a>, visitez notre page et partagez\n"
+"\t\t\t\t\t\t\t\tle lien.<br style=\"-ms-text-size-adjust:100%%;-webkit-text-"
+"size-adjust:100%%;\" />\n"
+"\t\t\t\t\t\t\t\tRassurez-vous que vous êtes connecté sur <a href=\"http://"
+"wwww.ikwen.com\" style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%;\" >ikwen.com</a> avant d'aller sur notre page.<br style=\"-ms-"
+"text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" />\n"
+"\t\t\t\tSouvenez-vous, collectionnez 100 de n'importe quel coupon et  "
+"échangez les avec %(referred_project_name)s pour l'équivalent.\n"
+"\t\t\t\t"
 
 #: templates/revival/mails/suggest_referral.html:235
 msgid "Invite friend now"
-msgstr ""
+msgstr "Invitez vos amis "
 
 #: templates/rewarding/mails/community_welcome_pack.html:249
 #, python-format
@@ -365,10 +523,15 @@ msgid ""
 ">%(joined_project_name)s </span> community\n"
 "                                                    "
 msgstr ""
+"\n"
+"\t\t\t\t\t\t   Bienvenue dans <span style = \"- ms-text-size-ajust:100%%;- "
+"webkit-text-size-ajust:100%%;color:#f28632;\" %(joined_project_name)s </"
+"span> communauté\n"
+"\t\t\t\t\t\t   "
 
 #: templates/rewarding/mails/community_welcome_pack.html:308
 msgid "Great things are waiting for you !"
-msgstr ""
+msgstr "Des surprises vous attendent !"
 
 #: templates/rewarding/mails/community_welcome_pack.html:310
 #, python-format
@@ -383,43 +546,54 @@ msgid ""
 "your first gifts ...\n"
 "                                                "
 msgstr ""
+"\n"
+"\t\t\t\t\t\tProfitez des coupons de collection gratuits tous les jours. "
+"Collectionnez-les pour des offres\n"
+"\t\t\t\t\t\tpromotionnelles, tarifs préférentiels, cadeaux spéciaux et plus. "
+"<br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+"\t\t\t\t\t\tCliquez ci-dessous pour collectionner les premiers cadeaux...\n"
+"\t\t\t\t\t\t"
+
+#: templates/rewarding/mails/community_welcome_pack.html:393
+msgid "Collect your gifts now"
+msgstr ""
 
 #: templates/rewarding/mails/community_welcome_pack.html:429
 msgid "How to collect coupons"
-msgstr ""
+msgstr "Comment collectionner des coupons"
 
 #: templates/rewarding/mails/community_welcome_pack.html:432
 msgid "There are 3 ways to earn coupons"
-msgstr ""
+msgstr "Il y'a 3 manières de gagner des coupons"
 
 #: templates/rewarding/mails/community_welcome_pack.html:434
 msgid "Join our community (you just did it)"
-msgstr ""
+msgstr "Rejoignez notre communauté (vous venez de le faire)"
 
 #: templates/rewarding/mails/community_welcome_pack.html:435
 msgid "Buy from us (online or onsite)"
-msgstr ""
+msgstr "Faites vos achats chez nous (en ligne ou sur place)"
 
 #: templates/rewarding/mails/community_welcome_pack.html:436
 msgid "Visit our website very often"
-msgstr ""
+msgstr "Visitez notre site Web très souvent"
 
 #: templates/rewarding/mails/community_welcome_pack.html:438
 msgid "All of your actions are rewarded"
-msgstr ""
+msgstr "Toutes vos actions sont récompensées"
 
 #: templates/rewarding/mails/community_welcome_pack.html:446
 msgid "http://blog.ikwen.com/how-to-collect-coupons"
-msgstr ""
+msgstr "http://blog.ikwen.com/how-to-collect-coupons"
 
 #: templates/rewarding/mails/community_welcome_pack.html:448
 #: templates/rewarding/mails/community_welcome_pack.html:485
 msgid "Read more"
-msgstr ""
+msgstr "Lire la suite"
 
 #: templates/rewarding/mails/community_welcome_pack.html:468
 msgid "How to recover my earnings?"
-msgstr ""
+msgstr "Comment récupérer mes profits?"
 
 #: templates/rewarding/mails/community_welcome_pack.html:472
 msgid ""
@@ -432,10 +606,18 @@ msgid ""
 "There are 3 types of coupons, get them all.\n"
 "                                                      "
 msgstr ""
+"\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t  Une fois que vous avez collecté 100 coupons du "
+"même article, vous pouvez\n"
+"                                                      les échanger contre "
+"des articles équivalents directement dans le magasin et \n"
+"                                                      sans frais "
+"supplémentaires! Il y'a 3 types de coupons, collectionnez-les tous\n"
+"                                                      "
 
 #: templates/rewarding/mails/community_welcome_pack.html:483
 msgid "http://blog.ikwen.com/how-to-recover-my-earned-coupons"
-msgstr ""
+msgstr "http://blog.ikwen.com/how-to-recover-my-earned-coupons "
 
 #: templates/rewarding/mails/free_reward.html:176
 #, python-format
@@ -447,11 +629,21 @@ msgid ""
 "favorite companies\n"
 "                                                    "
 msgstr ""
+"\n"
+"                                                   <span> Salut "
+"%(member_name)s!</span><br>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\tVous venez de recevoir des cadeaux gratuits de vos "
+"entreprises préférées\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t"
+
+#: templates/rewarding/mails/free_reward.html:271
+msgid "Collect your gifts"
+msgstr ""
 
 #: templates/rewarding/mails/free_reward.html:330
 #: templates/rewarding/mails/referral_reward.html:332
 msgid "En savoir plus"
-msgstr ""
+msgstr "En savoir plus"
 
 #: templates/rewarding/mails/referral_reward.html:178
 #, python-format
@@ -468,11 +660,26 @@ msgid ""
 "exchange them with %(joined_project_name)s for the equivalent.\n"
 "                                                    "
 msgstr ""
+"\n"
+"                                                    <span style=\"-ms-text-"
+"size-adjust:100%%;-webkit-text-size-adjust:100%%;\" > Salut !</span><br "
+"style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+"\t\t\t\t\t\t\t%(referee_name)s vient de vous rejoindre sur "
+"%(joined_project_name)s.\n"
+"\t\t\t\t\t\t\tVous avez gagné %(coupon_count)s pour cela. Souvenez-vous, "
+"collectez 100 de\n"
+"\t\t\t\t\t\t\tn'importe quel coupon et échangez les avec  "
+"%(joined_project_name)s pour l'équivalent.\n"
+"\t\t\t\t\t\t\t"
+
+#: templates/rewarding/mails/referral_reward.html:257
+msgid "Collect your reward"
+msgstr ""
 
 #: templates/shopping/mails/order_notice.html:188
 #, python-format
 msgid "Dear %(buyer_name)s"
-msgstr ""
+msgstr "Cher(e) %(buyer_name)s"
 
 #: templates/shopping/mails/order_notice.html:191
 #, python-format
@@ -482,6 +689,10 @@ msgid ""
 "strong> was confirmed.\n"
 "                "
 msgstr ""
+"\n"
+"\t\tVotre commande sur %(merchant)s avec le numéro <strong>%(rcc)s</strong> "
+"a été confirmée.\n"
+"\t\t"
 
 #: templates/shopping/mails/order_notice.html:195
 #, python-format
@@ -491,10 +702,14 @@ msgid ""
 "strong> was rejected.\n"
 "                "
 msgstr ""
+"\n"
+"\t\tVotre commande sur %(merchant)s avec le numéro <strong>%(rcc)s</strong>  "
+"a été rejetée.\n"
+"\t\t"
 
 #: templates/shopping/mails/order_notice.html:199
 msgid "Message"
-msgstr ""
+msgstr "Message"
 
 #: templates/shopping/mails/order_notice.html:205
 #, python-format
@@ -509,6 +724,15 @@ msgid ""
 "%(service_url)s%(order_cart_url)s</a>\n"
 "                "
 msgstr ""
+"\n"
+"\t\tVotre commande a été émise avec succès sous le numéro <strong>%(rcc)s </ "
+"strong> et\n"
+"\t\tsoumettre pour approbation à %(bank_name)s. <br>\n"
+"\t\tVous pouvez suivre le statut de votre commande à tout moment en cliquant "
+"sur le lien ci-dessous: <br><br>\n"
+"\t\t<a href=\"%(service_url)s%(order_cart_url)s\">%(service_url)s"
+"%(order_cart_url)s </a>\n"
+"\t\t"
 
 #: templates/shopping/mails/order_notice.html:213
 #: templates/shopping/mails/order_notice_with_reward.html:394
@@ -523,6 +747,14 @@ msgid ""
 "%(service_url)s%(order_cart_url)s</a>\n"
 "                    "
 msgstr ""
+"\n"
+"\t\t\tVotre commande a été émise avec succès sous le numéro <strong>%(rcc)s "
+"</ strong>.\n"
+"\t\t\tVous pouvez suivre le statut de votre commande à tout moment en "
+"cliquant sur le lien ci-dessous: <br><br>\n"
+"\t\t\t<a href=\"%(service_url)s%(order_cart_url)s\">%(service_url)s"
+"%(order_cart_url)s </a>\n"
+"\t\t\t"
 
 #: templates/shopping/mails/order_notice.html:219
 #: templates/shopping/mails/order_notice_with_reward.html:400
@@ -539,11 +771,22 @@ msgid ""
 "%(service_url)s%(order_cart_url)s</a>\n"
 "                    "
 msgstr ""
+"\n"
+"\t\t\tVotre commande a été émise avec succès sous le numéro <strong>%(rcc)s</"
+"strong>.\n"
+"\t\t\tVous pouvez récupérer votre colis dans notre magasin dans environ "
+"%(max_delay)s. <br>\n"
+"\t\t\tSuivez le statut de votre commande à tout moment en cliquant sur le "
+"lien ci-dessous: <br> <br>\n"
+"\t\t\t<a href=\"%(service_url)s%(order_cart_url)s\">%(service_url)s"
+"%(order_cart_url)s </a>\n"
+"\t\t\t\n"
+"\t\t\t"
 
 #: templates/shopping/mails/order_notice.html:228
 #: templates/shopping/mails/order_notice_with_reward.html:409
 msgid "Your order was shipped. You will receive it in about"
-msgstr ""
+msgstr "Votre commande a été expédiée. Vous le recevrez dans très bientôt"
 
 #: templates/shopping/mails/order_notice.html:230
 #: templates/shopping/mails/order_notice_with_reward.html:411
@@ -551,31 +794,33 @@ msgid ""
 "Your order was packaged and is ready for you to come and collect using the "
 "RCC:"
 msgstr ""
+"Votre commande a été emballée et est prête pour que vous puissiez venir "
+"chercher avec le RCC:"
 
 #: templates/shopping/mails/order_notice.html:268
 #: templates/shopping/mails/order_notice_with_reward.html:441
 msgid "See details below"
-msgstr ""
+msgstr "Voir détails ci-dessous"
 
 #: templates/shopping/mails/order_notice.html:327
 #: templates/shopping/mails/order_notice_with_reward.html:501
 msgid "Price"
-msgstr ""
+msgstr "Prix"
 
 #: templates/shopping/mails/order_notice.html:328
 #: templates/shopping/mails/order_notice_with_reward.html:502
 msgid "Quantity"
-msgstr ""
+msgstr "Quantité"
 
 #: templates/shopping/mails/order_notice.html:329
 #: templates/shopping/mails/order_notice_with_reward.html:503
 msgid "Subtotal"
-msgstr ""
+msgstr "Sous-total"
 
 #: templates/shopping/mails/order_notice.html:366
 #: templates/shopping/mails/order_notice_with_reward.html:539
 msgid "Thank you for shopping with us."
-msgstr ""
+msgstr "Nous vous remercions pour vos achats avec notre service."
 
 #: templates/shopping/mails/order_notice_with_reward.html:285
 #, python-format
@@ -586,6 +831,11 @@ msgid ""
 "%(coupon_count)s coupons for your payment</span>\n"
 "                                                    "
 msgstr ""
+"\n"
+"                                                   Vous venez de gagner "
+"<span style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >"
+"%(coupon_count)s coupons pour votre paiement</span>\n"
+"                                                    "
 
 #: templates/shopping/mails/order_notice_with_reward.html:340
 #, python-format
@@ -604,3 +854,16 @@ msgid ""
 "coupons.\n"
 "                                              "
 msgstr ""
+"\n"
+"                                              Salut %(buyer_name)s, <br "
+"style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+"\t\t\t\t\t\t\t\t\t\t\t  Vous venez de gagner %(coupon_count)s coupons, "
+"suivez votre payement sur <a href=\"%(service_url)s\" style=\"-ms-text-size-"
+"adjust:100%%;-webkit-text-size-adjust:100%%;text-decoration:none;\" >"
+"%(service.url)s</a> !\n"
+"                                              Collectionnez-en 100 pour les "
+"échanger avec nous contre l'équivalent .<br style=\"-ms-text-size-"
+"adjust:100%%;-webkit-text-size-adjust:100%%;\" >"
+
+#~ msgid "Dear"
+#~ msgstr "cher(e)"
