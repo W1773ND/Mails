@@ -131,7 +131,7 @@
 					<center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
 
 				<!-- Visually Hidden Preheader Text : BEGIN -->
-						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ subject }} - {{ company_name }}
+						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{% blocktrans %}Win by inviting your friends to join {{ project_name }} on ikwen{% endblocktrans %}
 						</div>
 				<!-- Visually Hidden Preheader Text : END -->
 
@@ -147,7 +147,9 @@
 					<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 					  <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
 						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-top:15px;padding-bottom:5px;padding-right:0;padding-left:0;text-align:left;" >
-						  <a href="{{ service.url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><img src="{{ IKWEN_MEDIA_URL }}{{ logo.name }}" width="100" height="auto" alt="ikwen website" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic;" ></a>
+						  <a href="{{ service.url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                              <img src="{{ IKWEN_MEDIA_URL }}{{ logo.name }}" width="100" height="auto" alt="{{ project_name }} logo" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic;" >
+                          </a>
 						</div>
 						</td>
 					</tr>
@@ -155,7 +157,7 @@
 				  <!-- Email Header : END -->
 
 				  <!-- Email Body : BEGIN -->
-				  		<table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+				  		<table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important" >
 
 
 
@@ -174,7 +176,7 @@
 												<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 												<td align="center" valign="top" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
 												<![endif]-->
-										<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+										<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;max-width:450px;table-layout:fixed !important;" >
 											<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 												<td class="mobil-font-size" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-size:30px;mso-height-rule:exactly;line-height:35px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                                     <img  src="{{ media_url }}{{ mail_image.name }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;max-width:100%;-ms-interpolation-mode:bicubic;" >
@@ -211,17 +213,20 @@
 												<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 												<td align="center" valign="top" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
 												<![endif]-->
-										<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+										<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;max-width:450px;table-layout:fixed !important" >
 											<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 												<td class="mobil-font-size" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:center;padding-top:20px;padding-bottom:2px;padding-right:0;padding-left:0;font-size:20px;mso-height-rule:exactly;line-height:20px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
 													<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-bottom:5px;" >
                                                         <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;font-size:14px;" >{% blocktrans %}
                                                             Hey {{ member_name }},<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" />
-                                                            Invite your friends to join {{ referred_project_name }} on ikwen and earn free coupons for that.
-                                                            It's simple ! Login to <a href="http://wwww.ikwen.com" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >ikwen.com</a>, visit our page and share
-                                                            the link.<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" />
-                                                            Make sure you login to <a href="http://wwww.ikwen.com" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >ikwen.com</a> first before you go to our page.<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" />
+                                                            Win free coupons by inviting your friends to join {{ referred_project_name }} on ikwen.
+                                                            It's simple ! Login to <a href="http://wwww.ikwen.com/{{ referred_project_name_slug }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >ikwen.com</a>, visit our page and share
+                                                            the link.<br/>
                                                             Remember, collect 100 of whatever coupon and exchange them with {{ referred_project_name }} for the equivalent.
+                                                        {% endblocktrans %}</p>
+                                                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#777;font-size:12px;" >{% blocktrans %}
+                                                            Make sure you login to <a href="http://wwww.ikwen.com/{{ referred_project_name_slug }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >ikwen.com</a>
+                                                            first before you go to our page and share.<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" />
                                                         {% endblocktrans %}</p>
                                                     </div>
 												</td>
