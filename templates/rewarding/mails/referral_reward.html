@@ -8,7 +8,8 @@
 <!-- Forcing initial-scale shouldn't be necessary -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 <!-- Use the latest (edge) version of IE rendering engine -->
-<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ subject }} - {{ project_name }}</title>
+<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% blocktrans %}{{ project_name }} is offering you {{ coupon_count }}
+    coupons for your referral to {{ referee_name }}{% endblocktrans %}</title>
 <!-- The title tag shows in email notifications, like Android 4.4. -->
 
 
@@ -135,7 +136,7 @@ table.center-on-narrow {
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
 
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ subject }} - {{ project_name }}</div>
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{% blocktrans %}You just earned {{ coupon_count }} coupons for referring {{ referee_name }}{% endblocktrans %}</div>
         <!-- Visually Hidden Preheader Text : END -->
 
         <div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;box-shadow:0 5px 5px 0 #bfbfbf;margin-top:10px;" >
@@ -151,7 +152,7 @@ table.center-on-narrow {
 					  <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
 						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-top:15px;padding-bottom:5px;padding-right:0;padding-left:0;text-align:left;" >
 						  <a href="http://www.ikwen.com" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                              <img src="https://lh3.googleusercontent.com/UKnQJTLFRojYq16ysHKkALYatEMamNqlqN6kUBTaMXkCBwn_B70FjnvBH3OwsFiHFo2g-rdA_ux_yLRyYNCazERPKyZI2J-gAPfyOQK5ZrcvqXU18kRBo4q6gznucb5y7xr94Y1kaHM9qokKvtbmFzUWy4XRybiSjJ1JJyidrBFIr4usYhkLqmcXVVHIq3V-9b9S4xC1afnc96IR6JYMue-_Nnm0Z5z9iSqASqVDGTcl-TKmqRyE23Dp6nH3dKl2sJVudIIRqjSA91CIu_nPCHrIb2JvFXbGX9xD7D5YZUWU_uzSBNR-RtR5zhq7S0NnZuWljR86D30kz0nHYijU-ZH6v23mVVCwYhpRj2byy8hJ52lyt9h9RWHH5iWqCCImuwesyP_9cnsoEsfy_rjoPjtgmp3fKYdoGP4YgGitZuaY_3YRcQ6Nnmv6nAYbVGQesc5ylJRD6Jf3jffU-w3XcgHUcDYaDVwCanAKh4wyNHrjfhNBxK4LAQx_ic3toHvcsX0fkbWObLvYfDdtFeCXcdaJrgZRB1sxYnUiora34hprdUQAE-cRgNBsj1U-MpiJMlgN-H36OMfO0-qrpSVHNPGKlKpjdTirQ5PXVXY=w200-h49-no" width="100" height="auto" alt="ikwen website" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic;" >
+                              <img src="https://lh3.googleusercontent.com/UKnQJTLFRojYq16ysHKkALYatEMamNqlqN6kUBTaMXkCBwn_B70FjnvBH3OwsFiHFo2g-rdA_ux_yLRyYNCazERPKyZI2J-gAPfyOQK5ZrcvqXU18kRBo4q6gznucb5y7xr94Y1kaHM9qokKvtbmFzUWy4XRybiSjJ1JJyidrBFIr4usYhkLqmcXVVHIq3V-9b9S4xC1afnc96IR6JYMue-_Nnm0Z5z9iSqASqVDGTcl-TKmqRyE23Dp6nH3dKl2sJVudIIRqjSA91CIu_nPCHrIb2JvFXbGX9xD7D5YZUWU_uzSBNR-RtR5zhq7S0NnZuWljR86D30kz0nHYijU-ZH6v23mVVCwYhpRj2byy8hJ52lyt9h9RWHH5iWqCCImuwesyP_9cnsoEsfy_rjoPjtgmp3fKYdoGP4YgGitZuaY_3YRcQ6Nnmv6nAYbVGQesc5ylJRD6Jf3jffU-w3XcgHUcDYaDVwCanAKh4wyNHrjfhNBxK4LAQx_ic3toHvcsX0fkbWObLvYfDdtFeCXcdaJrgZRB1sxYnUiora34hprdUQAE-cRgNBsj1U-MpiJMlgN-H36OMfO0-qrpSVHNPGKlKpjdTirQ5PXVXY=w200-h49-no" height="25" alt="ikwen website" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic;" >
                           </a>
 						</div>
 						</td>
@@ -161,8 +162,44 @@ table.center-on-narrow {
 
           <!-- Email Body : BEGIN -->
           <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+                <!-- Main image band : BEGIN -->
+                <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                  <td bgcolor="#ffffff" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:center;background-position:center !important;background-size:cover !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                      <!--[if gte mso 9]>
+                            <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:680px;height:175px;background-position:center center !important;" >
+                            <v:fill type="tile" src="assets/Hybrid/Image_680x230.png" color="#222222" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" />
+                            <v:textbox inset="0,0,0,0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                            <![endif]-->
 
-            <!-- Text with Background band : BEGIN -->
+                        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;text-align:center;" >
+                          <!--[if mso]>
+                                    <table border="0" cellspacing="0" cellpadding="0" align="center" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+                                    <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                    <td align="center" valign="top" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                    <![endif]-->
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;max-width:450px;table-layout:fixed !important;" >
+                                <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                    <td class="mobil-font-size" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-size:30px;mso-height-rule:exactly;line-height:35px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                        <img  src="https://lh3.googleusercontent.com/kfSvxIrCE56wxQRVM5947xy35ar6CS6cDoRVFQxzrWxuCMaqFjqePe3FRLR3e7uz4lpGG91Uqespb2dsuwjIW77A8rQdbnVt_H_cxeCHs5K9v9NZjJ15rukmdPopT5xS_Rj86l9AMq-zfANgp4wqN-ptuMG1QaYKdo4IY1FrShAiCDrVQbsDvXXtCH_vBUHIqrdJEgCAj12AKH5D_GiluYkNYO4L7oJbUaW8K07Yauh-PLYX9UIWporEiP6DTFssntUEtxqdUGZTw1opHJ2PzbHZtus9itSpg_49CLjIaJsaXu-e4nqUzqxZ86WOkYYCrq673lPuFhyeCf3I4WaFknZT6UNaEd81z2_5bSqa7oURWk2yk1dlV5B9Xfzpn4HWFkdCCgTi00sOFA-Vp2Fps3Ar60TboRbJ5r0B8uqjMj6VTNPN_iXANDS6s3y-eFoOtKFPpDYzAphNJDpglmNv82GB83Ij5w_7uPPPPzCp5kHnQ7gCbIMf4ViEFaAwH31e44UB7lDvQt8rN2VMKeMr4MRRaUAp9LnD-6VGz1sHE8BFIWVWwPu9KBrEo2tjPkHa28mX0hiZHNYp0dkn5dJXVnksjATtgQ3N29_fXmZAJksswE_VHPpII3uMP92iuqJRi42RTNRgVMGgXaknMLc1uvYj=w650-h375-no" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;max-width:100%;-ms-interpolation-mode:bicubic;" >
+                                    </td>
+                                </tr>
+                            </table>
+                          <!--[if (gte mso 9)|(IE)]>
+                                    </td>
+                                    </tr>
+                                    </table>
+                                    <![endif]-->
+                        </div>
+
+                    <!--[if gte mso 9]>
+                            </v:textbox>
+                            </v:rect>
+                            <![endif]-->
+                    </td>
+                </tr>
+                <!-- Main image band : END -->
+
+                <!-- Text with Background band : BEGIN -->
 							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 							  <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:center;background-position:center !important;background-size:cover !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
 
@@ -174,12 +211,16 @@ table.center-on-narrow {
 												<![endif]-->
 										<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;border-spacing:0 !important;" >
 											<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-												<td class="mobil-font-size" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:23px;mso-height-rule:exactly;line-height:23px;color:#555555;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-                                                    {% blocktrans %}
-                                                    <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" > Hey !</span><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-													{{ referee_name }} just joined you on {{ joined_project_name }}.
-                                                        You earned {{ coupon_count }} for that. Remember, collect 100 of
-                                                        whatever coupon and exchange them with {{ joined_project_name }} for the equivalent.
+												<td class="mobil-font-size" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:18px;mso-height-rule:exactly;line-height:25px;color:#555555;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                                    {% blocktrans with joined_project_name=joined_service.project_name %}
+                                                        <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#333;" > Hey {{ member_name }},</strong>
+                                                        <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                        <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;font-size:15px;" >
+													        {{ referee_name }} just joined you on {{ joined_project_name }}.
+                                                            You earned {{ coupon_count }} for that.<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                            Remember, collect 100 of whatever coupon and exchange them with us for the equivalent.
+                                                        </p>
                                                     {% endblocktrans %}
                                                 </td>
 											</tr>
@@ -216,29 +257,12 @@ table.center-on-narrow {
                                     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                                     <td align="left" valign="top" width="220" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                     <![endif]-->
-                      {% for service, reward_list in grouped_rewards.items %}
-                          {% with logo=service.config.logo %}
+                      {% for reward in referral_pack_list %}
                       <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:33.33%;min-width:220px;vertical-align:top;width:100%;" >
                         <table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 								<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
 									<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:14px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td colspan="2" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<img src="{{ IKWEN_MEDIA_URL }}{{ logo.name }}" width="200"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:90%;height:auto;-ms-interpolation-mode:bicubic;" >
-											</td>
-											<td colspan="3" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                                                    <p  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:90%;max-width:95%;height:auto;color:#555555;" >{{ service.project_name }}</p>
-                                                </strong>
-											</td>
-										</tr>
-                                        {% with reward=reward_list.0 %}
-										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-											<td colspan="5" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<img src="{{ IKWEN_MEDIA_URL }}{{ reward.coupon.image.name }}" width="200" class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:90%;height:auto;-ms-interpolation-mode:bicubic;" >
-											</td>
-										</tr>
 										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 											<td colspan="5" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
 												<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;margin-bottom:10px;margin-right:0;margin-left:0;" >
@@ -248,24 +272,11 @@ table.center-on-narrow {
 												</p>
 											</td>
 										</tr>
-                                        {% endwith %}
 									</table>
-									<!-- Button : Begin -->
-											<table cellspacing="0" cellpadding="0" border="0" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
-												<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-												  <td  class="button-ta" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;min-width:160px;border-radius:3px;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><a href="http://www.ikwen.com/"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#233682;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" >
-													  <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% trans "Collect your reward" %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
-													  </a>
-													</td>
-												</tr>
-											</table>
-												  <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-									<!-- Button : END -->
 								</td>
 							</tr>
                         </table>
                       </div>
-                          {% endwith %}
                       {% endfor %}
 
                       <!--[if mso]>
@@ -277,6 +288,19 @@ table.center-on-narrow {
                     </td>
                   </tr>
                 </table>
+
+                <!-- Button : Begin -->
+                        <table cellspacing="0" cellpadding="0" border="0" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
+                            <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                              <td  class="button-ta" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;min-width:160px;border-radius:3px;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;padding-top: 10px; text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                  <a href="http://www.ikwen.com/console"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#233682;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in; width: 190px" >
+                                  <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% trans "Collect your gifts" %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                  </a>
+                                </td>
+                            </tr>
+                        </table>
+                              <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                <!-- Button : END -->
 
                 <!--[if mso]>
                         </td>

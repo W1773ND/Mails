@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-01 18:20+0100\n"
-"PO-Revision-Date: 2018-12-01 19:56+0100\n"
+"POT-Creation-Date: 2018-12-06 20:00+0100\n"
+"PO-Revision-Date: 2018-12-06 20:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -53,6 +53,7 @@ msgid "Please confirm your email"
 msgstr "Veuillez confirmer votre email SVP"
 
 #: templates/accesscontrol/mails/confirm_email.html:191
+#: templates/revival/mails/suggest_referral.html:220
 #, python-format
 msgid "Hey %(member_name)s,"
 msgstr "Hey %(member_name)s,"
@@ -95,11 +96,8 @@ msgstr ""
 "milliers d'entre vous sont connectés à leur\n"
 "                        entreprises préférées. Ces entreprises vous offrent "
 "chaque jour des cadeaux exclusifs et vous permettent de\n"
-"                        Bénéficiez d'offres promotionnelles sur mesure, tout "
-"simplement parce que vous êtes ici. Pour fêter \n"
-"                        ensemble l'expansion de la famille ikwen, voici le "
-"premier cadeau que nous  vous offrons (entre autres).\n"
-"                         Cliquez sur la boîte cadeau pour la récupérer!"
+"                        bénéficier d'offres promotionnelles sur mesure, tout "
+"simplement parce que vous êtes ici."
 
 #: templates/accesscontrol/mails/welcome_to_ikwen.html:276
 #, python-format
@@ -156,40 +154,41 @@ msgstr ""
 "\t\t\t\t\t\t\t\t\t<li style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
 "adjust:100%%;\" >Quelle que soit la plate-forme de messagerie: lors de notre "
 "premier envoi (celui-ci), il est possible que votre boîte aux lettres "
-"électronique ne nous reconnaisse pas et nous classe dans la catégorie spam/"
-"courrier indésirable (NB: ceci est injuste étant donné que nous n'utilisons "
-"jamais de spam). Retrouvez-nous après un certain temps, vérifiez-nous dans "
-"le spam ... et sortez-nous de là! (Pour des difficultés techniques: <a href= "
-"\"http://ikwen.com\" style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
-"adjust:100%%; text-decoration: none;\" >support@ikwen.com</a>).</li>\n"
+"électronique ne nous reconnaisse pas et nous classe dans la catégorie Spam/"
+"courrier indésirable (NB: ceci est injuste étant donné que nous ne faisons "
+"jamais de spam). Si vous ne retrouovez pas après un certain temps, vérifiez-"
+"nous dans les Spam ... et sortez-nous de là! (Pour des difficultés "
+"techniques: <a href= \"http://ikwen.com\" style=\"-ms-text-size-"
+"adjust:100%%;-webkit-text-size-adjust:100%%; text-decoration: none;\" "
+">support@ikwen.com</a>).</li>\n"
 "\t\t\t\t\t\t\t\t</ul>\n"
 "\t\t\t\t\t\t\t"
 
-#: templates/billing/mails/notice.html:137
+#: templates/billing/mails/notice.html:135
 #, python-format
 msgid "Dear %(member_name)s,"
 msgstr "Cher(e) %(member_name)s,"
 
-#: templates/billing/mails/notice.html:191
+#: templates/billing/mails/notice.html:189
 #: templates/core/mails/service_deployed.html:286
 msgid "Invoice"
 msgstr "Facture"
 
-#: templates/billing/mails/notice.html:192
+#: templates/billing/mails/notice.html:190
 #: templates/cashout/mails/request_notice.html:120
 #: templates/core/mails/service_deployed.html:292
 msgid "Amount"
 msgstr "Montant"
 
-#: templates/billing/mails/notice.html:194
+#: templates/billing/mails/notice.html:192
 msgid "Due Date"
 msgstr "Date limite"
 
-#: templates/billing/mails/notice.html:197
+#: templates/billing/mails/notice.html:195
 msgid "Service details"
 msgstr "Détails"
 
-#: templates/billing/mails/notice.html:231
+#: templates/billing/mails/notice.html:229
 #, python-format
 msgid "Thank you for your business with %(company_name)s"
 msgstr "Merci d'être client chez %(company_name)s"
@@ -382,14 +381,14 @@ msgid ""
 "                              "
 msgstr ""
 "\n"
-"                                  Vous venez d'expirer crédit %(account)s . "
-"C'est grave, car les clients n'entendront plus jamais de vous.\n"
+"                                  Votre crédit %(account)s vient de "
+"s'épuiser. C'est grave, car les clients n'auront plus de nouvelles de vous.\n"
 "                                   Mais ne vous inquiétez pas, vous pouvez "
-"le régler maintenant en renseignant le crédit de messagerie."
+"le régler maintenant en rechargeant le crédit de messagerie."
 
 #: templates/echo/mails/empty_messaging_credit.html:222
 msgid "Refill now"
-msgstr "Renseignez maintenant"
+msgstr "Rechargez maintenant"
 
 #: templates/kako/mails/product_on_sale.html:288
 #, python-format
@@ -416,7 +415,7 @@ msgstr ""
 "text-size-adjust:100%%;-webkit-text-size-adjust:100%%;font-size:18px;color:"
 "#666;\" >\n"
 "                                                             Nous avons "
-"cette merveilleuse opportunité pour vous. Vous ne devriez pas le manquer !\n"
+"cette merveilleuse opportunité pour vous. Vous ne devriez pas la manquer !\n"
 "\t\t\t\t\t\t\t</span>\n"
 "\t\t\t\t\t\t\t"
 
@@ -424,7 +423,7 @@ msgstr ""
 #: templates/kako/mails/products_added.html:251
 #: templates/revival/mails/default.html:283
 msgid "Order now"
-msgstr "Acheter maintenant"
+msgstr "J'achète"
 
 #: templates/kako/mails/products_added.html:179
 #, python-format
@@ -488,69 +487,70 @@ msgstr ""
 "style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t"
 
-#: templates/revival/mails/suggest_referral.html:134
-#, python-format
-msgid "Win by inviting your friends to join %(project_name)s on ikwen"
-msgstr ""
-"Invitez vos amis à rejoindre %(project_name)s sur ikwen et vous y gagnerez "
-"quelque chose"
-
-#: templates/revival/mails/suggest_referral.html:220
+#: templates/revival/mails/suggest_referral.html:11
 #, python-format
 msgid ""
+"Win free coupons by inviting your friends to join %(project_name)s on ikwen"
+msgstr ""
+"Gagnez des coupons gratuits en invitant vos amis à rejoindre "
+"%(project_name)s sur ikwen"
+
+#: templates/revival/mails/suggest_referral.html:134
+#, python-format
+msgid ""
+"Share your %(project_name)s referral link to friends and earn free coupons "
+"for that"
+msgstr ""
+"Partagez votre lien d'invitation %(project_name)s à vos amis et gagnez des "
+"coupons gratuits"
+
+#: templates/revival/mails/suggest_referral.html:222
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "                                                            Win free "
+#| "coupons by inviting your friends to join %(referred_project_name)s on "
+#| "ikwen.\n"
+#| "                                                            It's simple ! "
+#| "Click below to start.\n"
+#| "                                                            <br style=\"-"
+#| "ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+#| "                                                            <br style=\"-"
+#| "ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+#| "                                                            Remember, "
+#| "collect 100 of whatever coupon and exchange them with "
+#| "%(referred_project_name)s for the equivalent.\n"
+#| "                                                        "
+msgid ""
 "\n"
-"                                                            Hey "
-"%(member_name)s,<br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
-"adjust:100%%;\" />\n"
 "                                                            Win free coupons "
 "by inviting your friends to join %(referred_project_name)s on ikwen.\n"
 "                                                            It's simple ! "
-"Login to <a href=\"http://wwww.ikwen.com/%(referred_project_name_slug)s\" "
-"style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >ikwen."
-"com</a>, visit our page and share\n"
-"                                                            the link.<br/>\n"
+"Click below to start.\n"
+"                                                            <br style=\"-ms-"
+"text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+"                                                            <br style=\"-ms-"
+"text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
 "                                                            Remember, "
-"collect 100 of whatever coupon and exchange them with "
-"%(referred_project_name)s for the equivalent.\n"
+"collect 100 of whatever coupon and exchange them with us for the "
+"equivalent.\n"
 "                                                        "
 msgstr ""
 "\n"
-"\t\t\t\t\t\t\t\tSalut %(member_name)s,<br style=\"-ms-text-size-"
-"adjust:100%%;-webkit-text-size-adjust:100%%;\" />\n"
-"\t\t\t\t\t\t\t\tInvitez vos amis à joindre  %(referred_project_name)s sur "
-"ikwen et gagner par la suite des coupons gratuits.\n"
-"\t\t\t\t\t\t\t\tC'est simple ! Connectez vous sur  <a href=\"http://www."
-"ikwen.com/%(referred_project_name_slug)s\" style=\"-ms-text-size-"
-"adjust:100%%;-webkit-text-size-adjust:100%%;\" >ikwen.com</a>, visitez notre "
-"page et partagez\n"
-"\t\t\t\t\t\t\t\tle lien.<br/>\n"
-"\t\t\t\tSouvenez-vous, collectionnez 100 de n'importe quel coupon et  "
-"échangez les avec %(referred_project_name)s pour l'équivalent.\n"
-"\t\t\t\t"
+"                                                            Gagnez des "
+"coupons gratuits en invitant vos amis à rejoindre  %(referred_project_name)s "
+"sur ikwen.\n"
+"                                                            C'est simple ! "
+"Cliquez ci-dessous pour commencer.\n"
+"                                                            <br style=\"-ms-"
+"text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+"                                                            <br style=\"-ms-"
+"text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+"                                                            Souvenez-vous, "
+"collectionnez 100 unités de n'importe quel coupon et  échangez les chez nous "
+"contre l'équivalent."
 
-#: templates/revival/mails/suggest_referral.html:227
-#, python-format
-msgid ""
-"\n"
-"                                                            Make sure you "
-"login to <a href=\"http://wwww.ikwen.com/%(referred_project_name_slug)s\" "
-"style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >ikwen."
-"com</a>\n"
-"                                                            first before you "
-"go to our page and share.<br style=\"-ms-text-size-adjust:100%%;-webkit-text-"
-"size-adjust:100%%;\" />\n"
-"                                                        "
-msgstr ""
-"\n"
-"                                              Rassurez-vous d'abord que vous "
-"êtes connecté sur <a href=\"http://wwww.ikwen.com/"
-"%(referred_project_name_slug)s\" style=\"-ms-text-size-adjust:100%%;-webkit-"
-"text-size-adjust:100%%;\" >ikwen.com</a>\n"
-"                                                            avant que vous "
-"allez sur notre page et partagez.<br style=\"-ms-text-size-adjust:100%%;-"
-"webkit-text-size-adjust:100%%;\"/>"
-
-#: templates/revival/mails/suggest_referral.html:240
+#: templates/revival/mails/suggest_referral.html:302
 msgid "Invite friend now"
 msgstr "Invitez vos amis "
 
@@ -587,16 +587,16 @@ msgid ""
 "                                                "
 msgstr ""
 "\n"
-"\t\t\t\t\t\tProfitez des coupons de collection gratuits tous les jours. "
+"\t\t\t\t\t\tProfitez tous les jours de coupons à collectionner gratuits. "
 "Collectionnez-les pour des offres\n"
 "\t\t\t\t\t\tpromotionnelles, tarifs préférentiels, cadeaux spéciaux et plus. "
 "<br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
-"\t\t\t\t\t\tCliquez ci-dessous pour collectionner les premiers cadeaux...\n"
+"\t\t\t\t\t\tCliquez ci-dessous pour collectionner les premiers cadeaux ...\n"
 "\t\t\t\t\t\t"
 
 #: templates/rewarding/mails/community_welcome_pack.html:393
 msgid "Collect your gifts now"
-msgstr "Récupérez vos cadeaux maintenant"
+msgstr "Récupérez vos cadeaux"
 
 #: templates/rewarding/mails/community_welcome_pack.html:429
 msgid "How to collect coupons"
@@ -612,7 +612,7 @@ msgstr "Rejoignez notre communauté (vous venez de le faire)"
 
 #: templates/rewarding/mails/community_welcome_pack.html:435
 msgid "Buy from us (online or onsite)"
-msgstr "Faites vos achats chez nous (en ligne ou sur place)"
+msgstr "Achetez chez nous (en ligne ou sur place)"
 
 #: templates/rewarding/mails/community_welcome_pack.html:436
 msgid "Visit our website very often"
@@ -633,7 +633,7 @@ msgstr "Lire la suite"
 
 #: templates/rewarding/mails/community_welcome_pack.html:468
 msgid "How to recover my earnings?"
-msgstr "Comment récupérer mes profits?"
+msgstr "Comment récupérer mes gains ?"
 
 #: templates/rewarding/mails/community_welcome_pack.html:472
 msgid ""
@@ -648,7 +648,7 @@ msgid ""
 msgstr ""
 "\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t  Une fois que vous avez collecté 100 coupons du "
-"même article, vous pouvez\n"
+"même type, vous pouvez\n"
 "                                                      les échanger contre "
 "des articles équivalents directement dans le magasin et \n"
 "                                                      sans frais "
@@ -659,62 +659,94 @@ msgstr ""
 msgid "http://blog.ikwen.com/how-to-recover-my-earned-coupons"
 msgstr "http://blog.ikwen.com/how-to-recover-my-earned-coupons "
 
-#: templates/rewarding/mails/free_reward.html:176
-#, python-format
-msgid ""
-"\n"
-"                                                    <span> Hey "
-"%(member_name)s!</span><br>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\tYou just received some free gifts from your "
-"favorite companies\n"
-"                                                    "
+#: templates/rewarding/mails/free_reward.html:179
+msgid "You just received some free gifts from your favorite companies"
 msgstr ""
-"\n"
-"                                                   <span> Salut "
-"%(member_name)s!</span><br>\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\tVous venez de recevoir des cadeaux gratuits de vos "
-"entreprises préférées\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t"
+"Vous venez de recevoir des cadeaux gratuits de vos entreprises préférées"
 
-#: templates/rewarding/mails/free_reward.html:271
+#: templates/rewarding/mails/free_reward.html:269
+#: templates/rewarding/mails/referral_reward.html:297
 msgid "Collect your gifts"
 msgstr "Récupérez vos cadeaux"
 
-#: templates/rewarding/mails/free_reward.html:330
-#: templates/rewarding/mails/referral_reward.html:332
+#: templates/rewarding/mails/free_reward.html:328
+#: templates/rewarding/mails/referral_reward.html:356
 msgid "En savoir plus"
 msgstr "En savoir plus"
 
-#: templates/rewarding/mails/referral_reward.html:178
+#: templates/rewarding/mails/referral_reward.html:11
+#, python-format
+msgid ""
+"%(project_name)s is offering you %(coupon_count)s\n"
+"    coupons for your referral to %(referee_name)s"
+msgstr ""
+"%(project_name)s vous offre %(coupon_count)s\n"
+"    coupons pour avoir recommandé %(referee_name)s"
+
+#: templates/rewarding/mails/referral_reward.html:139
+#, python-format
+msgid "You just earned %(coupon_count)s coupons for referring %(referee_name)s"
+msgstr ""
+"Vous avez gagné %(coupon_count)s coupons pour avoir recommandé "
+"%(referee_name)s"
+
+#: templates/rewarding/mails/referral_reward.html:215
 #, python-format
 msgid ""
 "\n"
-"                                                    <span style=\"-ms-text-"
-"size-adjust:100%%;-webkit-text-size-adjust:100%%;\" > Hey !</span><br style="
-"\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
-"\t\t\t\t\t\t\t\t\t\t\t\t\t%(referee_name)s just joined you on "
+"                                                        <strong style=\"-ms-"
+"text-size-adjust:100%%;-webkit-text-size-adjust:100%%;color:#333;\" > Hey "
+"%(member_name)s,</strong>\n"
+"                                                        <br style=\"-ms-text-"
+"size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+"                                                        <br style=\"-ms-text-"
+"size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+"                                                        <p style=\"-ms-text-"
+"size-adjust:100%%;-webkit-text-size-adjust:100%%;color:#555555;font-"
+"size:15px;\" >\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t        %(referee_name)s just joined you on "
 "%(joined_project_name)s.\n"
-"                                                        You earned "
-"%(coupon_count)s for that. Remember, collect 100 of\n"
-"                                                        whatever coupon and "
-"exchange them with %(joined_project_name)s for the equivalent.\n"
+"                                                            You earned "
+"%(coupon_count)s for that.<br style=\"-ms-text-size-adjust:100%%;-webkit-"
+"text-size-adjust:100%%;\" >\n"
+"                                                            Remember, "
+"collect 100 of whatever coupon and exchange them with us for the "
+"equivalent.\n"
+"                                                        </p>\n"
 "                                                    "
 msgstr ""
 "\n"
 "                                                    <span style=\"-ms-text-"
-"size-adjust:100%%;-webkit-text-size-adjust:100%%;\" > Salut !</span><br "
-"style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+"size-adjust:100%%;-webkit-text-size-adjust:100%%;\" > Salut %(member_name)s !"
+"</span><br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;"
+"\" >\n"
 "\t\t\t\t\t\t\t%(referee_name)s vient de vous rejoindre sur "
 "%(joined_project_name)s.\n"
 "\t\t\t\t\t\t\tVous avez gagné %(coupon_count)s pour cela. Souvenez-vous, "
 "collectez 100 de\n"
-"\t\t\t\t\t\t\tn'importe quel coupon et échangez les avec  "
-"%(joined_project_name)s pour l'équivalent.\n"
-"\t\t\t\t\t\t\t"
-
-#: templates/rewarding/mails/referral_reward.html:257
-msgid "Collect your reward"
-msgstr "Récupérez votre récompense"
+"\t\t\t\t\t\t\tn'importe quel coupon et échangez chez  "
+"%(joined_project_name)s contre l'équivalent.\n"
+"\t\t\t\t\t\t\t\n"
+"\n"
+"                                                        <strong style=\"-ms-"
+"text-size-adjust:100%%;-webkit-text-size-adjust:100%%;color:#333;\" > Hey "
+"%(member_name)s,</strong>\n"
+"                                                        <br style=\"-ms-text-"
+"size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+"                                                        <br style=\"-ms-text-"
+"size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
+"                                                        <p style=\"-ms-text-"
+"size-adjust:100%%;-webkit-text-size-adjust:100%%;color:#555555;font-"
+"size:15px;\" >\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t        %(referee_name)s vient de vous rejoindre "
+"sur %(joined_project_name)s.\n"
+"                                                            Vous avez gagné "
+"%(coupon_count)s pour cela.<br style=\"-ms-text-size-adjust:100%%;-webkit-"
+"text-size-adjust:100%%;\" >\n"
+"                                                            Souvenez-vous, "
+"collectez 100 unités de n'importe quel coupon et échangez-les chez nous "
+"contre l'équivalent.\n"
+"                                                        </p>"
 
 #: templates/shopping/mails/order_notice.html:188
 #, python-format
@@ -904,6 +936,44 @@ msgstr ""
 "                                              Collectionnez-en 100 pour les "
 "échanger avec nous contre l'équivalent .<br style=\"-ms-text-size-"
 "adjust:100%%;-webkit-text-size-adjust:100%%;\" >"
+
+#~ msgid ""
+#~ "\n"
+#~ "                                                    <span> Hey "
+#~ "%(member_name)s!</span><br>\n"
+#~ "\t\t\t\t\t\t\t\t\t\t\t\t\tYou just received some free gifts from your "
+#~ "favorite companies\n"
+#~ "                                                    "
+#~ msgstr ""
+#~ "\n"
+#~ "                                                   <span> Salut "
+#~ "%(member_name)s!</span><br>\n"
+#~ "\t\t\t\t\t\t\t\t\t\t\t\t\tVous venez de recevoir des cadeaux gratuits de "
+#~ "vos entreprises préférées\n"
+#~ "\t\t\t\t\t\t\t\t\t\t\t\t\t"
+
+#~ msgid "Collect your reward"
+#~ msgstr "Récupérez votre récompense"
+
+#~ msgid ""
+#~ "\n"
+#~ "                                                            Make sure you "
+#~ "login to <a href=\"http://wwww.ikwen.com/%(referred_project_name_slug)s\" "
+#~ "style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" "
+#~ ">ikwen.com</a>\n"
+#~ "                                                            first before "
+#~ "you go to our page and share.<br style=\"-ms-text-size-adjust:100%%;-"
+#~ "webkit-text-size-adjust:100%%;\" />\n"
+#~ "                                                        "
+#~ msgstr ""
+#~ "\n"
+#~ "                                              Rassurez-vous d'abord que "
+#~ "vous êtes connecté sur <a href=\"http://wwww.ikwen.com/"
+#~ "%(referred_project_name_slug)s\" style=\"-ms-text-size-adjust:100%%;-"
+#~ "webkit-text-size-adjust:100%%;\" >ikwen.com</a>\n"
+#~ "                                                            avant d'aller "
+#~ "sur notre page et partager.<br style=\"-ms-text-size-adjust:100%%;-webkit-"
+#~ "text-size-adjust:100%%;\"/>"
 
 #~ msgid "Dear"
 #~ msgstr "cher(e)"
