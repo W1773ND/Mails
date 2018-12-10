@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-10 12:20+0100\n"
-"PO-Revision-Date: 2018-12-10 12:21+0100\n"
+"POT-Creation-Date: 2018-12-10 16:01+0100\n"
+"PO-Revision-Date: 2018-12-10 16:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -446,18 +446,19 @@ msgstr ""
 msgid "Make sure you display images to so that you don't miss anything."
 msgstr "Assurez-vous d'afficher les images afin de ne rien manquer."
 
-#: templates/monitoring/mails/community_progression.html:130
-#: templates/monitoring/mails/community_progression.html:167
-#, python-format
-msgid "newly registered members on %(service_name)s"
-msgstr "membres nouvellement enregistrés sur %(service_name)s"
-
-#: templates/monitoring/mails/community_progression.html:169
+#: templates/monitoring/mails/community_progression.html:132
+#: templates/monitoring/mails/community_progression.html:172
 #, python-format
 msgid "No newly registered member on %(service_name)s"
 msgstr "Aucun membre nouvellement enregistré sur %(service_name)s"
 
-#: templates/monitoring/mails/community_progression.html:197
+#: templates/monitoring/mails/community_progression.html:134
+#: templates/monitoring/mails/community_progression.html:175
+#, python-format
+msgid "newly registered members on %(service_name)s"
+msgstr "membres nouvellement enregistrés sur %(service_name)s"
+
+#: templates/monitoring/mails/community_progression.html:203
 #, python-format
 msgid ""
 "\n"
@@ -475,7 +476,7 @@ msgstr ""
 "\n"
 "                                                    "
 
-#: templates/monitoring/mails/community_progression.html:202
+#: templates/monitoring/mails/community_progression.html:208
 #, python-format
 msgid ""
 "\n"
@@ -651,17 +652,27 @@ msgstr ""
 msgid "http://blog.ikwen.com/how-to-recover-my-earned-coupons"
 msgstr "http://blog.ikwen.com/how-to-recover-my-earned-coupons "
 
-#: templates/rewarding/mails/free_reward.html:179
+#: templates/rewarding/mails/free_reward.html:140
+#, python-format
+msgid "%(project_names)s is offering you some free coupons"
+msgstr "%(project_names)s vous offre gratuitement quelques coupons"
+
+#: templates/rewarding/mails/free_reward.html:142
+#, python-format
+msgid "%(project_names)s are offering you some free coupons"
+msgstr "%(project_names)s vous offrent gratuitement quelques coupons"
+
+#: templates/rewarding/mails/free_reward.html:183
 msgid "You just received some free gifts from your favorite companies"
 msgstr ""
 "Vous venez de recevoir des cadeaux gratuits de vos entreprises préférées"
 
-#: templates/rewarding/mails/free_reward.html:269
+#: templates/rewarding/mails/free_reward.html:273
 #: templates/rewarding/mails/referral_reward.html:297
 msgid "Collect your gifts"
 msgstr "Récupérez vos cadeaux"
 
-#: templates/rewarding/mails/free_reward.html:328
+#: templates/rewarding/mails/free_reward.html:332
 #: templates/rewarding/mails/referral_reward.html:356
 msgid "En savoir plus"
 msgstr "En savoir plus"
