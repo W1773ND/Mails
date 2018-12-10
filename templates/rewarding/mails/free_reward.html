@@ -8,7 +8,7 @@
 <!-- Forcing initial-scale shouldn't be necessary -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 <!-- Use the latest (edge) version of IE rendering engine -->
-<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ company_name }} - {{ subject }}</title>
+<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ subject }}</title>
 <!-- The title tag shows in email notifications, like Android 4.4. -->
 
 
@@ -135,7 +135,12 @@ table.center-on-narrow {
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
         
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ company_name }} - {{ subject }}</div>
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >
+            {% if total_companies == 1 %}
+                {% blocktrans %}{{ project_names }} is offering you some free coupons{% endblocktrans %}
+            {% else %}
+                {% blocktrans %}{{ project_names }} are offering you some free coupons{% endblocktrans %}</div>
+            {% endif %}
         <!-- Visually Hidden Preheader Text : END -->
         
         <div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;box-shadow:0 5px 5px 0 #bfbfbf;margin-top:10px;" > 
@@ -174,7 +179,6 @@ table.center-on-narrow {
 											<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 												<td class="mobil-font-size" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:18px;mso-height-rule:exactly;line-height:25px;color:#555555;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                                     <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#333;" > Hey {{ member_name }},</strong>
-                                                    <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                                                     <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                                                     <p style="font-size:15px">{% blocktrans %}You just received some free gifts from your favorite companies{% endblocktrans %}</p>
                                                 </td>
@@ -221,7 +225,7 @@ table.center-on-narrow {
 									<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:14px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 											<td colspan="5" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-                                                <img src="{{ IKWEN_MEDIA_URL }}{{ logo.name }}" height="25" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:90%;height:auto;-ms-interpolation-mode:bicubic;float:left" >
+                                                <img src="{{ IKWEN_MEDIA_URL }}{{ logo.name }}" height="25" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;max-width:90%;-ms-interpolation-mode:bicubic;float:left" >
 												<strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;float:left;margin:5px 0 0 15px" >
                                                     {{ service.project_name }}
                                                 </strong>
