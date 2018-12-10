@@ -1,4 +1,4 @@
-{% load i18n %}
+{% load i18n humanize %}
 <!doctype html>
 <html style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
 <head style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -127,7 +127,7 @@ table.center-on-narrow {
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
         
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;" >{{ subject }} - ikwen</div>
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;" >{{ total|intcomma }} {% blocktrans %}newly registered members on {{ service_name }}{% endblocktrans %}</div>
         <!-- Visually Hidden Preheader Text : END -->
         
         <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;margin-top:10px;" > 
@@ -162,8 +162,12 @@ table.center-on-narrow {
 										<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 											<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >												
 												<td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;padding-top:40px;padding-bottom:40px;padding-right:20px;padding-left:20px;font-size:18px;mso-height-rule:exactly;line-height:25px;color:#ffffff;border-top-width:5px;border-top-style:solid;border-top-color:#9CC640;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-                                                    <strong>{{ total }}</strong>
-                                                    {% trans "newly registered members" %}
+                                                    {% if total == 0 %}
+                                                        {% blocktrans %}No newly registered member on {{ service_name }}{% endblocktrans %}
+                                                    {% else %}
+                                                        <strong>{{ total|intcomma }}</strong>
+                                                        {% blocktrans %}newly registered members on {{ service_name }}{% endblocktrans %}
+                                                    {% endif %}
                                                 </td>
 											</tr>
 										</table>
@@ -190,13 +194,13 @@ table.center-on-narrow {
 									<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
 							  			<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 											<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:10px;padding-bottom:0;padding-right:20px;padding-left:20px;text-align:left;mso-height-rule:exactly;color:#555555;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-												<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:15px;line-height:23px;" >{% blocktrans with iao_name=member.first_name  %}
+												<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:15px;line-height:23px;" >{% blocktrans with iao_name=member.first_name total_count=total_member_count|intcomma  %}
 													Hi {{ iao_name }}, <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-													Your community now has <strong>{{ total_member_count }}</strong> members,
+													Your community {{ service_name }} now has <strong>{{ total_count }}</strong> members,
                                                 {% endblocktrans %}
-                                                {% if last_mail %}
+                                                {% if last_mail and total > 0 %}
                                                 {% blocktrans with last_report_date=last_mail.created_on|date %}
-                                                    meaning a {{ change_rate }} increase since {{ last_report_date }}.<br/>
+                                                    meaning a {{ change_rate }}% increase since {{ last_report_date }}.<br/>
                                                     Congratulations ! <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" > <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 												{% endblocktrans %}</p>
                                                 {% endif %}
