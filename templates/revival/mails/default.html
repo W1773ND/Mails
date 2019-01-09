@@ -273,7 +273,7 @@
                                     {{ product.name }} - <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#888;" >{{ currency.symbol }} {{ product.retail_price }}</span>
                                 </strong>
                             	<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-bottom:10px;" ><p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;line-height:18px;font-size:15px;color:#555555;" >
-                             {{ product.description|safe|truncatewords:25 }}</p></div>
+                             {{ product.description|truncatewords_html:25|safe }}</p></div>
 
                               <!-- Button : Begin -->
                               <table cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;float:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
