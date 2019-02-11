@@ -388,7 +388,7 @@
 													<td align="left" valign="top" width="220" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
 													<![endif]-->
 
-									  <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:16px;line-height:18px; color: #555555;" >
+									  <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color: #555555;font-size:16px;line-height:18px;overflow-wrap:break-word;word-wrap:break-word;" >
             {% if order.status == 'Pending' %}
                 {% if order.delivery_option.type == 'HomeDelivery' %}
                     {% blocktrans with service_url=service.url %}
@@ -440,6 +440,51 @@
                                           <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:16px;line-height:18px; color: #555555;" >
 										{% trans "See details below" %}:
 										</p></strong>
+
+                                        <div style="clear: both; font-size: 16px; line-height: 28px">
+                                            {% blocktrans with currency_symbol=crcy.symbol items_count=order.items_count items_cost=order.items_cost|currency:crcy.code|floatformat:crcy.precision|intcomma %}
+                                            <p>
+                                                {{ items_count }} items(s), totaling
+                                                <ins>
+                                                    {{ currency_symbol }}
+                                                    {{ items_cost }}
+                                                </ins>
+                                            </p>
+                                            {% endblocktrans %}
+                                            {% if order.delivery_option.type == 'HomeDelivery' %}
+                                                <p style="color: #555">
+                                                 {% if order.delivery_option.cost > 0 %}
+                                                     {% trans "Shipping fees" %}:
+                                                     <ins style="font-weight: 700">
+                                                         {{ crcy.symbol }}
+                                                         {{ order.delivery_option.cost|currency:crcy.code|floatformat:crcy.precision|intcomma }}
+                                                     </ins>
+                                                 {% else %}
+                                                     <ins>{% trans "Free shipping" %}</ins>
+                                                 {% endif %}
+                                                </p>
+                                                <div style="font-size: .9em">
+                                                    <h4 style="color: #555; margin-bottom: 0">{% trans "Deliver to" %}:</h4>
+                                                    <span>{{ order.delivery_address.name }}</span>
+                                                    <p style="font-size: .9em; line-height: 1.5em; margin-top: .3em">
+                                                        {{ order.delivery_address.details }}, <br>
+                                                        {% trans "Postal code" %}: {{ order.delivery_address.postal_code }}, <br>
+                                                        <strong style="color: #666">{{ order.delivery_address.city }}, {{ order.delivery_address.country.name }}.</strong><br>
+                                                        <em>{{ order.delivery_address.phone }}</em>
+                                                    </p>
+                                                </div>
+                                            {% else %}
+                                                <p style="color: #555">
+                                                    {% trans "Pick up in store" %}:
+                                                    <ins>{{ order.delivery_address.details }}</ins>
+                                                </p>
+                                                <div style="font-size: .9em">
+                                                    <h4 style="color: #555; margin-bottom: 0">{% trans "Remit to" %}:</h4>
+                                                    <span>{{ order.delivery_address.name }}</span><br>
+                                                    <em>{{ order.delivery_address.phone }}</em>
+                                                </div>
+                                            {% endif %}
+                                        </div>
 
 									  <!--[if mso]>
 													</td>
@@ -497,10 +542,13 @@
                                                      </span>
                                                     {% endif %}
                                                 </strong>
-                                                <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-bottom:0;" >
-                                                          &#8226; {% trans "Price" %} : {{ crcy.symbol }} {{ entry.product.retail_price|currency:crcy.code|floatformat:crcy.precision|intcomma }}<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                                                          &#8226; {% trans "Quantity" %} : {{ entry.count }}<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                                                          &#8226; {% trans "Subtotal" %} : {{ crcy.symbol }} {{ entry.get_total|currency:crcy.code|floatformat:crcy.precision|intcomma }}</p><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-bottom:0;" >
+                                                  &#8226; {% trans "Price" %} : {{ crcy.symbol }} {{ entry.product.retail_price|currency:crcy.code|floatformat:crcy.precision|intcomma }}<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                  &#8226; {% trans "Quantity" %} : {{ entry.count }}<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                  &#8226; {% trans "Subtotal" %} : {{ crcy.symbol }} {{ entry.get_total|currency:crcy.code|floatformat:crcy.precision|intcomma }}
+                                                </p>
+                                                <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 											  <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 
 											 </td>
@@ -523,6 +571,71 @@
 										<![endif]--></td>
 							</tr>
                             {% endfor %}
+                            {% if order.packing_cost > 0 %}
+							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+							  <td dir="ltr" bgcolor="#F3F3F3" align="center" height="100%" valign="top" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><!--[if mso]>
+										<table border="0" cellspacing="0" cellpadding="0" align="center" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+										<td align="center" valign="top" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+										<![endif]-->
+
+								<table border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:660px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+								  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+									<td align="center" valign="top" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:0;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><!--[if mso]>
+													<table border="0" cellspacing="0" cellpadding="0" align="center" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+													<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+													<td align="left" valign="top" width="220" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+													<![endif]-->
+
+									  <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:33.33%;min-width:160px;vertical-align:top;width:100%;" >
+										<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+										  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+											<td dir="ltr" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:10px;padding-right:10px;padding-left:10px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                                <img src="{% static 'kakocase/img/shopping-bag.png' %}" width="200" alt=""  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:200px;height:auto;-ms-interpolation-mode:bicubic;" >
+                                            </td>
+										  </tr>
+										</table>
+									  </div>
+
+									  <!--[if mso]>
+													</td>
+													<td align="left" valign="top" width="440" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+													<![endif]-->
+
+									  <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:66.66%;min-width:320px;vertical-align:top;" >
+										<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+										  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+											<td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:16px;mso-height-rule:exactly;line-height:18px;color:#555555;padding-top:10px;padding-bottom:0;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                                <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;" >
+                                                    {% trans "Packing" %}
+                                                </strong>
+                                                <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-bottom:0;" >
+                                                    {{ order.packing_cost|currency:crcy.code|floatformat:crcy.precision|intcomma }}
+                                                </p>
+                                                <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+											  <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+
+											 </td>
+										  </tr>
+										</table>
+									  </div>
+
+									  <!--[if mso]>
+													</td>
+													</tr>
+													</table>
+													<![endif]--></td>
+								  </tr>
+								</table>
+
+								<!--[if mso]>
+										</td>
+										</tr>
+										</table>
+										<![endif]--></td>
+							</tr>
+                            {% endif %}
 						<!-- Thumbnail Left, Text Right : END -->
 							<!-- 1 Column Text : BEGIN -->
 							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
