@@ -175,14 +175,14 @@ table.center-on-narrow {
                         <h2 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 							Hey!
 						  </h2>
-                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% blocktrans with service_url=service.url %}
-                            Your domain name was moved to : &nbsp;<a href="{{ service_url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#f38e42; text-decoration: none" >{{ service_url }}</a>
+                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% blocktrans with website_url=website.url %}
+                            Your domain name was moved to : &nbsp;<a href="{{ website_url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#f38e42; text-decoration: none" >{{ website_url }}</a>
                         {% endblocktrans %}</p>
                         
                       <!-- Button : Begin -->
                     <table cellspacing="0" cellpadding="0" border="0" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
                         <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                          <td  class="button-ta" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;min-width:160px;border-radius:3px;background-color:#f38e42;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><a href="{{ service.url }}"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#f38e42;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#f38e42;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" >
+                          <td  class="button-ta" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;min-width:160px;border-radius:3px;background-color:#f38e42;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><a href="{{ website.url }}"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#f38e42;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#f38e42;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" >
                               <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% trans "Visit your website" %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
                               </a>
 							</td>
