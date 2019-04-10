@@ -206,7 +206,7 @@ table.center-on-narrow {
                                                 {% endblocktrans %}
                                                 {% if last_mail and total > 0 %}
                                                 {% blocktrans with last_report_date=last_mail.created_on|date %}
-                                                    meaning a {{ change_rate }}% increase since {{ last_report_date }}.<br/>
+                                                    meaning a {{ change_rate|floatformat:"2" }}% increase since {{ last_report_date }}.<br/>
                                                     Congratulations ! <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" > <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 												{% endblocktrans %}</p>
                                                 {% endif %}
