@@ -131,7 +131,7 @@
 					<center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
 
 				<!-- Visually Hidden Preheader Text : BEGIN -->
-						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ pre_header }}</div>
+						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ campaign.pre_header }}</div>
 				<!-- Visually Hidden Preheader Text : END -->
 
 						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;box-shadow:0 5px 5px 0 #bfbfbf;" >
@@ -306,6 +306,36 @@
             </tr>
            		  <!-- Thumbnail Left, Text Right : END -->
             {% endfor %}
+
+            {% if campaign.cta %}
+            <!-- Button on center : Begin -->
+            <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+              <td dir="rtl" bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><!--[if mso]>
+                        <table border="0" cellspacing="0" cellpadding="0" align="center" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+                        <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                        <td align="center" valign="top" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                        <![endif]-->
+
+
+				<table cellspacing="0" cellpadding="0" border="0" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
+						<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+								<td  class="button-td" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-radius:3px;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;transition:all 100ms ease-in;" ><a href="{{ campaign.cta_url }}"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#233682;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#233682;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" >
+								  <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{{ campaign.cta }}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+								  </a>
+								</td>
+						</tr>
+				</table>
+
+                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#8f8f8f;text-align:center;margin-bottom:20px;" ></p>
+                <!--[if mso]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+							</td>
+            </tr>
+            <!-- Button on center : END -->
+            {% endif %}
 
 						</table>
 							  <!-- Email Body : END -->
