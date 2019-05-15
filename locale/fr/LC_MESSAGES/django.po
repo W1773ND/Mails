@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-11 19:50+0100\n"
-"PO-Revision-Date: 2019-02-11 22:07+0100\n"
+"POT-Creation-Date: 2018-12-10 16:01+0100\n"
+"PO-Revision-Date: 2018-12-10 16:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -53,7 +53,6 @@ msgid "Please confirm your email"
 msgstr "Veuillez confirmer votre email SVP"
 
 #: templates/accesscontrol/mails/confirm_email.html:191
-#: templates/revival/mails/suggest_create_account.html:224
 #: templates/revival/mails/suggest_referral.html:220
 #, python-format
 msgid "Hey %(member_name)s,"
@@ -496,48 +495,6 @@ msgstr ""
 "style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t"
 
-#: templates/revival/mails/suggest_create_account.html:11
-msgid "Win free coupons by joining us on ikwen"
-msgstr ""
-"Gagnez des coupons gratuits en invitant vos amis à nous rejoindre sur ikwen"
-
-#: templates/revival/mails/suggest_create_account.html:134
-msgid "Login on ikwen.com and Join our community"
-msgstr "Connectez-vous sur ikwen.com et rejoignez votre communauté"
-
-#: templates/revival/mails/suggest_create_account.html:228
-#, python-format
-msgid ""
-"\n"
-"                                                            Win free coupons "
-"by joining our community on ikwen. It's simple ! Click below to start.\n"
-"                                                            <br style=\"-ms-"
-"text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
-"                                                            <br style=\"-ms-"
-"text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
-"                                                            Remember, "
-"collect 100 of whatever coupon and exchange them with us for the "
-"equivalent.\n"
-"                                                        "
-msgstr ""
-"\n"
-"                                                            Gagnez des "
-"coupons gratuits en invitant vos amis sur ikwen.\n"
-"                                                            C'est simple ! "
-"Cliquez ci-dessous pour commencer.\n"
-"                                                            <br style=\"-ms-"
-"text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
-"                                                            <br style=\"-ms-"
-"text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
-"                                                            Souvenez-vous, "
-"collectionnez 100 unités de n'importe quel coupon et  échangez les chez nous "
-"contre l'équivalent.\n"
-"\t\t\t\t\t\t\t"
-
-#: templates/revival/mails/suggest_create_account.html:308
-msgid "Join now"
-msgstr ""
-
 #: templates/revival/mails/suggest_referral.html:11
 #, python-format
 msgid ""
@@ -920,84 +877,23 @@ msgstr ""
 msgid "See details below"
 msgstr "Voir détails ci-dessous"
 
-#: templates/shopping/mails/order_notice.html:272
-#: templates/shopping/mails/order_notice_with_reward.html:445
-#, python-format
-msgid ""
-"\n"
-"                                            <p>\n"
-"                                                %(items_count)s items(s), "
-"totaling\n"
-"                                                <ins>\n"
-"                                                    %(currency_symbol)s\n"
-"                                                    %(items_cost)s\n"
-"                                                </ins>\n"
-"                                            </p>\n"
-"                                            "
-msgstr ""
-"\n"
-"                                            <p>\n"
-"                                                %(items_count)s article(s), "
-"coûtent\n"
-"                                                <ins>\n"
-"                                                    %(currency_symbol)s\n"
-"                                                    %(items_cost)s\n"
-"                                                </ins>\n"
-"                                            </p>\n"
-"                                            "
-
-#: templates/shopping/mails/order_notice.html:284
-#: templates/shopping/mails/order_notice_with_reward.html:457
-msgid "Shipping fees"
-msgstr "Frais de livraison"
-
-#: templates/shopping/mails/order_notice.html:290
-#: templates/shopping/mails/order_notice_with_reward.html:463
-msgid "Free shipping"
-msgstr "Livraison gratuite"
-
-#: templates/shopping/mails/order_notice.html:294
-#: templates/shopping/mails/order_notice_with_reward.html:467
-msgid "Deliver to"
-msgstr "Livrer à"
-
-#: templates/shopping/mails/order_notice.html:298
-#: templates/shopping/mails/order_notice_with_reward.html:471
-msgid "Postal code"
-msgstr "Code postale"
-
-#: templates/shopping/mails/order_notice.html:305
-#: templates/shopping/mails/order_notice_with_reward.html:478
-msgid "Pick up in store"
-msgstr "Récupérer sur place"
-
-#: templates/shopping/mails/order_notice.html:309
-#: templates/shopping/mails/order_notice_with_reward.html:482
-msgid "Remit to"
-msgstr "Remettre à"
-
-#: templates/shopping/mails/order_notice.html:373
-#: templates/shopping/mails/order_notice_with_reward.html:547
+#: templates/shopping/mails/order_notice.html:327
+#: templates/shopping/mails/order_notice_with_reward.html:501
 msgid "Price"
 msgstr "Prix"
 
-#: templates/shopping/mails/order_notice.html:374
-#: templates/shopping/mails/order_notice_with_reward.html:548
+#: templates/shopping/mails/order_notice.html:328
+#: templates/shopping/mails/order_notice_with_reward.html:502
 msgid "Quantity"
 msgstr "Quantité"
 
-#: templates/shopping/mails/order_notice.html:375
-#: templates/shopping/mails/order_notice_with_reward.html:549
+#: templates/shopping/mails/order_notice.html:329
+#: templates/shopping/mails/order_notice_with_reward.html:503
 msgid "Subtotal"
 msgstr "Sous-total"
 
-#: templates/shopping/mails/order_notice.html:436
-#: templates/shopping/mails/order_notice_with_reward.html:610
-msgid "Packing"
-msgstr "Emballage"
-
-#: templates/shopping/mails/order_notice.html:479
-#: templates/shopping/mails/order_notice_with_reward.html:652
+#: templates/shopping/mails/order_notice.html:366
+#: templates/shopping/mails/order_notice_with_reward.html:539
 msgid "Thank you for shopping with us."
 msgstr "Nous vous remercions pour vos achats avec notre service."
 

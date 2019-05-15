@@ -205,8 +205,8 @@ table.center-on-narrow {
 													Your community {{ service_name }} now has <strong>{{ total_count }}</strong> members,
                                                 {% endblocktrans %}
                                                 {% if last_mail and total > 0 %}
-                                                {% blocktrans with last_report_date=last_mail.created_on|date %}
-                                                    meaning a {{ change_rate }}% increase since {{ last_report_date }}.<br/>
+                                                {% blocktrans with last_report_date=last_mail.created_on|date change=change_rate|floatformat:"2" %}
+                                                    meaning a {{ change }}% increase since {{ last_report_date }}.<br/>
                                                     Congratulations ! <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" > <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 												{% endblocktrans %}</p>
                                                 {% endif %}

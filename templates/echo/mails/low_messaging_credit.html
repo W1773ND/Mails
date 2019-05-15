@@ -209,8 +209,8 @@ table.center-on-narrow {
                             <td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:18px;mso-height-rule:exactly;line-height:20px;color:#555555;padding-top:20px;padding-bottom:0;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                     Hmmm ... pay attention to this {{ member_name }}, <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                               <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                              <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:15px;" >{% blocktrans %}
-                                  You have only {{ credit_left }} {{ account }} remaining in your account.
+                              <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:15px;" >{% blocktrans with project_name=website.project_name %}
+                                  You have only {{ credit_left }} {{ account }} remaining in your account on {{ project_name }}.
                                   It's terrible because your customers may not hear from you very soon. <br>
                                   But don't worry, you can fix it now by refilling your messaging credit.
                               {% endblocktrans %}</p>

@@ -136,7 +136,9 @@ table.center-on-narrow {
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
 
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ subject }} - ikwen</div>
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{% blocktrans %}
+            Please refill your {{ account }} credit.
+        {% endblocktrans %}</div>
         <!-- Visually Hidden Preheader Text : END -->
 
         <div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;box-shadow:0 5px 5px 0 #bfbfbf;margin-top:10px;" >
@@ -207,9 +209,9 @@ table.center-on-narrow {
                             <td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:18px;mso-height-rule:exactly;line-height:20px;color:#555555;padding-top:20px;padding-bottom:0;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                     Hmmm ... we have a bad new {{ member_name }}, <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                               <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                              <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:15px;" >{% blocktrans %}
-                                  You run out of {{ account }} credit. It's terrible because your customers won't hear from
-                                  you again. But don't worry, you can fix it now by refilling your messaging credit.
+                              <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:15px;" >{% blocktrans with project_name=website.project_name %}
+                                  You run out of {{ account }} credit on {{ project_name }}. It's terrible because your customers
+                                  won't hear from you again. But don't worry, you can fix it now by refilling your messaging credit.
                               {% endblocktrans %}</p>
                                 <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                               <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
