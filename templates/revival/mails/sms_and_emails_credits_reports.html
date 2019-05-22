@@ -1,0 +1,653 @@
+<!doctype html>
+<html style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0 !important;padding: 0 !important;height: 100% !important;width: 100% !important;">
+
+<head style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+	<meta charset="utf-8" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+	<!-- utf-8 works for most cases -->
+	<meta name="viewport" content="width=device-width" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <!-- Forcing initial-scale shouldn't be necessary -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+	<!-- Use the latest (edge) version of IE rendering engine -->
+	<title style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">ikwen analytics-Revival reports</title>
+	<!-- The title tag shows in email notifications, like Android 4.4. -->
+	<link rel="icon" type="image/jpg" href="https://lh3.googleusercontent.com/vb7iXyRvaxdZZQovWZ-h05n8tgEZDWhk_H_QJ1xuwVnXK8H839wF-S1USNQastw1KE9AIi-MGRPsupyPebi2ipNSCmj_zBHP_WIcnudFYgqa97_xca48tcN9HpcWxS3FZeid4Ihstq46PwvTXCcS1h3THVXY8zK5BJMh-a50caAmJmYBn1xyoy0eK8I9xJBd4btpEbkPyh_V5xhR55771gR7cvzmSrbc4nsm-ZEO3-h6DMj8iz0zBfNJj56RimXxTk8KWGi7Pd0zZ7y_Aul3bM7sgWRxD9-rkcTFBjVfkpZ49QAT499c-P2WRQBtt3ewDNV9CaSaqax8fwrEzXWQzFDLpyZG7nkZW75wmtNJM4oArVgenbddOA7OWxJoo7bf_HocY88h0AkDGDhe0NHixxLL4TAUflCHV-gTSdCjYWeDieq8-KZ_BkU1F-Oo5VgO5fRIA1ryN5_RAdru7RK8w7YdEn4KHV279p_ILiCiIeT7t4HtH6gLAT4UiCvFmYxwbfzPRm38b4yGiaN0GNUHi0dHskdyklVBT9dQXaXmt7zp1evEa6uLj20BgLOseJsay_NinX_SdS7r6uKLXB1AuKInQhJDC6e85iKYzL8q4uRXm13oq0YbqqGY-yZgPktWzh5-1kcFIjo3R6nJtv7puNw=s170-no" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+	<!-- CSS Reset -->
+	<style type="text/css" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+		/* What it does: Remove spaces around the email design added by some email clients. */
+		/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+		html,
+		body {
+			margin: 0 !important;
+			padding: 0 !important;
+			height: 100% !important;
+			width: 100% !important;
+		}
+
+		/* What it does: Stops email clients resizing small text. */
+		* {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+
+		/* What it does: Forces Outlook.com to display emails full width. */
+		.ExternalClass {
+			width: 100%;
+		}
+
+		/* What is does: Centers email on Android 4.4 */
+		div[style*="margin: 16px 0"] {
+			margin: 0 !important;
+		}
+
+		/* What it does: Stops Outlook from adding extra spacing to tables. */
+		table,
+		td {
+			mso-table-lspace: 0pt !important;
+			mso-table-rspace: 0pt !important;
+		}
+
+		/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+		table {
+			/*				border-spacing: 0 !important;*/
+			border-collapse: separate !important;
+			table-layout: fixed !important;
+			margin: 0 auto !important;
+		}
+
+		table table table {
+			table-layout: auto;
+		}
+
+		/* What it does: Uses a better rendering method when resizing images in IE. */
+		img {
+			-ms-interpolation-mode: bicubic;
+		}
+
+		/* What it does: Overrides styles added when Yahoo's auto-senses a link. */
+		.yshortcuts a {
+			border-bottom: none !important;
+		}
+
+		/* What it does: Another work-around for iOS meddling in triggered links. */
+		a[x-apple-data-detectors] {
+			color: inherit !important;
+		}
+
+		.mobil-lists-adjustement{
+			text-align: initial;margin:-12px -2% 5% -12px;
+		}
+/*
+		#q-graph {
+		display: block; /* fixes layout wonkiness in FF1.5 */
+/*		position: relative;
+		width: 600px;
+		height: 300px;
+		margin: 1.1em 0 0;
+		padding: 0;
+		background: transparent;
+		font-size: 11px;
+		}
+
+		#q-graph caption {
+		caption-side: top;
+		width: 600px;
+		text-transform: uppercase;
+		letter-spacing: .5px;
+		top: -40px;
+		position: relative;
+		z-index: 10;
+		font-weight: bold;
+		}
+
+		#q-graph tr, #q-graph th, #q-graph td {
+		position: absolute;
+		bottom: 0;
+		width: 150px;
+		z-index: 2;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		}
+
+		#q-graph td {
+  transition: all .3s ease;
+
+  &:hover {
+    background-color: desaturate(#85144b, 100);
+    opacity: .9;
+    color: white;
+  }
+}
+
+#q-graph thead tr {
+  left: 100%;
+  top: 50%;
+  bottom: auto;
+  margin: -2.5em 0 0 5em;}
+#q-graph thead th {
+  width: 7.5em;
+  height: auto;
+  padding: 0.5em 1em;
+}
+#q-graph thead th.sent {
+  top: 0;
+  left: 0;
+  line-height: 2;
+}
+#q-graph thead th.paid {
+  top: 2.75em;
+  line-height: 2;
+  left: 0;
+}
+
+#q-graph tbody tr {
+  height: 296px;
+  padding-top: 2px;
+  border-right: 1px dotted #C4C4C4;
+  color: #AAA;
+}
+#q-graph #q1 {
+  left: 0;
+}
+#q-graph #q2 {left: 150px;}
+#q-graph #q3 {left: 300px;}
+#q-graph #q4 {left: 450px; border-right: none;}
+#q-graph tbody th {bottom: -1.75em; vertical-align: top;
+font-weight: normal; color: #333;}
+#q-graph .bar {
+  width: 60px;
+  border: 1px solid;
+  border-bottom: none;
+  color: #000;
+}
+#q-graph .bar p {
+  margin: 5px 0 0;
+  padding: 0;
+  opacity: .4;
+}
+#q-graph .sent {
+  left: 13px;
+  background-color: $color-sent;
+  border-color: transparent;
+}
+#q-graph .paid {
+  left: 77px;
+  background-color: $color-paid;
+  border-color: transparent;
+}
+
+
+#ticks {
+  position: relative;
+  top: -300px;
+  left: 2px;
+  width: 596px;
+  height: 300px;
+  z-index: 1;
+  margin-bottom: -300px;
+  font-size: 10px;
+  font-family: "fira-sans-2", Verdana, sans-serif;
+}
+
+#ticks .tick {
+  position: relative;
+  border-bottom: 1px dotted #C4C4C4;
+  width: 600px;
+}
+
+#ticks .tick p {
+  position: absolute;
+  left: -5em;
+  top: -0.8em;
+  margin: 0 0 0 0.5em;
+}
+*/
+	</style>
+
+	<!-- Progressive Enhancements -->
+	<style type="text/css" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+		/* What it does: Hover styles for buttons */
+		.button-td,
+		.button-a {
+			transition: all 100ms ease-in;
+			color: #2431ecea;
+		}
+
+		.button-td:hover,
+		.button-a:hover {
+			background: #f28632 !important;
+			border-color: #f28632 !important;
+		}
+
+		/* Media Queries */
+		@media screen and (max-width: 480px) {
+
+			/* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+			.fluid,
+			.fluid-centered {
+				width: 100% !important;
+				max-width: 100% !important;
+				height: auto !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+
+			/* And center justify these ones. */
+			.fluid-centered {
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+
+			/* What it does: Forces table cells into full-width rows. */
+			.stack-column,
+			.stack-column-center {
+				display: block !important;
+				width: 100% !important;
+				max-width: 100% !important;
+				direction: ltr !important;
+			}
+
+			/* And center justify these ones. */
+			.stack-column-center {
+				text-align: left !important;
+			}
+
+			/* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+			.center-on-narrow {
+				text-align: left !important;
+				display: inline-block !important;
+				margin-left: -15px !important;
+				margin-right: auto !important;
+				float: left !important;
+
+			}
+
+
+			table.center-on-narrow {
+				display: inline-block !important;
+			}
+
+			.screen-adjust {
+				height: 150px !important;
+				text-align: justify !important;
+			}
+
+			/*?* Here we change the marging-left and the text-align properties of unordered lists *!*/
+			.mobil-lists-adjustement>li {
+				margin-left: 2px;
+				text-align: left;
+			}
+			.mobil-lists-adjustement{
+				/* margin:none; */
+				text-align: initial;margin:-12px -2% 5% -22px;
+
+			}
+			.table-data-class{
+				padding-top:0px;
+			}
+
+
+		}
+	</style>
+</head>
+
+<body width="100%" bgcolor="#e0e0e0" style="margin: 0 !important;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0 !important;height: 100% !important;width: 100% !important;" yahoo="yahoo">
+	<table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#e0e0e0" style="border-collapse: collapse;padding-top: 30px;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;table-layout: fixed !important;margin: 0 auto !important;">
+		<tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+			<td style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+				<center style="width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+					<!-- Visually Hidden Preheader Text : BEGIN -->
+					<div style="display: none;font-size: 1px;line-height: 1px;max-height: 0px;max-width: 0px;opacity: 0;overflow: hidden;mso-hide: all;font-family: 'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">4
+						Check out your revival reports, to know how things move foreward.
+					</div>
+					<!-- Visually Hidden Preheader Text : END -->
+
+					<div class="screen-display" style="max-width: 680px;box-shadow: 0 5px 5px 0 #bfbfbf;font-family: 'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+						<!--[if (gte mso 9)|(IE)]>
+					<table cellspacing="0" cellpadding="0" border="0" width="680" align="center">
+					<tr>
+					<td>
+					<![endif]-->
+
+						<!-- Email Header : BEGIN -->
+						<table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#FFFFFF" width="100%" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width: 680px;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;border-spacing: 0 !important;border-collapse: collapse !important;margin-top: 0 !important;margin-bottom: 0 !important;margin-right: auto !important;margin-left: auto !important;table-layout: fixed !important;-webkit-box-shadow: 30px 0px 4px 0px #e0e0e0;box-shadow: 40px 0px 10px 0px #e0e0e0;margin: 0 auto !important;">
+							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
+								<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;">
+									<div style="width: 100%;margin: auto;padding: 15px 0 5px 0;text-align: left;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+										<a href="http://www.ikwen.com" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+											<img src="https://lh3.googleusercontent.com/qrLIfmZFldMpb69PW-0TtVTq80Ux7GnzZ08WQLuq5wNK2-XK688UONV4EjDJldxTpz4TRbbSnv6Y32l5WYyae_-CN9KSQXyN9nZaYUn8hIQzCLO3PSBs247kMPDKW0KF0nFIqxlXlzlKWUxAMRbAsOjC9oWXrAwuAo5vCX2Z0Ndl7AQSFs6GX8LMd63Z8v2b1vS2Ub4m0kzjdemV1ZlTtOz_jSzJe7imo57V8d7recEnMaTTPTMLzpyZuVD7QwaRCfXK4WEx5cMWFfNDwrQEdIhjlXx09uqQ3huAA1stMQ8EZNjtqXSBrsx_uq2TF6s48C8oDGDkGkS1OKWFc5erv60jYgSzcGxRXvGz-1xfWM_7OrQMZvQ7y231j7UQYax7e0vZvkbILk23i-boiXIc1qYJCH_1Hv70T5gXQHq3_mRyP5UUgtqNJXa9VK0BxHPr6v7OPTJ4Ls9r8cjhbaYBtWIpvjPvbM-sXGsCFpdw57f37-AG5W1j3VayDHWEPKwma7FGd47hMEa_0PXSAJ0WYIEvh65cr90DVkiotRzEgKrATbnLVkp7Z9jyfg6Ik37GzMNPznhMYKrrvL0i3M_R7xYxS7QKpkf8TLZRF1_nUKsJvlT3zQSHj6QakC6JY2H5exvItSTHE9CyvHcIziqx793i=w200-h49-no" width="100" height="auto" alt="ikwen website" border="0" style="padding-left: 20px;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;-ms-interpolation-mode: bicubic;">
+										</a>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<!-- Email Header : END -->
+
+						<!-- Email Body : BEGIN -->
+						<table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#F3F3F3" width="100%" style="max-width: 680px;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;border-collapse: separate !important;table-layout: fixed !important;margin: 0 auto !important;">
+
+
+							<!-- 1 Column Text : BEGIN -->
+							<tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+								<td bgcolor="#FFF" valign="middle" style="text-align: center;background-position: center center !important;background-size: cover !important;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+									<!--[if gte mso 9]>
+										<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:680px;height:175px; background-position: center center !important;">
+										<v:fill type="tile" src="assets/Hybrid/Image_680x230.png" color="#222222" />
+										<v:textbox inset="0,0,0,0">
+										<![endif]-->
+
+									<div style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+										<!--[if mso]>
+											<table border="0" cellspacing="0" cellpadding="0" align="center" width="500">
+											<tr>
+											<td align="center" valign="top" width="500">
+											<![endif]-->
+										<table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;border-collapse: separate !important;margin: 0 auto !important;">
+											<tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+												<td dir="ltr" bgcolor="#FFF" align="center" height="100%" valign="top" width="100%" style="padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+													<!--[if mso]>
+														<table border="0" cellspacing="0" cellpadding="0" align="center" width="660">
+														<tr>
+														<td align="center" valign="top" width="660">
+														<![endif]-->
+
+													<table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width: 660px;margin-bottom: 15px !important;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;border-collapse: separate !important;margin: 0 auto !important;">
+														<tbody style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+															<tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																<td align="left" valign="top" style="font-size: 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+																	<!--[if mso]>
+																	<table border="0" cellspacing="0" cellpadding="0" align="center" width="660">
+																	<tr>
+																	<td align="left" valign="top" width="220">
+																	<![endif]-->
+
+
+																	<!--[if mso]>
+																	</td>
+																	<td align="left" valign="top" width="440">
+																	<![endif]-->
+
+																	<div style="display: inline;margin: 0 -2px;max-width: 80%;min-width: 320px;vertical-align: top;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="stack-column">
+																		<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;border-collapse: separate !important;margin: 0 auto !important;">
+																			<tbody style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																				<tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																					<td dir="ltr" style="font-size: 14px;line-height: 25px;mso-height-rule: exactly;color: #555555;padding: 0px 10px 0;text-align: center;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+																						<br style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                        <h1 style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Revival reports</h1><br style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                        <!-- <form role="form" class="form-inline">
+                                                                                            <div class="form-group">
+                                                                                                <label for="startPeriod">From: </label>
+                                                                                                <input type="date" class="form-control" id="startPeriod" placeholder="01/12/19">
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label for="deadline">To: </label>
+                                                                                                <input type="date" class="form-control" id="deadline" placeholder="01/15/19">
+                                                                                            </div>
+
+                                                                                        </form>                                                                        																					 -->
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</div>
+
+																	<!--[if mso]>
+																	</td>
+																	</tr>
+																	</table>
+																	<![endif]-->
+																</td>
+															</tr>
+														</tbody>
+													</table>
+
+													<!--[if mso]>
+														</td>
+														</tr>
+														</table>
+														<![endif]-->
+												</td>
+											</tr>
+											<tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+												<td dir="ltr" bgcolor="#FFF" align="center" height="100%" valign="top" width="100%" style="padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+													<!--[if mso]>
+													  <table border="0" cellspacing="0" cellpadding="0" align="center" width="660">
+													  <tr>
+													  <td align="center" valign="top" width="660">
+													  <![endif]-->
+
+													<table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width: 660px;margin-bottom: 15px !important;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;border-collapse: separate !important;margin: 0 auto !important;">
+														<tbody style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+															<tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																	<td align="left" valign="top" style="font-size: 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+																			<!--[if mso]>
+																				<table border="0" cellspacing="0" cellpadding="0" align="center" width="660">
+																				<tr>
+																				<td align="left" valign="top" width="220">
+																				<![endif]-->
+
+
+
+																			<!--[if mso]>
+																				</td>
+																				<td align="left" valign="top" width="440">
+																				<![endif]-->
+
+																			<div style="display: inline;margin: 0 -2px;max-width: 66.66%;min-width: 320px;vertical-align: top;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="stack-column">
+																				<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;border-collapse: separate !important;margin: 0 auto !important;">
+																					<tbody style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																						<tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																							<td dir="ltr" style="font-size: 14px;mso-height-rule: exactly;line-height: 25px;color: #555555;padding: 0px 8px 0 30px;text-align: left;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;" class="center-on-narrow">
+
+																									<strong style="color: rgb(103, 102, 116);font-size: 14px;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Hi Kom,</strong>
+                                                                                                    <br style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">This is the report of the <strong style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">2,305 revivals</strong> used and which gather by profiles.
+																									<table width="100%" cellspacing="0" cellpadding="0" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;border-collapse: separate !important;margin: 0 auto !important;">
+																										<tbody style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																											<tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																												<br style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><br style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																												<td width="100%" height="100%" class="table-data-class table-data1" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+																														<span style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																																<strong style="color: rgb(58, 58, 61);font-size: 15px;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Men - </strong><strong style="color: darkkhaki;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">255 revivals</strong>
+																																<p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																																		<ul class="mobil-lists-adjustement" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-align: initial;margin: -12px -2% 5% -12px;">
+																																			<li style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Smart : 68</li>
+																																			<li style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Cyclic Mail(s): 156</li>
+																																			<li style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Cyclic SMS: 31</li>
+																																		</ul>
+																																</p>
+																															</span>
+																												</td>
+																												<td width="100%" height="100%" class="table-data-class" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+																													<span style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																														<strong style="color: rgb(58, 58, 61);font-size: 15px;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Women -</strong> <strong style="color: darkkhaki;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 702 revivals</strong>
+																														<p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																															<ul class="mobil-lists-adjustement" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-align: initial;margin: -12px -2% 5% -12px;">
+																																	<li style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Smart : 368</li>
+																																	<li style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Cyclic Mail(s): 94</li>
+																																	<li style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Cyclic SMS: 240</li>
+																															</ul>
+																														</p>
+																													</span>
+																												</td>
+																											</tr>
+																											<tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																												<td width="100%" height="100%" class="table-data-class" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+																													<span style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																															<strong style="color: rgb(58, 58, 61);font-size: 15px;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Retailers -</strong><strong style="color: darkkhaki;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 846 revivals</strong>
+																															<p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																																<ul class="mobil-lists-adjustement" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-align: initial;margin: -12px -2% 5% -12px;">
+																																		<li style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Smart : 208</li>
+																																		<li style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Cyclic Mail(s): 394</li>
+																																		<li style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Cyclic SMS: 240</li>
+																																</ul>
+																															</p>
+																														</span>
+																												</td>
+																												<td width="100%" height="100%" class="table-data-class" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;">
+																														<span style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																																<strong style="color: rgb(58, 58, 61);font-size: 15px;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Dyers -</strong><strong style="color: darkkhaki;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"> 502 revivals</strong>
+																																<p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																																	<ul class="mobil-lists-adjustement" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-align: initial;margin: -12px -2% 5% -12px;">
+																																			<li style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Smart : 208</li>
+																																			<li style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Cyclic Mail(s): 194</li>
+																																			<li style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Cyclic SMS: 100</li>
+																																	</ul>
+																																</p>
+																															</span>
+																													</td>
+																											</tr>
+																										<br style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																									</tbody>
+																								</table>
+																								<br style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><br style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																								<table id="q-graph" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;border-collapse: separate !important;margin: 0 auto !important;">
+																										<caption style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Revival chart</caption>
+																										<thead style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																											<tr style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																											 	<th class="smart" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Smart</th>
+																												<th class="cyclic-sms" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Cyclic SMS</th>
+																												<th class="cyclic-mails" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Cyclic Mails</th>
+																											</tr>
+																										</thead>
+																										<tbody style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																											<tr class="qtr" id="men" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																												<th scope="row" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Men</th>
+																												<td class="smart bar" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;"><p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">68</p></td>
+																												<td class="cyclic-sms bar" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;"><p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">156</p></td>
+																												<td class="cyclic-mails bar" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;"><p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">31</p></td>
+																											</tr>
+																											<tr class="qtr" id="women" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																												<th scope="row" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Women</th>
+																												<td class="smart bar" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;"><p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">368</p></td>
+																												<td class="cyclic-sms bar" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;"><p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">94</p></td>
+																												<td class="cyclic-mails bar" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;"><p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">240</p></td>
+																											</tr>
+																											<tr class="qtr" id="retailers" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																												<th scope="row" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Retailers</th>
+																												<td class="smart bar" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;"><p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">208</p></td>
+																												<td class="cyclic-sms bar" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;"><p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">394</p></td>
+																												<td class="cyclic-mails bar" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;"><p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">240</p></td>
+																											</tr>
+																											<tr class="qtr" id="dyers" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																												<th scope="row" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Dyers</th>
+																												<td class="smart bar" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;"><p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">208</p></td>
+																												<td class="cyclic-sms bar" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;"><p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">194</p></td>
+																												<td class="cyclic-mails bar" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;"><p style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">100</p></td>
+																											</tr>
+																										</tbody>
+																										<!-- <tfoot>
+																											<tr>
+																												<th>Men</th>
+																												<th>Women</th>
+																												<th>Retailers</th>
+																												<th>Dyers</th>
+																											</tr>
+																										</tfoot> -->
+																									</table>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																			</div>
+
+
+																			<!--[if mso]>
+																				</td>
+																				</tr>
+																				</table>
+																				<![endif]-->
+																		</td>
+															</tr>
+														</tbody>
+													</table>
+
+													<!--[if mso]>
+													  </td>
+													  </tr>
+													  </table>
+													  <![endif]-->
+												</td>
+											</tr>
+
+
+													<!--[if mso]>
+															  </td>
+															  </tr>
+															  </table>
+															  <![endif]-->
+												<!-- >
+
+
+
+
+								</td>
+							</tr>-->
+						</table>
+
+						<!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+					</div>
+
+					<!--[if gte mso 9]>
+                        </v:textbox>
+                        </v:rect>
+                        <![endif]-->
+			</td>
+		</tr>
+		<!-- 1 Column Text : END -->
+
+	</table>
+	<!-- Email Body : END -->
+
+
+	<!-- Email Footer : BEGIN -->
+	<table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="gray" width="100%" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width: 680px;padding-top: 15px;mso-table-lspace: 0pt !important;mso-table-rspace: 0pt !important;border-spacing: 0 !important;border-collapse: collapse !important;margin-top: 0 !important;margin-bottom: 0 !important;margin-right: auto !important;margin-left: auto !important;table-layout: fixed !important;margin: 0 auto !important;">
+		<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
+			<td align="center" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;">
+				<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;max-width:600px; border-top: 2px solid rgba(0, 0, 0, 0.14)">
+					<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#FFFFFF;font-size:12px;text-align:left;">CONFIDENTIALITY
+					</p>
+					<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#FFFFFF;font-size:12px;text-align:justify;">
+						The information contained in this e-mail and any accompanying documents is confidential or otherwise protected
+						from disclosure. If you are not the intended recipient, please immediately alert the sender by reply e-mail and
+						delete this message and any attachments. Any copy, dissemination or unauthorized access of the contents of this
+						message by anyone other than the intended recipient is strictly prohibited. E-mails may be susceptible to
+						falsification or alteration and cause data corruption and/or loss of data. IKWEN and/or any of its subsidiaries
+						decline any liability resulting from the consequences thereof. Therefore, this e-mail and any attachments are
+						used at your own risk.
+					</p>
+					<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;"><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:12px;color:#555555;">©
+							{{ year }} ikwen, Inc. All Rights Reserved.</span>
+					</p>
+					<p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;"><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;font-size:12px;padding-bottom:40px;">
+							<span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:normal;letter-spacing:normal;orphans:2;text-align:center;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;-webkit-text-stroke-width:0px;float:none;display:inline !important;"><a href="{{ site_url_about}}" target="_blank" style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-decoration:none;color:#4834d4;padding-bottom:30px;">About
+									us</a>&nbsp;| Making the Web a business.</span></span>
+					</p>
+				</div>
+			</td>
+
+		</tr>
+	</table>
+
+	<!-- Email Footer : END -->
+
+	<!--[if (gte mso 9)|(IE)]>
+								</td>
+								</tr>
+								</table>
+								<![endif]-->
+	</div>
+	</center>
+	</td>
+	</tr>
+	</table>
+</body>
+
+</html>
+
