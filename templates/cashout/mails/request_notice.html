@@ -118,7 +118,7 @@
                                 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:600px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;line-height:20px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important; color: #555555;" >  
                                 <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                                    	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{% trans "Amount" %}</td>
-                                    <td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ cash_out_request.amount|intcomma }}</td>
+                                    <td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ wallet.balance|intcomma }}</td>
                                 </tr>
                                 <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >                                
                                 	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{% trans "Method" %}</td>
@@ -128,6 +128,18 @@
 								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >                                
                                 	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{% trans "Account number" %}</td>
                                   	<td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ cash_out_request.account_number }}</td>
+                                </tr>
+                                {% endif %}
+                                {% if iao_profile.cash_out_rate %}
+								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{% trans "Cash out rate" %}</td>
+                                  	<td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{{ iao_profile.cash_out_rate }}%</td>
+                                </tr>
+								<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                	<td width="70%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >{% trans "Amount payable" %}</td>
+                                  	<td width="30%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                        <strong>{{ cash_out_request.amount|intcomma }}</strong>
+                                    </td>
                                 </tr>
                                 {% endif %}
                                 </table>
