@@ -173,7 +173,7 @@ table.center-on-narrow {
             <tr>
               <td class="full-width-image" align="center" style="padding:15px">
                   <div style="border: 1px solid #eee; border-radius: 92px; height: 180px; padding: 3px; overflow: hidden; width: 180px">
-                      <div style="background: url({% if member.photo.name %}{{ IKWEN_MEDIA_URL }}{{ member.photo.name }}{% static 'https://static.ikwen.com/daraja/img/login-avatar.jpg' %}{% else %}{% endif %}) no-repeat center; background-size: cover; height: 180px; width: 180px"></div>
+                      <div style="background: url({% if member.photo.name %}{{ IKWEN_MEDIA_URL }}{{ member.photo.name }}{% else %} 'https://static.ikwen.com/daraja/img/login-avatar.jpg'{% endif %}) no-repeat center; background-size: cover; height: 180px; width: 180px"></div>
                   </div>
                 </td>
             </tr>
