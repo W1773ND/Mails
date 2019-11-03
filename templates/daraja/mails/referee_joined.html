@@ -9,7 +9,7 @@
 <!-- Forcing initial-scale shouldn't be necessary -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 <!-- Use the latest (edge) version of IE rendering engine -->
-<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Welcome to the business network." %} - ikwen Daraja</title>
+<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ subject }} - ikwen Daraja</title>
 <!-- The title tag shows in email notifications, like Android 4.4. -->
 
 
@@ -173,7 +173,7 @@ table.center-on-narrow {
             <tr>
               <td class="full-width-image" align="center" style="padding:15px">
                   <div style="border: 1px solid #eee; border-radius: 92px; height: 180px; padding: 3px; overflow: hidden; width: 180px">
-                      <div style="background: url({% if member.photo.name %}{{ IKWEN_MEDIA_URL }}{{ member.photo.name }}{% else %} 'https://static.ikwen.com/daraja/img/login-avatar.jpg'{% endif %}) no-repeat center; background-size: cover; height: 180px; width: 180px"></div>
+                      <div style="background: url({% if referee.photo.name %}{{ IKWEN_MEDIA_URL }}{{ referee.photo.small_name }}{% else %} 'https://static.ikwen.com/daraja/img/login-avatar.jpg'{% endif %}) no-repeat center; background-size: cover; height: 180px; width: 180px"></div>
                   </div>
                 </td>
             </tr>
@@ -241,30 +241,29 @@ table.center-on-narrow {
           <!-- Email Body : END -->
 
         <!-- Email Footer : BEGIN -->
-                <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" bgcolor="#fff" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;padding-top:15px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-                <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                  <td align="center" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-                        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:20px;padding-top:10px;max-width:600px;border-top-width:2px;border-top-style:solid;border-top-color:rgba(0, 0, 0, 0.14);" >
-                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#999;font-size:12px;text-align:left;" >{% trans "CONFIDENTIALITY" %}</p>
-                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#999;font-size:12px;text-align:justify;" >
-                            {% blocktrans %}
-                                The information contained in this e-mail and any accompanying documents is confidential or otherwise
-                                protected from disclosure. If you are not the intended recipient, please immediately alert the
-                                sender by reply e-mail and delete this message and any attachments. Any copy, dissemination or
-                                unauthorized access of the contents of this message by anyone other than the intended recipient
-                                is strictly prohibited. E-mails may be susceptible to falsification or alteration and cause data
-                                corruption and/or loss of data. ikwen and/or any of its subsidiaries decline any liability resulting
-                                from the consequences thereof. Therefore, this e-mail and any attachments are used at your own risk.
-                            {% endblocktrans %}
-                            </p>
-                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                                <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:12px;color:#555555;" >{% blocktrans %}&copy; {{ year }} ikwen. All Rights Reserved.{% endblocktrans %}</span>
-                            </p>
-                            <p>&nbsp;</p>
-                    </div>
-                  </td>
-                </tr>
-            </table>
+<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" bgcolor="#fff" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;padding-top:15px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+    <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+      <td align="center" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+            <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:20px;padding-top:10px;max-width:600px;border-top-width:2px;border-top-style:solid;border-top-color:rgba(0, 0, 0, 0.14);" >
+                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#999;font-size:12px;text-align:left;" >{% trans "CONFIDENTIALITY" %}</p>
+                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#999;font-size:12px;text-align:justify;" >
+                {% blocktrans %}
+                    The information contained in this e-mail and any accompanying documents is confidential or otherwise
+                    protected from disclosure. If you are not the intended recipient, please immediately alert the
+                    sender by reply e-mail and delete this message and any attachments. Any copy, dissemination or
+                    unauthorized access of the contents of this message by anyone other than the intended recipient
+                    is strictly prohibited. E-mails may be susceptible to falsification or alteration and cause data
+                    corruption and/or loss of data. {{ company_name }} and/or any of its subsidiaries decline any liability resulting
+                    from the consequences thereof. Therefore, this e-mail and any attachments are used at your own risk.
+                {% endblocktrans %}
+                </p>
+                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                    <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:12px;color:#555555;" >{% blocktrans %}&copy; {{ year }} {{ company_name }}. All Rights Reserved.{% endblocktrans %}</span>
+                </p>
+        </div>
+      </td>
+    </tr>
+</table>
           <!-- Email Footer : END -->
 
           <!--[if (gte mso 9)|(IE)]>
