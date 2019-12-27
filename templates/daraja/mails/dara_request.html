@@ -170,9 +170,9 @@ table.center-on-narrow {
                 <!-- Hero Image, Flush : BEGIN -->
                 <tr>
                   <td class="full-width-image" align="center" style="padding:15px">
-                      <div style="border-radius: 92px; height: 180px; overflow: hidden; width: 180px;">
+                      <div style="border-radius: 92px; height: 120px; overflow: hidden; width: 120px;">
     {#                  border: 1px solid #eee; #}
-                        <div style="background: url({% if member.photo.name %}{{ IKWEN_MEDIA_URL }}{{ member.photo.small_name }}{% else %} 'https://static.ikwen.com/daraja/img/login-avatar.jpg'{% endif %}) no-repeat center; background-size: cover; height: 180px; width: 180px">
+                        <div style="background: url({% if member.photo.name %}{{ IKWEN_MEDIA_URL }}{{ member.photo.small_name }}{% else %} 'https://static.ikwen.com/daraja/img/login-avatar.jpg'{% endif %}) no-repeat center; background-size: cover; height: 120px; width: 120px">
                         </div>
                       </div>
                   </td>
@@ -196,9 +196,9 @@ table.center-on-narrow {
                                       <td valign="middle" style="font-size: 18px; mso-height-rule: exactly; line-height: 25px;text-align:center;"><!-- color: #555555; -->
                                          <div style="padding: 15px;">
                                             <br>
-                                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555;font-size:15px;text-align: justify">
+                                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555;font-size:15px; ">
                                                 {% blocktrans  %}
-                                                    <strong>{{ dara_name }}</strong> just sent you a Dara request.
+                                                    <strong>{{ dara_name }}</strong> just sent you a Dara request on {{ project_name }}.
                                                 {% endblocktrans %}
                                             </p>
                                              <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
@@ -210,7 +210,7 @@ table.center-on-narrow {
                                                 <tr>
                                                     <td style="border-radius: 3px; background: #233682; text-align: center;" class="button-td">
                                                         <a target="_blank" href="{{ cta_url }}" style="background: #319dd5; border: 15px solid #319dd5; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
-                                                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans %}View now{% endblocktrans%}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans %}View now{% endblocktrans %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
                                                       </a>
                                                     </td>
                                                 </tr>
