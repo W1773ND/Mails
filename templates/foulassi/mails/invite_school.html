@@ -1,5 +1,6 @@
 {% load i18n %}
 <!doctype html>
+<!-- confirm_email.html -->
 <html style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
 <head style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 <meta charset="utf-8" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -8,16 +9,14 @@
 <!-- Forcing initial-scale shouldn't be necessary -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 <!-- Use the latest (edge) version of IE rendering engine -->
-<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Domain name changed" %}</title>
+<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Please confirm your email" %} - ikwen</title>
 <!-- The title tag shows in email notifications, like Android 4.4. -->
 
-<!-- Please use an inliner tool to convert all CSS to inline as inpage or external CSS is removed by email clients -->
-<!-- important in CSS is used to prevent the styles of currently inline CSS from overriding the ones mentioned in media queries when corresponding screen sizes are encountered -->
 
 <!-- CSS Reset -->
 <style type="text/css" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 
-      
+
 html, body {
 	margin: 0 !important;
 	padding: 0 !important;
@@ -71,21 +70,19 @@ a[x-apple-data-detectors] {
 
 .button-td, .button-a {
 	transition: all 100ms ease-in;
+	min-width: 200px;
 }
 .button-td:hover, .button-a:hover {
-	background:#319dd5!important;
-	border-color: #319dd5!important;
+	background: #319dd5 !important;
+	border-color: #319dd5 !important;
 }
-.button-ta:hover, .button-b:hover {
-	background:#cccccc!important;
-	border-color: #cccccc!important;
-}
-	
+
 .screen-display{
 	margin-top: 10px;
 }
 
-@media screen and (max-width: 480px) {
+
+@media screen and (max-width: 480px){
 
 .fluid, .fluid-centered {
 	width: 100% !important;
@@ -94,6 +91,7 @@ a[x-apple-data-detectors] {
 	margin-left: auto !important;
 	margin-right: auto !important;
 }
+
 
 .fluid-centered {
 	margin-left: auto !important;
@@ -133,17 +131,22 @@ table.center-on-narrow {
 }
 </style>
 </head>
-<body width="100%" bgcolor="#e0e0e0"  yahoo="yahoo" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
+<body width="100%" bgcolor="#e0e0e0"  yahoo="yahoo" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
 <table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#e0e0e0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;table-layout:fixed !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;" >
   <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
-        <div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;box-shadow:6px 5px 5px  #bfbfbf;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;margin-top:10px;" > 
+
+        <!-- Visually Hidden Preheader Text : BEGIN -->
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ kids_details }}</div>
+        <!-- Visually Hidden Preheader Text : END -->
+
+        <div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;box-shadow:0 5px 5px 0 #bfbfbf;margin-top:10px;" >
           <!--[if (gte mso 9)|(IE)]>
             <table cellspacing="0" cellpadding="0" border="0" width="680" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;" >
             <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
             <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-            <![endif]--> 
-          
+            <![endif]-->
+
           <!-- Email Header : BEGIN -->
               <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important; background-color: #fff;" >
                 <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -159,66 +162,93 @@ table.center-on-narrow {
                 </tr>
               </table>
             <!-- Email Header : END -->
-          
+
+
           <!-- Email Body : BEGIN -->
-          <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;border-top-width:3px;border-top-style:solid;border-top-color:#9CC640;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-            
-            <!-- 1 Column Text : BEGIN -->
-            <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-              <td bgcolor="#223682" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:center;background-position:center center !important;background-size:cover !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-                
-                <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" > 
+        <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#FFF" width="100%" style="max-width: 400px;">
+
+							<!-- Hero Image, Flush : BEGIN -->
+							<tr>
+							  <td class="full-width-image" align="center" style="padding:15px">
+                                  <img src="{% if parent.photo.name %}{{ IKWEN_MEDIA_URL }}{{ parent.photo.small_name }}{% else %}{{ MEMBER_AVATAR }}{% endif %}"
+                                       width="225" alt="alt_text" border="0"  style="width: 100%; max-width: 225px; height: auto;">
+								</td>
+							</tr>
+							<!-- Hero Image, Flush : END -->
+
+							<!-- 1 Column Text : BEGIN -->
+            <tr>
+              <td bgcolor="#FFF" valign="middle" style="text-align: center; background-position: center center !important; background-size: cover !important;"><!--[if gte mso 9]>
+                        <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:680px;height:175px; background-position: center center !important;">
+                        <v:fill type="tile" src="assets/Hybrid/Image_680x230.png" color="#222222" />
+                        <v:textbox inset="0,0,0,0">
+                        <![endif]-->
+
+                <div>
                   <!--[if mso]>
-                            <table border="0" cellspacing="0" cellpadding="0" align="center" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-                            <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                            <td align="center" valign="top" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                            <table border="0" cellspacing="0" cellpadding="0" align="center" width="500">
+                            <tr>
+                            <td align="center" valign="top" width="500">
                             <![endif]-->
-                <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:600px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
-                    <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                      <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:16px;mso-height-rule:exactly;line-height:20px;color:#ffffff;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" > 
-                        <h2 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-							Hey!
-						  </h2>
-                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% blocktrans with website_url=website.url %}
-                            Your domain name was moved to : &nbsp;<a href="{{ website_url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#f38e42; text-decoration: none" >{{ website_url }}</a>
-                        {% endblocktrans %}</p>
-                        
+                <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:630px; margin: auto;">
+                    <tr>
+                      <td valign="middle" style="font-size: 18px; mso-height-rule: exactly; line-height: 25px;text-align:center;"><!-- color: #555555; -->
+                         <div style="">
+                          <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#333;" >{% blocktrans %}Good day Sir/Madam,{% endblocktrans %}</strong> <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                              <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                              <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555;font-size:15px;text-align:center" >{% blocktrans %}
+                                  Please, I would like you to follow my kids below on ikwen Foulassi. Could you add my contact as their parent ?
+                              {% endblocktrans %}</p>
+                              <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#888;font-size:15px;text-align:center" >
+                                  {{ kids_details }}
+                              </p><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                         </div>
+
                       <!-- Button : Begin -->
-                    <table cellspacing="0" cellpadding="0" border="0" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
-                        <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                          <td  class="button-ta" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;min-width:160px;border-radius:3px;background-color:#f38e42;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><a href="{{ website.url }}"  class="button-a" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#f38e42;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;border-color:#f38e42;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;color:#ffffff;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" >
-                              <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% trans "Visit your website" %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+
+                    <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
+                        <tr>
+                            <td style="border-radius: 3px; background: #233682; text-align: center;" class="button-td">
+                                <a href="{{ cta_url }}" style="background: #f38e42; border: 15px solid #f38e42	; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
+                              <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% trans "Add this parent" %} &#8594;<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
                               </a>
-							</td>
+                            </td>
                         </tr>
                     </table>
-						  <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-					<!-- Button : END -->
-						</td>
+                    <br>
+                <!-- Button : END --></td>
                     </tr>
                 </table>
-                
+
                   <!--[if (gte mso 9)|(IE)]>
                             </td>
                             </tr>
                             </table>
-                            <![endif]--> 
+                            <![endif]-->
                 </div>
-                
+
                 <!--[if gte mso 9]>
                         </v:textbox>
                         </v:rect>
                         <![endif]--></td>
             </tr>
             <!-- 1 Column Text : END -->
-            <!-- Email Footer : BEGIN -->
-                {% include 'core/mails/snippets/confidentiality.html' %}
-            <!-- Email Footer : END -->
-	</table>
+
+							</table>
+          <!-- Email Body : END -->
+
+					<!-- Email Footer : BEGIN -->
+                            {% include 'core/mails/snippets/confidentiality.html' %}
+					  <!-- Email Footer : END -->
+
+          <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
         </div>
-    </center>
-	</td>
-  </tr> 
+      </center></td>
+  </tr>
 </table>
 </body>
-</html>  
+</html>
