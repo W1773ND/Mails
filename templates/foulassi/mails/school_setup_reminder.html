@@ -140,7 +140,7 @@ a[x-apple-data-detectors] {
             <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
 
                 <!-- Visually Hidden Preheader Text : BEGIN -->
-                <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{% blocktrans with estimated_loss=estimated_loss|intcomma parents_count=parents_reminder.missing|intcomma %}You might lose {{ estimated_loss }} XAF if you don't fix this.{% endblocktrans %}</div>
+                <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{% blocktrans with estimated_loss=estimated_loss|floatformat:"0"|intcomma parents_count=parents_reminder.missing|intcomma %}You might lose {{ estimated_loss }} XAF if you don't fix this.{% endblocktrans %}</div>
                 <!-- Visually Hidden Preheader Text : END -->
 
                 <div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;box-shadow:0 5px 5px 0 #bfbfbf;margin-top:10px;" >
@@ -156,7 +156,7 @@ a[x-apple-data-detectors] {
                         <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-top:15px;padding-bottom:5px;padding-right:0;padding-left:0;text-align:left;" >
                           <a target="_blank" href="http://www.ikwen.com/foulassi/" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%; text-decoration: none" >
                             <div style="display: inline-block">
-                                   <img src="https://static.ikwen.com/foulassi/img/ikwen-Foulassi-500.png" alt="ikwen - Foulassi" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic; height: 30px">
+                                <img src="https://static.ikwen.com/foulassi/img/ikwen-Foulassi-730x100.png" alt="ikwen - Foulassi" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic; height: 23px">
                             </div>
                           </a>
                         </div>
@@ -169,7 +169,7 @@ a[x-apple-data-detectors] {
                     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                       <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                           <a target="_blank" href="http://www.ikwen.com/foulassi/" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%; text-decoration: none; color: #fff;">
-                             <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%; margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-right:0;padding-left:0;text-align: center; display: inline-block; width: 100%; height: 200px;">
+                             <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%; margin-top:30px;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-right:0;padding-left:0;text-align: center; display: inline-block; width: 100%; height: 200px;">
                                  <img src="https://static.ikwen.com/foulassi/img/warning-icon.png" style="height: inherit;">
                              </div>
                           </a>
@@ -200,7 +200,7 @@ a[x-apple-data-detectors] {
                                                     <h3 style="text-align: left;">Dear {{ member_name }},</h3>
                                                     <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555;font-size:15px;text-align: justify">
                                                         {% if estimated_loss %}
-                                                            {% blocktrans with estimated_loss=estimated_loss|intcomma %}Please, fix the following issues in your school {{ school_name }} to avoid losing about XAF <strong>{{ estimated_loss }}</strong>{% endblocktrans %}
+                                                            {% blocktrans with estimated_loss=estimated_loss|floatformat:"0"|intcomma %}Please, fix the following issues in your school {{ school_name }} to avoid losing about XAF <strong>{{ estimated_loss }}</strong>{% endblocktrans %}
                                                         {% else %}
                                                             {% blocktrans %}Please, fix the following issues in your school {{ school_name }}.{% endblocktrans %}
                                                         {% endif %}

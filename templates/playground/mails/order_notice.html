@@ -1,0 +1,536 @@
+{% load i18n static media_from_provider humanize currency %}
+<!doctype html>
+<!-- wallet_debit_notice.html -->
+<html style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
+	<head style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+		<meta charset="utf-8" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+		<!-- utf-8 works for most cases -->
+		<meta name="viewport" content="width=device-width" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+		<!-- Forcing initial-scale shouldn't be necessary -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+		<!-- Use the latest (edge) version of IE rendering engine -->
+		<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ subject }} - {{ company_name }}</title>
+		<!-- The title tag shows in email notifications, like Android 4.4. -->
+
+
+	<!-- CSS Reset -->
+		<style type="text/css" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+		
+			  
+			html, body {
+				margin: 0 !important;
+				padding: 0 !important;
+				height: 100% !important;
+				width: 100% !important;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%;
+				-webkit-text-size-adjust: 100%;
+			}
+			
+			.ExternalClass {
+				width: 100%;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table, td {
+				mso-table-lspace: 0pt !important;
+				mso-table-rspace: 0pt !important;
+			}
+			
+			table {
+
+				border-collapse:separate !important;
+				table-layout: fixed !important;
+				margin: 0 auto !important;
+			}
+			table table table {
+				table-layout: auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic;
+			}
+			
+			.yshortcuts a {
+				border-bottom: none !important;
+			}
+			
+			a[x-apple-data-detectors] {
+				color: inherit !important;
+			}
+			
+			
+		</style>
+
+	<!-- Progressive Enhancements -->
+		<style type="text/css" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+		
+		.button-td, .button-a {
+			transition: all 100ms ease-in;
+		}
+		.button-td:hover, .button-a:hover {
+			background: #f28632 !important;
+			border-color: #f28632 !important;
+		}
+		.screen-display{
+			margin-top: 10px !important;
+		}
+
+		
+		@media screen and (max-width: 480px) {
+		
+		.fluid, .fluid-centered {
+			width: 100% !important;
+			max-width: 100% !important;
+			height: auto !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+		
+		.fluid-centered {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+		
+		.stack-column, .stack-column-center {
+			display: block !important;
+			width: 100% !important;
+			max-width: 100% !important;
+			direction: ltr !important;
+		}
+		
+		.stack-column-center {
+			text-align: center !important;
+		}
+		
+		.center-on-narrow {
+			text-align: center !important;
+			display: block !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+			float: none !important;
+		}
+			.mobil-font-size{
+				font-size: 22px !important;
+			}
+		table.center-on-narrow {
+			display: inline-block !important;
+		}
+		.screen-display{
+			margin-top: 0 !important;
+		}
+		}
+		
+		@media screen and (max-width: 767px) and (orientation: landscape){
+		.screen-display{
+			margin-top: 0 !important;
+		}
+		}
+		</style>
+	</head>
+
+    {% with crcy=order.currency rcc=order.rcc|upper %}
+	<body width="100%"  yahoo="yahoo" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
+		<table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:separate !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;table-layout:fixed !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;" >
+	  		<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+				<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+					<center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
+
+				<!-- Visually Hidden Preheader Text : BEGIN -->
+						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{{ subject }}</div>
+				<!-- Visually Hidden Preheader Text : END -->
+
+						<div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;box-shadow:0 5px 5px 0 #bfbfbf;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;margin-top:10px !important;" > 
+				  <!--[if (gte mso 9)|(IE)]>
+					<table cellspacing="0" cellpadding="0" border="0" width="680" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;table-layout:fixed !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;" >
+					<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+					<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+					<![endif]-->
+							
+				  <!-- Email Header : BEGIN -->
+				  <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+					<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+					  <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-top:15px;padding-bottom:5px;padding-right:0;padding-left:0;text-align:center;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#EEEEEE;" >
+						  <a href="{{ service.url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><img src="{{ IKWEN_MEDIA_URL }}{{ logo.name }}" height="60" width="auto" alt="website" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-ms-interpolation-mode:bicubic;" ></a>
+						</div>				
+						</td>
+					</tr>
+				  </table>
+				  <!-- Email Header : END -->
+
+				  <!-- Email Body : BEGIN -->
+				  		<table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+
+
+
+					<!-- Text with Background band : BEGIN -->
+							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+							  <td bgcolor="#f6f6f6" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:center;background-position:center !important;background-size:cover !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+									<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:5px;padding-right:0;padding-left:0;text-align:center;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#EEEEEE;" > 
+									  <!--[if mso]>
+												<table border="0" cellspacing="0" cellpadding="0" align="center" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+												<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+												<td align="center" valign="top" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+												<![endif]-->
+
+										<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+											<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+												<td class="mobil-font-size" valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:16px;mso-height-rule:exactly;line-height:18px;color:#555555;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                                    <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:16px;line-height:23px;overflow-wrap:break-word;word-wrap:break-word;" >
+
+        {% url 'shopping:cart' order.id as order_cart_url  %}
+        {% blocktrans %}Dear {{ buyer_name }}{% endblocktrans %},<br>
+        {% if IS_BANK %}
+            {% if order.status == 'Confirmed' %}
+                {% blocktrans with merchant=order.retailer.project_name %}
+                    Your order on {{ merchant }} with number <strong>{{ rcc }}</strong> was confirmed.
+                {% endblocktrans %}
+            {% else %}
+                {% blocktrans with merchant=order.retailer.project_name service_url=order.retailer.url %}
+                    Your order on {{ merchant }} with number <strong>{{ rcc }}</strong> was rejected.
+                {% endblocktrans %}
+                {% if message %}<br/><br/>
+                    {% trans "Message" %}:<br/>
+                    <p style="color: #c35c51">{{ message }}</p>
+                {% endif %}
+            {% endif %}
+        {% else %}
+            {% if order.status == 'PendingForApproval' %}
+                {% blocktrans with service_url=service.url bank_name=order.deal.bank.config.company_name %}
+                    Your order was issued with success under number <strong>{{ rcc }}</strong> and
+                    submit for approval to {{ bank_name }}.<br>
+                    You can follow order status anytime by clicking the link down here:<br><br>
+                     <a href="{{ service_url }}{{ order_cart_url }}">{{ service_url }}{{ order_cart_url }}</a>
+                {% endblocktrans %}
+            {% elif order.status == 'Pending' %}
+                {% if order.delivery_option.type == 'HomeDelivery' %}
+                    {% blocktrans with service_url=service.url %}
+                        Your order was issued with success under number <strong>{{ rcc }}</strong>.
+                        You can follow order status anytime by clicking the link down here:<br><br>
+                         <a href="{{ service_url }}{{ order_cart_url }}">{{ service_url }}{{ order_cart_url }}</a>
+                    {% endblocktrans %}
+                {% else %}
+                    {% blocktrans with max_delay=order.delivery_option.get_delay_as_string service_url=service.url %}
+                        Your order was issued with success under number <strong>{{ rcc }}</strong>.
+                        You can pick up your package in our store in about {{ max_delay }}.<br>
+                        Follow order status anytime by clicking the link down here:<br><br>
+                         <a href="{{ service_url }}{{ order_cart_url }}">{{ service_url }}{{ order_cart_url }}</a>
+                    {% endblocktrans %}
+                {% endif %}
+            {% else %}
+                {% if order.delivery_option.type == 'HomeDelivery' %}
+                    {% trans "Your order was shipped. You will receive it in about" %} {{ order.delivery_option.get_delay_as_string }}
+                {% else %}
+                    {% trans "Your order was packaged and is ready for you to come and collect using the RCC:" %} <strong>{{ rcc }}</strong>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+                                                    </p>
+                                                </td>
+											</tr>
+										</table>
+									  <!--[if (gte mso 9)|(IE)]>
+												</td>
+												</tr>
+												</table>
+												<![endif]--> 
+									</div>
+
+								<!--[if gte mso 9]>
+										</v:textbox>
+										</v:rect>
+										<![endif]-->
+								</td>
+							</tr>
+					<!-- Text with Background band : END -->
+					
+							
+					
+					<!-- 1 Column Text : BEGIN -->
+							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+					  			<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+									<table border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:660px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+								  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%" >
+									<td align="left" valign="top" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:0;padding-top:20px;padding-bottom:10px;padding-right:0;padding-left:20px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><!--[if mso]>
+													<table border="0" cellspacing="0" cellpadding="0" align="center" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+													<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+													<td align="left" valign="top" width="220" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+													<![endif]-->
+
+									  <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                          <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:16px;line-height:18px; color: #555555" >
+										{% trans "See details below" %}:
+										</p></strong>
+
+                                        <div style="clear: both; font-size: 16px; line-height: 28px">
+                                            {% blocktrans with currency_symbol=crcy.symbol items_count=order.items_count items_cost=order.items_cost|currency:crcy.code|floatformat:crcy.precision|intcomma %}
+                                            <p>
+                                                {{ items_count }} items(s), totaling
+                                                <ins>
+                                                    {{ currency_symbol }}
+                                                    {{ items_cost }}
+                                                </ins>
+                                            </p>
+                                            {% endblocktrans %}
+                                            {% if order.delivery_option.type == 'HomeDelivery' %}
+                                                <p style="color: #555">
+                                                 {% if order.delivery_option.cost > 0 %}
+                                                     {% trans "Shipping fees" %}:
+                                                     <ins style="font-weight: 700">
+                                                         {{ crcy.symbol }}
+                                                         {{ order.delivery_option.cost|currency:crcy.code|floatformat:crcy.precision|intcomma }}
+                                                     </ins>
+                                                 {% else %}
+                                                     <ins>{% trans "Free shipping" %}</ins>
+                                                 {% endif %}
+                                                </p>
+                                                <div style="font-size: .9em">
+                                                    <h4 style="color: #555; margin-bottom: 0">{% trans "Deliver to" %}:</h4>
+                                                    <span>{{ order.delivery_address.name }}</span>
+                                                    <p style="font-size: .9em; line-height: 1.5em; margin-top: .3em">
+                                                        {{ order.delivery_address.details }}, <br>
+                                                        {% trans "Postal code" %}: {{ order.delivery_address.postal_code }}, <br>
+                                                        <strong style="color: #666">{{ order.delivery_address.city }}, {{ order.delivery_address.country.name }}.</strong><br>
+                                                        <em>{{ order.delivery_address.phone }}</em>
+                                                    </p>
+                                                </div>
+                                            {% else %}
+                                                <p style="color: #555">
+                                                    {% trans "Pick up in store" %}:
+                                                    <ins>{{ order.delivery_address.details }}</ins>
+                                                </p>
+                                                <div style="font-size: .9em">
+                                                    <h4 style="color: #555; margin-bottom: 0">{% trans "Remit to" %}:</h4>
+                                                    <span>{{ order.delivery_address.name }}</span><br>
+                                                    <em>{{ order.delivery_address.phone }}</em>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+									  <!--[if mso]>
+													</td>
+													</tr>
+													</table>
+													<![endif]-->
+                                    </td>
+								  </tr>
+								</table>
+								</td>
+							</tr>
+					<!-- 1 Column Text : END -->
+
+				    <!-- Thumbnail Left, Text Right : BEGIN -->
+                            {% for entry in order.entries %}
+							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+							  <td dir="ltr" align="center" height="100%" valign="top" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><!--[if mso]>
+										<table border="0" cellspacing="0" cellpadding="0" align="center" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+										<td align="center" valign="top" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+										<![endif]-->
+
+								<table border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:660px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+								  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+									<td align="center" valign="top" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:0;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><!--[if mso]>
+													<table border="0" cellspacing="0" cellpadding="0" align="center" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+													<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+													<td align="left" valign="top" width="220" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+													<![endif]-->
+
+									  <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:33.33%;min-width:160px;vertical-align:top;width:100%;" >
+										<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+										  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+											<td dir="ltr" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:10px;padding-right:10px;padding-left:10px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                                <img src="{% if entry.product.image.name %}{{ entry.product.image|from_provider:entry.product.provider }}{% endif %}" width="200" alt=""  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:200px;height:auto;-ms-interpolation-mode:bicubic;" >
+                                            </td>
+										  </tr>
+										</table>
+									  </div>
+
+									  <!--[if mso]>
+													</td>
+													<td align="left" valign="top" width="440" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+													<![endif]-->
+
+									  <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:66.66%;min-width:320px;vertical-align:top;" >
+										<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+										  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+											<td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:16px;mso-height-rule:exactly;line-height:18px;color:#555555;padding-top:10px;padding-bottom:0;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                                <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;" >
+                                                    {{ entry.product.name }}
+                                                    {% if entry.product.size %}
+                                                     <span style="color: #999">
+                                                         (<span>{{ entry.product.size }}</span>)
+                                                     </span>
+                                                    {% endif %}
+                                                </strong>
+                                                <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-bottom:0;" >
+                                                  &#8226; {% trans "Price" %} : {{ crcy.symbol }} {{ entry.product.retail_price|currency:crcy.code|floatformat:crcy.precision|intcomma }}<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                  &#8226; {% trans "Quantity" %} : {{ entry.count }}<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                  &#8226; {% trans "Subtotal" %} : {{ crcy.symbol }} {{ entry.get_total|currency:crcy.code|floatformat:crcy.precision|intcomma }}
+                                                </p>
+                                                <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+											  <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+
+											 </td>
+										  </tr>
+										</table>
+									  </div>
+
+									  <!--[if mso]>
+													</td>
+													</tr>
+													</table>
+													<![endif]--></td>
+								  </tr>
+								</table>
+
+								<!--[if mso]>
+										</td>
+										</tr>
+										</table>
+										<![endif]--></td>
+							</tr>
+                            {% endfor %}
+                            {% if order.packing_cost > 0 %}
+							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+							  <td dir="ltr" align="center" height="100%" valign="top" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><!--[if mso]>
+										<table border="0" cellspacing="0" cellpadding="0" align="center" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+										<td align="center" valign="top" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+										<![endif]-->
+
+								<table border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:660px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+								  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+									<td align="center" valign="top" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:0;padding-top:0;padding-bottom:10px;padding-right:0;padding-left:0;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><!--[if mso]>
+													<table border="0" cellspacing="0" cellpadding="0" align="center" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+													<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+													<td align="left" valign="top" width="220" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+													<![endif]-->
+
+									  <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:33.33%;min-width:160px;vertical-align:top;width:100%;" >
+										<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+										  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+											<td dir="ltr" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:10px;padding-right:10px;padding-left:10px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                                <img src="{% static 'kakocase/img/shopping-bag.png' %}" width="200" alt=""  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-width:0;width:100%;max-width:200px;height:auto;-ms-interpolation-mode:bicubic;" >
+                                            </td>
+										  </tr>
+										</table>
+									  </div>
+
+									  <!--[if mso]>
+													</td>
+													<td align="left" valign="top" width="440" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+													<![endif]-->
+
+									  <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:66.66%;min-width:320px;vertical-align:top;" >
+										<table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+										  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+											<td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:16px;mso-height-rule:exactly;line-height:18px;color:#555555;padding-top:10px;padding-bottom:0;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                                <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555555;" >
+                                                    {% trans "Packing" %}
+                                                </strong>
+                                                <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-bottom:0;" >
+                                                    {{ order.packing_cost|currency:crcy.code|floatformat:crcy.precision|intcomma }}
+                                                </p>
+                                                <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+											  <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+
+											 </td>
+										  </tr>
+										</table>
+									  </div>
+
+									  <!--[if mso]>
+													</td>
+													</tr>
+													</table>
+													<![endif]--></td>
+								  </tr>
+								</table>
+
+								<!--[if mso]>
+										</td>
+										</tr>
+										</table>
+										<![endif]--></td>
+							</tr>
+                            {% endif %}
+						<!-- Thumbnail Left, Text Right : END -->
+
+							<!-- 1 Column Text : BEGIN -->
+							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+					  			<td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+									<table border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:660px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+								  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+									<td align="left" valign="top" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:10px;padding-right:0;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><!--[if mso]>
+													<table border="0" cellspacing="0" cellpadding="0" align="center" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+													<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+													<td align="left" valign="top" width="220" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+													<![endif]-->
+										<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:80%;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-top:0;padding-bottom:5px;padding-right:0;padding-left:0;text-align:center;" >
+										  <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:16px;line-height:18px;margin-top:0; color: #555555" >
+											  {% trans "Thank you for shopping with us." %}
+										  </p>
+										</div>
+                                        <div>
+                                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:15px;text-align: center;background: #f8f6f6; padding: 15px">
+                                                {% blocktrans %}You successfully completed the <strong>Buy online</strong> test. <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">You just earned <strong>100 CFA bonus cash + 1xp</strong> for that.{% endblocktrans %}
+                                            </p>
+                                        </div>
+                                        <div style="padding: 15px 30px; margin-bottom: 30px;">
+                                            {% blocktrans %}Now, <strong>invite</strong> a follower and earn another 100 CFA bonus cash + 1xp.{% endblocktrans %}
+                                        </div>
+                                        <!-- Button : Begin -->
+                                            <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
+                                                <tr>
+                                                    <td style="border-radius: 3px; background: #233682; text-align: center;" class="button-td">
+                                                        <a target="_blank" href="{{ invitation_url }}" style="background: #f38e42; border: 15px solid #f38e42	; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
+                                                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans %}Invite now{% endblocktrans%}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                                      </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <br>
+                                        <!-- Button : END --></td>
+
+									  <!--[if mso]>
+													</td>
+													</tr>
+													</table>
+													<![endif]--></td>
+								  </tr>
+								</table>
+								</td>
+							</tr>
+							
+					<!-- 1 Column Text : END -->
+
+
+							</table>
+							  <!-- Email Body : END --> 
+
+
+							  <!-- Email Footer : BEGIN -->
+                                {% include 'core/mails/snippets/confidentiality.html' %}
+					          <!-- Email Footer : END -->
+
+							  <!--[if (gte mso 9)|(IE)]>
+								</td>
+								</tr>
+								</table>
+								<![endif]--> 
+						</div>
+		  			</center>
+				</td>
+	  		</tr>
+		</table>
+	</body>
+    {% endwith %}
+</html>

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-27 18:58+0100\n"
-"PO-Revision-Date: 2019-12-27 18:59+0100\n"
+"POT-Creation-Date: 2020-02-07 18:50+0100\n"
+"PO-Revision-Date: 2020-02-07 19:11+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Welcome to our Community"
 msgstr "Bienvenue dans notre communauté"
 
-#: templates/accesscontrol/mails/community_welcome.html:68
+#: templates/accesscontrol/mails/community_welcome.html:72
 #, python-format
 msgid ""
 "\n"
@@ -35,12 +35,12 @@ msgstr ""
 "webkit-text-size-adjust:100%%;color:#f28632;\" >%(joined_project_name)s</span> .\n"
 "                                                    "
 
-#: templates/accesscontrol/mails/community_welcome.html:128
+#: templates/accesscontrol/mails/community_welcome.html:132
 #, python-format
 msgid "You just joined %(joined_project_name)s community."
 msgstr "Vous venez de rejoindre la communauté %(joined_project_name)s."
 
-#: templates/accesscontrol/mails/community_welcome.html:134
+#: templates/accesscontrol/mails/community_welcome.html:138
 msgid "Thank you"
 msgstr "Merci !"
 
@@ -49,36 +49,36 @@ msgstr "Merci !"
 msgid "Please confirm your email"
 msgstr "Veuillez confirmer votre email SVP"
 
-#: templates/accesscontrol/mails/confirm_email.html:192 templates/daraja/mails/service_deployed.html:196
+#: templates/accesscontrol/mails/confirm_email.html:195 templates/daraja/mails/service_deployed.html:196
 #: templates/revival/mails/suggest_create_account.html:224 templates/revival/mails/suggest_referral.html:220
 #, python-format
 msgid "Hey %(member_name)s,"
 msgstr "Hey %(member_name)s,"
 
-#: templates/accesscontrol/mails/confirm_email.html:195
+#: templates/accesscontrol/mails/confirm_email.html:198
 msgid "Please click down here to confirm your email and make sure you don't miss anything."
 msgstr "Veuillez cliquer ci-dessous pour confirmer votre adresse e-mail et ainsi vous assurer que vous ne ratez rien."
 
-#: templates/accesscontrol/mails/confirm_email.html:205
+#: templates/accesscontrol/mails/confirm_email.html:208
 msgid "Confirm email now"
 msgstr "Confirmez votre email"
 
 #: templates/accesscontrol/mails/password_reset_instructions.html:12
-#: templates/accesscontrol/mails/password_reset_instructions.html:293
+#: templates/accesscontrol/mails/password_reset_instructions.html:294
 msgid "Reset your password"
 msgstr "Renouvellez votre mot de passe"
 
-#: templates/accesscontrol/mails/password_reset_instructions.html:284
+#: templates/accesscontrol/mails/password_reset_instructions.html:285
 #, python-format
 msgid "Hi %(member_name)s,"
 msgstr "Bonjour %(member_name)s,"
 
 #: templates/accesscontrol/mails/welcome_to_ikwen.html:12 templates/accesscontrol/mails/welcome_to_ikwen.html:200
-#: templates/accesscontrol/mails/welcome_to_ikwen.html:236
+#: templates/accesscontrol/mails/welcome_to_ikwen.html:238
 msgid "Welcome to ikwen"
 msgstr "Bienvenue sur ikwen"
 
-#: templates/accesscontrol/mails/welcome_to_ikwen.html:237
+#: templates/accesscontrol/mails/welcome_to_ikwen.html:239
 msgid ""
 "\n"
 "                          By joining us, you’ve just entered into an exciting universe whereby every action is rewarded.\n"
@@ -93,9 +93,10 @@ msgstr ""
 "                        L'aventure ne fait que commencer. Sur ikwen, plus de milliers d'entre vous sont connectés à leur\n"
 "                        entreprises préférées. Ces entreprises vous offrent chaque jour des cadeaux exclusifs et vous permettent "
 "de\n"
-"                        bénéficier d'offres promotionnelles sur mesure, tout simplement parce que vous êtes ici."
+"                        bénéficier d'offres promotionnelles sur mesure, tout simplement parce que vous êtes ici.\n"
+"                          "
 
-#: templates/accesscontrol/mails/welcome_to_ikwen.html:277
+#: templates/accesscontrol/mails/welcome_to_ikwen.html:279
 #, python-format
 msgid ""
 "\n"
@@ -140,38 +141,39 @@ msgstr ""
 "\t\t\t\t\t\t\t\t</ul>\n"
 "\t\t\t\t\t\t\t"
 
-#: templates/billing/mails/notice.html:136 templates/echo/mails/successful_refill.html:192
+#: templates/billing/mails/notice.html:138 templates/daraja/mails/publish_products_request.html:201
+#: templates/echo/mails/successful_refill.html:193
 #, python-format
 msgid "Dear %(member_name)s,"
 msgstr "Cher(e) %(member_name)s,"
 
-#: templates/billing/mails/notice.html:190 templates/core/mails/service_deployed.html:286
+#: templates/billing/mails/notice.html:192 templates/core/mails/service_deployed.html:282
 msgid "Invoice"
 msgstr "Facture"
 
-#: templates/billing/mails/notice.html:191 templates/cashout/mails/payment_notice.html:271
-#: templates/cashout/mails/request_notice.html:120 templates/core/mails/service_deployed.html:292
+#: templates/billing/mails/notice.html:193 templates/cashout/mails/payment_notice.html:259
+#: templates/cashout/mails/request_notice.html:123 templates/core/mails/service_deployed.html:288
 msgid "Amount"
 msgstr "Montant"
 
-#: templates/billing/mails/notice.html:193
+#: templates/billing/mails/notice.html:195
 msgid "Due Date"
 msgstr "Date limite"
 
-#: templates/billing/mails/notice.html:196
+#: templates/billing/mails/notice.html:198
 msgid "Service details"
 msgstr "Détails"
 
-#: templates/billing/mails/notice.html:231
+#: templates/billing/mails/notice.html:233
 #, python-format
 msgid "Thank you for your business with %(company_name)s"
 msgstr "Merci d'être client chez %(company_name)s"
 
-#: templates/billing/mails/wallet_debit_notice.html:83
+#: templates/billing/mails/wallet_debit_notice.html:85
 msgid "Thanks for your business with ikwen"
 msgstr "Merci d'être client chez ikwen"
 
-#: templates/billing/mails/wallet_debit_notice.html:84
+#: templates/billing/mails/wallet_debit_notice.html:86
 msgid ""
 "\n"
 "                            We successfully charged your wallet for your service fees, so you're all set !\n"
@@ -180,16 +182,16 @@ msgstr ""
 "\n"
 "                            Nous avons débité votre solde en ligne pour vos frais de service, donc tout est OK ! "
 
-#: templates/billing/mails/wallet_debit_notice.html:140
+#: templates/billing/mails/wallet_debit_notice.html:142
 #, python-format
 msgid "Summary for %(member_name)s"
 msgstr "Récapitulatif pour %(member_name)s"
 
-#: templates/billing/mails/wallet_debit_notice.html:150
+#: templates/billing/mails/wallet_debit_notice.html:152
 msgid "Amount paid"
 msgstr "Montant payé"
 
-#: templates/billing/mails/wallet_debit_notice.html:162
+#: templates/billing/mails/wallet_debit_notice.html:164
 msgid "View invoice"
 msgstr "Voir facture"
 
@@ -201,12 +203,12 @@ msgstr "Confirmation du paiement."
 msgid "The Operation of withdrawal of money from your account has been successfully completed"
 msgstr "L'opération de retrait d'argent de votre compte a été effectuée avec succès"
 
-#: templates/cashout/mails/payment_notice.html:262
+#: templates/cashout/mails/payment_notice.html:250
 #, python-format
 msgid "Dear %(iao_name)s"
 msgstr "Cher(e) %(iao_name)s"
 
-#: templates/cashout/mails/payment_notice.html:263
+#: templates/cashout/mails/payment_notice.html:251
 #, python-format
 msgid ""
 "\n"
@@ -223,39 +225,39 @@ msgstr ""
 "size-adjust:100%%;-webkit-text-size-adjust:100%%;\" ><br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
 "                                                                                                                            "
 
-#: templates/cashout/mails/payment_notice.html:267
+#: templates/cashout/mails/payment_notice.html:255
 msgid "Details of transaction"
 msgstr "Détails de transaction"
 
-#: templates/cashout/mails/payment_notice.html:270
+#: templates/cashout/mails/payment_notice.html:258
 msgid "Recipient's name:"
 msgstr "Destinataire:"
 
-#: templates/cashout/mails/payment_notice.html:272 templates/cashout/mails/request_notice.html:124
+#: templates/cashout/mails/payment_notice.html:260 templates/cashout/mails/request_notice.html:127
 msgid "Method"
 msgstr "Mode de paiement"
 
-#: templates/cashout/mails/payment_notice.html:274 templates/cashout/mails/request_notice.html:129
+#: templates/cashout/mails/payment_notice.html:262 templates/cashout/mails/request_notice.html:132
 msgid "Account number"
 msgstr "Numéro de compte"
 
-#: templates/cashout/mails/payment_notice.html:276
+#: templates/cashout/mails/payment_notice.html:264
 msgid "Reference"
 msgstr "Référence"
 
-#: templates/cashout/mails/payment_notice.html:279
+#: templates/cashout/mails/payment_notice.html:267
 msgid "City"
 msgstr "Ville"
 
-#: templates/cashout/mails/payment_notice.html:280
+#: templates/cashout/mails/payment_notice.html:268
 msgid "Country"
 msgstr "Pays"
 
-#: templates/cashout/mails/payment_notice.html:282
+#: templates/cashout/mails/payment_notice.html:270
 msgid "Time & Date"
 msgstr "Heure & Date"
 
-#: templates/cashout/mails/request_notice.html:64
+#: templates/cashout/mails/request_notice.html:67
 #, python-format
 msgid ""
 "\n"
@@ -268,15 +270,15 @@ msgstr ""
 "\t\t\t\t\t\t\tCeci est la confirmation que nous avions reçu la demande de retirer de l'argent sur %(project_name)s.\n"
 "                           L'argent sera payé dans les prochaines 24h. Voir les détails ci-dessous."
 
-#: templates/cashout/mails/request_notice.html:117
+#: templates/cashout/mails/request_notice.html:120
 msgid "Pay to"
 msgstr "Payer à"
 
-#: templates/cashout/mails/request_notice.html:135
+#: templates/cashout/mails/request_notice.html:138
 msgid "Cash out rate"
 msgstr "Taux de retrait"
 
-#: templates/cashout/mails/request_notice.html:139
+#: templates/cashout/mails/request_notice.html:142
 msgid "Amount payable"
 msgstr "Montant exigible"
 
@@ -284,7 +286,7 @@ msgstr "Montant exigible"
 msgid "Domain name changed"
 msgstr "Nom de domaine changé"
 
-#: templates/core/mails/domain_updated.html:178
+#: templates/core/mails/domain_updated.html:182
 #, python-format
 msgid ""
 "\n"
@@ -297,39 +299,39 @@ msgstr ""
 "size-adjust:100%%;color:#f38e42; text-decoration: none\" >%(website_url)s</a>\n"
 "\t\t\t"
 
-#: templates/core/mails/domain_updated.html:186
+#: templates/core/mails/domain_updated.html:190
 msgid "Visit your website"
 msgstr "Visitez votre site web"
 
-#: templates/core/mails/service_deployed.html:196
+#: templates/core/mails/service_deployed.html:192
 msgid "Congrats, you are online !"
 msgstr "Félicitations, vous êtes en ligne!"
 
-#: templates/core/mails/service_deployed.html:197
+#: templates/core/mails/service_deployed.html:193
 msgid "Your service details are as follow"
 msgstr "Vos détails de votre service sont les suivants"
 
-#: templates/core/mails/service_deployed.html:199
+#: templates/core/mails/service_deployed.html:195
 msgid "Application"
 msgstr "Application"
 
-#: templates/core/mails/service_deployed.html:201
+#: templates/core/mails/service_deployed.html:197
 msgid "Running as"
 msgstr "Sous le nom"
 
-#: templates/core/mails/service_deployed.html:203
+#: templates/core/mails/service_deployed.html:199
 msgid "On"
 msgstr "Sur"
 
-#: templates/core/mails/service_deployed.html:206
+#: templates/core/mails/service_deployed.html:202
 msgid "Monthly cost"
 msgstr "Coût mensuel"
 
-#: templates/core/mails/service_deployed.html:241
+#: templates/core/mails/service_deployed.html:237
 msgid "Invoiced to"
 msgstr "Facturé à"
 
-#: templates/core/mails/service_deployed.html:247
+#: templates/core/mails/service_deployed.html:243
 #, python-format
 msgid ""
 "\n"
@@ -338,22 +340,23 @@ msgstr ""
 "\n"
 "            La facture pour votre mise en service a été générée et expire le %(due_date)s, voir détails ci-dessous"
 
-#: templates/core/mails/service_deployed.html:291
+#: templates/core/mails/service_deployed.html:287
 msgid "Item"
 msgstr "Item"
 
-#: templates/core/mails/service_deployed.html:319
+#: templates/core/mails/service_deployed.html:315
 msgid "Pay Now"
 msgstr "Payez"
 
-#: templates/core/mails/service_deployed.html:337
+#: templates/core/mails/service_deployed.html:333
 #, python-format
 msgid "Thank you for your business with %(company_name)s."
 msgstr "Merci d'être client chez %(company_name)s."
 
 #: templates/core/mails/snippets/confidentiality.html:6 templates/daraja/mails/accept_dara_request.html:246
-#: templates/daraja/mails/dara_request.html:244 templates/daraja/mails/new_transaction.html:248
-#: templates/daraja/mails/referee_joined.html:245 templates/smartevent/mails/thank-you.html:442
+#: templates/daraja/mails/congratulations_for_products_publication.html:245 templates/daraja/mails/dara_request.html:244
+#: templates/daraja/mails/new_transaction.html:248 templates/daraja/mails/referee_joined.html:245
+#: templates/smartevent/mails/thank-you.html:441
 msgid "CONFIDENTIALITY"
 msgstr "CONFIDENTIALITÉ"
 
@@ -389,13 +392,14 @@ msgstr ""
 "                "
 
 #: templates/core/mails/snippets/confidentiality.html:19 templates/daraja/mails/accept_dara_request.html:259
-#: templates/daraja/mails/dara_request.html:257 templates/daraja/mails/new_transaction.html:261
-#: templates/daraja/mails/referee_joined.html:258 templates/smartevent/mails/thank-you.html:455
+#: templates/daraja/mails/congratulations_for_products_publication.html:258 templates/daraja/mails/dara_request.html:257
+#: templates/daraja/mails/new_transaction.html:261 templates/daraja/mails/referee_joined.html:258
+#: templates/smartevent/mails/thank-you.html:454
 #, python-format
 msgid "&copy; %(year)s %(company_name)s. All Rights Reserved."
 msgstr "© %(year)s %(company_name)s.Tous droits réservés."
 
-#: templates/daraja/mails/accept_dara_request.html:143
+#: templates/daraja/mails/accept_dara_request.html:143 templates/daraja/mails/congratulations_for_products_publication.html:143
 #, python-format
 msgid "%(company_name)s accepted your request."
 msgstr "%(company_name)s a accepté votre demande."
@@ -419,8 +423,8 @@ msgstr ""
 msgid "Login and refer"
 msgstr "Connectez-vous et recommendez"
 
-#: templates/daraja/mails/accept_dara_request.html:248 templates/daraja/mails/dara_request.html:246
-#: templates/smartevent/mails/thank-you.html:444
+#: templates/daraja/mails/accept_dara_request.html:248 templates/daraja/mails/congratulations_for_products_publication.html:247
+#: templates/daraja/mails/dara_request.html:246
 #, python-format
 msgid ""
 "\n"
@@ -452,6 +456,23 @@ msgstr ""
 "                   des conséquences de celle-ci. Par conséquent, cet e-mail et toutes les pièces jointes sont utilisés à vos "
 "risques et périls.\n"
 "                "
+
+#: templates/daraja/mails/congratulations_for_products_publication.html:201
+#, fuzzy
+msgid ""
+"\n"
+"                                                    You have successfully published products online, and your platform is now\n"
+"                                                    ready to make money.\n"
+"                                                "
+msgstr ""
+"\n"
+"                                                    Bonjour,\n"
+"                                                    <b>%(dara.member.full_name)s</b> voudrait être Dara pour vous.\n"
+"                                                "
+
+#: templates/daraja/mails/congratulations_for_products_publication.html:214
+msgid "Manage your Com & Marketing"
+msgstr ""
 
 #: templates/daraja/mails/dara_request.html:143
 #, python-format
@@ -499,6 +520,29 @@ msgstr ""
 #: templates/daraja/mails/new_transaction.html:216
 msgid "See details"
 msgstr "Voir détails"
+
+#: templates/daraja/mails/publish_products_request.html:143
+msgid "Start making your business now by publishing your products online."
+msgstr ""
+
+#: templates/daraja/mails/publish_products_request.html:203
+#, fuzzy
+msgid ""
+"\n"
+"                                                            Your online shop has been successfully created. But there are "
+"pictures test on the website which are not corresponding to\n"
+"                                                            images of products you are selling online. Ask your Dara' admin to "
+"replace them or simply do it yourself.\n"
+"                                                        "
+msgstr ""
+"\n"
+"\t\t\t\t\t\t\tSalut %(member_name)s,<br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" />\n"
+"\t\t\t\t\t\t\tNous avons ces nouveaux produits que nous pensons être parfaits pour vous. Soyez les premiers à les obtenir.\n"
+"\t\t\t\t\t\t\t"
+
+#: templates/daraja/mails/publish_products_request.html:217
+msgid "Change now"
+msgstr ""
 
 #: templates/daraja/mails/referee_joined.html:140
 msgid "Send me some interesting products to buy online."
@@ -555,10 +599,22 @@ msgstr ""
 msgid "Choose your companies"
 msgstr "Choisissez vos entreprises"
 
-#: templates/echo/mails/campaign.html:283 templates/kako/mails/product_on_sale.html:331
-#: templates/kako/mails/products_added.html:251 templates/revival/mails/default.html:288
-msgid "Order now"
-msgstr "J'achète"
+#: templates/echo/mails/campaign.html:12
+msgid "Please complete registration process"
+msgstr ""
+
+#: templates/echo/mails/campaign.html:202
+#, python-format
+msgid ""
+"\n"
+"                                        <a href=\"%(cta_url)s\" style=\"background: #E0E0E0; border: 2px solid #BDBDBD\t; "
+"padding: 12px;color: #212121;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; "
+"border-radius: 4px;\" class=\"button-a\">\n"
+"                                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->%(cta)s<!--[if mso]>&nbsp;&nbsp;&nbsp;"
+"&nbsp;<![endif]-->\n"
+"                                      </a>\n"
+"                                        "
+msgstr ""
 
 #: templates/echo/mails/empty_messaging_credit.html:140
 #, python-format
@@ -571,7 +627,7 @@ msgstr ""
 "            S'il vous plaît rechargez votre crédit %(account)s.\n"
 "        "
 
-#: templates/echo/mails/empty_messaging_credit.html:213
+#: templates/echo/mails/empty_messaging_credit.html:216
 #, python-format
 msgid ""
 "\n"
@@ -587,7 +643,7 @@ msgstr ""
 "messagerie.\n"
 "\t\t\t\t"
 
-#: templates/echo/mails/empty_messaging_credit.html:225 templates/echo/mails/low_messaging_credit.html:226
+#: templates/echo/mails/empty_messaging_credit.html:228 templates/echo/mails/low_messaging_credit.html:227
 msgid "Refill now"
 msgstr "Rechargez maintenant"
 
@@ -602,7 +658,7 @@ msgstr ""
 "            Plus que %(credit_left)s %(account)s remaining in your account.\n"
 "        "
 
-#: templates/echo/mails/low_messaging_credit.html:213
+#: templates/echo/mails/low_messaging_credit.html:214
 #, python-format
 msgid ""
 "\n"
@@ -621,7 +677,7 @@ msgstr ""
 msgid "Messaging bundle payment confirmation"
 msgstr "Confirmation du paiement du forfait messagerie"
 
-#: templates/echo/mails/successful_refill.html:195
+#: templates/echo/mails/successful_refill.html:196
 #, python-format
 msgid ""
 "\n"
@@ -634,11 +690,11 @@ msgstr ""
 "                                      Votre nouveau solde %(type)s est de %(count)s.\n"
 "                                  "
 
-#: templates/foulassi/mails/invite_school.html:193
+#: templates/foulassi/mails/invite_school.html:197
 msgid "Good day Sir/Madam,"
 msgstr "Bonjour Monsieur (Madame),"
 
-#: templates/foulassi/mails/invite_school.html:195
+#: templates/foulassi/mails/invite_school.html:199
 msgid ""
 "\n"
 "                                  Please, I would like you to follow my kids below on ikwen Foulassi. Could you add my contact "
@@ -650,9 +706,42 @@ msgstr ""
 "mon contact dans liste de leurs parents ?\n"
 "                              "
 
-#: templates/foulassi/mails/invite_school.html:209
+#: templates/foulassi/mails/invite_school.html:213
 msgid "Add this parent"
 msgstr "Ajouter un parent"
+
+#: templates/foulassi/mails/school_setup_reminder.html:143
+#, python-format
+msgid "You might lose %(estimated_loss)s XAF if you don't fix this."
+msgstr "Vous pourriez perdre %(estimated_loss)s XAF, si vous le faites."
+
+#: templates/foulassi/mails/school_setup_reminder.html:203
+#, python-format
+msgid ""
+"Please, fix the following issues in your school %(school_name)s to avoid losing about XAF <strong>%(estimated_loss)s</strong>"
+msgstr ""
+"Prière de réglez les problèmes suivants dans l'établissement %(school_name)s pour éviter une perte potentielle de XAF <strong>"
+"%(estimated_loss)s</strong>"
+
+#: templates/foulassi/mails/school_setup_reminder.html:205
+#, python-format
+msgid "Please, fix the following issues in your school %(school_name)s."
+msgstr "Prière de réglez les problèmes suivants dans l'établissement %(school_name)s."
+
+#: templates/foulassi/mails/school_setup_reminder.html:209
+#, python-format
+msgid "%(missing)s students are not yet registered"
+msgstr "%(missing)s élèves ne sont pas encore enregistrés"
+
+#: templates/foulassi/mails/school_setup_reminder.html:212
+#, python-format
+msgid "%(missing)s students have no parent contacts"
+msgstr "%(missing)s élèves n'ont pas de contacts parents"
+
+#: templates/foulassi/mails/school_setup_reminder.html:225
+#, fuzzy
+msgid "Fix now"
+msgstr "Voir"
 
 #: templates/kako/mails/product_on_sale.html:288
 #, python-format
@@ -679,6 +768,11 @@ msgstr ""
 "\t\t\t\t\t\t\t</span>\n"
 "\t\t\t\t\t\t\t"
 
+#: templates/kako/mails/product_on_sale.html:331 templates/kako/mails/products_added.html:251
+#: templates/revival/mails/default.html:288
+msgid "Order now"
+msgstr "J'achète"
+
 #: templates/kako/mails/products_added.html:179
 #, python-format
 msgid ""
@@ -698,17 +792,17 @@ msgstr ""
 msgid "Make sure you display images to so that you don't miss anything."
 msgstr "Assurez-vous d'afficher les images afin de ne rien manquer."
 
-#: templates/monitoring/mails/community_progression.html:132 templates/monitoring/mails/community_progression.html:172
+#: templates/monitoring/mails/community_progression.html:132 templates/monitoring/mails/community_progression.html:174
 #, python-format
 msgid "No newly registered member on %(service_name)s"
 msgstr "Aucun membre nouvellement enregistré sur %(service_name)s"
 
-#: templates/monitoring/mails/community_progression.html:134 templates/monitoring/mails/community_progression.html:175
+#: templates/monitoring/mails/community_progression.html:134 templates/monitoring/mails/community_progression.html:177
 #, python-format
 msgid "newly registered members on %(service_name)s"
 msgstr "membres nouvellement enregistrés sur %(service_name)s"
 
-#: templates/monitoring/mails/community_progression.html:203
+#: templates/monitoring/mails/community_progression.html:205
 #, python-format
 msgid ""
 "\n"
@@ -723,7 +817,7 @@ msgstr ""
 "\n"
 "                                                    "
 
-#: templates/monitoring/mails/community_progression.html:208
+#: templates/monitoring/mails/community_progression.html:210
 #, python-format
 msgid ""
 "\n"
@@ -814,7 +908,7 @@ msgstr ""
 msgid "Invite friend now"
 msgstr "Invitez vos amis"
 
-#: templates/rewarding/mails/community_welcome_pack.html:249
+#: templates/rewarding/mails/community_welcome_pack.html:253
 #, python-format
 msgid ""
 "\n"
@@ -827,11 +921,11 @@ msgstr ""
 "%(joined_project_name)s </span> communauté\n"
 "\t\t\t\t\t\t   "
 
-#: templates/rewarding/mails/community_welcome_pack.html:308
+#: templates/rewarding/mails/community_welcome_pack.html:312
 msgid "Great things are waiting for you !"
 msgstr "Des surprises vous attendent !"
 
-#: templates/rewarding/mails/community_welcome_pack.html:310
+#: templates/rewarding/mails/community_welcome_pack.html:314
 #, python-format
 msgid ""
 "\n"
@@ -848,47 +942,47 @@ msgstr ""
 "\t\t\t\t\t\tCliquez ci-dessous pour collectionner les premiers cadeaux ...\n"
 "\t\t\t\t\t\t"
 
-#: templates/rewarding/mails/community_welcome_pack.html:393 templates/shopping/mails/order_notice_with_reward.html:361
+#: templates/rewarding/mails/community_welcome_pack.html:397 templates/shopping/mails/order_notice_with_reward.html:361
 msgid "Collect your gifts now"
 msgstr "Récupérez vos cadeaux"
 
-#: templates/rewarding/mails/community_welcome_pack.html:429
+#: templates/rewarding/mails/community_welcome_pack.html:433
 msgid "How to collect coupons"
 msgstr "Comment collectionner des coupons"
 
-#: templates/rewarding/mails/community_welcome_pack.html:432
+#: templates/rewarding/mails/community_welcome_pack.html:436
 msgid "There are 3 ways to earn coupons"
 msgstr "Il y'a 3 manières de gagner des coupons"
 
-#: templates/rewarding/mails/community_welcome_pack.html:434
+#: templates/rewarding/mails/community_welcome_pack.html:438
 msgid "Join our community (you just did it)"
 msgstr "Rejoignez notre communauté (vous venez de le faire)"
 
-#: templates/rewarding/mails/community_welcome_pack.html:435
+#: templates/rewarding/mails/community_welcome_pack.html:439
 msgid "Buy from us (online or onsite)"
 msgstr "Achetez chez nous (en ligne ou sur place)"
 
-#: templates/rewarding/mails/community_welcome_pack.html:436
+#: templates/rewarding/mails/community_welcome_pack.html:440
 msgid "Visit our website very often"
 msgstr "Visitez notre site Web très souvent"
 
-#: templates/rewarding/mails/community_welcome_pack.html:438
+#: templates/rewarding/mails/community_welcome_pack.html:442
 msgid "All of your actions are rewarded"
 msgstr "Toutes vos actions sont récompensées"
 
-#: templates/rewarding/mails/community_welcome_pack.html:446
+#: templates/rewarding/mails/community_welcome_pack.html:450
 msgid "http://blog.ikwen.com/how-to-collect-coupons"
 msgstr "http://blog.ikwen.com/how-to-collect-coupons"
 
-#: templates/rewarding/mails/community_welcome_pack.html:448 templates/rewarding/mails/community_welcome_pack.html:485
+#: templates/rewarding/mails/community_welcome_pack.html:452 templates/rewarding/mails/community_welcome_pack.html:489
 msgid "Read more"
 msgstr "Lire la suite"
 
-#: templates/rewarding/mails/community_welcome_pack.html:468
+#: templates/rewarding/mails/community_welcome_pack.html:472
 msgid "How to recover my earnings?"
 msgstr "Comment récupérer mes gains ?"
 
-#: templates/rewarding/mails/community_welcome_pack.html:472
+#: templates/rewarding/mails/community_welcome_pack.html:476
 msgid ""
 "\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t  Once you have collected 100 coupons from the same item, you can\n"
@@ -904,7 +998,7 @@ msgstr ""
 "tous\n"
 "                                                      "
 
-#: templates/rewarding/mails/community_welcome_pack.html:483
+#: templates/rewarding/mails/community_welcome_pack.html:487
 msgid "http://blog.ikwen.com/how-to-recover-my-earned-coupons"
 msgstr "http://blog.ikwen.com/how-to-recover-my-earned-coupons"
 
@@ -918,15 +1012,15 @@ msgstr "%(project_names)s vous offre gratuitement quelques coupons"
 msgid "%(project_names)s are offering you some free coupons"
 msgstr "%(project_names)s vous offrent gratuitement quelques coupons"
 
-#: templates/rewarding/mails/free_reward.html:184
+#: templates/rewarding/mails/free_reward.html:186
 msgid "You just received some free gifts from your favorite companies"
 msgstr "Vous venez de recevoir des cadeaux gratuits de vos entreprises préférées"
 
-#: templates/rewarding/mails/free_reward.html:274 templates/rewarding/mails/referral_reward.html:297
+#: templates/rewarding/mails/free_reward.html:276 templates/rewarding/mails/referral_reward.html:297
 msgid "Collect your gifts"
 msgstr "Récupérez vos cadeaux"
 
-#: templates/rewarding/mails/free_reward.html:333 templates/rewarding/mails/referral_reward.html:356
+#: templates/rewarding/mails/free_reward.html:335 templates/rewarding/mails/referral_reward.html:356
 msgid "En savoir plus"
 msgstr "En savoir plus"
 
@@ -1187,30 +1281,33 @@ msgstr ""
 msgid "Earn XAF 5,800 as Dara ikwen by getting a company to create an online shop."
 msgstr "Gagne 5.800 FCFA en tant que Dara ikwen en invitant une entreprise à créer sa boutique en ligne."
 
-#: templates/smartevent/mails/thank-you.html:220
+#: templates/smartevent/mails/thank-you.html:219
 #, python-format
 msgid "Dear %(dara_name)s,"
 msgstr "Salut %(dara_name)s,"
 
-#: templates/smartevent/mails/thank-you.html:222
+#: templates/smartevent/mails/thank-you.html:221
+#, fuzzy
 msgid ""
 "\n"
-"                                                    Thank you for your presence at <strong>ikwen Daraja</strong> conference.\n"
-"                                                "
+"                                                            Thank you for your presence at <strong>ikwen Daraja</strong> "
+"conference.\n"
+"                                                        "
 msgstr ""
 "\n"
 "                                                    Merci d'avoir assisté(e) à la conférence <strong>ikwen Daraja</strong>.\n"
 "                                                "
 
-#: templates/smartevent/mails/thank-you.html:227
+#: templates/smartevent/mails/thank-you.html:226
+#, fuzzy
 msgid ""
 "\n"
-"                                                    You already knew that Daraja will let you make money by referring products "
-"of companies you like to your nearest ones.<br>\n"
-"                                                    As a Dara for ikwen, earn <strong>XAF 5,800</strong> this week by getting a "
-"company to create an online shop.<br>\n"
-"                                                    Learn more about it by clicking the button below.<br>\n"
-"                                                "
+"                                                            You already knew that Daraja will let you make money by referring "
+"products of companies you like to your nearest ones.<br>\n"
+"                                                            As a Dara for ikwen, earn <strong>XAF 5,800</strong> this week by "
+"getting a company to create an online shop.<br>\n"
+"                                                            Learn more about it by clicking the button below.<br>\n"
+"                                                        "
 msgstr ""
 "\n"
 "                                                    Tu sais déjà que Daraja te permet de gagner de l'argent en recommendant les "
@@ -1220,32 +1317,57 @@ msgstr ""
 "                                                    Plus d'infos en cliquant le bouton en bas de page.<br>\n"
 "                                               "
 
-#: templates/smartevent/mails/thank-you.html:269
+#: templates/smartevent/mails/thank-you.html:268
 msgid ""
 "Feel free to contact any of these ikwen' staffs to get further information on how to become a billionaire on Daraja venture."
 msgstr ""
 "N'hésite pas à contacter l'une des personnes ci-dessous, pour plus d'informations sur comment devenir millionaire grâce à Daraja."
 
-#: templates/smartevent/mails/thank-you.html:410
+#: templates/smartevent/mails/thank-you.html:409
 msgid "Let's go"
 msgstr "Allons-y !"
+
+#: templates/smartevent/mails/thank-you.html:443
+#, fuzzy, python-format
+msgid ""
+"\n"
+"                                        The information contained in this e-mail and any accompanying documents is confidential "
+"or otherwise\n"
+"                                        protected from disclosure. If you are not the intended recipient, please immediately "
+"alert the\n"
+"                                        sender by reply e-mail and delete this message and any attachments. Any copy, "
+"dissemination or\n"
+"                                        unauthorized access of the contents of this message by anyone other than the intended "
+"recipient\n"
+"                                        is strictly prohibited. E-mails may be susceptible to falsification or alteration and "
+"cause data\n"
+"                                        corruption and/or loss of data. %(company_name)s and/or any of its subsidiaries decline "
+"any liability resulting\n"
+"                                        from the consequences thereof. Therefore, this e-mail and any attachments are used at "
+"your own risk.\n"
+"                                    "
+msgstr ""
+"\n"
+"\t\t\t\t  Les informations contenues dans ce courrier électronique et dans les documents d’accompagnement sont confidentielles "
+"sinon\n"
+"                   protégé de la divulgation. Si vous n'êtes pas le destinataire prévu, veuillez immédiatement avertir "
+"l'emetteur\n"
+"                   par courrier électronique de réponse et supprimez ce message ainsi que toutes les pièces jointes. Toute "
+"copie, diffusion ou\n"
+"                   accès non autorisé au contenu de ce message par une personne autre que le destinataire prévu\n"
+"                   est strictement interdit. Les courriels peuvent être falsifiés ou altérés et provoquer la corruption des "
+"données\n"
+"                   et/ou perte de données. %(company_name)s et/ou l’une de ses filiales déclinent toute responsabilité "
+"résultante \n"
+"                   des conséquences de celle-ci. Par conséquent, cet e-mail et toutes les pièces jointes sont utilisés à vos "
+"risques et périls.\n"
+"                "
 
 #~ msgid "Make money now"
 #~ msgstr "Gagnez de l'argent"
 
 #~ msgid "%(dara.member.full_name)s requested to be a dara for your company."
 #~ msgstr "%(dara.member.full_name)s souhaiterait être dara pour votre entreprise."
-
-#~ msgid ""
-#~ "\n"
-#~ "                                                    Hi,\n"
-#~ "                                                    <b>%(dara.member.full_name)s</b> requested to be a Dara for you.\n"
-#~ "                                                "
-#~ msgstr ""
-#~ "\n"
-#~ "                                                    Bonjour,\n"
-#~ "                                                    <b>%(dara.member.full_name)s</b> voudrait être Dara pour vous.\n"
-#~ "                                                "
 
 #~ msgid "Accept now"
 #~ msgstr "Acceptez"
