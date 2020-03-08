@@ -154,7 +154,7 @@ table.center-on-narrow {
                 <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-top:15px;padding-bottom:5px;padding-right:0;padding-left:0;text-align:left;" >
                     <a target="_blank" href="http://www.ikwen.com/daraja/" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%; text-decoration: none" >
                         <div style="display: inline-block">
-                               <img src="https://static.ikwen.com/daraja/img/ikwen-Daraja.png" alt="ikwen - daraja" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic; width: 20%; height: inherit" >
+                            <img src="https://static.ikwen.com/daraja/img/ikwen-Daraja.png" alt="ikwen - daraja" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic; width: 30%; height: inherit" >
                         </div>
                     </a>
                 </div>
@@ -198,17 +198,14 @@ table.center-on-narrow {
                                 {% blocktrans with referee_name=referee.full_name|capfirst %}
                                   <strong>{{ referee_name }}</strong> accepted your invitation on {{ referred_service_name }} .
                                   Make some money by getting this person to buy online. <br>
-                                  Go to <a target="_blank" href="{{ referred_service_url }}">{{ referred_service_url }}</a> and
+                                  Click on the button below to visit Playground website and
                                   send him/her links of products he/she might be interested in.
                                 {% endblocktrans%}</p><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                               <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                             <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align: justify;background: #f8f6f6; padding: 15px">
+                             <div style="text-align: justify;background: #f8f6f6; padding: 15px">
                                  {% blocktrans %}You successfully completed this step by <strong>inviting a follower</strong>. <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">You just earned <strong>100 CFA bonus cash + 1xp</strong> for that.{% endblocktrans %}
-                             </p>
+                             </div>
                          </div>
-                          <div style="margin: 30px 0;">
-                              {% blocktrans %}Now, <a href="{{ referred_service_url }}">click here</a> to get him/her to <strong>buy</strong> products that he may interested in.{% endblocktrans %}
-                          </div>
 
                       <!-- Button : Begin -->
 

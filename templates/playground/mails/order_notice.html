@@ -157,7 +157,7 @@
 					<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 					  <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
 						<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-top:15px;padding-bottom:5px;padding-right:0;padding-left:0;text-align:center;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#EEEEEE;" >
-						  <a href="{{ service.url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><img src="{{ IKWEN_MEDIA_URL }}{{ logo.name }}" height="60" width="auto" alt="website" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-ms-interpolation-mode:bicubic;" ></a>
+						  <a href="{{ service.url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><img src="https://static.ikwen.com/playground/img/logo_playground.jpg" height="40" width="auto" alt="website" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-ms-interpolation-mode:bicubic;" ></a>
 						</div>				
 						</td>
 					</tr>
@@ -206,21 +206,21 @@
                     Your order was issued with success under number <strong>{{ rcc }}</strong> and
                     submit for approval to {{ bank_name }}.<br>
                     You can follow order status anytime by clicking the link down here:<br><br>
-                     <a href="{{ service_url }}{{ order_cart_url }}">{{ service_url }}{{ order_cart_url }}</a>
+                     <a href="https://go.ikwen.com/{{ order_cart_url }}">https://go.ikwen.com/{{ order_cart_url }}</a>
                 {% endblocktrans %}
             {% elif order.status == 'Pending' %}
                 {% if order.delivery_option.type == 'HomeDelivery' %}
                     {% blocktrans with service_url=service.url %}
                         Your order was issued with success under number <strong>{{ rcc }}</strong>.
                         You can follow order status anytime by clicking the link down here:<br><br>
-                         <a href="{{ service_url }}{{ order_cart_url }}">{{ service_url }}{{ order_cart_url }}</a>
+                         <a href="https://go.ikwen.com/{{ order_cart_url }}">https://go.ikwen.com/{{ order_cart_url }}</a>
                     {% endblocktrans %}
                 {% else %}
                     {% blocktrans with max_delay=order.delivery_option.get_delay_as_string service_url=service.url %}
                         Your order was issued with success under number <strong>{{ rcc }}</strong>.
                         You can pick up your package in our store in about {{ max_delay }}.<br>
                         Follow order status anytime by clicking the link down here:<br><br>
-                         <a href="{{ service_url }}{{ order_cart_url }}">{{ service_url }}{{ order_cart_url }}</a>
+                         <a href="https://go.ikwen.com/{{ order_cart_url }}">https://go.ikwen.com/{{ order_cart_url }}</a>
                     {% endblocktrans %}
                 {% endif %}
             {% else %}
@@ -479,6 +479,7 @@
 											  {% trans "Thank you for shopping with us." %}
 										  </p>
 										</div>
+                                        {% if is_dara %}
                                         <div>
                                             <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:15px;text-align: center;background: #f8f6f6; padding: 15px">
                                                 {% blocktrans %}You successfully completed the <strong>Buy online</strong> test. <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">You just earned <strong>100 CFA bonus cash + 1xp</strong> for that.{% endblocktrans %}
@@ -491,14 +492,14 @@
                                             <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
                                                 <tr>
                                                     <td style="border-radius: 3px; background: #233682; text-align: center;" class="button-td">
-                                                        <a target="_blank" href="{{ invitation_url }}" style="background: #f38e42; border: 15px solid #f38e42	; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
+                                                        <a target="_blank" href="{{ invitation_url }}" style="background: #f38e42; border: 15px solid #f38e42	; padding: 0 10px;color: #ffffff;font-size: 16px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
                                                       <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans %}Invite now{% endblocktrans%}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
                                                       </a>
                                                     </td>
                                                 </tr>
                                             </table>
                                             <br>
-                                        <!-- Button : END --></td>
+                                        <!-- Button : END -->{% endif %}</td>
 
 									  <!--[if mso]>
 													</td>
