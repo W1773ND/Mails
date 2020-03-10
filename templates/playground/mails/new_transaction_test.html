@@ -200,7 +200,6 @@ table.center-on-narrow {
                                 {% blocktrans with amount_paid=amount|intcomma amount_earned=dara_earnings|intcomma balance=account_balance|intcomma %}
                                   You just received {{ currency_symbol }} {{ amount_earned }} from {{ company_name }} after the payment
                                   of {{ currency_symbol }} {{ amount_paid }} from a follower at {{ transaction_time }}.<br><br>
-                                  New account balance: <strong>{{ currency_symbol }} {{ balance }}</strong>
                                 {% endblocktrans%}</p><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                               <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
                             <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align: justify;background: #f8f6f6; padding: 15px">
@@ -209,10 +208,6 @@ table.center-on-narrow {
                          </div>
                           <div style="padding: 15px 30px;">
                               <span>{% blocktrans %}Now, click below to <strong>like and follow </strong>us on social medias{% endblocktrans %}</span>
-                          <ul style="list-style: none; padding-top: 20px;">
-                              <li style="display: inline; margin-right: 10px;"><a href="https://www.facebook.com/Ikwen-kakocase-2025554244382381/" style="text-decoration: none;"><img src="https://static.ikwen.com/playground/img/fb_icon.png" width="30"></a></li>
-                              <li style="display: inline; margin-right: 10px;"><a href="https://www.instagram.com/p/B81Al4BBQeQ/?igshid=vcycpcvi03qn" style="text-decoration: none;"><img src="https://static.ikwen.com/playground/img/insta_icon.png" width="30"></a></li>
-                          </ul>
                           </div>
 
                       <!-- Button : Begin -->
@@ -220,7 +215,7 @@ table.center-on-narrow {
                             <tr>
                                 <td style="border-radius: 3px; background: #233682; text-align: center;" class="button-td">
                                     <a target="_blank" href="{{ dashboard_url }}" style="background: #f38e42; border: 15px solid #f38e42	; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
-                                  <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans %}See details{% endblocktrans%}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                  <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans %}Follow us{% endblocktrans%}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
                                   </a>
                                 </td>
                             </tr>

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-07 18:50+0100\n"
-"PO-Revision-Date: 2020-02-07 19:11+0100\n"
+"POT-Creation-Date: 2020-03-10 17:19+0100\n"
+"PO-Revision-Date: 2020-03-10 17:26+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -141,8 +141,7 @@ msgstr ""
 "\t\t\t\t\t\t\t\t</ul>\n"
 "\t\t\t\t\t\t\t"
 
-#: templates/billing/mails/notice.html:138 templates/daraja/mails/publish_products_request.html:201
-#: templates/echo/mails/successful_refill.html:193
+#: templates/billing/mails/notice.html:138 templates/echo/mails/successful_refill.html:193
 #, python-format
 msgid "Dear %(member_name)s,"
 msgstr "Cher(e) %(member_name)s,"
@@ -354,14 +353,15 @@ msgid "Thank you for your business with %(company_name)s."
 msgstr "Merci d'être client chez %(company_name)s."
 
 #: templates/core/mails/snippets/confidentiality.html:6 templates/daraja/mails/accept_dara_request.html:246
-#: templates/daraja/mails/congratulations_for_products_publication.html:245 templates/daraja/mails/dara_request.html:244
-#: templates/daraja/mails/new_transaction.html:248 templates/daraja/mails/referee_joined.html:245
-#: templates/smartevent/mails/thank-you.html:441
+#: templates/daraja/mails/dara_request.html:244 templates/daraja/mails/new_transaction.html:248
+#: templates/daraja/mails/referee_joined.html:245 templates/playground/mails/new_transaction_test.html:250
+#: templates/playground/mails/referee_joined.html:248 templates/smartevent/mails/thank-you.html:441
 msgid "CONFIDENTIALITY"
 msgstr "CONFIDENTIALITÉ"
 
 #: templates/core/mails/snippets/confidentiality.html:8 templates/daraja/mails/new_transaction.html:250
-#: templates/daraja/mails/referee_joined.html:247
+#: templates/daraja/mails/referee_joined.html:247 templates/playground/mails/new_transaction_test.html:252
+#: templates/playground/mails/referee_joined.html:250
 #, python-format
 msgid ""
 "\n"
@@ -392,14 +392,14 @@ msgstr ""
 "                "
 
 #: templates/core/mails/snippets/confidentiality.html:19 templates/daraja/mails/accept_dara_request.html:259
-#: templates/daraja/mails/congratulations_for_products_publication.html:258 templates/daraja/mails/dara_request.html:257
-#: templates/daraja/mails/new_transaction.html:261 templates/daraja/mails/referee_joined.html:258
-#: templates/smartevent/mails/thank-you.html:454
+#: templates/daraja/mails/dara_request.html:257 templates/daraja/mails/new_transaction.html:261
+#: templates/daraja/mails/referee_joined.html:258 templates/playground/mails/new_transaction_test.html:263
+#: templates/playground/mails/referee_joined.html:261 templates/smartevent/mails/thank-you.html:454
 #, python-format
 msgid "&copy; %(year)s %(company_name)s. All Rights Reserved."
 msgstr "© %(year)s %(company_name)s.Tous droits réservés."
 
-#: templates/daraja/mails/accept_dara_request.html:143 templates/daraja/mails/congratulations_for_products_publication.html:143
+#: templates/daraja/mails/accept_dara_request.html:143
 #, python-format
 msgid "%(company_name)s accepted your request."
 msgstr "%(company_name)s a accepté votre demande."
@@ -423,8 +423,7 @@ msgstr ""
 msgid "Login and refer"
 msgstr "Connectez-vous et recommendez"
 
-#: templates/daraja/mails/accept_dara_request.html:248 templates/daraja/mails/congratulations_for_products_publication.html:247
-#: templates/daraja/mails/dara_request.html:246
+#: templates/daraja/mails/accept_dara_request.html:248 templates/daraja/mails/dara_request.html:246
 #, python-format
 msgid ""
 "\n"
@@ -457,23 +456,6 @@ msgstr ""
 "risques et périls.\n"
 "                "
 
-#: templates/daraja/mails/congratulations_for_products_publication.html:201
-#, fuzzy
-msgid ""
-"\n"
-"                                                    You have successfully published products online, and your platform is now\n"
-"                                                    ready to make money.\n"
-"                                                "
-msgstr ""
-"\n"
-"                                                    Bonjour,\n"
-"                                                    <b>%(dara.member.full_name)s</b> voudrait être Dara pour vous.\n"
-"                                                "
-
-#: templates/daraja/mails/congratulations_for_products_publication.html:214
-msgid "Manage your Com & Marketing"
-msgstr ""
-
 #: templates/daraja/mails/dara_request.html:143
 #, python-format
 msgid "%(dara_name)s would like to partnership with you."
@@ -495,7 +477,7 @@ msgstr ""
 msgid "View now"
 msgstr "Voir"
 
-#: templates/daraja/mails/new_transaction.html:140
+#: templates/daraja/mails/new_transaction.html:140 templates/playground/mails/new_transaction_test.html:140
 #, python-format
 msgid "A follower just made a purchase of %(currency_symbol)s %(amount)s."
 msgstr "Un follower vient de faire un achat de %(amount)s %(currency_symbol)s."
@@ -521,30 +503,7 @@ msgstr ""
 msgid "See details"
 msgstr "Voir détails"
 
-#: templates/daraja/mails/publish_products_request.html:143
-msgid "Start making your business now by publishing your products online."
-msgstr ""
-
-#: templates/daraja/mails/publish_products_request.html:203
-#, fuzzy
-msgid ""
-"\n"
-"                                                            Your online shop has been successfully created. But there are "
-"pictures test on the website which are not corresponding to\n"
-"                                                            images of products you are selling online. Ask your Dara' admin to "
-"replace them or simply do it yourself.\n"
-"                                                        "
-msgstr ""
-"\n"
-"\t\t\t\t\t\t\tSalut %(member_name)s,<br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" />\n"
-"\t\t\t\t\t\t\tNous avons ces nouveaux produits que nous pensons être parfaits pour vous. Soyez les premiers à les obtenir.\n"
-"\t\t\t\t\t\t\t"
-
-#: templates/daraja/mails/publish_products_request.html:217
-msgid "Change now"
-msgstr ""
-
-#: templates/daraja/mails/referee_joined.html:140
+#: templates/daraja/mails/referee_joined.html:140 templates/playground/mails/referee_joined.html:140
 msgid "Send me some interesting products to buy online."
 msgstr "Envoyez moi des produits interessants à acheter en ligne."
 
@@ -566,7 +525,7 @@ msgstr ""
 "                                  envoyez lui les liens vers des produits qui pourraient l'interesser.\n"
 "                                "
 
-#: templates/daraja/mails/referee_joined.html:213
+#: templates/daraja/mails/referee_joined.html:213 templates/playground/mails/referee_joined.html:216
 #, python-format
 msgid "Go to %(referred_service_name)s"
 msgstr "Allez sur %(referred_service_name)s"
@@ -739,9 +698,8 @@ msgid "%(missing)s students have no parent contacts"
 msgstr "%(missing)s élèves n'ont pas de contacts parents"
 
 #: templates/foulassi/mails/school_setup_reminder.html:225
-#, fuzzy
 msgid "Fix now"
-msgstr "Voir"
+msgstr "Corrigez le problème"
 
 #: templates/kako/mails/product_on_sale.html:288
 #, python-format
@@ -832,6 +790,251 @@ msgstr ""
 "                                                    Félicitations ! <br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
 "adjust:100%%;\" > <br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" >\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t"
+
+#: templates/playground/mails/new_transaction_test.html:200
+#, python-format
+msgid ""
+"\n"
+"                                  You just received %(currency_symbol)s %(amount_earned)s from %(company_name)s after the "
+"payment\n"
+"                                  of %(currency_symbol)s %(amount_paid)s from a follower at %(transaction_time)s.<br><br>\n"
+"                                "
+msgstr ""
+"\n"
+"                                  Vous venez de recevoir %(amount_earned)s %(currency_symbol)s de %(company_name)s suite au "
+"paiement\n"
+"                                  de %(amount_paid)s %(currency_symbol)s par un follower à %(transaction_time)s.<br><br>\n"
+"                                "
+
+#: templates/playground/mails/new_transaction_test.html:206
+#, python-format
+msgid ""
+"You successfully completed this step by making your follower to <strong>buy</strong> online. <br style=\"-ms-text-size-"
+"adjust:100%%;-webkit-text-size-adjust:100%%;\">You just earned <strong>100 CFA bonus cash + 1xp</strong> into your account to "
+"have accomplish this stage"
+msgstr ""
+
+#: templates/playground/mails/new_transaction_test.html:210
+msgid "Now, click below to <strong>like and follow </strong>us on social medias"
+msgstr ""
+
+#: templates/playground/mails/new_transaction_test.html:218
+msgid "Follow us"
+msgstr ""
+
+#: templates/playground/mails/order_notice.html:188 templates/shopping/mails/order_notice.html:188
+#, python-format
+msgid "Dear %(buyer_name)s"
+msgstr "Cher(e) %(buyer_name)s"
+
+#: templates/playground/mails/order_notice.html:191 templates/shopping/mails/order_notice.html:191
+#, python-format
+msgid ""
+"\n"
+"                    Your order on %(merchant)s with number <strong>%(rcc)s</strong> was confirmed.\n"
+"                "
+msgstr ""
+"\n"
+"\t\tVotre commande sur %(merchant)s avec le numéro <strong>%(rcc)s</strong> a été confirmée.\n"
+"\t\t"
+
+#: templates/playground/mails/order_notice.html:195 templates/shopping/mails/order_notice.html:195
+#, python-format
+msgid ""
+"\n"
+"                    Your order on %(merchant)s with number <strong>%(rcc)s</strong> was rejected.\n"
+"                "
+msgstr ""
+"\n"
+"\t\tVotre commande sur %(merchant)s avec le numéro <strong>%(rcc)s</strong>  a été rejetée.\n"
+"\t\t"
+
+#: templates/playground/mails/order_notice.html:199 templates/shopping/mails/order_notice.html:199
+msgid "Message"
+msgstr "Message"
+
+#: templates/playground/mails/order_notice.html:205
+#, python-format
+msgid ""
+"\n"
+"                    Your order was issued with success under number <strong>%(rcc)s</strong> and\n"
+"                    submit for approval to %(bank_name)s.<br>\n"
+"                    You can follow order status anytime by clicking the link down here:<br><br>\n"
+"                     <a href=\"https://go.ikwen.com/%(order_cart_url)s\">https://go.ikwen.com/%(order_cart_url)s</a>\n"
+"                "
+msgstr ""
+"\n"
+"\t\tVotre commande a été émise avec succès sous le numéro <strong>%(rcc)s </ strong> et\n"
+"\t\tsoumettre pour approbation à %(bank_name)s. <br>\n"
+"\t\tVous pouvez suivre le statut de votre commande à tout moment en cliquant sur le lien ci-dessous: <br><br>\n"
+"\t\t<a href=\"https://go.ikwen.com/%(order_cart_url)s\">https://go.ikwen.com/%(order_cart_url)s </a>\n"
+"\t\t"
+
+#: templates/playground/mails/order_notice.html:213
+#, python-format
+msgid ""
+"\n"
+"                        Your order was issued with success under number <strong>%(rcc)s</strong>.\n"
+"                        You can follow order status anytime by clicking the link down here:<br><br>\n"
+"                         <a href=\"https://go.ikwen.com/%(order_cart_url)s\">https://go.ikwen.com/%(order_cart_url)s</a>\n"
+"                    "
+msgstr ""
+"\n"
+"\t\t\tVotre commande a été émise avec succès sous le numéro <strong>%(rcc)s </ strong>.\n"
+"\t\t\tVous pouvez suivre le statut de votre commande à tout moment en cliquant sur le lien ci-dessous: <br><br>\n"
+"\t\t\t<a href=\"https://go.ikwen.com/%(order_cart_url)s\">https://go.ikwen.com/%(order_cart_url)s </a>\n"
+"\t\t\t"
+
+#: templates/playground/mails/order_notice.html:219
+#, python-format
+msgid ""
+"\n"
+"                        Your order was issued with success under number <strong>%(rcc)s</strong>.\n"
+"                        You can pick up your package in our store in about %(max_delay)s.<br>\n"
+"                        Follow order status anytime by clicking the link down here:<br><br>\n"
+"                         <a href=\"https://go.ikwen.com/%(order_cart_url)s\">https://go.ikwen.com/%(order_cart_url)s</a>\n"
+"                    "
+msgstr ""
+"\n"
+"\t\t\tVotre commande a été émise avec succès sous le numéro <strong>%(rcc)s</strong>.\n"
+"\t\t\tVous pouvez récupérer votre colis dans notre magasin dans environ %(max_delay)s. <br>\n"
+"\t\t\tSuivez le statut de votre commande à tout moment en cliquant sur le lien ci-dessous: <br> <br>\n"
+"\t\t\t<a href=\"https://go.ikwen.com/%(order_cart_url)s\">https://go.ikwen.com/%(order_cart_url)s </a>\n"
+"\t\t\t\n"
+"\t\t\t"
+
+#: templates/playground/mails/order_notice.html:228 templates/shopping/mails/order_notice.html:228
+#: templates/shopping/mails/order_notice_with_reward.html:415
+msgid "Your order was shipped. You will receive it in about"
+msgstr "Votre commande a été expédiée. Vous le recevrez très bientôt"
+
+#: templates/playground/mails/order_notice.html:230 templates/shopping/mails/order_notice.html:230
+#: templates/shopping/mails/order_notice_with_reward.html:417
+msgid "Your order was packaged and is ready for you to come and collect using the RCC:"
+msgstr "Votre commande a été emballée et est prête pour que vous puissiez venir chercher avec le RCC:"
+
+#: templates/playground/mails/order_notice.html:268 templates/shopping/mails/order_notice.html:268
+#: templates/shopping/mails/order_notice_with_reward.html:447
+msgid "See details below"
+msgstr "Voir détails ci-dessous"
+
+#: templates/playground/mails/order_notice.html:272 templates/shopping/mails/order_notice.html:272
+#: templates/shopping/mails/order_notice_with_reward.html:451
+#, python-format
+msgid ""
+"\n"
+"                                            <p>\n"
+"                                                %(items_count)s items(s), totaling\n"
+"                                                <ins>\n"
+"                                                    %(currency_symbol)s\n"
+"                                                    %(items_cost)s\n"
+"                                                </ins>\n"
+"                                            </p>\n"
+"                                            "
+msgstr ""
+"\n"
+"                                            <p>\n"
+"                                                %(items_count)s article(s), font au total\n"
+"                                                <ins>\n"
+"                                                    %(items_cost)s\n"
+"                                                    %(currency_symbol)s\n"
+"                                                </ins>\n"
+"                                            </p>\n"
+"                                            "
+
+#: templates/playground/mails/order_notice.html:284 templates/shopping/mails/order_notice.html:284
+#: templates/shopping/mails/order_notice_with_reward.html:463
+msgid "Shipping fees"
+msgstr "Frais de livraison"
+
+#: templates/playground/mails/order_notice.html:290 templates/shopping/mails/order_notice.html:290
+#: templates/shopping/mails/order_notice_with_reward.html:469
+msgid "Free shipping"
+msgstr "Livraison gratuite"
+
+#: templates/playground/mails/order_notice.html:294 templates/shopping/mails/order_notice.html:294
+#: templates/shopping/mails/order_notice_with_reward.html:473
+msgid "Deliver to"
+msgstr "Livré à"
+
+#: templates/playground/mails/order_notice.html:298 templates/shopping/mails/order_notice.html:298
+#: templates/shopping/mails/order_notice_with_reward.html:477
+msgid "Postal code"
+msgstr "Code postal"
+
+#: templates/playground/mails/order_notice.html:305 templates/shopping/mails/order_notice.html:305
+#: templates/shopping/mails/order_notice_with_reward.html:484
+msgid "Pick up in store"
+msgstr "Récupérez sur place"
+
+#: templates/playground/mails/order_notice.html:309 templates/shopping/mails/order_notice.html:309
+#: templates/shopping/mails/order_notice_with_reward.html:488
+msgid "Remit to"
+msgstr "Remettre à"
+
+#: templates/playground/mails/order_notice.html:373 templates/shopping/mails/order_notice.html:373
+#: templates/shopping/mails/order_notice_with_reward.html:553
+msgid "Price"
+msgstr "Prix"
+
+#: templates/playground/mails/order_notice.html:374 templates/shopping/mails/order_notice.html:374
+#: templates/shopping/mails/order_notice_with_reward.html:554
+msgid "Quantity"
+msgstr "Quantité"
+
+#: templates/playground/mails/order_notice.html:375 templates/shopping/mails/order_notice.html:375
+#: templates/shopping/mails/order_notice_with_reward.html:555
+msgid "Subtotal"
+msgstr "Sous-total"
+
+#: templates/playground/mails/order_notice.html:436 templates/shopping/mails/order_notice.html:436
+#: templates/shopping/mails/order_notice_with_reward.html:616
+msgid "Packing"
+msgstr "Emballage"
+
+#: templates/playground/mails/order_notice.html:479 templates/shopping/mails/order_notice.html:479
+#: templates/shopping/mails/order_notice_with_reward.html:658
+msgid "Thank you for shopping with us."
+msgstr "Nous vous remercions pour vos achats avec notre service."
+
+#: templates/playground/mails/order_notice.html:485
+#, python-format
+msgid ""
+"You successfully completed the <strong>Buy online</strong> test. <br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%;\">You just earned <strong>100 CFA bonus cash + 1xp</strong> for that."
+msgstr ""
+
+#: templates/playground/mails/order_notice.html:489
+msgid "Now, <strong>invite</strong> a follower and earn another 100 CFA bonus cash + 1xp."
+msgstr ""
+
+#: templates/playground/mails/order_notice.html:496
+msgid "Invite now"
+msgstr "Invitez un proche"
+
+#: templates/playground/mails/referee_joined.html:198
+#, python-format
+msgid ""
+"\n"
+"                                  <strong>%(referee_name)s</strong> accepted your invitation on %(referred_service_name)s .\n"
+"                                  Make some money by getting this person to buy online. <br>\n"
+"                                  Click on the button below to visit Playground website and\n"
+"                                  send him/her links of products he/she might be interested in.\n"
+"                                "
+msgstr ""
+"\n"
+"                                  <strong>%(referee_name)s</strong> a accepté votre invitation sur %(referred_service_name)s .\n"
+"                                  Gagnez de l'argent en l'amenant à acheter en ligne. <br>\n"
+"                                  Cliquez ci-dessous pour aller sur la boutique Playground et\n"
+"                                  envoyez lui les liens vers des produits qui pourraient l'intéresser.\n"
+"                                "
+
+#: templates/playground/mails/referee_joined.html:206
+#, python-format
+msgid ""
+"You successfully completed this step by <strong>inviting a follower</strong>. <br style=\"-ms-text-size-adjust:100%%;-webkit-"
+"text-size-adjust:100%%;\">You just earned <strong>100 CFA bonus cash + 1xp</strong> for that."
+msgstr ""
 
 #: templates/revival/mails/suggest_create_account.html:134
 msgid "Login on ikwen.com and Join our community"
@@ -1081,37 +1284,6 @@ msgstr ""
 "échangez-les chez nous contre l'équivalent.\n"
 "                                                        </p>"
 
-#: templates/shopping/mails/order_notice.html:188
-#, python-format
-msgid "Dear %(buyer_name)s"
-msgstr "Cher(e) %(buyer_name)s"
-
-#: templates/shopping/mails/order_notice.html:191
-#, python-format
-msgid ""
-"\n"
-"                    Your order on %(merchant)s with number <strong>%(rcc)s</strong> was confirmed.\n"
-"                "
-msgstr ""
-"\n"
-"\t\tVotre commande sur %(merchant)s avec le numéro <strong>%(rcc)s</strong> a été confirmée.\n"
-"\t\t"
-
-#: templates/shopping/mails/order_notice.html:195
-#, python-format
-msgid ""
-"\n"
-"                    Your order on %(merchant)s with number <strong>%(rcc)s</strong> was rejected.\n"
-"                "
-msgstr ""
-"\n"
-"\t\tVotre commande sur %(merchant)s avec le numéro <strong>%(rcc)s</strong>  a été rejetée.\n"
-"\t\t"
-
-#: templates/shopping/mails/order_notice.html:199
-msgid "Message"
-msgstr "Message"
-
 #: templates/shopping/mails/order_notice.html:205
 #, python-format
 msgid ""
@@ -1162,85 +1334,6 @@ msgstr ""
 "\t\t\t\n"
 "\t\t\t"
 
-#: templates/shopping/mails/order_notice.html:228 templates/shopping/mails/order_notice_with_reward.html:415
-msgid "Your order was shipped. You will receive it in about"
-msgstr "Votre commande a été expédiée. Vous le recevrez très bientôt"
-
-#: templates/shopping/mails/order_notice.html:230 templates/shopping/mails/order_notice_with_reward.html:417
-msgid "Your order was packaged and is ready for you to come and collect using the RCC:"
-msgstr "Votre commande a été emballée et est prête pour que vous puissiez venir chercher avec le RCC:"
-
-#: templates/shopping/mails/order_notice.html:268 templates/shopping/mails/order_notice_with_reward.html:447
-msgid "See details below"
-msgstr "Voir détails ci-dessous"
-
-#: templates/shopping/mails/order_notice.html:272 templates/shopping/mails/order_notice_with_reward.html:451
-#, python-format
-msgid ""
-"\n"
-"                                            <p>\n"
-"                                                %(items_count)s items(s), totaling\n"
-"                                                <ins>\n"
-"                                                    %(currency_symbol)s\n"
-"                                                    %(items_cost)s\n"
-"                                                </ins>\n"
-"                                            </p>\n"
-"                                            "
-msgstr ""
-"\n"
-"                                            <p>\n"
-"                                                %(items_count)s article(s), font au total\n"
-"                                                <ins>\n"
-"                                                    %(items_cost)s\n"
-"                                                    %(currency_symbol)s\n"
-"                                                </ins>\n"
-"                                            </p>\n"
-"                                            "
-
-#: templates/shopping/mails/order_notice.html:284 templates/shopping/mails/order_notice_with_reward.html:463
-msgid "Shipping fees"
-msgstr "Frais de livraison"
-
-#: templates/shopping/mails/order_notice.html:290 templates/shopping/mails/order_notice_with_reward.html:469
-msgid "Free shipping"
-msgstr "Livraison gratuite"
-
-#: templates/shopping/mails/order_notice.html:294 templates/shopping/mails/order_notice_with_reward.html:473
-msgid "Deliver to"
-msgstr "Livré à"
-
-#: templates/shopping/mails/order_notice.html:298 templates/shopping/mails/order_notice_with_reward.html:477
-msgid "Postal code"
-msgstr "Code postal"
-
-#: templates/shopping/mails/order_notice.html:305 templates/shopping/mails/order_notice_with_reward.html:484
-msgid "Pick up in store"
-msgstr "Récupérez sur place"
-
-#: templates/shopping/mails/order_notice.html:309 templates/shopping/mails/order_notice_with_reward.html:488
-msgid "Remit to"
-msgstr "Remettre à"
-
-#: templates/shopping/mails/order_notice.html:373 templates/shopping/mails/order_notice_with_reward.html:553
-msgid "Price"
-msgstr "Prix"
-
-#: templates/shopping/mails/order_notice.html:374 templates/shopping/mails/order_notice_with_reward.html:554
-msgid "Quantity"
-msgstr "Quantité"
-
-#: templates/shopping/mails/order_notice.html:375 templates/shopping/mails/order_notice_with_reward.html:555
-msgid "Subtotal"
-msgstr "Sous-total"
-
-#: templates/shopping/mails/order_notice.html:436 templates/shopping/mails/order_notice_with_reward.html:616
-msgid "Packing"
-msgstr "Emballage"
-
-#: templates/shopping/mails/order_notice.html:479 templates/shopping/mails/order_notice_with_reward.html:658
-msgid "Thank you for shopping with us."
-msgstr "Nous vous remercions pour vos achats avec notre service."
-
 #: templates/shopping/mails/order_notice_with_reward.html:286
 #, python-format
 msgid ""
@@ -1287,7 +1380,6 @@ msgid "Dear %(dara_name)s,"
 msgstr "Salut %(dara_name)s,"
 
 #: templates/smartevent/mails/thank-you.html:221
-#, fuzzy
 msgid ""
 "\n"
 "                                                            Thank you for your presence at <strong>ikwen Daraja</strong> "
@@ -1299,7 +1391,6 @@ msgstr ""
 "                                                "
 
 #: templates/smartevent/mails/thank-you.html:226
-#, fuzzy
 msgid ""
 "\n"
 "                                                            You already knew that Daraja will let you make money by referring "
@@ -1328,7 +1419,7 @@ msgid "Let's go"
 msgstr "Allons-y !"
 
 #: templates/smartevent/mails/thank-you.html:443
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "\n"
 "                                        The information contained in this e-mail and any accompanying documents is confidential "
@@ -1362,6 +1453,33 @@ msgstr ""
 "                   des conséquences de celle-ci. Par conséquent, cet e-mail et toutes les pièces jointes sont utilisés à vos "
 "risques et périls.\n"
 "                "
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "                                                    You have successfully published products online, and your platform is "
+#~ "now\n"
+#~ "                                                    ready to make money.\n"
+#~ "                                                "
+#~ msgstr ""
+#~ "\n"
+#~ "                                                    Bonjour,\n"
+#~ "                                                    <b>%(dara.member.full_name)s</b> voudrait être Dara pour vous.\n"
+#~ "                                                "
+
+#, fuzzy
+#~ msgid ""
+#~ "\n"
+#~ "                                                            Your online shop has been successfully created. But there are "
+#~ "pictures test on the website which are not corresponding to\n"
+#~ "                                                            images of products you are selling online. Ask your Dara' admin "
+#~ "to replace them or simply do it yourself.\n"
+#~ "                                                        "
+#~ msgstr ""
+#~ "\n"
+#~ "\t\t\t\t\t\t\tSalut %(member_name)s,<br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" />\n"
+#~ "\t\t\t\t\t\t\tNous avons ces nouveaux produits que nous pensons être parfaits pour vous. Soyez les premiers à les obtenir.\n"
+#~ "\t\t\t\t\t\t\t"
 
 #~ msgid "Make money now"
 #~ msgstr "Gagnez de l'argent"
