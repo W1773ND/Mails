@@ -73,17 +73,14 @@ a[x-apple-data-detectors] {
 	min-width: 200px;
 }
 .button-td:hover, .button-a:hover {
-	background: #f38e42 !important;
-	border-color: #f38e42 !important;
+	background: #319dd5 !important;
+	border-color: #319dd5 !important;
 }
 
 .screen-display{
 	margin-top: 10px;
 }
 
-.ikwen-staff tr {
-    margin-bottom: 20px;
-}
 
 @media screen and (max-width: 480px){
 
@@ -140,7 +137,9 @@ table.center-on-narrow {
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
 
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{% blocktrans %}{{ company_name }} accepted your request.{% endblocktrans %}</div>
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{% blocktrans with referee_name=referee.first_name %}
+            Remind {{ referee_name }} to pay his invoice of {{ invoice_total }} CFA for his newly deployed website.
+        {% endblocktrans %}</div>
         <!-- Visually Hidden Preheader Text : END -->
 
         <div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;box-shadow:0 5px 5px 0 #bfbfbf;margin-top:10px;" >
@@ -155,89 +154,102 @@ table.center-on-narrow {
             <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
               <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                 <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-top:15px;padding-bottom:5px;padding-right:0;padding-left:0;text-align:left;" >
-                  <a target="_blank" href="http://www.ikwen.com/daraja/" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%; text-decoration: none" >
-                    <div style="display: inline-block">
-                           <img src="https://static.ikwen.com/daraja/img/ikwen-Daraja.png" alt="ikwen - Daraja" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic; height: 30px">
-                    </div>
-                  </a>
+                    <a target="_blank" href="http://www.ikwen.com/daraja/" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%; text-decoration: none" >
+                        <div style="display: inline-block">
+                            <img src="https://static.ikwen.com/daraja/img/ikwen-Daraja.png" alt="ikwen - daraja" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic; width: 30%; height: inherit" >
+                        </div>
+                    </a>
                 </div>
               </td>
             </tr>
           </table>
           <!-- Email Header : END -->
-            <!-- Email Body : BEGIN -->
-            <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#FFF" width="100%" style="max-width: 400px;">
-                <!-- Hero Image, Flush : BEGIN -->
-                <tr>
-                  <td class="full-width-image" align="center" style="padding:15px">
-                      <div>
-    {#                  border: 1px solid #eee; #}
-                        <div style="background: url('https://static.ikwen.com/daraja/img/website-deployed.png') no-repeat center; background-size: cover; height: 200px;">
-                        </div>
-                      </div>
-                  </td>
-                </tr>
-                <!-- Hero Image, Flush : END -->
-                <!-- 1 Column Text : BEGIN -->
-                <tr>
-                    <td bgcolor="#FFF" valign="middle" style="text-align: center; background-position: center center !important; background-size: cover !important;"><!--[if gte mso 9]>
+
+
+       <!-- Email Body : BEGIN -->
+        <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#FFF" width="100%">
+            <!-- Hero Image, Flush : BEGIN -->
+            <tr>
+              <td class="full-width-image" align="center" style="padding:15px">
+                  <div style="border-radius: 92px; height: 180px; overflow: hidden; width: 180px;">
+{#                  border: 1px solid #eee; #}
+                    <div style="background: url('https://static.ikwen.com/daraja/img/money-remittance.png') no-repeat center; background-size: cover; height: 180px; width: 180px">
+                    </div>
+                  </div>
+              </td>
+            </tr>
+            <!-- Hero Image, Flush : END -->
+
+			<!-- 1 Column Text : BEGIN -->
+            <tr>
+              <td bgcolor="#FFF" valign="middle" style="background-position: center center !important; background-size: cover !important;"><!--[if gte mso 9]>
                         <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:680px;height:175px; background-position: center center !important;">
                         <v:fill type="tile" src="assets/Hybrid/Image_680x230.png" color="#222222" />
                         <v:textbox inset="0,0,0,0">
                         <![endif]-->
-                        <div>
-                            <!--[if mso]>
-                                <table border="0" cellspacing="0" cellpadding="0" align="center" width="500">
-                                <tr>
-                                <td align="center" valign="top" width="500">
-                                <![endif]-->
-                                <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:630px; margin: auto;">
-                                    <tr>
-                                      <td valign="middle" style="font-size: 18px; mso-height-rule: exactly; line-height: 25px;text-align:center;"><!-- color: #555555; -->
-                                         <div style="padding: 15px;">
-                                            <br>
-                                            <h3 style="text-align: left;">Dear {{ dara_name }},</h3>
-                                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555;font-size:15px;text-align: justify">
-                                                {% blocktrans  %}
-                                                    This is just to inform you that you are now a Dara for {{ project_name }}.
-                                                    Start making money now by referring our products to your nearest ones.
-                                                {% endblocktrans %}
-                                            </p>
-                                             <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
-                                             <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
-                                         </div>
-                                          <!-- Button : Begin -->
 
-                                            <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
-                                                <tr>
-                                                    <td style="border-radius: 3px; background: #233682; text-align: center;" class="button-td">
-                                                        <a target="_blank" href="{{ cta_url }}" style="background: #319dd5; border: 15px solid #319dd5; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
-                                                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans %}Login and refer{% endblocktrans%}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
-                                                      </a>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            <br>
-                                          <!-- Button : END -->
-                                      </td>
-                                    </tr>
-                                </table>
-                            <!--[if (gte mso 9)|(IE)]>
+                <div>
+                  <!--[if mso]>
+                            <table border="0" cellspacing="0" cellpadding="0" align="center" width="500">
+                            <tr>
+                            <td align="center" valign="top" width="500">
+                            <![endif]-->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:630px; margin: auto;">
+                    <tr>
+                      <td valign="middle" style="mso-height-rule: exactly; line-height: 25px;"><!-- color: #555555; -->
+                         <div style="padding: 15px; font-size:15px; margin-bottom: 20px;">
+                              <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555; overflow-wrap: break-word" >
+                                {% blocktrans with referee_name=referee.full_name|capfirst amount=amount|intcomma %}
+                                    Good new <strong>{{ dara_name }}</strong>,<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><strong>{{ referee_name }}</strong> just deployed an e-commerce website under {{ deployed_service }} .
+                                    Remind and guide him to pay his invoice to collect <strong>XAF {{ amount }}</strong>.<br>
+                                {% endblocktrans%}</p>
+                         </div>
+                      {% if referee.phone %}
+                      <!-- Button : Begin -->
+                        <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto; max-width: 300px">
+                            <tr>
+                                <td style="border-radius: 3px; background: #233682; text-align: center;" class="button-td">
+                                    <a href="tel:+{{ referee.phone }}" style="background: #f38e42; border: 15px solid #f38e42	; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
+                                  <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans with referee_name=referee.first_name %}Call {{ referee_name }} now{% endblocktrans %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                  </a>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    <!-- Button : END -->
+                          <!-- Button : Begin -->
+                        <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto; max-width: 300px">
+                            <tr>
+                                <td style="border-radius: 3px; background: #233682; text-align: center;" class="button-td">
+                                    <a href="https://api.whatsapp.com/send?phone=+{{ referee.phone }}" style="background: #25d366; border: 15px solid #25d366; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
+                                  <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans with referee_name=referee.first_name %}WhatsApp {{ referee_name }} now{% endblocktrans %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                  </a>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    <!-- Button : END -->
+                      {% endif %}
+                      </td>
+                    </tr>
+                </table>
+
+                  <!--[if (gte mso 9)|(IE)]>
                             </td>
                             </tr>
                             </table>
                             <![endif]-->
-                        </div>
+                </div>
 
-                    <!--[if gte mso 9]>
-                            </v:textbox>
-                            </v:rect>
-                            <![endif]-->
-                  </td>
-                </tr>
-                <!-- 1 Column Text : END -->
-            </table>
-            <!-- Email Body : END -->
+                <!--[if gte mso 9]>
+                        </v:textbox>
+                        </v:rect>
+                        <![endif]--></td>
+            </tr>
+            <!-- 1 Column Text : END -->
+
+							</table>
+          <!-- Email Body : END -->
 
         <!-- Email Footer : BEGIN -->
 <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" bgcolor="#fff" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;padding-top:15px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
@@ -271,8 +283,7 @@ table.center-on-narrow {
             </table>
             <![endif]-->
         </div>
-      </center>
-    </td>
+      </center></td>
   </tr>
 </table>
 </body>

@@ -70,7 +70,7 @@ a[x-apple-data-detectors] {
 
 .button-td, .button-a {
 	transition: all 100ms ease-in;
-	min-width: 200px;
+	min-width: 240px;
 }
 .button-td:hover, .button-a:hover {
 	background: #f38e42 !important;
@@ -140,7 +140,7 @@ table.center-on-narrow {
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
 
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{% blocktrans %}{{ company_name }} accepted your request.{% endblocktrans %}</div>
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{% blocktrans %}You have requested to partnership with <strong>{{ project_name }}</strong>.{% endblocktrans %}</div>
         <!-- Visually Hidden Preheader Text : END -->
 
         <div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;box-shadow:0 5px 5px 0 #bfbfbf;margin-top:10px;" >
@@ -157,7 +157,7 @@ table.center-on-narrow {
                 <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-top:15px;padding-bottom:5px;padding-right:0;padding-left:0;text-align:left;" >
                   <a target="_blank" href="http://www.ikwen.com/daraja/" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%; text-decoration: none" >
                     <div style="display: inline-block">
-                           <img src="https://static.ikwen.com/daraja/img/ikwen-Daraja.png" alt="ikwen - Daraja" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic; height: 30px">
+                        <img src="https://static.ikwen.com/daraja/img/ikwen-Daraja.png" alt="ikwen - Daraja" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic; height: 30px">
                     </div>
                   </a>
                 </div>
@@ -170,9 +170,9 @@ table.center-on-narrow {
                 <!-- Hero Image, Flush : BEGIN -->
                 <tr>
                   <td class="full-width-image" align="center" style="padding:15px">
-                      <div>
+                      <div style="border-radius: 92px; height: 120px; overflow: hidden; width: 120px;">
     {#                  border: 1px solid #eee; #}
-                        <div style="background: url('https://static.ikwen.com/daraja/img/website-deployed.png') no-repeat center; background-size: cover; height: 200px;">
+                        <div style="background: url({% if config.logo.name %}{{ settings.IKWEN_MEDIA_URL }}{{ config.logo.name }}{% else %} 'https://static.ikwen.com/daraja/img/architecture-entreprise.jpg'{% endif %}) no-repeat center; background-size: cover; height: 120px; width: 120px">
                         </div>
                       </div>
                   </td>
@@ -193,26 +193,29 @@ table.center-on-narrow {
                                 <![endif]-->
                                 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:630px; margin: auto;">
                                     <tr>
-                                      <td valign="middle" style="font-size: 18px; mso-height-rule: exactly; line-height: 25px;text-align:center;"><!-- color: #555555; -->
-                                         <div style="padding: 15px;">
+                                      <td valign="middle" style="mso-height-rule: exactly; line-height: 25px;text-align:center;"><!-- color: #555555; -->
+                                         <div style="padding: 15px;  font-size:15px;">
                                             <br>
-                                            <h3 style="text-align: left;">Dear {{ dara_name }},</h3>
-                                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555;font-size:15px;text-align: justify">
+                                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555;">
                                                 {% blocktrans  %}
-                                                    This is just to inform you that you are now a Dara for {{ project_name }}.
-                                                    Start making money now by referring our products to your nearest ones.
+                                                    You just sent a Dara request to <strong>{{ project_name }}</strong>.
                                                 {% endblocktrans %}
                                             </p>
-                                             <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
-                                             <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
+                                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align: justify;background: #f8f6f6; padding: 15px; margin: 20px auto">
+                                                {% blocktrans %}You successfully completed this step and you now earn <strong>2xp</strong>. {% endblocktrans %}
+                                            </p>
+                                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555;margin: 10px auto ">
+                                                {% blocktrans  %}
+                                                    Now, invite 3 followers on Daraja and earn 1xp for each.
+                                                {% endblocktrans %}
+                                            </p>
                                          </div>
                                           <!-- Button : Begin -->
-
                                             <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
                                                 <tr>
                                                     <td style="border-radius: 3px; background: #233682; text-align: center;" class="button-td">
                                                         <a target="_blank" href="{{ cta_url }}" style="background: #319dd5; border: 15px solid #319dd5; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
-                                                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans %}Login and refer{% endblocktrans%}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans %}Invite now{% endblocktrans %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
                                                       </a>
                                                     </td>
                                                 </tr>
@@ -238,32 +241,31 @@ table.center-on-narrow {
                 <!-- 1 Column Text : END -->
             </table>
             <!-- Email Body : END -->
-
-        <!-- Email Footer : BEGIN -->
-<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" bgcolor="#fff" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;padding-top:15px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
-    <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-      <td align="center" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-            <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:20px;padding-top:10px;max-width:600px;border-top-width:2px;border-top-style:solid;border-top-color:rgba(0, 0, 0, 0.14);" >
-                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#999;font-size:12px;text-align:left;" >{% trans "CONFIDENTIALITY" %}</p>
-                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#999;font-size:12px;text-align:justify;" >
-                {% blocktrans %}
-                    The information contained in this e-mail and any accompanying documents is confidential or otherwise
-                    protected from disclosure. If you are not the intended recipient, please immediately alert the
-                    sender by reply e-mail and delete this message and any attachments. Any copy, dissemination or
-                    unauthorized access of the contents of this message by anyone other than the intended recipient
-                    is strictly prohibited. E-mails may be susceptible to falsification or alteration and cause data
-                    corruption and/or loss of data. {{ company_name }} and/or any of its subsidiaries decline any liability resulting
-                    from the consequences thereof. Therefore, this e-mail and any attachments are used at your own risk.
-                {% endblocktrans %}
-                </p>
-                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                    <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:12px;color:#555555;" >{% blocktrans %}&copy; {{ year }} {{ company_name }}. All Rights Reserved.{% endblocktrans %}</span>
-                </p>
-        </div>
-      </td>
-    </tr>
-</table>
-          <!-- Email Footer : END -->
+            <!-- Email Footer : BEGIN -->
+            <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" bgcolor="#fff" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;padding-top:15px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+                <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                  <td align="center" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:20px;padding-top:10px;max-width:600px;border-top-width:2px;border-top-style:solid;border-top-color:rgba(0, 0, 0, 0.14);" >
+                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#999;font-size:12px;text-align:left;" >{% trans "CONFIDENTIALITY" %}</p>
+                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#999;font-size:12px;text-align:justify;" >
+                            {% blocktrans with company_name='ikwen' %}
+                                The information contained in this e-mail and any accompanying documents is confidential or otherwise
+                                protected from disclosure. If you are not the intended recipient, please immediately alert the
+                                sender by reply e-mail and delete this message and any attachments. Any copy, dissemination or
+                                unauthorized access of the contents of this message by anyone other than the intended recipient
+                                is strictly prohibited. E-mails may be susceptible to falsification or alteration and cause data
+                                corruption and/or loss of data. {{ company_name }} and/or any of its subsidiaries decline any liability resulting
+                                from the consequences thereof. Therefore, this e-mail and any attachments are used at your own risk.
+                            {% endblocktrans %}
+                            </p>
+                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:12px;color:#555555;" >{% blocktrans with company_name='ikwen' %}&copy; {{ year }} {{ company_name }}. All Rights Reserved.{% endblocktrans %}</span>
+                            </p>
+                    </div>
+                  </td>
+                </tr>
+            </table>
+            <!-- Email Footer : END -->
 
           <!--[if (gte mso 9)|(IE)]>
             </td>

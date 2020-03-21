@@ -194,30 +194,41 @@ table.center-on-narrow {
                             <![endif]-->
                 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:630px; margin: auto;">
                     <tr>
-                      <td valign="middle" style="font-size: 18px; mso-height-rule: exactly; line-height: 25px;text-align:center;"><!-- color: #555555; -->
-                         <div style="padding: 15px;">
+                      <td valign="middle" style=" mso-height-rule: exactly; line-height: 25px;text-align:center;"><!-- color: #555555; -->
+                         <div style="padding: 15px; font-size:15px;">
                             <br>
-                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555;font-size:15px;text-align: justify" >
+                            <p style="-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; color:#555; text-align: justify" >
 {#                                text-align:left#}
                                 {% blocktrans with amount_paid=amount|intcomma amount_earned=dara_earnings|intcomma balance=account_balance|intcomma %}
                                   You just received {{ currency_symbol }} {{ amount_earned }} from {{ company_name }} after the payment
                                   of {{ currency_symbol }} {{ amount_paid }} from a follower at {{ transaction_time }}.<br><br>
                                   New account balance: <strong>{{ currency_symbol }} {{ balance }}</strong>
-                                {% endblocktrans%}</p><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                {% endblocktrans%}</p>
                               <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                         </div>
 
-                      <!-- Button : Begin -->
+                         </div>
+                      {% if dara.level == 2 and dara.xp == 5 %}
+                          <div style="text-align: justify;background: #f8f6f6; padding: 15px; margin-bottom:  30px">
+                              {% blocktrans %}You successfully completed this step by getting a <strong>follower who bought online</strong>. <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">You just earned <strong>5xp</strong> for that.{% endblocktrans %}
+                          </div>
+                          <p style="-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; color:#555; text-align: justify" >
+                                {% blocktrans %}
+                                    Congratulations ! You've completed all steps of level 2.
+                                    Now, you can enter in <strong>Kako master experience</strong> and earn more cash for managing companies websites.
+                                {% endblocktrans %}
+                            </p>
+                      {% else %}
 
                     <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
                         <tr>
                             <td style="border-radius: 3px; background: #233682; text-align: center;" class="button-td">
-                                <a target="_blank" href="{{ dashboard_url }}" style="background: #f38e42; border: 15px solid #f38e42	; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
-                              <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans %}See details{% endblocktrans%}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                <a target="_blank" href="{{ dashboard_url }}" style="background: #f38e42; border: 15px solid #f38e42; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
+                              <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans %}See details{% endblocktrans %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
                               </a>
                             </td>
                         </tr>
                     </table>
+                      {% endif %}
                     <br>
                 <!-- Button : END --></td>
                     </tr>

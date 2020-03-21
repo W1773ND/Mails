@@ -193,8 +193,8 @@ table.center-on-narrow {
                 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:630px; margin: auto;">
                     <tr>
                       <td valign="middle" style="font-size: 18px; mso-height-rule: exactly; line-height: 25px;text-align:center;"><!-- color: #555555; -->
-                         <div style="padding: 15px;">
-                              <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555;font-size:15px;text-align:center" >
+                         <div style="padding: 15px; font-size:15px; margin-bottom: 20px">
+                              <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555;text-align:center" >
                                 {% blocktrans with referee_name=referee.full_name|capfirst %}
                                   <strong>{{ referee_name }}</strong> accepted your invitation on {{ referred_service_name }} .
                                   Make some money by getting this person to buy online. <br>
@@ -202,21 +202,22 @@ table.center-on-narrow {
                                   send him/her links of products he/she might be interested in.
                                 {% endblocktrans%}</p><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                               <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                              <div style="text-align: justify;background: #f8f6f6; padding: 15px">
+                                 {% blocktrans %}You successfully completed this step by <strong>inviting a new follower</strong>. <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">You just earned <strong>1xp</strong> for that.{% endblocktrans %}
+                             </div>
                          </div>
-
                       <!-- Button : Begin -->
-
-                    <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
-                        <tr>
-                            <td style="border-radius: 3px; background: #233682; text-align: center;" class="button-td">
-                                <a href="{{ referred_service_url }}" style="background: #f38e42; border: 15px solid #f38e42	; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
-                              <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans %}Go to {{ referred_service_name }}{% endblocktrans%}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
-                              </a>
-                            </td>
-                        </tr>
-                    </table>
-                    <br>
-                <!-- Button : END --></td>
+                        <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
+                            <tr>
+                                <td style="border-radius: 3px; background: #233682; text-align: center;" class="button-td">
+                                    <a href="https://daraja.ikwen.com/" style="background: #f38e42; border: 15px solid #f38e42	; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
+                                  <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans %}Go to {{ referred_service_name }}{% endblocktrans%}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                  </a>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                    <!-- Button : END --></td>
                     </tr>
                 </table>
 
