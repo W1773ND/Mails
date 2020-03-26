@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-20 15:56+0100\n"
-"PO-Revision-Date: 2020-03-23 17:30+0100\n"
+"POT-Creation-Date: 2020-03-23 19:13+0100\n"
+"PO-Revision-Date: 2020-03-23 19:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -357,7 +357,7 @@ msgstr "Merci d'être client chez %(company_name)s."
 #: templates/core/mails/snippets/confidentiality.html:6 templates/daraja/mails/accept_dara_request.html:247
 #: templates/daraja/mails/congratulations_for_products_publication.html:245 templates/daraja/mails/dara_request.html:244
 #: templates/daraja/mails/new_transaction.html:259 templates/daraja/mails/partnership_request.html:249
-#: templates/daraja/mails/referee_joined.html:246 templates/daraja/mails/remind_referrer.html:240
+#: templates/daraja/mails/referee_joined.html:246 templates/daraja/mails/remind_referrer.html:259
 #: templates/playground/mails/new_transaction_test.html:250 templates/playground/mails/referee_joined.html:247
 #: templates/smartevent/mails/thank-you.html:441
 msgid "CONFIDENTIALITY"
@@ -365,7 +365,7 @@ msgstr "CONFIDENTIALITÉ"
 
 #: templates/core/mails/snippets/confidentiality.html:8 templates/daraja/mails/accept_dara_request.html:249
 #: templates/daraja/mails/dara_request.html:246 templates/daraja/mails/new_transaction.html:261
-#: templates/daraja/mails/referee_joined.html:248 templates/daraja/mails/remind_referrer.html:242
+#: templates/daraja/mails/referee_joined.html:248 templates/daraja/mails/remind_referrer.html:261
 #: templates/playground/mails/new_transaction_test.html:252 templates/playground/mails/referee_joined.html:249
 #, python-format
 msgid ""
@@ -399,7 +399,7 @@ msgstr ""
 #: templates/core/mails/snippets/confidentiality.html:19 templates/daraja/mails/accept_dara_request.html:260
 #: templates/daraja/mails/congratulations_for_products_publication.html:258 templates/daraja/mails/dara_request.html:257
 #: templates/daraja/mails/new_transaction.html:272 templates/daraja/mails/partnership_request.html:262
-#: templates/daraja/mails/referee_joined.html:259 templates/daraja/mails/remind_referrer.html:253
+#: templates/daraja/mails/referee_joined.html:259 templates/daraja/mails/remind_referrer.html:272
 #: templates/playground/mails/new_transaction_test.html:263 templates/playground/mails/referee_joined.html:260
 #: templates/smartevent/mails/thank-you.html:454
 #, python-format
@@ -415,13 +415,14 @@ msgstr "%(company_name)s a accepté votre demande."
 #, python-format
 msgid ""
 "\n"
-"                                                    This is just to inform you that you are now a Dara for %(project_name)s.\n"
+"                                                    This is just to inform you that you are now a Dara for <strong>"
+"%(company_name)s</strong>.\n"
 "                                                    Start making money now by referring our products to your nearest ones.\n"
 "                                                "
 msgstr ""
 "\n"
-"                                                    Ceci est pour vous informez que vous êtes désormais un Dara "
-"%(project_name)s.\n"
+"                                                    Ceci est pour vous informez que vous êtes désormais un Dara <strong>"
+"%(company_name)s</strong>.\n"
 "                                                    Commencez à gagner de l'argent dès maintenant en recommendant nos produits à "
 "vos proches.\n"
 "                                                "
@@ -610,8 +611,7 @@ msgstr ""
 msgid "Change now"
 msgstr "Changer"
 
-#: templates/daraja/mails/referee_joined.html:140 templates/daraja/mails/remind_referrer.html:140
-#: templates/playground/mails/referee_joined.html:140
+#: templates/daraja/mails/referee_joined.html:140 templates/playground/mails/referee_joined.html:140
 msgid "Send me some interesting products to buy online."
 msgstr "Envoyez moi des produits interessants à acheter en ligne."
 
@@ -647,14 +647,25 @@ msgstr ""
 msgid "Go to %(referred_service_name)s"
 msgstr "Allez sur %(referred_service_name)s"
 
-#: templates/daraja/mails/remind_referrer.html:198
+#: templates/daraja/mails/remind_referrer.html:140
+#, python-format
+msgid ""
+"\n"
+"            Remind %(referee_name)s to pay his invoice of %(invoice_total)s CFA for his newly deployed website.\n"
+"        "
+msgstr ""
+"\n"
+"            Rappelez %(referee_name)s de payer sa facture d'un montant de of %(invoice_total)s FCFA pour son site nouvellement "
+"déployé .\n"
+"        "
+
+#: templates/daraja/mails/remind_referrer.html:202
 #, python-format
 msgid ""
 "\n"
 "                                    Good new <strong>%(dara_name)s</strong>,<br style=\"-ms-text-size-adjust:100%%;-webkit-text-"
 "size-adjust:100%%;\" ><strong>%(referee_name)s</strong> just deployed an e-commerce website under %(deployed_service)s .\n"
-"                                    Remind and guide him to pay his invoice and earn <strong>XAF %(amount)s</strong> for that."
-"<br>\n"
+"                                    Remind and guide him to pay his invoice to collect <strong>XAF %(amount)s</strong>.<br>\n"
 "                                "
 msgstr ""
 "\n"
@@ -665,9 +676,15 @@ msgstr ""
 "strong> pour cela.<br>\n"
 "                                "
 
-#: templates/daraja/mails/remind_referrer.html:208
-msgid "Contact him/her now"
-msgstr "Contactez !"
+#: templates/daraja/mails/remind_referrer.html:213
+#, python-format
+msgid "Call %(referee_name)s now"
+msgstr "Appelez %(referee_name)s"
+
+#: templates/daraja/mails/remind_referrer.html:225
+#, python-format
+msgid "WhatsApp %(referee_name)s now"
+msgstr "Contactez %(referee_name)s sur WhatsApp"
 
 #: templates/daraja/mails/service_deployed.html:12
 msgid "Welcome to the business network."
@@ -1597,6 +1614,9 @@ msgstr ""
 "                   des conséquences de celle-ci. Par conséquent, cet e-mail et toutes les pièces jointes sont utilisés à vos "
 "risques et périls.\n"
 "                "
+
+#~ msgid "Contact him/her now"
+#~ msgstr "Contactez !"
 
 #~ msgid "Make money now"
 #~ msgstr "Gagnez de l'argent"

@@ -140,7 +140,7 @@ table.center-on-narrow {
     <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
 
         <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{% blocktrans %}You have requested to partnership with <strong>{{ project_name }}</strong>.{% endblocktrans %}</div>
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{% blocktrans %}You just earned 2xp for your request.{% endblocktrans %}</div>
         <!-- Visually Hidden Preheader Text : END -->
 
         <div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;box-shadow:0 5px 5px 0 #bfbfbf;margin-top:10px;" >
@@ -172,7 +172,7 @@ table.center-on-narrow {
                   <td class="full-width-image" align="center" style="padding:15px">
                       <div style="border-radius: 92px; height: 120px; overflow: hidden; width: 120px;">
     {#                  border: 1px solid #eee; #}
-                        <div style="background: url({% if config.logo.name %}{{ settings.IKWEN_MEDIA_URL }}{{ config.logo.name }}{% else %} 'https://static.ikwen.com/daraja/img/architecture-entreprise.jpg'{% endif %}) no-repeat center; background-size: cover; height: 120px; width: 120px">
+                        <div style="background: url({% if config.logo.name %}{{ IKWEN_MEDIA_URL }}{{ config.logo.name }}{% else %}'https://static.ikwen.com/daraja/img/architecture-entreprise.jpg'{% endif %}) no-repeat center; background-size: cover; height: 120px; width: 120px">
                         </div>
                       </div>
                   </td>
@@ -202,26 +202,38 @@ table.center-on-narrow {
                                                 {% endblocktrans %}
                                             </p>
                                             <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align: justify;background: #f8f6f6; padding: 15px; margin: 20px auto">
-                                                {% blocktrans %}You successfully completed this step and you now earn <strong>2xp</strong>. {% endblocktrans %}
+                                                {% blocktrans %}You successfully completed this step and earned <strong>2xp</strong>.{% endblocktrans %}
                                             </p>
                                             <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#555;margin: 10px auto ">
                                                 {% blocktrans  %}
-                                                    Now, invite 3 followers on Daraja and earn 1xp for each.
+                                                    Now, wait for the confirmation, then invite 3 followers on {{ project_name }}. Earn 1xp for each.
                                                 {% endblocktrans %}
                                             </p>
                                          </div>
                                           <!-- Button : Begin -->
-                                            <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
+                                            <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto; max-width: 300px">
                                                 <tr>
                                                     <td style="border-radius: 3px; background: #233682; text-align: center;" class="button-td">
-                                                        <a target="_blank" href="{{ cta_url }}" style="background: #319dd5; border: 15px solid #319dd5; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
-                                                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans %}Invite now{% endblocktrans %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                                        <a href="tel:+{{ company_phone }}" style="background: #f38e42; border: 15px solid #f38e42	; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
+                                                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans with referee_name=referee.first_name %}Call {{ project_name }} now{% endblocktrans %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
                                                       </a>
                                                     </td>
                                                 </tr>
                                             </table>
                                             <br>
-                                          <!-- Button : END -->
+                                        <!-- Button : END -->
+                                              <!-- Button : Begin -->
+                                            <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto; max-width: 300px">
+                                                <tr>
+                                                    <td style="border-radius: 3px; background: #233682; text-align: center;" class="button-td">
+                                                        <a href="https://api.whatsapp.com/send?phone=+{{ company_phone }}" style="background: #25d366; border: 15px solid #25d366; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
+                                                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans with referee_name=referee.first_name %}WhatsApp {{ project_name }} now{% endblocktrans %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                                      </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <br>
+                                        <!-- Button : END -->
                                       </td>
                                     </tr>
                                 </table>

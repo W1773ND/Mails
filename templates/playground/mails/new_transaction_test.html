@@ -200,16 +200,18 @@ table.center-on-narrow {
                                 {% blocktrans with amount_paid=amount|intcomma amount_earned=dara_earnings|intcomma balance=account_balance|intcomma %}
                                   You just received {{ currency_symbol }} {{ amount_earned }} from {{ company_name }} after the payment
                                   of {{ currency_symbol }} {{ amount_paid }} from a follower at {{ transaction_time }}.<br><br>
-                                {% endblocktrans%}</p><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                              <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
-                            <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align: justify;background: #f8f6f6; padding: 15px">
-                                {% blocktrans %}You successfully completed this step 3 by making your follower to <strong>buy</strong> online. <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">You just earned <strong>100 CFA bonus cash + 1xp</strong> for that.{% endblocktrans %}
-                            </p>
+                                {% endblocktrans%}</p><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
+                                {% if dara.level == 1 and dara.xp == 3 %}
+                                    <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align: justify;background: #f8f6f6; padding: 15px">
+                                        {% blocktrans %}You successfully completed this step 3 by making your follower to <strong>buy</strong> online. <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">You just earned <strong>100 CFA bonus cash + 1xp</strong> for that.{% endblocktrans %}
+                                    </p>
+                                {% endif %}
                          </div>
+                        {% if dara.level == 1 and dara.xp == 3 %}
                           <div style="padding: 15px 30px;">
                               <span>{% blocktrans %}Now, click below to <strong>like and follow </strong>us on social medias{% endblocktrans %}</span>
                           </div>
-
+                        {% endif %}
                       <!-- Button : Begin -->
                         <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
                             <tr>

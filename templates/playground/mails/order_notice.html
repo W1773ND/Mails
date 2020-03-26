@@ -479,7 +479,7 @@
 											  {% trans "Thank you for shopping with us." %}
 										  </p>
 										</div>
-                                        {% if is_dara %}
+                                        {% if dara.level == 1 and dara.xp == 1 %}
                                         <div>
                                             <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:15px;text-align: center;background: #f8f6f6; padding: 15px">
                                                 {% blocktrans %}You successfully completed the <strong>Buy online</strong> test. <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">You just earned <strong>100 CFA bonus cash + 1xp</strong> for that.{% endblocktrans %}

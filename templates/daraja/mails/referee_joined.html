@@ -200,11 +200,12 @@ table.center-on-narrow {
                                   Make some money by getting this person to buy online. <br>
                                   Go to <a target="_blank" href="{{ referred_service_url }}">{{ referred_service_url }}</a> and
                                   send him/her links of products he/she might be interested in.
-                                {% endblocktrans%}</p><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                              <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                              <div style="text-align: justify;background: #f8f6f6; padding: 15px">
-                                 {% blocktrans %}You successfully completed this step by <strong>inviting a new follower</strong>. <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">You just earned <strong>1xp</strong> for that.{% endblocktrans %}
-                             </div>
+                                {% endblocktrans%}</p><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                                {% if dara.level == 2 and dara.xp <= 5 and dara.xp >= 3 %}
+                                  <div style="text-align: justify;background: #f8f6f6; padding: 15px">
+                                     {% blocktrans %}You successfully completed this step by <strong>inviting a new follower</strong>. <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">You just earned <strong>1xp</strong> for that.{% endblocktrans %}
+                                  </div>
+                                {% endif %}
                          </div>
                       <!-- Button : Begin -->
                         <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
