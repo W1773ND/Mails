@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-23 19:13+0100\n"
-"PO-Revision-Date: 2020-03-23 19:23+0100\n"
+"POT-Creation-Date: 2020-05-05 10:08+0100\n"
+"PO-Revision-Date: 2020-05-05 10:13+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -142,8 +142,7 @@ msgstr ""
 "\t\t\t\t\t\t\t\t</ul>\n"
 "\t\t\t\t\t\t\t"
 
-#: templates/billing/mails/notice.html:138 templates/daraja/mails/publish_products_request.html:201
-#: templates/echo/mails/successful_refill.html:193
+#: templates/billing/mails/notice.html:138 templates/echo/mails/successful_refill.html:193
 #, python-format
 msgid "Dear %(member_name)s,"
 msgstr "Cher(e) %(member_name)s,"
@@ -354,19 +353,18 @@ msgstr "Payez"
 msgid "Thank you for your business with %(company_name)s."
 msgstr "Merci d'être client chez %(company_name)s."
 
-#: templates/core/mails/snippets/confidentiality.html:6 templates/daraja/mails/accept_dara_request.html:247
-#: templates/daraja/mails/congratulations_for_products_publication.html:245 templates/daraja/mails/dara_request.html:244
-#: templates/daraja/mails/new_transaction.html:259 templates/daraja/mails/partnership_request.html:249
-#: templates/daraja/mails/referee_joined.html:246 templates/daraja/mails/remind_referrer.html:259
-#: templates/playground/mails/new_transaction_test.html:250 templates/playground/mails/referee_joined.html:247
-#: templates/smartevent/mails/thank-you.html:441
+#: templates/core/mails/snippets/confidentiality.html:6 templates/daraja/mails/accept_dara_request.html:246
+#: templates/daraja/mails/dara_request.html:244 templates/daraja/mails/first_dara_request.html:261
+#: templates/daraja/mails/new_transaction.html:259 templates/daraja/mails/referee_joined.html:247
+#: templates/daraja/mails/remind_referrer.html:259 templates/playground/mails/new_transaction_test.html:252
+#: templates/playground/mails/referee_joined.html:247 templates/smartevent/mails/thank-you.html:441
 msgid "CONFIDENTIALITY"
 msgstr "CONFIDENTIALITÉ"
 
-#: templates/core/mails/snippets/confidentiality.html:8 templates/daraja/mails/accept_dara_request.html:249
+#: templates/core/mails/snippets/confidentiality.html:8 templates/daraja/mails/accept_dara_request.html:248
 #: templates/daraja/mails/dara_request.html:246 templates/daraja/mails/new_transaction.html:261
-#: templates/daraja/mails/referee_joined.html:248 templates/daraja/mails/remind_referrer.html:261
-#: templates/playground/mails/new_transaction_test.html:252 templates/playground/mails/referee_joined.html:249
+#: templates/daraja/mails/referee_joined.html:249 templates/daraja/mails/remind_referrer.html:261
+#: templates/playground/mails/new_transaction_test.html:254 templates/playground/mails/referee_joined.html:249
 #, python-format
 msgid ""
 "\n"
@@ -396,17 +394,16 @@ msgstr ""
 "risques et périls.\n"
 "                "
 
-#: templates/core/mails/snippets/confidentiality.html:19 templates/daraja/mails/accept_dara_request.html:260
-#: templates/daraja/mails/congratulations_for_products_publication.html:258 templates/daraja/mails/dara_request.html:257
-#: templates/daraja/mails/new_transaction.html:272 templates/daraja/mails/partnership_request.html:262
-#: templates/daraja/mails/referee_joined.html:259 templates/daraja/mails/remind_referrer.html:272
-#: templates/playground/mails/new_transaction_test.html:263 templates/playground/mails/referee_joined.html:260
-#: templates/smartevent/mails/thank-you.html:454
+#: templates/core/mails/snippets/confidentiality.html:19 templates/daraja/mails/accept_dara_request.html:259
+#: templates/daraja/mails/dara_request.html:257 templates/daraja/mails/first_dara_request.html:274
+#: templates/daraja/mails/new_transaction.html:272 templates/daraja/mails/referee_joined.html:260
+#: templates/daraja/mails/remind_referrer.html:272 templates/playground/mails/new_transaction_test.html:265
+#: templates/playground/mails/referee_joined.html:260 templates/smartevent/mails/thank-you.html:454
 #, python-format
 msgid "&copy; %(year)s %(company_name)s. All Rights Reserved."
 msgstr "© %(year)s %(company_name)s.Tous droits réservés."
 
-#: templates/daraja/mails/accept_dara_request.html:143 templates/daraja/mails/congratulations_for_products_publication.html:143
+#: templates/daraja/mails/accept_dara_request.html:143
 #, python-format
 msgid "%(company_name)s accepted your request."
 msgstr "%(company_name)s a accepté votre demande."
@@ -427,29 +424,75 @@ msgstr ""
 "vos proches.\n"
 "                                                "
 
-#: templates/daraja/mails/accept_dara_request.html:215
+#: templates/daraja/mails/accept_dara_request.html:214
 msgid "Login and refer"
 msgstr "Connectez-vous et recommendez"
 
-#: templates/daraja/mails/congratulations_for_products_publication.html:201
+#: templates/daraja/mails/dara_request.html:143
+#, python-format
+msgid "%(dara_name)s would like to partnership with you."
+msgstr "%(dara_name)s aimerait être votre partenaire."
+
+#: templates/daraja/mails/dara_request.html:200
+#, python-format
 msgid ""
 "\n"
-"                                                    You have successfully published products online, and your platform is now\n"
-"                                                    ready to make money.\n"
+"                                                    <strong>%(dara_name)s</strong> just sent you a Dara request on "
+"%(project_name)s.\n"
 "                                                "
 msgstr ""
 "\n"
-"\n"
-"                                                    Vous avez publié les produits en ligne avec succès, et votre plateforme est "
-"désormais prête\n"
-"                                                    à vous faire gagner de l'argent.\n"
+"                                                    <strong>%(dara_name)s</strong> voudrait être Dara sur %(project_name)s.\n"
 "                                                "
 
-#: templates/daraja/mails/congratulations_for_products_publication.html:214
-msgid "Manage your Com & Marketing"
-msgstr "Gérez votre Com & Marketing"
+#: templates/daraja/mails/dara_request.html:212
+msgid "View now"
+msgstr "Voir"
 
-#: templates/daraja/mails/congratulations_for_products_publication.html:247 templates/daraja/mails/partnership_request.html:251
+#: templates/daraja/mails/first_dara_request.html:143
+msgid "You just earned 2xp for your request."
+msgstr ""
+
+#: templates/daraja/mails/first_dara_request.html:200
+#, python-format
+msgid ""
+"\n"
+"                                                    You just sent a Dara request to <strong>%(project_name)s</strong>.\n"
+"                                                "
+msgstr ""
+"\n"
+"                                                    Vous venez d'envoyer une demande de partenariat à <strong>%(project_name)s</"
+"strong>\n"
+"                                                "
+
+#: templates/daraja/mails/first_dara_request.html:205
+#, fuzzy
+msgid "You successfully completed this step and earned <strong>2xp</strong>."
+msgstr "Vous avez réussi cette étape avec succès et vous venez juste de gagner <strong>2xp</strong>. "
+
+#: templates/daraja/mails/first_dara_request.html:208
+#, fuzzy, python-format
+msgid ""
+"\n"
+"                                                    Now, wait for the confirmation, then invite 3 followers on %(project_name)s. "
+"Earn 1xp for each.\n"
+"                                                "
+msgstr ""
+"\n"
+"                                                    Maintenant, invitez 3 followers sur Daraja et gagnez 1xp pour cela.\n"
+"                                                "
+
+#: templates/daraja/mails/first_dara_request.html:218
+#, fuzzy, python-format
+msgid "Call %(project_name)s now"
+msgstr "Appelez %(referee_name)s"
+
+#: templates/daraja/mails/first_dara_request.html:230
+#, fuzzy, python-format
+msgid "WhatsApp %(project_name)s now"
+msgstr "Contactez %(referee_name)s sur WhatsApp"
+
+#: templates/daraja/mails/first_dara_request.html:263
 #, python-format
 msgid ""
 "\n"
@@ -481,27 +524,6 @@ msgstr ""
 "                   des conséquences de celle-ci. Par conséquent, cet e-mail et toutes les pièces jointes sont utilisés à vos "
 "risques et périls.\n"
 "                "
-
-#: templates/daraja/mails/dara_request.html:143
-#, python-format
-msgid "%(dara_name)s would like to partnership with you."
-msgstr "%(dara_name)s aimerait être votre partenaire."
-
-#: templates/daraja/mails/dara_request.html:200
-#, python-format
-msgid ""
-"\n"
-"                                                    <strong>%(dara_name)s</strong> just sent you a Dara request on "
-"%(project_name)s.\n"
-"                                                "
-msgstr ""
-"\n"
-"                                                    <strong>%(dara_name)s</strong> voudrait être Dara sur %(project_name)s.\n"
-"                                                "
-
-#: templates/daraja/mails/dara_request.html:212
-msgid "View now"
-msgstr "Voir"
 
 #: templates/daraja/mails/new_transaction.html:140 templates/playground/mails/new_transaction_test.html:140
 #, python-format
@@ -552,65 +574,6 @@ msgstr ""
 msgid "See details"
 msgstr "Voir détails"
 
-#: templates/daraja/mails/partnership_request.html:143
-#, python-format
-msgid "You have requested to partnership with <strong>%(project_name)s</strong>."
-msgstr "Vous souhaitez être partenaire avec <strong>%(project_name)s</strong>."
-
-#: templates/daraja/mails/partnership_request.html:200
-#, python-format
-msgid ""
-"\n"
-"                                                    You just sent a Dara request to <strong>%(project_name)s</strong>.\n"
-"                                                "
-msgstr ""
-"\n"
-"                                                    Vous venez d'envoyer une demande de partenariat à <strong>%(project_name)s</"
-"strong>\n"
-"                                                "
-
-#: templates/daraja/mails/partnership_request.html:205
-msgid "You successfully completed this step and you now earn <strong>2xp</strong>. "
-msgstr "Vous avez réussi cette étape avec succès et vous venez juste de gagner <strong>2xp</strong>. "
-
-#: templates/daraja/mails/partnership_request.html:208
-msgid ""
-"\n"
-"                                                    Now, invite 3 followers on Daraja and earn 1xp for each.\n"
-"                                                "
-msgstr ""
-"\n"
-"                                                    Maintenant, invitez 3 followers sur Daraja et gagnez 1xp pour cela.\n"
-"                                                "
-
-#: templates/daraja/mails/partnership_request.html:218 templates/playground/mails/order_notice.html:496
-msgid "Invite now"
-msgstr "Invitez un proche"
-
-#: templates/daraja/mails/publish_products_request.html:143
-msgid "Start making your business now by publishing your products online."
-msgstr "Commencez à faire de l'argent dès maintenant en publiant vos produits en ligne."
-
-#: templates/daraja/mails/publish_products_request.html:203
-msgid ""
-"\n"
-"                                                            Your online shop has been successfully created. But there are "
-"pictures test on the website which are not corresponding to\n"
-"                                                            images of products you are selling online. Ask your Dara' admin to "
-"replace them or simply do it yourself.\n"
-"                                                        "
-msgstr ""
-"\n"
-"                                                            Vous venez de créer votre boutique en ligne avec succès. Mais les "
-"présentes images ne correspondent pas à celles des produits que vous voulez vendre en ligne.\n"
-"                                                            Vous pouvez demander à un Dara Kako Master de le faire, soit vous le "
-"faites vous-même.\n"
-"                                                        "
-
-#: templates/daraja/mails/publish_products_request.html:217
-msgid "Change now"
-msgstr "Changer"
-
 #: templates/daraja/mails/referee_joined.html:140 templates/playground/mails/referee_joined.html:140
 msgid "Send me some interesting products to buy online."
 msgstr "Envoyez moi des produits interessants à acheter en ligne."
@@ -642,7 +605,7 @@ msgstr ""
 "Vous avez réussi cette étape avec succès en <strong>invitant un nouveau follower</strong>. <br style=\"-ms-text-size-"
 "adjust:100%%;-webkit-text-size-adjust:100%%;\">Vous venez de gagner <strong>1xp</strong> pour cela."
 
-#: templates/daraja/mails/referee_joined.html:214
+#: templates/daraja/mails/referee_joined.html:215
 #, python-format
 msgid "Go to %(referred_service_name)s"
 msgstr "Allez sur %(referred_service_name)s"
@@ -758,7 +721,7 @@ msgstr ""
 "messagerie.\n"
 "\t\t\t\t"
 
-#: templates/echo/mails/empty_messaging_credit.html:228 templates/echo/mails/low_messaging_credit.html:227
+#: templates/echo/mails/empty_messaging_credit.html:228 templates/echo/mails/low_messaging_credit.html:229
 msgid "Refill now"
 msgstr "Rechargez maintenant"
 
@@ -773,7 +736,12 @@ msgstr ""
 "            Plus que %(credit_left)s %(account)s remaining in your account.\n"
 "        "
 
-#: templates/echo/mails/low_messaging_credit.html:214
+#: templates/echo/mails/low_messaging_credit.html:213
+#, python-format
+msgid "Hey %(member_name)s,<br> May be you should ... pay attention to this"
+msgstr ""
+
+#: templates/echo/mails/low_messaging_credit.html:216
 #, python-format
 msgid ""
 "\n"
@@ -817,8 +785,8 @@ msgid ""
 "                              "
 msgstr ""
 "\n"
-"                                  SVP, J'aimerais que vous suiviez mes enfants sur ikwen Foulassi. Pourriez-vous aussi ajouter "
-"mon contact dans liste de leurs parents ?\n"
+"                                  S'il vous plaît, j'aimerais pouvoir suivre mes enfants ci-dessous sur ikwen Foulassi. Pourriez-"
+"vous ajouter mon contact dans leur fiche comme parent ?\n"
 "                              "
 
 #: templates/foulassi/mails/invite_school.html:213
@@ -971,11 +939,11 @@ msgstr ""
 "Vous avez réussi cette étape 3 en obtenant votre follower qui <strong>achète</strong> en ligne. <br style=\"-ms-text-size-"
 "adjust:100%%;-webkit-text-size-adjust:100%%;\">Vous venez de gagner <strong>100 FCFA de bonus cash + 1xp</strong> pour cela."
 
-#: templates/playground/mails/new_transaction_test.html:210
+#: templates/playground/mails/new_transaction_test.html:212
 msgid "Now, click below to <strong>like and follow </strong>us on social medias"
 msgstr "Maitenant, cliquez ci-dessous pour nous <strong>liker</strong> et nous <strong>suivre </strong> sur les médias sociaux"
 
-#: templates/playground/mails/new_transaction_test.html:218
+#: templates/playground/mails/new_transaction_test.html:220
 msgid "Follow us"
 msgstr "Suivez-nous"
 
@@ -1167,6 +1135,10 @@ msgstr ""
 msgid "Now, <strong>invite</strong> a follower and earn another 100 CFA bonus cash + 1xp."
 msgstr "Maitenant, <strong>invitez</strong> un follower et gagnez encore 100 CFA de bonus cash + 1xp."
 
+#: templates/playground/mails/order_notice.html:496
+msgid "Invite now"
+msgstr "Invitez un proche"
+
 #: templates/playground/mails/referee_joined.html:198
 #, python-format
 msgid ""
@@ -1184,7 +1156,7 @@ msgstr ""
 "                                  envoyez lui les liens vers des produits qui pourraient l'intéresser.\n"
 "                                "
 
-#: templates/playground/mails/referee_joined.html:205
+#: templates/playground/mails/referee_joined.html:206
 #, python-format
 msgid ""
 "You successfully completed this step 2 by <strong>inviting a follower</strong>. <br style=\"-ms-text-size-adjust:100%%;-webkit-"
@@ -1614,6 +1586,47 @@ msgstr ""
 "                   des conséquences de celle-ci. Par conséquent, cet e-mail et toutes les pièces jointes sont utilisés à vos "
 "risques et périls.\n"
 "                "
+
+#~ msgid ""
+#~ "\n"
+#~ "                                                    You have successfully published products online, and your platform is "
+#~ "now\n"
+#~ "                                                    ready to make money.\n"
+#~ "                                                "
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "                                                    Vous avez publié les produits en ligne avec succès, et votre plateforme "
+#~ "est désormais prête\n"
+#~ "                                                    à vous faire gagner de l'argent.\n"
+#~ "                                                "
+
+#~ msgid "Manage your Com & Marketing"
+#~ msgstr "Gérez votre Com & Marketing"
+
+#~ msgid "You have requested to partnership with <strong>%(project_name)s</strong>."
+#~ msgstr "Vous souhaitez être partenaire avec <strong>%(project_name)s</strong>."
+
+#~ msgid "Start making your business now by publishing your products online."
+#~ msgstr "Commencez à faire de l'argent dès maintenant en publiant vos produits en ligne."
+
+#~ msgid ""
+#~ "\n"
+#~ "                                                            Your online shop has been successfully created. But there are "
+#~ "pictures test on the website which are not corresponding to\n"
+#~ "                                                            images of products you are selling online. Ask your Dara' admin "
+#~ "to replace them or simply do it yourself.\n"
+#~ "                                                        "
+#~ msgstr ""
+#~ "\n"
+#~ "                                                            Vous venez de créer votre boutique en ligne avec succès. Mais les "
+#~ "présentes images ne correspondent pas à celles des produits que vous voulez vendre en ligne.\n"
+#~ "                                                            Vous pouvez demander à un Dara Kako Master de le faire, soit vous "
+#~ "le faites vous-même.\n"
+#~ "                                                        "
+
+#~ msgid "Change now"
+#~ msgstr "Changer"
 
 #~ msgid "Contact him/her now"
 #~ msgstr "Contactez !"
