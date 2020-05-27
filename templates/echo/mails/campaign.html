@@ -199,11 +199,9 @@ table.center-on-narrow {
                             <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
                                 <tr>
                                     <td style="border-radius: 3px; background: #fff; text-align: center;">
-                                        {% blocktrans with cta_url=campaign.cta_url cta=campaign.cta %}
-                                        <a href="{{ cta_url }}" style="background: #E0E0E0; border: 2px solid #BDBDBD	; padding: 12px;color: #212121;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 4px;" class="button-a">
-                                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{{ cta }}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                        <a href="{{ campaign.cta_url }}" style="background: #E0E0E0; border: 2px solid #BDBDBD	; padding: 12px;color: #212121;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 4px;" class="button-a">
+                                      <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{{ campaign.cta }}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
                                       </a>
-                                        {% endblocktrans %}
                                     </td>
                                 </tr>
                             </table>
