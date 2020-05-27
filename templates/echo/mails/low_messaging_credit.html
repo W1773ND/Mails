@@ -208,10 +208,12 @@ table.center-on-narrow {
                       <div  class="stack-column" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:inline-block;margin-top:0;margin-bottom:0;margin-right:-2px;margin-left:-2px;max-width:66.66%;min-width:320px;vertical-align:top;" >
                         <table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
                           <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                            <td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:18px;mso-height-rule:exactly;line-height:20px;color:#555555;padding-top:20px;padding-bottom:0;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-                                    Hmmm ... pay attention to this {{ member_name }}, <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                            <td dir="ltr"  class="center-on-narrow" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:16px;mso-height-rule:exactly;line-height:23px;color:#555555;padding-top:20px;padding-bottom:0;padding-right:10px;padding-left:10px;text-align:left;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                                <p style="">
+                                    {% blocktrans %}Hey {{ member_name }},<br> May be you should ... pay attention to this{% endblocktrans %}
+                                </p>
                               <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                              <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:15px;" >{% blocktrans with project_name=website.project_name %}
+                              <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:16px;line-height:23px" >{% blocktrans with project_name=website.project_name %}
                                   You have only {{ credit_left }} {{ account }} remaining in your account on {{ project_name }}.
                                   It's terrible because your customers may not hear from you very soon. <br>
                                   But don't worry, you can fix it now by refilling your messaging credit.
