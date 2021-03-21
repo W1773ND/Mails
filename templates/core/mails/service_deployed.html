@@ -180,22 +180,22 @@ table.center-on-narrow {
                   <!--[if mso]>
                             <table border="0" cellspacing="0" cellpadding="0" align="left" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
                             <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                            <td align="center" valign="top" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                            <td align="left" valign="top" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                             <![endif]-->
                 <table border="0" cellpadding="0" cellspacing="0" align="left" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
                     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                      <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:16px;mso-height-rule:exactly;line-height:23px;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-                        <h2 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;" >{% trans "Congrats, you are online !" %}</h2>
+                      <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:16px;mso-height-rule:exactly;line-height:23px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                        <h2 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;text-align: center" >{% trans "Congrats, you are online !" %}</h2>
                         {% trans "Your service details are as follow" %} :
                         <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                        {% trans "Application" %} : {{ service_activated.app.name }}
+                        {% trans "Application" %} : {{ weblet.app.name }}
                         <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                        {% trans "Running as" %} : {{ service_activated.project_name }}
+                        {% trans "Running as" %} : {{ weblet.project_name }}
                         <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                         {% trans "On" %} :
-                        <a href= "{{ service_activated.url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#f38e42; text-decoration: none;" >{{ service_activated.url }}</span></a>
+                        <a href= "{{ weblet.url }}" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" ><span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#f38e42; text-decoration: none;" >{{ weblet.url }}</span></a>
                         <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                        {% trans "Monthly cost" %} : <strong>{{ config.currency_symbol }}</strong> {{ service_activated.monthly_cost|intcomma }}
+                        {% trans "Monthly cost" %} : <strong>{{ config.currency_symbol }}</strong> {{ weblet.monthly_cost|intcomma }}
                       </td>
                     </tr>
                 </table>
@@ -225,12 +225,12 @@ table.center-on-narrow {
                   <!--[if mso]>
                             <table border="0" cellspacing="0" cellpadding="0" align="left" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
                             <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                            <td align="center" valign="top" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                            <td align="left" valign="top" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                             <![endif]-->
                 <table border="0" cellpadding="0" cellspacing="0" align="left" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
                     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                       <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:16px;mso-height-rule:exactly;line-height:18px;color:#555555;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" > 
-                        <strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#007bff;" >{% trans "Invoiced to" %}:</strong>
+                        <h4 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Invoiced to" %}:</h4>
                         <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >                       
                         {{ member.full_name }},
 						<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
@@ -268,14 +268,14 @@ table.center-on-narrow {
                   <!--[if mso]>
                             <table border="0" cellspacing="0" cellpadding="0" align="left" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
                             <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                            <td align="center" valign="top" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                            <td align="left" valign="top" width="500" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                             <![endif]-->
                 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:600px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
                         <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                             <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:center;font-size:15px;mso-height-rule:exactly;line-height:18px;color:#555555;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                                 <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:20px;margin-bottom:20px;margin-right:10px;margin-left:10px;" >
-									<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#007bff;padding-bottom:10px;" >
-										<strong style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Invoice" %} No {{ invoice.number }}</strong>
+									<div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-bottom:10px;" >
+										<h4 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Invoice" %} No {{ invoice.number }}</h4>
 									</div>
                                 <table border="1" cellpadding="1" cellspacing="1" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:600px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;border-width:1px;border-style:solid;border-color:#555555;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
 									<thead style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100% !important;background-color:#e0e0e0 !important;background-image:none !important;background-repeat:repeat !important;background-position:top left !important;background-attachment:scroll !important;" >
@@ -297,16 +297,16 @@ table.center-on-narrow {
 									<tfoot style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%" >
 										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 											<td class="bill" width="60" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-width:1px !important;border-style:solid !important;border-color:#000000 !important;padding-top:10px !important;padding-bottom:10px !important;padding-right:15px !important;padding-left:15px !important;" >TOTAL</td>
-											<td class="bill" width="40" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-width:1px !important;border-style:solid !important;border-color:#000000 !important;padding-top:10px !important;padding-bottom:10px !important;padding-right:15px !important;padding-left:15px !important;" >{{ config.currency_symbol }} {{ invoice.amount|intcomma }}</td>
+											<td class="bill" width="40" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-width:1px !important;border-style:solid !important;border-color:#000000 !important;padding-top:10px !important;padding-bottom:10px !important;padding-right:15px !important;padding-left:15px !important;" >{{ config.currency_symbol }} {{ late_payment_amount|intcomma }}</td>
 										</tr>
 									</tfoot>
 
                                 </table>
                                 </div>
-                                <p style="clear: both; padding: 2em 0; ">
-                                    {% blocktrans with currency=config.currency_symbol deadline=invoice.due_date epd=early_payment_discount|intcomma invoice_amount=invoice.amount|intcomma %}
-                                        <strong style="text-decoration: underline">PS: </strong>Enjoy a {{ currency }} {{ epd }} discount and
-                                    pay only {{ currency }} {{ invoice_amount }} if you do so before {{ deadline }}. After this date,
+                                <p style="clear: both; padding: 2em 0; text-align: left">
+                                    {% blocktrans with currency=config.currency_symbol due_date=invoice.due_date invoice_amount=invoice.amount|intcomma epd=early_payment_discount|intcomma %}
+                                        <strong style="text-decoration: underline">PS: </strong>Enjoy a <strong>{{ currency }} {{ epd }}</strong> discount and
+                                        pay only <strong>{{ currency }} {{ invoice_amount }}</strong> if you do so before {{ due_date }}. After this date,
                                     your discount is lost and your invoice is set back to its original amount.
                                     {% endblocktrans %}</p>
 								<!-- Button : Begin -->
