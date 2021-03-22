@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-27 17:28+0100\n"
+"POT-Creation-Date: 2021-03-20 21:00+0100\n"
 "PO-Revision-Date: 2020-05-27 17:28+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -179,20 +179,21 @@ msgstr ""
 "\t\t\t\t\t\t\t"
 
 #: templates/billing/mails/notice.html:138
+#: templates/daraja/mails/publish_products_request.html:201
 #: templates/echo/mails/successful_refill.html:193
 #, python-format
 msgid "Dear %(member_name)s,"
 msgstr "Cher(e) %(member_name)s,"
 
 #: templates/billing/mails/notice.html:192
-#: templates/core/mails/service_deployed.html:282
+#: templates/core/mails/service_deployed.html:278
 msgid "Invoice"
 msgstr "Facture"
 
 #: templates/billing/mails/notice.html:193
 #: templates/cashout/mails/payment_notice.html:259
 #: templates/cashout/mails/request_notice.html:123
-#: templates/core/mails/service_deployed.html:288
+#: templates/core/mails/service_deployed.html:284
 msgid "Amount"
 msgstr "Montant"
 
@@ -361,35 +362,35 @@ msgstr ""
 msgid "Visit your website"
 msgstr "Visitez votre site web"
 
-#: templates/core/mails/service_deployed.html:192
+#: templates/core/mails/service_deployed.html:188
 msgid "Congrats, you are online !"
 msgstr "Félicitations, vous êtes en ligne!"
 
-#: templates/core/mails/service_deployed.html:193
+#: templates/core/mails/service_deployed.html:189
 msgid "Your service details are as follow"
 msgstr "Vos détails de votre service sont les suivants"
 
-#: templates/core/mails/service_deployed.html:195
+#: templates/core/mails/service_deployed.html:191
 msgid "Application"
 msgstr "Application"
 
-#: templates/core/mails/service_deployed.html:197
+#: templates/core/mails/service_deployed.html:193
 msgid "Running as"
 msgstr "Sous le nom"
 
-#: templates/core/mails/service_deployed.html:199
+#: templates/core/mails/service_deployed.html:195
 msgid "On"
 msgstr "Sur"
 
-#: templates/core/mails/service_deployed.html:202
+#: templates/core/mails/service_deployed.html:198
 msgid "Monthly cost"
 msgstr "Coût mensuel"
 
-#: templates/core/mails/service_deployed.html:237
+#: templates/core/mails/service_deployed.html:233
 msgid "Invoiced to"
 msgstr "Facturé à"
 
-#: templates/core/mails/service_deployed.html:243
+#: templates/core/mails/service_deployed.html:239
 #, python-format
 msgid ""
 "\n"
@@ -400,20 +401,46 @@ msgstr ""
 "            La facture pour votre mise en service a été générée et expire le "
 "%(due_date)s, voir détails ci-dessous"
 
-#: templates/core/mails/service_deployed.html:287
+#: templates/core/mails/service_deployed.html:283
 msgid "Item"
 msgstr "Item"
 
-#: templates/core/mails/service_deployed.html:315
+#: templates/core/mails/service_deployed.html:307
+#, fuzzy, python-format
+msgid ""
+"\n"
+"                                        <strong style=\"text-decoration: "
+"underline\">PS: </strong>Enjoy a <strong>%(currency)s %(epd)s</strong> "
+"discount and\n"
+"                                        pay only <strong>%(currency)s "
+"%(invoice_amount)s</strong> if you do so before %(due_date)s. After this "
+"date,\n"
+"                                    your discount is lost and your invoice "
+"is set back to its original amount.\n"
+"                                    "
+msgstr ""
+"\n"
+"                                    Vous êtes maintenant un Dara! Devenez "
+"partenaire des entreprises que vous voulez et amenez vos amis et famille à \n"
+"                                    acheter sur leurs sites web. Votre "
+"pourcentage sera immédiatement déposé dans votre compte et\n"
+"                                    vous pouvez suivre votre business en "
+"temps réel sur votre téléphone.\n"
+"                                  "
+
+#: templates/core/mails/service_deployed.html:317
 msgid "Pay Now"
 msgstr "Payez"
 
-#: templates/core/mails/service_deployed.html:333
+#: templates/core/mails/service_deployed.html:335
 #, python-format
 msgid "Thank you for your business with %(company_name)s."
 msgstr "Merci d'être client chez %(company_name)s."
 
 #: templates/core/mails/snippets/confidentiality.html:6
+#: templates/daraja/mails/congratulations_for_products_publication.html:245
+#: templates/foulassi/mails/new_assignment.html:248
+#: templates/foulassi/mails/unsubmitted_homework.html:246
 #: templates/playground/mails/new_transaction_test.html:252
 #: templates/playground/mails/referee_joined.html:247
 #: templates/smartevent/mails/thank-you.html:441
@@ -421,6 +448,8 @@ msgid "CONFIDENTIALITY"
 msgstr "CONFIDENTIALITÉ"
 
 #: templates/core/mails/snippets/confidentiality.html:8
+#: templates/foulassi/mails/new_assignment.html:250
+#: templates/foulassi/mails/unsubmitted_homework.html:248
 #: templates/playground/mails/new_transaction_test.html:254
 #: templates/playground/mails/referee_joined.html:249
 #, python-format
@@ -460,12 +489,107 @@ msgstr ""
 "                "
 
 #: templates/core/mails/snippets/confidentiality.html:19
+#: templates/daraja/mails/congratulations_for_products_publication.html:258
+#: templates/foulassi/mails/new_assignment.html:261
+#: templates/foulassi/mails/unsubmitted_homework.html:259
 #: templates/playground/mails/new_transaction_test.html:265
 #: templates/playground/mails/referee_joined.html:260
 #: templates/smartevent/mails/thank-you.html:454
 #, python-format
 msgid "&copy; %(year)s %(company_name)s. All Rights Reserved."
 msgstr "© %(year)s %(company_name)s.Tous droits réservés."
+
+#: templates/daraja/mails/congratulations_for_products_publication.html:143
+#, python-format
+msgid "%(company_name)s accepted your request."
+msgstr "%(company_name)s a accepté votre demande."
+
+#: templates/daraja/mails/congratulations_for_products_publication.html:201
+msgid ""
+"\n"
+"                                                    You have successfully "
+"published products online, and your platform is now\n"
+"                                                    ready to make money.\n"
+"                                                "
+msgstr ""
+"\n"
+"\n"
+"                                                    Vous avez publié les "
+"produits en ligne avec succès, et votre plateforme est désormais prête\n"
+"                                                    à vous faire gagner de "
+"l'argent.\n"
+"                                                "
+
+#: templates/daraja/mails/congratulations_for_products_publication.html:214
+msgid "Manage your Com & Marketing"
+msgstr "Gérez votre Com & Marketing"
+
+#: templates/daraja/mails/congratulations_for_products_publication.html:247
+#, python-format
+msgid ""
+"\n"
+"                                The information contained in this e-mail and "
+"any accompanying documents is confidential or otherwise\n"
+"                                protected from disclosure. If you are not "
+"the intended recipient, please immediately alert the\n"
+"                                sender by reply e-mail and delete this "
+"message and any attachments. Any copy, dissemination or\n"
+"                                unauthorized access of the contents of this "
+"message by anyone other than the intended recipient\n"
+"                                is strictly prohibited. E-mails may be "
+"susceptible to falsification or alteration and cause data\n"
+"                                corruption and/or loss of data. "
+"%(company_name)s and/or any of its subsidiaries decline any liability "
+"resulting\n"
+"                                from the consequences thereof. Therefore, "
+"this e-mail and any attachments are used at your own risk.\n"
+"                            "
+msgstr ""
+"\n"
+"\t\t\t\t  Les informations contenues dans ce courrier électronique et dans "
+"les documents d’accompagnement sont confidentielles sinon\n"
+"                   protégé de la divulgation. Si vous n'êtes pas le "
+"destinataire prévu, veuillez immédiatement avertir l'emetteur\n"
+"                   par courrier électronique de réponse et supprimez ce "
+"message ainsi que toutes les pièces jointes. Toute copie, diffusion ou\n"
+"                   accès non autorisé au contenu de ce message par une "
+"personne autre que le destinataire prévu\n"
+"                   est strictement interdit. Les courriels peuvent être "
+"falsifiés ou altérés et provoquer la corruption des données\n"
+"                   et/ou perte de données. %(company_name)s et/ou l’une de "
+"ses filiales déclinent toute responsabilité résultante \n"
+"                   des conséquences de celle-ci. Par conséquent, cet e-mail "
+"et toutes les pièces jointes sont utilisés à vos risques et périls.\n"
+"                "
+
+#: templates/daraja/mails/publish_products_request.html:143
+msgid "Start making your business now by publishing your products online."
+msgstr ""
+"Commencez à faire de l'argent dès maintenant en publiant vos produits en "
+"ligne."
+
+#: templates/daraja/mails/publish_products_request.html:203
+msgid ""
+"\n"
+"                                                            Your online shop "
+"has been successfully created. But there are pictures test on the website "
+"which are not corresponding to\n"
+"                                                            images of "
+"products you are selling online. Ask your Dara' admin to replace them or "
+"simply do it yourself.\n"
+"                                                        "
+msgstr ""
+"\n"
+"                                                            Vous venez de "
+"créer votre boutique en ligne avec succès. Mais les présentes images ne "
+"correspondent pas à celles des produits que vous voulez vendre en ligne.\n"
+"                                                            Vous pouvez "
+"demander à un Dara Kako Master de le faire, soit vous le faites vous-même.\n"
+"                                                        "
+
+#: templates/daraja/mails/publish_products_request.html:217
+msgid "Change now"
+msgstr "Changer"
 
 #: templates/echo/mails/campaign.html:12
 msgid "Please complete registration process"
@@ -562,6 +686,80 @@ msgstr ""
 "                                      Votre nouveau solde %(type)s est de "
 "%(count)s.\n"
 "                                  "
+
+#: templates/foulassi/mails/new_assignment.html:141
+#, fuzzy, python-format
+msgid ""
+"\n"
+"                Your child <strong>%(student_name)s</strong> has an "
+"assignment on <strong>%(assignment_title)s</strong>.\n"
+"            "
+msgstr ""
+"\n"
+"\t\tVotre commande sur %(merchant)s avec le numéro <strong>%(rcc)s</strong>  "
+"a été rejetée.\n"
+"\t\t"
+
+#: templates/foulassi/mails/new_assignment.html:204
+#, fuzzy, python-format
+msgid ""
+"\n"
+"                                    Dear <strong>%(parent_name)s</strong>,"
+"<br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" "
+">Your child <strong>%(student_name)s</strong> has a new assigment of <strong>"
+"%(assignment_subject)s</strong> on <strong>%(assignment_title)s</strong> to "
+"submit before the %(deadline)s.<br>\n"
+"                                    You will be remind 24 hours before the "
+"deadline, if the homework is not submitted.\n"
+"                                "
+msgstr ""
+"\n"
+"                                    Bonne nouvelle <strong>%(dara_name)s</"
+"strong>,<br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%;\" ><strong>%(referee_name)s</strong> vient de déployer son "
+"site de e-commerce sous le nom %(deployed_service)s .\n"
+"                                    Rappelez-le et guidez-le pour qu'il paie "
+"sa facture, et gagnez <strong>XAF %(amount)s</strong> pour cela.<br>\n"
+"                                "
+
+#: templates/foulassi/mails/new_assignment.html:215
+msgid "See homework"
+msgstr ""
+
+#: templates/foulassi/mails/unsubmitted_homework.html:141
+#, python-format
+msgid ""
+"\n"
+"                Your child <strong>%(student_name)s</strong> has not yet "
+"submitted his <strong>%(assignment_subject)s</strong> homework on <strong>"
+"%(assignment_title)s</strong>.\n"
+"            "
+msgstr ""
+
+#: templates/foulassi/mails/unsubmitted_homework.html:204
+#, fuzzy, python-format
+msgid ""
+"\n"
+"                                    Dear <strong>%(parent_name)s</strong>,"
+"<br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-adjust:100%%;\" "
+">Your child <strong>%(student_name)s</strong> has not yet submitted his "
+"<strong>%(assignment_subject)s</strong> homework on <strong>"
+"%(assignment_title)s</strong>.<br>\n"
+"                                "
+msgstr ""
+"\n"
+"                                    Bonne nouvelle <strong>%(dara_name)s</"
+"strong>,<br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
+"adjust:100%%;\" ><strong>%(referee_name)s</strong> vient de déployer son "
+"site de e-commerce sous le nom %(deployed_service)s .\n"
+"                                    Rappelez-le et guidez-le pour qu'il paie "
+"sa facture, et gagnez <strong>XAF %(amount)s</strong> pour cela.<br>\n"
+"                                "
+
+#: templates/foulassi/mails/unsubmitted_homework.html:213
+#, fuzzy
+msgid "Submit now"
+msgstr "Invitez un proche"
 
 #: templates/kako/mails/product_on_sale.html:288
 #, python-format
@@ -1518,9 +1716,6 @@ msgstr ""
 "et toutes les pièces jointes sont utilisés à vos risques et périls.\n"
 "                "
 
-#~ msgid "%(company_name)s accepted your request."
-#~ msgstr "%(company_name)s a accepté votre demande."
-
 #~ msgid ""
 #~ "\n"
 #~ "                                                    This is just to "
@@ -1596,42 +1791,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "WhatsApp %(project_name)s now"
 #~ msgstr "Contactez %(referee_name)s sur WhatsApp"
-
-#~ msgid ""
-#~ "\n"
-#~ "                                The information contained in this e-mail "
-#~ "and any accompanying documents is confidential or otherwise\n"
-#~ "                                protected from disclosure. If you are not "
-#~ "the intended recipient, please immediately alert the\n"
-#~ "                                sender by reply e-mail and delete this "
-#~ "message and any attachments. Any copy, dissemination or\n"
-#~ "                                unauthorized access of the contents of "
-#~ "this message by anyone other than the intended recipient\n"
-#~ "                                is strictly prohibited. E-mails may be "
-#~ "susceptible to falsification or alteration and cause data\n"
-#~ "                                corruption and/or loss of data. "
-#~ "%(company_name)s and/or any of its subsidiaries decline any liability "
-#~ "resulting\n"
-#~ "                                from the consequences thereof. Therefore, "
-#~ "this e-mail and any attachments are used at your own risk.\n"
-#~ "                            "
-#~ msgstr ""
-#~ "\n"
-#~ "\t\t\t\t  Les informations contenues dans ce courrier électronique et "
-#~ "dans les documents d’accompagnement sont confidentielles sinon\n"
-#~ "                   protégé de la divulgation. Si vous n'êtes pas le "
-#~ "destinataire prévu, veuillez immédiatement avertir l'emetteur\n"
-#~ "                   par courrier électronique de réponse et supprimez ce "
-#~ "message ainsi que toutes les pièces jointes. Toute copie, diffusion ou\n"
-#~ "                   accès non autorisé au contenu de ce message par une "
-#~ "personne autre que le destinataire prévu\n"
-#~ "                   est strictement interdit. Les courriels peuvent être "
-#~ "falsifiés ou altérés et provoquer la corruption des données\n"
-#~ "                   et/ou perte de données. %(company_name)s et/ou l’une "
-#~ "de ses filiales déclinent toute responsabilité résultante \n"
-#~ "                   des conséquences de celle-ci. Par conséquent, cet e-"
-#~ "mail et toutes les pièces jointes sont utilisés à vos risques et périls.\n"
-#~ "                "
 
 #~ msgid ""
 #~ "\n"
@@ -1729,26 +1888,6 @@ msgstr ""
 #~ "of %(invoice_total)s FCFA pour son site nouvellement déployé .\n"
 #~ "        "
 
-#~ msgid ""
-#~ "\n"
-#~ "                                    Good new <strong>%(dara_name)s</"
-#~ "strong>,<br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
-#~ "adjust:100%%;\" ><strong>%(referee_name)s</strong> just deployed an e-"
-#~ "commerce website under %(deployed_service)s .\n"
-#~ "                                    Remind and guide him to pay his "
-#~ "invoice to collect <strong>XAF %(amount)s</strong>.<br>\n"
-#~ "                                "
-#~ msgstr ""
-#~ "\n"
-#~ "                                    Bonne nouvelle <strong>%(dara_name)s</"
-#~ "strong>,<br style=\"-ms-text-size-adjust:100%%;-webkit-text-size-"
-#~ "adjust:100%%;\" ><strong>%(referee_name)s</strong> vient de déployer son "
-#~ "site de e-commerce sous le nom %(deployed_service)s .\n"
-#~ "                                    Rappelez-le et guidez-le pour qu'il "
-#~ "paie sa facture, et gagnez <strong>XAF %(amount)s</strong> pour cela."
-#~ "<br>\n"
-#~ "                                "
-
 #~ msgid "Call %(referee_name)s now"
 #~ msgstr "Appelez %(referee_name)s"
 
@@ -1760,26 +1899,6 @@ msgstr ""
 
 #~ msgid "Make money by referring friends and family."
 #~ msgstr "Gagnez de l'argent en recommendant des amis et la famille."
-
-#~ msgid ""
-#~ "\n"
-#~ "                                    You are now a Dara! Partner with "
-#~ "companies you want and get your friends and family to\n"
-#~ "                                    buy online on their websites. Your "
-#~ "share is immediately deposited on your account and\n"
-#~ "                                    you follow your business in realtime "
-#~ "on your phone.\n"
-#~ "                                  "
-#~ msgstr ""
-#~ "\n"
-#~ "                                    Vous êtes maintenant un Dara! Devenez "
-#~ "partenaire des entreprises que vous voulez et amenez vos amis et famille "
-#~ "à \n"
-#~ "                                    acheter sur leurs sites web. Votre "
-#~ "pourcentage sera immédiatement déposé dans votre compte et\n"
-#~ "                                    vous pouvez suivre votre business en "
-#~ "temps réel sur votre téléphone.\n"
-#~ "                                  "
 
 #~ msgid "Choose your companies"
 #~ msgstr "Choisissez vos entreprises"
@@ -1828,54 +1947,9 @@ msgstr ""
 #~ msgstr "Corrigez le problème"
 
 #~ msgid ""
-#~ "\n"
-#~ "                                                    You have successfully "
-#~ "published products online, and your platform is now\n"
-#~ "                                                    ready to make money.\n"
-#~ "                                                "
-#~ msgstr ""
-#~ "\n"
-#~ "\n"
-#~ "                                                    Vous avez publié les "
-#~ "produits en ligne avec succès, et votre plateforme est désormais prête\n"
-#~ "                                                    à vous faire gagner "
-#~ "de l'argent.\n"
-#~ "                                                "
-
-#~ msgid "Manage your Com & Marketing"
-#~ msgstr "Gérez votre Com & Marketing"
-
-#~ msgid ""
 #~ "You have requested to partnership with <strong>%(project_name)s</strong>."
 #~ msgstr ""
 #~ "Vous souhaitez être partenaire avec <strong>%(project_name)s</strong>."
-
-#~ msgid "Start making your business now by publishing your products online."
-#~ msgstr ""
-#~ "Commencez à faire de l'argent dès maintenant en publiant vos produits en "
-#~ "ligne."
-
-#~ msgid ""
-#~ "\n"
-#~ "                                                            Your online "
-#~ "shop has been successfully created. But there are pictures test on the "
-#~ "website which are not corresponding to\n"
-#~ "                                                            images of "
-#~ "products you are selling online. Ask your Dara' admin to replace them or "
-#~ "simply do it yourself.\n"
-#~ "                                                        "
-#~ msgstr ""
-#~ "\n"
-#~ "                                                            Vous venez de "
-#~ "créer votre boutique en ligne avec succès. Mais les présentes images ne "
-#~ "correspondent pas à celles des produits que vous voulez vendre en ligne.\n"
-#~ "                                                            Vous pouvez "
-#~ "demander à un Dara Kako Master de le faire, soit vous le faites vous-"
-#~ "même.\n"
-#~ "                                                        "
-
-#~ msgid "Change now"
-#~ msgstr "Changer"
 
 #~ msgid "Contact him/her now"
 #~ msgstr "Contactez !"

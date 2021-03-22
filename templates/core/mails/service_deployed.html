@@ -185,7 +185,7 @@ table.center-on-narrow {
                 <table border="0" cellpadding="0" cellspacing="0" align="left" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
                     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                       <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:16px;mso-height-rule:exactly;line-height:23px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
-                        <h2 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0;text-align: center" >{% trans "Congrats, you are online !" %}</h2>
+                        <h2 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align: center" >{% trans "Congrats, you are online !" %}</h2>
                         {% trans "Your service details are as follow" %} :
                         <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                         {% trans "Application" %} : {{ weblet.app.name }}
@@ -229,15 +229,14 @@ table.center-on-narrow {
                             <![endif]-->
                 <table border="0" cellpadding="0" cellspacing="0" align="left" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
                     <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-                      <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:16px;mso-height-rule:exactly;line-height:18px;color:#555555;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" > 
+                      <td valign="middle" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;font-size:16px;mso-height-rule:exactly;line-height:25px;color:#555555;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
                         <h4 style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{% trans "Invoiced to" %}:</h4>
-                        <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >                       
                         {{ member.full_name }},
 						<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
                         {{ member.email }}
                           {% if member.phone %}, <br><em>{{ member.phone }}</em>{% endif %} <br>
-                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-bottom:0;" >{% blocktrans with due_date=invoice.due_date %}
-            The invoice for your service setup has been generated, and is due on {{ due_date }}, see details below{% endblocktrans%} :</p>
+                        <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-bottom:0;" >{% blocktrans with due_date=invoice.due_date|date:"d M Y" %}
+            The invoice for your service setup has been generated, and is due on {{ due_date }}.<br>See details below{% endblocktrans%} :</p>
 
                         </td>
                     </tr>
@@ -289,7 +288,13 @@ table.center-on-narrow {
 										{% for entry in invoice.entries %}
 										<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 											<td width="60" class="bill" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-width:1px !important;border-style:solid !important;border-color:#000000 !important;padding-top:10px !important;padding-bottom:10px !important;padding-right:15px !important;padding-left:15px !important;" >{{ entry.item.label }} : <em>{{ entry.short_description }}</em></td>
-											<td width="40" class="bill" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-width:1px !important;border-style:solid !important;border-color:#000000 !important;padding-top:10px !important;padding-bottom:10px !important;padding-right:15px !important;padding-left:15px !important;" >{{ entry.item.amount|intcomma }}</td>
+											<td width="40" class="bill" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-width:1px !important;border-style:solid !important;border-color:#000000 !important;padding-top:10px !important;padding-bottom:10px !important;padding-right:15px !important;padding-left:15px !important;" >
+                                                {% if entry.item.amount == 0 %}
+                                                    {% trans 'Free' %}
+                                                {% else %}
+                                                    {{ entry.item.amount|intcomma }}
+                                                {% endif %}
+                                            </td>
 										</tr>
                                         {% endfor %}
 									</tbody>
@@ -303,17 +308,20 @@ table.center-on-narrow {
 
                                 </table>
                                 </div>
-                                <p style="clear: both; padding: 2em 0; text-align: left">
-                                    {% blocktrans with currency=config.currency_symbol due_date=invoice.due_date invoice_amount=invoice.amount|intcomma epd=early_payment_discount|intcomma %}
-                                        <strong style="text-decoration: underline">PS: </strong>Enjoy a <strong>{{ currency }} {{ epd }}</strong> discount and
-                                        pay only <strong>{{ currency }} {{ invoice_amount }}</strong> if you do so before {{ due_date }}. After this date,
-                                    your discount is lost and your invoice is set back to its original amount.
-                                    {% endblocktrans %}</p>
+                                {% if early_payment_discount %}
+                                    <p style="clear: both; padding: 2em 0; text-align: left">
+                                        {% blocktrans with currency=config.currency_symbol due_date=invoice.due_date|date:"d M Y" invoice_amount=invoice.amount|intcomma epd=early_payment_discount|intcomma %}
+                                            <strong style="text-decoration: underline">PS: </strong><br>Enjoy a <strong>{{ currency }} {{ epd }}</strong> discount and
+                                            pay only <strong>{{ currency }} {{ invoice_amount }}</strong> if you do so before {{ due_date }}. After this date,
+                                        your discount is lost and your invoice is set back to its original amount.
+                                        {% endblocktrans %}</p>
+                                {% endif %}
 								<!-- Button : Begin -->
 								<br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 								<table cellspacing="0" cellpadding="0" border="0" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;" >
 									<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
-										<td  class="button-td" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;min-width:160px;border-radius:3px;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;transition:all 100ms ease-in;" ><a href="{{ invoice_url }}"  class="btn-deep-blue" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in;" >
+										<td  class="button-td" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;min-width:160px;border-radius:3px;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;text-align:center;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;transition:all 100ms ease-in;" >
+                                            <a href="{{ invoice_url }}"  class="btn-deep-blue" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;border-width:15px;border-style:solid;padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;font-size:13px;line-height:1.1;text-align:center;text-decoration:none;display:block;border-radius:3px;transition:all 100ms ease-in; color: #fff" >
 												  <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% trans "Pay Now" %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--> 
 												  </a>
 										</td>
