@@ -297,7 +297,7 @@
                                                         {{ order.delivery_address.details }}, <br>
                                                         {% trans "Postal code" %}: {{ order.delivery_address.postal_code }}, <br>
                                                         <strong style="color: #666">{{ order.delivery_address.city }}, {{ order.delivery_address.country.name }}.</strong><br>
-                                                        <em>{{ order.delivery_address.phone }}</em>
+                                                        <em>{{ order.delivery_address.phone }}{% if order.delivery_address.phone_alt %}/{{ order.delivery_address.phone_alt }}{% endif %}</em>
                                                     </p>
                                                 </div>
                                             {% else %}
@@ -308,7 +308,7 @@
                                                 <div style="font-size: .9em">
                                                     <h4 style="color: #555; margin-bottom: 0">{% trans "Remit to" %}:</h4>
                                                     <span>{{ order.delivery_address.name }}</span><br>
-                                                    <em>{{ order.delivery_address.phone }}</em>
+                                                    <em>{{ order.delivery_address.phone }}{% if order.delivery_address.phone_alt %}/{{ order.delivery_address.phone_alt }}{% endif %}</em>
                                                 </div>
                                             {% endif %}
                                         </div>
@@ -325,7 +325,7 @@
 					<!-- 1 Column Text : END -->
 
 				    <!-- Thumbnail Left, Text Right : BEGIN -->
-                            {% for entry in order.entries %}
+                            {% for entry in order.get_entry_queryset %}
 							<tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
 							  <td dir="ltr" align="center" height="100%" valign="top" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><!--[if mso]>
 										<table border="0" cellspacing="0" cellpadding="0" align="center" width="660" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >

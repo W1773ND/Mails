@@ -310,7 +310,7 @@ table.center-on-narrow {
                                 </div>
                                 {% if early_payment_discount %}
                                     <p style="clear: both; padding: 2em 0; text-align: left">
-                                        {% blocktrans with currency=config.currency_symbol due_date=invoice.due_date|date:"d M Y" invoice_amount=invoice.amount|intcomma epd=early_payment_discount|intcomma %}
+                                        {% blocktrans with currency=config.currency_symbol due_date=invoice.due_date|date:"d F Y" invoice_amount=invoice.amount|intcomma epd=early_payment_discount|intcomma %}
                                             <strong style="text-decoration: underline">PS: </strong><br>Enjoy a <strong>{{ currency }} {{ epd }}</strong> discount and
                                             pay only <strong>{{ currency }} {{ invoice_amount }}</strong> if you do so before {{ due_date }}. After this date,
                                         your discount is lost and your invoice is set back to its original amount.
