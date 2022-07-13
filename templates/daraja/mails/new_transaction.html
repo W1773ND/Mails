@@ -1,0 +1,290 @@
+{% load i18n static humanize %}
+<!doctype html>
+<!-- confirm_email.html -->
+<html style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
+<head style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+<meta charset="utf-8" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+<!-- utf-8 works for most cases -->
+<meta name="viewport" content="width=device-width" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+<!-- Forcing initial-scale shouldn't be necessary -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+<!-- Use the latest (edge) version of IE rendering engine -->
+<title style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >{{ subject }} - ikwen Daraja</title>
+<!-- The title tag shows in email notifications, like Android 4.4. -->
+
+
+<!-- CSS Reset -->
+<style type="text/css" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+
+
+html, body {
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 100% !important;
+	width: 100% !important;
+}
+
+* {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+.ExternalClass {
+	width: 100%;
+}
+
+div[style*="margin: 16px 0"] {
+	margin: 0 !important;
+}
+
+table, td {
+	mso-table-lspace: 0pt !important;
+	mso-table-rspace: 0pt !important;
+}
+
+table {
+	border-spacing: 0 !important;
+	border-collapse: collapse !important;
+	table-layout: fixed !important;
+	margin: 0 auto !important;
+}
+table table table {
+	table-layout: auto;
+}
+
+img {
+	-ms-interpolation-mode: bicubic;
+}
+
+.yshortcuts a {
+	border-bottom: none !important;
+}
+
+a[x-apple-data-detectors] {
+	color: inherit !important;
+}
+</style>
+
+<!-- Progressive Enhancements -->
+<style type="text/css" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+
+.button-td, .button-a {
+	transition: all 100ms ease-in;
+	min-width: 200px;
+}
+.button-td:hover, .button-a:hover {
+	background: #319dd5 !important;
+	border-color: #319dd5 !important;
+}
+
+.screen-display{
+	margin-top: 10px;
+}
+
+
+@media screen and (max-width: 480px){
+
+.fluid, .fluid-centered {
+	width: 100% !important;
+	max-width: 100% !important;
+	height: auto !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+
+.fluid-centered {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.stack-column, .stack-column-center {
+	display: block !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	direction: ltr !important;
+}
+
+.stack-column-center {
+	text-align: center !important;
+}
+
+.center-on-narrow {
+	text-align: center !important;
+	display: block !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	float: none !important;
+}
+table.center-on-narrow {
+	display: inline-block !important;
+}
+.screen-display{
+	margin-top: 0 !important;
+}
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape){
+.screen-display{
+	margin-top: 0 !important;
+}
+}
+</style>
+</head>
+<body width="100%" bgcolor="#e0e0e0"  yahoo="yahoo" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;height:100% !important;width:100% !important;" >
+<table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#e0e0e0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse !important;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;table-layout:fixed !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;" >
+  <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+    <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" ><center style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;" >
+
+        <!-- Visually Hidden Preheader Text : BEGIN -->
+        <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family:'Myriad Pro','Lucida Sans Unicode' ,Verdana, Helvetica, Arial, sans-serif;" >{% blocktrans %}A follower just made a purchase of {{ currency_symbol }} {{ amount }}.{% endblocktrans %}</div>
+        <!-- Visually Hidden Preheader Text : END -->
+
+        <div class="screen-display" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;background-color:#FFFFFF;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;box-shadow:0 5px 5px 0 #bfbfbf;margin-top:10px;" >
+          <!--[if (gte mso 9)|(IE)]>
+            <table cellspacing="0" cellpadding="0" border="0" width="680" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;table-layout:fixed !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;" >
+            <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+            <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+            <![endif]-->
+
+          <!-- Email Header : BEGIN -->
+          <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-spacing:0 !important;border-collapse:collapse !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+            <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+              <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+                <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;width:100%;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;padding-top:15px;padding-bottom:5px;padding-right:0;padding-left:0;text-align:left;" >
+                  <a target="_blank" href="http://www.ikwen.com/daraja/" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%; text-decoration: none" >
+                    <div style="display: inline-block">
+                           <img src="https://static.ikwen.com/daraja/img/ikwen-Daraja.png" alt="ikwen - daraja" border="0" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;padding-left:20px;-ms-interpolation-mode:bicubic; height: 30px;">
+                    </div>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <!-- Email Header : END -->
+
+
+        <!-- Email Body : BEGIN -->
+        <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#FFF" width="100%" style="max-width: 400px;">
+            <!-- Hero Image, Flush : BEGIN -->
+            <tr>
+              <td class="full-width-image" align="center" style="padding:15px">
+                  <div style="border-radius: 92px; height: 180px; overflow: hidden; width: 180px;">
+{#                  border: 1px solid #eee; #}
+                    <div style="background: url('https://static.ikwen.com/daraja/img/money-remittance.png') no-repeat center; background-size: cover; height: 180px; width: 180px">
+                    </div>
+                  </div>
+              </td>
+            </tr>
+            <!-- Hero Image, Flush : END -->
+
+			<!-- 1 Column Text : BEGIN -->
+            <tr>
+              <td bgcolor="#FFF" valign="middle" style="text-align: center; background-position: center center !important; background-size: cover !important;"><!--[if gte mso 9]>
+                        <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:680px;height:175px; background-position: center center !important;">
+                        <v:fill type="tile" src="assets/Hybrid/Image_680x230.png" color="#222222" />
+                        <v:textbox inset="0,0,0,0">
+                        <![endif]-->
+
+                <div>
+                  <!--[if mso]>
+                            <table border="0" cellspacing="0" cellpadding="0" align="center" width="500">
+                            <tr>
+                            <td align="center" valign="top" width="500">
+                            <![endif]-->
+                <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:630px; margin: auto;">
+                    <tr>
+                      <td valign="middle" style=" mso-height-rule: exactly; line-height: 25px;text-align:center;"><!-- color: #555555; -->
+                         <div style="padding: 15px; font-size:15px;">
+                            <br>
+                            <p style="-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; color:#555; text-align: justify" >
+{#                                text-align:left#}
+                                {% blocktrans with amount_paid=amount|intcomma amount_earned=dara_earnings|intcomma balance=account_balance|intcomma %}
+                                  You just received {{ currency_symbol }} {{ amount_earned }} from {{ company_name }} after the payment
+                                  of {{ currency_symbol }} {{ amount_paid }} from a follower on {{ tx_date }} at {{ tx_time }}.<br><br>
+                                  New account balance: <strong>{{ currency_symbol }} {{ balance }}</strong>
+                                {% endblocktrans%}</p>
+                              <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+
+                         </div>
+                      {% if dara.level == 2 and dara.xp == 10 %}
+                          <div style="text-align: justify;background: #f8f6f6; padding: 15px; margin-bottom:  30px">
+                              {% blocktrans %}You successfully completed this step by getting a <strong>follower to buy online</strong>. <br style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">You just earned <strong>5xp</strong> for that.{% endblocktrans %}
+                          </div>
+                          <p style="-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; color:#555; text-align: justify" >
+                                {% blocktrans %}
+                                    Congratulations ! You've completed all steps of level 2.
+                                    Now, you can enter in <strong>Kako master experience</strong> and earn more cash for managing companies websites.
+                                {% endblocktrans %}
+                            </p>
+                      {% else %}
+
+                    <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
+                        <tr>
+                            <td style="border-radius: 3px; background: #233682; text-align: center;" class="button-td">
+                                <a target="_blank" href="{{ dashboard_url }}" style="background: #f38e42; border: 15px solid #f38e42; padding: 0 10px;color: #ffffff;font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px;" class="button-a">
+                              <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{% blocktrans %}See details{% endblocktrans %}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                              </a>
+                            </td>
+                        </tr>
+                    </table>
+                      {% endif %}
+                    <br>
+                <!-- Button : END --></td>
+                    </tr>
+                </table>
+
+                  <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                </div>
+
+                <!--[if gte mso 9]>
+                        </v:textbox>
+                        </v:rect>
+                        <![endif]--></td>
+            </tr>
+            <!-- 1 Column Text : END -->
+
+							</table>
+          <!-- Email Body : END -->
+
+        <!-- Email Footer : BEGIN -->
+<table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" bgcolor="#fff" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;max-width:680px;padding-top:15px;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:separate !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:auto !important;margin-left:auto !important;table-layout:fixed !important;" >
+    <tr style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+      <td align="center" style="padding-top:0;padding-bottom:0;padding-right:20px;padding-left:20px;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;" >
+            <div style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;margin-top:20px;padding-top:10px;max-width:600px;border-top-width:2px;border-top-style:solid;border-top-color:rgba(0, 0, 0, 0.14);" >
+                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#999;font-size:12px;text-align:left;" >{% trans "CONFIDENTIALITY" %}</p>
+                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#999;font-size:12px;text-align:justify;" >
+                {% blocktrans with company_name='ikwen' %}
+                    The information contained in this e-mail and any accompanying documents is confidential or otherwise
+                    protected from disclosure. If you are not the intended recipient, please immediately alert the
+                    sender by reply e-mail and delete this message and any attachments. Any copy, dissemination or
+                    unauthorized access of the contents of this message by anyone other than the intended recipient
+                    is strictly prohibited. E-mails may be susceptible to falsification or alteration and cause data
+                    corruption and/or loss of data. {{ company_name }} and/or any of its subsidiaries decline any liability resulting
+                    from the consequences thereof. Therefore, this e-mail and any attachments are used at your own risk.
+                {% endblocktrans %}
+                </p>
+                <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" >
+                    <span style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:12px;color:#555555;" >{% blocktrans with company_name='ikwen' %}&copy; {{ year }} {{ company_name }}. All Rights Reserved.{% endblocktrans %}</span>
+                </p>
+        </div>
+      </td>
+    </tr>
+</table>
+          <!-- Email Footer : END -->
+
+          <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </div>
+      </center></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends "core/base_bs.html" %}
+{% load i18n static %}
+{% block meta %}
+    {% include 'core/snippets/color_and_icons.html' %}
+{% endblock %}
+{% block page_title %}<title>{% trans "Looks like you can't access the page - Internal server error - ikwen" %}</title>{% endblock %}
+{% block head_style %}
+    {{ block.super }}
+    <style type="text/css">
+        #navbar {display: none}
+        body {background-image: url("{% static 'ikwen/img/background-500.jpg' %}"); background-repeat: no-repeat}
+        a.btn {background-color: #1194e8; border-color: #1194e8}
+        a.btn:hover {background-color: #045081; border-color: #045081}
+        footer {font-size: 12px; text-align: center; margin-top: 30vh; color: #fff}
+        footer a strong {color: #1194e8}
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div id="content" class="container">
+        <div style="margin:9% 5% 0; text-align: center; color: #fff">
+            <div style="padding-top: 20px; text-align: center;">
+                <h2 class="text-has-shade" style="font-size: 45px;">{% trans "Looks like you can't access the page !" %}</h2>
+                <p style="font-weight: 300;padding-top:12px;font-size:21px"> {% trans "Please wait for a while and click the button below to try again ..." %} </p>
+                <a class="btn btn-primary" href="{% if request.META.HTTP_REFERER %}{{ request.META.HTTP_REFERER }}{% else %}/{% endif %}"
+                   style="font-size: 18px;margin-top: 15px;min-width:200px">
+                    {% trans "Let's try again" %}
+                </a>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+     <footer>
+            &copy; {{ year }} <a class="company-name" href="{{ settings.IKWEN_BASE_URL }}"><strong>ikwen</strong></a>.
+            {% trans "All rights reserved." %}
+     </footer>
+{% endblock %}

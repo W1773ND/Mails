@@ -1,0 +1,46 @@
+{% load i18n static staticfiles auth_tokens %}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{% trans "Looks like you can't access the page - Page not found - ikwen" %}</title>
+        <link rel='stylesheet' href="{% static 'ikwen/font-awesome/css/font-awesome.min.css' %}" />
+        <link rel='stylesheet' href="{% static 'ikwen/css/flatly.bootstrap.min.css' %}" />
+        <link rel='stylesheet' href="{% static 'ikwen/css/base.css' %}" />
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+            .error-page {background: url({% static 'ikwen/img/background-404.jpg' %}) center fixed; background-size: cover; color: #fff; padding-top: 10%}
+            .error-page #content {padding-left: 15px; padding-right: 15px}
+            .error-page h1 {font-size: 4em;}
+            .error-page footer, .error-page footer a {color: #fff}
+            .error-page footer a strong {color: rgba(225, 92, 92, 0.27)}
+            .error-page a.btn {color: rgb(225, 92, 92); border: #efefee; background: #efefee}
+            .error-page a.btn:hover {color: #efefee; border:  #ef6476; background: #ef6476}
+            footer {font-size: 12px; margin-top: 45px; text-align: center}
+        </style>
+    </head>
+    <body class="error-page">
+        {% blocktrans %}
+            <div id="content" class="container">
+                <h1 class="text-has-shade">Looks like you can't access the page !</h1>
+                <p>Sorry the requested URL was not found on this website.</p>
+                <p>The page might have been moved or deleted.</p>
+            </div>
+        {% endblocktrans %}
+        <a class="btn btn-primary" href="{% if request.META.HTTP_REFERER %}{{ request.META.HTTP_REFERER }}{% else %}/{% endif %}"
+               style="font-size: 18px;margin-top: 15px;min-width:200px">
+                {% trans "Let's try again" %}
+        </a>
+        <footer>
+            &copy; {{ year }} <a class="company-name" href="{{ settings.IKWEN_BASE_URL }}"><strong>ikwen</strong></a>.
+            {% trans "All rights reserved." %}
+        </footer>
+    </body>
+</html>
